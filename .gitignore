@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node (for potential future prototype)
+node_modules/
+dist/
+build/
+.next/
+.env
+.env.local
+
+# Python (for potential RAG experiments)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Figma export
+*.fig.bak
+
+# Logs
+*.log
