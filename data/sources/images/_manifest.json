@@ -1,1 +1,3355 @@
-{}
+{
+  "data/sources/images/cma/1914.535.jpg": {
+    "accession": "1914.535",
+    "bytes": 63026,
+    "source": "cma",
+    "source_id": "93946",
+    "url": "https://openaccess-cdn.clevelandart.org/1914.535/1914.535_web.jpg"
+  },
+  "data/sources/images/cma/1914.567.jpg": {
+    "accession": "1914.567",
+    "bytes": 382760,
+    "source": "cma",
+    "source_id": "93992",
+    "url": "https://openaccess-cdn.clevelandart.org/1914.567/1914.567_web.jpg"
+  },
+  "data/sources/images/cma/1915.105.jpg": {
+    "accession": "1915.105",
+    "bytes": 129335,
+    "source": "cma",
+    "source_id": "94599",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.105/1915.105_web.jpg"
+  },
+  "data/sources/images/cma/1915.106.jpg": {
+    "accession": "1915.106",
+    "bytes": 116718,
+    "source": "cma",
+    "source_id": "94600",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.106/1915.106_web.jpg"
+  },
+  "data/sources/images/cma/1915.107.jpg": {
+    "accession": "1915.107",
+    "bytes": 165774,
+    "source": "cma",
+    "source_id": "94601",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.107/1915.107_web.jpg"
+  },
+  "data/sources/images/cma/1915.108.jpg": {
+    "accession": "1915.108",
+    "bytes": 149181,
+    "source": "cma",
+    "source_id": "94602",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.108/1915.108_web.jpg"
+  },
+  "data/sources/images/cma/1915.110.jpg": {
+    "accession": "1915.110",
+    "bytes": 598048,
+    "source": "cma",
+    "source_id": "94605",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.110/1915.110_web.jpg"
+  },
+  "data/sources/images/cma/1915.111.jpg": {
+    "accession": "1915.111",
+    "bytes": 108224,
+    "source": "cma",
+    "source_id": "94606",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.111/1915.111_web.jpg"
+  },
+  "data/sources/images/cma/1915.112.jpg": {
+    "accession": "1915.112",
+    "bytes": 122057,
+    "source": "cma",
+    "source_id": "94607",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.112/1915.112_web.jpg"
+  },
+  "data/sources/images/cma/1915.114.jpg": {
+    "accession": "1915.114",
+    "bytes": 118184,
+    "source": "cma",
+    "source_id": "94609",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.114/1915.114_web.jpg"
+  },
+  "data/sources/images/cma/1915.116.jpg": {
+    "accession": "1915.116",
+    "bytes": 80662,
+    "source": "cma",
+    "source_id": "94611",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.116/1915.116_web.jpg"
+  },
+  "data/sources/images/cma/1915.117.jpg": {
+    "accession": "1915.117",
+    "bytes": 346635,
+    "source": "cma",
+    "source_id": "94612",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.117/1915.117_web.jpg"
+  },
+  "data/sources/images/cma/1915.232.jpg": {
+    "accession": "1915.232",
+    "bytes": 49719,
+    "source": "cma",
+    "source_id": "94646",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.232/1915.232_web.jpg"
+  },
+  "data/sources/images/cma/1915.309.jpg": {
+    "accession": "1915.309",
+    "bytes": 297357,
+    "source": "cma",
+    "source_id": "94663",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.309/1915.309_web.jpg"
+  },
+  "data/sources/images/cma/1915.311.jpg": {
+    "accession": "1915.311",
+    "bytes": 129329,
+    "source": "cma",
+    "source_id": "94667",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.311/1915.311_web.jpg"
+  },
+  "data/sources/images/cma/1915.333.jpg": {
+    "accession": "1915.333",
+    "bytes": 96489,
+    "source": "cma",
+    "source_id": "94675",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.333/1915.333_web.jpg"
+  },
+  "data/sources/images/cma/1915.334.1.jpg": {
+    "accession": "1915.334.1",
+    "bytes": 139919,
+    "source": "cma",
+    "source_id": "94676",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.334.1/1915.334.1_web.jpg"
+  },
+  "data/sources/images/cma/1915.334.2.jpg": {
+    "accession": "1915.334.2",
+    "bytes": 153056,
+    "source": "cma",
+    "source_id": "94677",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.334.2/1915.334.2_web.jpg"
+  },
+  "data/sources/images/cma/1915.352.jpg": {
+    "accession": "1915.352",
+    "bytes": 98289,
+    "source": "cma",
+    "source_id": "94789",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.352/1915.352_web.jpg"
+  },
+  "data/sources/images/cma/1915.361.jpg": {
+    "accession": "1915.361",
+    "bytes": 220673,
+    "source": "cma",
+    "source_id": "94798",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.361/1915.361_web.jpg"
+  },
+  "data/sources/images/cma/1915.364.jpg": {
+    "accession": "1915.364",
+    "bytes": 272316,
+    "source": "cma",
+    "source_id": "94801",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.364/1915.364_web.jpg"
+  },
+  "data/sources/images/cma/1915.373.jpg": {
+    "accession": "1915.373",
+    "bytes": 90472,
+    "source": "cma",
+    "source_id": "94811",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.373/1915.373_web.jpg"
+  },
+  "data/sources/images/cma/1915.379.jpg": {
+    "accession": "1915.379",
+    "bytes": 383169,
+    "source": "cma",
+    "source_id": "94817",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.379/1915.379_web.jpg"
+  },
+  "data/sources/images/cma/1915.381.jpg": {
+    "accession": "1915.381",
+    "bytes": 407376,
+    "source": "cma",
+    "source_id": "94820",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.381/1915.381_web.jpg"
+  },
+  "data/sources/images/cma/1915.388.jpg": {
+    "accession": "1915.388",
+    "bytes": 104235,
+    "source": "cma",
+    "source_id": "94826",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.388/1915.388_web.jpg"
+  },
+  "data/sources/images/cma/1915.389.jpg": {
+    "accession": "1915.389",
+    "bytes": 63861,
+    "source": "cma",
+    "source_id": "94827",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.389/1915.389_web.jpg"
+  },
+  "data/sources/images/cma/1915.394.jpg": {
+    "accession": "1915.394",
+    "bytes": 223890,
+    "source": "cma",
+    "source_id": "94832",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.394/1915.394_web.jpg"
+  },
+  "data/sources/images/cma/1915.395.jpg": {
+    "accession": "1915.395",
+    "bytes": 102442,
+    "source": "cma",
+    "source_id": "94833",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.395/1915.395_web.jpg"
+  },
+  "data/sources/images/cma/1915.396.jpg": {
+    "accession": "1915.396",
+    "bytes": 201295,
+    "source": "cma",
+    "source_id": "94834",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.396/1915.396_web.jpg"
+  },
+  "data/sources/images/cma/1915.397.jpg": {
+    "accession": "1915.397",
+    "bytes": 102575,
+    "source": "cma",
+    "source_id": "94835",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.397/1915.397_web.jpg"
+  },
+  "data/sources/images/cma/1915.398.jpg": {
+    "accession": "1915.398",
+    "bytes": 69081,
+    "source": "cma",
+    "source_id": "94836",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.398/1915.398_web.jpg"
+  },
+  "data/sources/images/cma/1915.399.jpg": {
+    "accession": "1915.399",
+    "bytes": 66995,
+    "source": "cma",
+    "source_id": "94837",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.399/1915.399_web.jpg"
+  },
+  "data/sources/images/cma/1915.400.jpg": {
+    "accession": "1915.400",
+    "bytes": 66029,
+    "source": "cma",
+    "source_id": "94840",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.400/1915.400_web.jpg"
+  },
+  "data/sources/images/cma/1915.401.jpg": {
+    "accession": "1915.401",
+    "bytes": 56420,
+    "source": "cma",
+    "source_id": "94841",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.401/1915.401_web.jpg"
+  },
+  "data/sources/images/cma/1915.402.jpg": {
+    "accession": "1915.402",
+    "bytes": 91347,
+    "source": "cma",
+    "source_id": "94842",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.402/1915.402_web.jpg"
+  },
+  "data/sources/images/cma/1915.403.jpg": {
+    "accession": "1915.403",
+    "bytes": 119707,
+    "source": "cma",
+    "source_id": "94843",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.403/1915.403_web.jpg"
+  },
+  "data/sources/images/cma/1915.409.jpg": {
+    "accession": "1915.409",
+    "bytes": 142084,
+    "source": "cma",
+    "source_id": "94847",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.409/1915.409_web.jpg"
+  },
+  "data/sources/images/cma/1915.415.jpg": {
+    "accession": "1915.415",
+    "bytes": 82827,
+    "source": "cma",
+    "source_id": "94853",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.415/1915.415_web.jpg"
+  },
+  "data/sources/images/cma/1915.506.jpg": {
+    "accession": "1915.506",
+    "bytes": 662998,
+    "source": "cma",
+    "source_id": "94951",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.506/1915.506_web.jpg"
+  },
+  "data/sources/images/cma/1915.507.jpg": {
+    "accession": "1915.507",
+    "bytes": 64801,
+    "source": "cma",
+    "source_id": "94952",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.507/1915.507_web.jpg"
+  },
+  "data/sources/images/cma/1915.508.jpg": {
+    "accession": "1915.508",
+    "bytes": 92251,
+    "source": "cma",
+    "source_id": "94953",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.508/1915.508_web.jpg"
+  },
+  "data/sources/images/cma/1915.510.jpg": {
+    "accession": "1915.510",
+    "bytes": 98503,
+    "source": "cma",
+    "source_id": "94955",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.510/1915.510_web.jpg"
+  },
+  "data/sources/images/cma/1915.536.jpg": {
+    "accession": "1915.536",
+    "bytes": 580564,
+    "source": "cma",
+    "source_id": "94983",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.536/1915.536_web.jpg"
+  },
+  "data/sources/images/cma/1915.561.jpg": {
+    "accession": "1915.561",
+    "bytes": 259342,
+    "source": "cma",
+    "source_id": "95011",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.561/1915.561_web.jpg"
+  },
+  "data/sources/images/cma/1915.562.jpg": {
+    "accession": "1915.562",
+    "bytes": 202833,
+    "source": "cma",
+    "source_id": "95012",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.562/1915.562_web.jpg"
+  },
+  "data/sources/images/cma/1915.602.jpg": {
+    "accession": "1915.602",
+    "bytes": 184177,
+    "source": "cma",
+    "source_id": "95065",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.602/1915.602_web.jpg"
+  },
+  "data/sources/images/cma/1915.603.jpg": {
+    "accession": "1915.603",
+    "bytes": 123511,
+    "source": "cma",
+    "source_id": "95066",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.603/1915.603_web.jpg"
+  },
+  "data/sources/images/cma/1915.604.jpg": {
+    "accession": "1915.604",
+    "bytes": 145598,
+    "source": "cma",
+    "source_id": "95067",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.604/1915.604_web.jpg"
+  },
+  "data/sources/images/cma/1915.605.jpg": {
+    "accession": "1915.605",
+    "bytes": 216624,
+    "source": "cma",
+    "source_id": "95068",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.605/1915.605_web.jpg"
+  },
+  "data/sources/images/cma/1915.606.jpg": {
+    "accession": "1915.606",
+    "bytes": 168202,
+    "source": "cma",
+    "source_id": "95069",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.606/1915.606_web.jpg"
+  },
+  "data/sources/images/cma/1915.607.jpg": {
+    "accession": "1915.607",
+    "bytes": 142828,
+    "source": "cma",
+    "source_id": "95070",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.607/1915.607_web.jpg"
+  },
+  "data/sources/images/cma/1915.608.jpg": {
+    "accession": "1915.608",
+    "bytes": 174001,
+    "source": "cma",
+    "source_id": "95071",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.608/1915.608_web.jpg"
+  },
+  "data/sources/images/cma/1915.609.jpg": {
+    "accession": "1915.609",
+    "bytes": 172953,
+    "source": "cma",
+    "source_id": "95072",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.609/1915.609_web.jpg"
+  },
+  "data/sources/images/cma/1915.610.jpg": {
+    "accession": "1915.610",
+    "bytes": 152849,
+    "source": "cma",
+    "source_id": "95074",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.610/1915.610_web.jpg"
+  },
+  "data/sources/images/cma/1915.611.jpg": {
+    "accession": "1915.611",
+    "bytes": 180070,
+    "source": "cma",
+    "source_id": "95075",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.611/1915.611_web.jpg"
+  },
+  "data/sources/images/cma/1915.612.jpg": {
+    "accession": "1915.612",
+    "bytes": 100965,
+    "source": "cma",
+    "source_id": "95076",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.612/1915.612_web.jpg"
+  },
+  "data/sources/images/cma/1915.613.jpg": {
+    "accession": "1915.613",
+    "bytes": 93760,
+    "source": "cma",
+    "source_id": "95077",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.613/1915.613_web.jpg"
+  },
+  "data/sources/images/cma/1915.616.jpg": {
+    "accession": "1915.616",
+    "bytes": 91472,
+    "source": "cma",
+    "source_id": "95079",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.616/1915.616_web.jpg"
+  },
+  "data/sources/images/cma/1915.617.jpg": {
+    "accession": "1915.617",
+    "bytes": 48920,
+    "source": "cma",
+    "source_id": "95080",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.617/1915.617_web.jpg"
+  },
+  "data/sources/images/cma/1915.619.jpg": {
+    "accession": "1915.619",
+    "bytes": 82215,
+    "source": "cma",
+    "source_id": "95084",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.619/1915.619_web.jpg"
+  },
+  "data/sources/images/cma/1915.620.jpg": {
+    "accession": "1915.620",
+    "bytes": 50975,
+    "source": "cma",
+    "source_id": "95086",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.620/1915.620_web.jpg"
+  },
+  "data/sources/images/cma/1915.621.jpg": {
+    "accession": "1915.621",
+    "bytes": 106122,
+    "source": "cma",
+    "source_id": "95087",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.621/1915.621_web.jpg"
+  },
+  "data/sources/images/cma/1915.626.jpg": {
+    "accession": "1915.626",
+    "bytes": 122875,
+    "source": "cma",
+    "source_id": "95091",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.626/1915.626_web.jpg"
+  },
+  "data/sources/images/cma/1915.627.jpg": {
+    "accession": "1915.627",
+    "bytes": 60576,
+    "source": "cma",
+    "source_id": "95092",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.627/1915.627_web.jpg"
+  },
+  "data/sources/images/cma/1915.628.jpg": {
+    "accession": "1915.628",
+    "bytes": 146706,
+    "source": "cma",
+    "source_id": "95093",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.628/1915.628_web.jpg"
+  },
+  "data/sources/images/cma/1915.629.jpg": {
+    "accession": "1915.629",
+    "bytes": 61170,
+    "source": "cma",
+    "source_id": "95094",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.629/1915.629_web.jpg"
+  },
+  "data/sources/images/cma/1915.630.jpg": {
+    "accession": "1915.630",
+    "bytes": 284369,
+    "source": "cma",
+    "source_id": "95096",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.630/1915.630_web.jpg"
+  },
+  "data/sources/images/cma/1915.66.jpg": {
+    "accession": "1915.66",
+    "bytes": 93576,
+    "source": "cma",
+    "source_id": "95145",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.66/1915.66_web.jpg"
+  },
+  "data/sources/images/cma/1915.673.jpg": {
+    "accession": "1915.673",
+    "bytes": 391848,
+    "source": "cma",
+    "source_id": "95160",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.673/1915.673_web.jpg"
+  },
+  "data/sources/images/cma/1915.68.jpg": {
+    "accession": "1915.68",
+    "bytes": 96698,
+    "source": "cma",
+    "source_id": "95170",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.68/1915.68_web.jpg"
+  },
+  "data/sources/images/cma/1915.680.jpg": {
+    "accession": "1915.680",
+    "bytes": 209920,
+    "source": "cma",
+    "source_id": "95171",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.680/1915.680_web.jpg"
+  },
+  "data/sources/images/cma/1915.69.jpg": {
+    "accession": "1915.69",
+    "bytes": 80448,
+    "source": "cma",
+    "source_id": "95173",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.69/1915.69_web.jpg"
+  },
+  "data/sources/images/cma/1915.698.jpg": {
+    "accession": "1915.698",
+    "bytes": 85342,
+    "source": "cma",
+    "source_id": "92943",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.698/1915.698_web.jpg"
+  },
+  "data/sources/images/cma/1915.70.jpg": {
+    "accession": "1915.70",
+    "bytes": 158139,
+    "source": "cma",
+    "source_id": "95177",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.70/1915.70_web.jpg"
+  },
+  "data/sources/images/cma/1915.71.jpg": {
+    "accession": "1915.71",
+    "bytes": 108851,
+    "source": "cma",
+    "source_id": "95178",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.71/1915.71_web.jpg"
+  },
+  "data/sources/images/cma/1915.73.jpg": {
+    "accession": "1915.73",
+    "bytes": 135732,
+    "source": "cma",
+    "source_id": "95180",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.73/1915.73_web.jpg"
+  },
+  "data/sources/images/cma/1915.75.jpg": {
+    "accession": "1915.75",
+    "bytes": 243365,
+    "source": "cma",
+    "source_id": "95182",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.75/1915.75_web.jpg"
+  },
+  "data/sources/images/cma/1915.77.jpg": {
+    "accession": "1915.77",
+    "bytes": 166975,
+    "source": "cma",
+    "source_id": "95184",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.77/1915.77_web.jpg"
+  },
+  "data/sources/images/cma/1915.96.jpg": {
+    "accession": "1915.96",
+    "bytes": 92111,
+    "source": "cma",
+    "source_id": "95204",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.96/1915.96_web.jpg"
+  },
+  "data/sources/images/cma/1915.97.1.jpg": {
+    "accession": "1915.97.1",
+    "bytes": 86139,
+    "source": "cma",
+    "source_id": "95206",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.97.1/1915.97.1_web.jpg"
+  },
+  "data/sources/images/cma/1915.97.2.jpg": {
+    "accession": "1915.97.2",
+    "bytes": 80101,
+    "source": "cma",
+    "source_id": "95207",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.97.2/1915.97.2_web.jpg"
+  },
+  "data/sources/images/cma/1915.97.3.jpg": {
+    "accession": "1915.97.3",
+    "bytes": 85632,
+    "source": "cma",
+    "source_id": "95208",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.97.3/1915.97.3_web.jpg"
+  },
+  "data/sources/images/cma/1915.97.4.jpg": {
+    "accession": "1915.97.4",
+    "bytes": 72604,
+    "source": "cma",
+    "source_id": "95209",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.97.4/1915.97.4_web.jpg"
+  },
+  "data/sources/images/cma/1915.97.jpg": {
+    "accession": "1915.97",
+    "bytes": 323814,
+    "source": "cma",
+    "source_id": "95205",
+    "url": "https://openaccess-cdn.clevelandart.org/1915.97/1915.97_web.jpg"
+  },
+  "data/sources/images/cma/1916.1177.jpg": {
+    "accession": "1916.1177",
+    "bytes": 479148,
+    "source": "cma",
+    "source_id": "95431",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1177/1916.1177_web.jpg"
+  },
+  "data/sources/images/cma/1916.1189.jpg": {
+    "accession": "1916.1189",
+    "bytes": 73771,
+    "source": "cma",
+    "source_id": "95448",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1189/1916.1189_web.jpg"
+  },
+  "data/sources/images/cma/1916.1196.a.jpg": {
+    "accession": "1916.1196.a",
+    "bytes": 144808,
+    "source": "cma",
+    "source_id": "95456",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1196.a/1916.1196.a_web.jpg"
+  },
+  "data/sources/images/cma/1916.1196.b.jpg": {
+    "accession": "1916.1196.b",
+    "bytes": 198531,
+    "source": "cma",
+    "source_id": "95457",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1196.b/1916.1196.b_web.jpg"
+  },
+  "data/sources/images/cma/1916.1196.jpg": {
+    "accession": "1916.1196",
+    "bytes": 140509,
+    "source": "cma",
+    "source_id": "95455",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1196/1916.1196_web.jpg"
+  },
+  "data/sources/images/cma/1916.1197.jpg": {
+    "accession": "1916.1197",
+    "bytes": 85146,
+    "source": "cma",
+    "source_id": "95458",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1197/1916.1197_web.jpg"
+  },
+  "data/sources/images/cma/1916.1198.1.a.jpg": {
+    "accession": "1916.1198.1.a",
+    "bytes": 152798,
+    "source": "cma",
+    "source_id": "95460",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1198.1.a/1916.1198.1.a_web.jpg"
+  },
+  "data/sources/images/cma/1916.1198.1.b.jpg": {
+    "accession": "1916.1198.1.b",
+    "bytes": 176453,
+    "source": "cma",
+    "source_id": "95461",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1198.1.b/1916.1198.1.b_web.jpg"
+  },
+  "data/sources/images/cma/1916.1198.2.jpg": {
+    "accession": "1916.1198.2",
+    "bytes": 133156,
+    "source": "cma",
+    "source_id": "95462",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1198.2/1916.1198.2_web.jpg"
+  },
+  "data/sources/images/cma/1916.1198.3.a.jpg": {
+    "accession": "1916.1198.3.a",
+    "bytes": 133620,
+    "source": "cma",
+    "source_id": "95463",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1198.3.a/1916.1198.3.a_web.jpg"
+  },
+  "data/sources/images/cma/1916.1198.3.b.jpg": {
+    "accession": "1916.1198.3.b",
+    "bytes": 172590,
+    "source": "cma",
+    "source_id": "95464",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1198.3.b/1916.1198.3.b_web.jpg"
+  },
+  "data/sources/images/cma/1916.1198.jpg": {
+    "accession": "1916.1198",
+    "bytes": 139855,
+    "source": "cma",
+    "source_id": "95459",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1198/1916.1198_web.jpg"
+  },
+  "data/sources/images/cma/1916.139.jpg": {
+    "accession": "1916.139",
+    "bytes": 110880,
+    "source": "cma",
+    "source_id": "95685",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.139/1916.139_web.jpg"
+  },
+  "data/sources/images/cma/1916.1398.jpg": {
+    "accession": "1916.1398",
+    "bytes": 85285,
+    "source": "cma",
+    "source_id": "95702",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.1398/1916.1398_web.jpg"
+  },
+  "data/sources/images/cma/1916.15.a.jpg": {
+    "accession": "1916.15.a",
+    "bytes": 97229,
+    "source": "cma",
+    "source_id": "95812",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.15.a/1916.15.a_web.jpg"
+  },
+  "data/sources/images/cma/1916.15.b.jpg": {
+    "accession": "1916.15.b",
+    "bytes": 132927,
+    "source": "cma",
+    "source_id": "95813",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.15.b/1916.15.b_web.jpg"
+  },
+  "data/sources/images/cma/1916.15.jpg": {
+    "accession": "1916.15",
+    "bytes": 114181,
+    "source": "cma",
+    "source_id": "95811",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.15/1916.15_web.jpg"
+  },
+  "data/sources/images/cma/1916.19.jpg": {
+    "accession": "1916.19",
+    "bytes": 95921,
+    "source": "cma",
+    "source_id": "96187",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.19/1916.19_web.jpg"
+  },
+  "data/sources/images/cma/1916.409.jpg": {
+    "accession": "1916.409",
+    "bytes": 60644,
+    "source": "cma",
+    "source_id": "96685",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.409/1916.409_web.jpg"
+  },
+  "data/sources/images/cma/1916.410.jpg": {
+    "accession": "1916.410",
+    "bytes": 97487,
+    "source": "cma",
+    "source_id": "96687",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.410/1916.410_web.jpg"
+  },
+  "data/sources/images/cma/1916.426.jpg": {
+    "accession": "1916.426",
+    "bytes": 62525,
+    "source": "cma",
+    "source_id": "96700",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.426/1916.426_web.jpg"
+  },
+  "data/sources/images/cma/1916.442.jpg": {
+    "accession": "1916.442",
+    "bytes": 115637,
+    "source": "cma",
+    "source_id": "96720",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.442/1916.442_web.jpg"
+  },
+  "data/sources/images/cma/1916.631.1.jpg": {
+    "accession": "1916.631.1",
+    "bytes": 123464,
+    "source": "cma",
+    "source_id": "96984",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.631.1/1916.631.1_web.jpg"
+  },
+  "data/sources/images/cma/1916.631.2.jpg": {
+    "accession": "1916.631.2",
+    "bytes": 113834,
+    "source": "cma",
+    "source_id": "96985",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.631.2/1916.631.2_web.jpg"
+  },
+  "data/sources/images/cma/1916.631.jpg": {
+    "accession": "1916.631",
+    "bytes": 111073,
+    "source": "cma",
+    "source_id": "96983",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.631/1916.631_web.jpg"
+  },
+  "data/sources/images/cma/1916.638.jpg": {
+    "accession": "1916.638",
+    "bytes": 104348,
+    "source": "cma",
+    "source_id": "96992",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.638/1916.638_web.jpg"
+  },
+  "data/sources/images/cma/1916.640.jpg": {
+    "accession": "1916.640",
+    "bytes": 92017,
+    "source": "cma",
+    "source_id": "96995",
+    "url": "https://openaccess-cdn.clevelandart.org/1916.640/1916.640_web.jpg"
+  },
+  "data/sources/images/cma/1917.1021.jpg": {
+    "accession": "1917.1021",
+    "bytes": 90466,
+    "source": "cma",
+    "source_id": "97447",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.1021/1917.1021_web.jpg"
+  },
+  "data/sources/images/cma/1917.13.jpg": {
+    "accession": "1917.13",
+    "bytes": 130530,
+    "source": "cma",
+    "source_id": "97532",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.13/1917.13_web.jpg"
+  },
+  "data/sources/images/cma/1917.2.jpg": {
+    "accession": "1917.2",
+    "bytes": 130887,
+    "source": "cma",
+    "source_id": "97570",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.2/1917.2_web.jpg"
+  },
+  "data/sources/images/cma/1917.25.jpg": {
+    "accession": "1917.25",
+    "bytes": 169688,
+    "source": "cma",
+    "source_id": "97604",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.25/1917.25_web.jpg"
+  },
+  "data/sources/images/cma/1917.257.jpg": {
+    "accession": "1917.257",
+    "bytes": 95914,
+    "source": "cma",
+    "source_id": "97610",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.257/1917.257_web.jpg"
+  },
+  "data/sources/images/cma/1917.260.jpg": {
+    "accession": "1917.260",
+    "bytes": 83012,
+    "source": "cma",
+    "source_id": "97614",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.260/1917.260_web.jpg"
+  },
+  "data/sources/images/cma/1917.293.jpg": {
+    "accession": "1917.293",
+    "bytes": 210601,
+    "source": "cma",
+    "source_id": "97651",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.293/1917.293_web.jpg"
+  },
+  "data/sources/images/cma/1917.298.jpg": {
+    "accession": "1917.298",
+    "bytes": 562979,
+    "source": "cma",
+    "source_id": "97655",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.298/1917.298_web.jpg"
+  },
+  "data/sources/images/cma/1917.299.jpg": {
+    "accession": "1917.299",
+    "bytes": 90726,
+    "source": "cma",
+    "source_id": "97656",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.299/1917.299_web.jpg"
+  },
+  "data/sources/images/cma/1917.301.jpg": {
+    "accession": "1917.301",
+    "bytes": 91303,
+    "source": "cma",
+    "source_id": "97660",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.301/1917.301_web.jpg"
+  },
+  "data/sources/images/cma/1917.303.jpg": {
+    "accession": "1917.303",
+    "bytes": 87299,
+    "source": "cma",
+    "source_id": "97661",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.303/1917.303_web.jpg"
+  },
+  "data/sources/images/cma/1917.305.jpg": {
+    "accession": "1917.305",
+    "bytes": 170764,
+    "source": "cma",
+    "source_id": "97663",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.305/1917.305_web.jpg"
+  },
+  "data/sources/images/cma/1917.309.jpg": {
+    "accession": "1917.309",
+    "bytes": 65217,
+    "source": "cma",
+    "source_id": "97667",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.309/1917.309_web.jpg"
+  },
+  "data/sources/images/cma/1917.313.jpg": {
+    "accession": "1917.313",
+    "bytes": 128660,
+    "source": "cma",
+    "source_id": "97671",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.313/1917.313_web.jpg"
+  },
+  "data/sources/images/cma/1917.315.jpg": {
+    "accession": "1917.315",
+    "bytes": 402001,
+    "source": "cma",
+    "source_id": "97672",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.315/1917.315_web.jpg"
+  },
+  "data/sources/images/cma/1917.319.jpg": {
+    "accession": "1917.319",
+    "bytes": 91286,
+    "source": "cma",
+    "source_id": "97675",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.319/1917.319_web.jpg"
+  },
+  "data/sources/images/cma/1917.320.jpg": {
+    "accession": "1917.320",
+    "bytes": 417243,
+    "source": "cma",
+    "source_id": "97677",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.320/1917.320_web.jpg"
+  },
+  "data/sources/images/cma/1917.378.jpg": {
+    "accession": "1917.378",
+    "bytes": 90856,
+    "source": "cma",
+    "source_id": "97744",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.378/1917.378_web.jpg"
+  },
+  "data/sources/images/cma/1917.382.jpg": {
+    "accession": "1917.382",
+    "bytes": 55883,
+    "source": "cma",
+    "source_id": "97749",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.382/1917.382_web.jpg"
+  },
+  "data/sources/images/cma/1917.383.jpg": {
+    "accession": "1917.383",
+    "bytes": 61741,
+    "source": "cma",
+    "source_id": "97750",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.383/1917.383_web.jpg"
+  },
+  "data/sources/images/cma/1917.47.jpg": {
+    "accession": "1917.47",
+    "bytes": 89804,
+    "source": "cma",
+    "source_id": "97861",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.47/1917.47_web.jpg"
+  },
+  "data/sources/images/cma/1917.50.jpg": {
+    "accession": "1917.50",
+    "bytes": 221492,
+    "source": "cma",
+    "source_id": "97902",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.50/1917.50_web.jpg"
+  },
+  "data/sources/images/cma/1917.52.jpg": {
+    "accession": "1917.52",
+    "bytes": 97379,
+    "source": "cma",
+    "source_id": "97924",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.52/1917.52_web.jpg"
+  },
+  "data/sources/images/cma/1917.54.jpg": {
+    "accession": "1917.54",
+    "bytes": 144250,
+    "source": "cma",
+    "source_id": "97944",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.54/1917.54_web.jpg"
+  },
+  "data/sources/images/cma/1917.55.jpg": {
+    "accession": "1917.55",
+    "bytes": 128798,
+    "source": "cma",
+    "source_id": "97950",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.55/1917.55_web.jpg"
+  },
+  "data/sources/images/cma/1917.56.jpg": {
+    "accession": "1917.56",
+    "bytes": 57069,
+    "source": "cma",
+    "source_id": "97951",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.56/1917.56_web.jpg"
+  },
+  "data/sources/images/cma/1917.59.jpg": {
+    "accession": "1917.59",
+    "bytes": 86443,
+    "source": "cma",
+    "source_id": "97954",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.59/1917.59_web.jpg"
+  },
+  "data/sources/images/cma/1917.60.jpg": {
+    "accession": "1917.60",
+    "bytes": 105853,
+    "source": "cma",
+    "source_id": "97956",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.60/1917.60_web.jpg"
+  },
+  "data/sources/images/cma/1917.7.jpg": {
+    "accession": "1917.7",
+    "bytes": 212875,
+    "source": "cma",
+    "source_id": "98075",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.7/1917.7_web.jpg"
+  },
+  "data/sources/images/cma/1917.8.jpg": {
+    "accession": "1917.8",
+    "bytes": 70264,
+    "source": "cma",
+    "source_id": "98165",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.8/1917.8_web.jpg"
+  },
+  "data/sources/images/cma/1917.885.jpg": {
+    "accession": "1917.885",
+    "bytes": 64597,
+    "source": "cma",
+    "source_id": "98201",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.885/1917.885_web.jpg"
+  },
+  "data/sources/images/cma/1917.94.jpg": {
+    "accession": "1917.94",
+    "bytes": 123962,
+    "source": "cma",
+    "source_id": "98261",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.94/1917.94_web.jpg"
+  },
+  "data/sources/images/cma/1917.95.1.jpg": {
+    "accession": "1917.95.1",
+    "bytes": 67832,
+    "source": "cma",
+    "source_id": "98273",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.95.1/1917.95.1_web.jpg"
+  },
+  "data/sources/images/cma/1917.95.2.jpg": {
+    "accession": "1917.95.2",
+    "bytes": 66288,
+    "source": "cma",
+    "source_id": "98274",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.95.2/1917.95.2_web.jpg"
+  },
+  "data/sources/images/cma/1917.95.jpg": {
+    "accession": "1917.95",
+    "bytes": 119031,
+    "source": "cma",
+    "source_id": "98272",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.95/1917.95_web.jpg"
+  },
+  "data/sources/images/cma/1917.953.jpg": {
+    "accession": "1917.953",
+    "bytes": 149524,
+    "source": "cma",
+    "source_id": "98278",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.953/1917.953_web.jpg"
+  },
+  "data/sources/images/cma/1917.974.jpg": {
+    "accession": "1917.974",
+    "bytes": 155373,
+    "source": "cma",
+    "source_id": "98298",
+    "url": "https://openaccess-cdn.clevelandart.org/1917.974/1917.974_web.jpg"
+  },
+  "data/sources/images/cma/1918.133.jpg": {
+    "accession": "1918.133",
+    "bytes": 87130,
+    "source": "cma",
+    "source_id": "98396",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.133/1918.133_web.jpg"
+  },
+  "data/sources/images/cma/1918.344.jpg": {
+    "accession": "1918.344",
+    "bytes": 127306,
+    "source": "cma",
+    "source_id": "98644",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.344/1918.344_web.jpg"
+  },
+  "data/sources/images/cma/1918.345.jpg": {
+    "accession": "1918.345",
+    "bytes": 131896,
+    "source": "cma",
+    "source_id": "98645",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.345/1918.345_web.jpg"
+  },
+  "data/sources/images/cma/1918.348.jpg": {
+    "accession": "1918.348",
+    "bytes": 108021,
+    "source": "cma",
+    "source_id": "98648",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.348/1918.348_web.jpg"
+  },
+  "data/sources/images/cma/1918.351.jpg": {
+    "accession": "1918.351",
+    "bytes": 123533,
+    "source": "cma",
+    "source_id": "98652",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.351/1918.351_web.jpg"
+  },
+  "data/sources/images/cma/1918.369.jpg": {
+    "accession": "1918.369",
+    "bytes": 145575,
+    "source": "cma",
+    "source_id": "98673",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.369/1918.369_web.jpg"
+  },
+  "data/sources/images/cma/1918.371.jpg": {
+    "accession": "1918.371",
+    "bytes": 109485,
+    "source": "cma",
+    "source_id": "98676",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.371/1918.371_web.jpg"
+  },
+  "data/sources/images/cma/1918.382.jpg": {
+    "accession": "1918.382",
+    "bytes": 174829,
+    "source": "cma",
+    "source_id": "98690",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.382/1918.382_web.jpg"
+  },
+  "data/sources/images/cma/1918.392.jpg": {
+    "accession": "1918.392",
+    "bytes": 132925,
+    "source": "cma",
+    "source_id": "98701",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.392/1918.392_web.jpg"
+  },
+  "data/sources/images/cma/1918.469.jpg": {
+    "accession": "1918.469",
+    "bytes": 65049,
+    "source": "cma",
+    "source_id": "98793",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.469/1918.469_web.jpg"
+  },
+  "data/sources/images/cma/1918.470.jpg": {
+    "accession": "1918.470",
+    "bytes": 378338,
+    "source": "cma",
+    "source_id": "98796",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.470/1918.470_web.jpg"
+  },
+  "data/sources/images/cma/1918.544.jpg": {
+    "accession": "1918.544",
+    "bytes": 209413,
+    "source": "cma",
+    "source_id": "98870",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.544/1918.544_web.jpg"
+  },
+  "data/sources/images/cma/1918.547.jpg": {
+    "accession": "1918.547",
+    "bytes": 168531,
+    "source": "cma",
+    "source_id": "98872",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.547/1918.547_web.jpg"
+  },
+  "data/sources/images/cma/1918.560.1.a.jpg": {
+    "accession": "1918.560.1.a",
+    "bytes": 228051,
+    "source": "cma",
+    "source_id": "98890",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.560.1.a/1918.560.1.a_web.jpg"
+  },
+  "data/sources/images/cma/1918.560.1.b.jpg": {
+    "accession": "1918.560.1.b",
+    "bytes": 389660,
+    "source": "cma",
+    "source_id": "98891",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.560.1.b/1918.560.1.b_web.jpg"
+  },
+  "data/sources/images/cma/1918.560.1.c.jpg": {
+    "accession": "1918.560.1.c",
+    "bytes": 247372,
+    "source": "cma",
+    "source_id": "98892",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.560.1.c/1918.560.1.c_web.jpg"
+  },
+  "data/sources/images/cma/1918.560.1.d.jpg": {
+    "accession": "1918.560.1.d",
+    "bytes": 361248,
+    "source": "cma",
+    "source_id": "98893",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.560.1.d/1918.560.1.d_web.jpg"
+  },
+  "data/sources/images/cma/1918.560.1.e.jpg": {
+    "accession": "1918.560.1.e",
+    "bytes": 366304,
+    "source": "cma",
+    "source_id": "98894",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.560.1.e/1918.560.1.e_web.jpg"
+  },
+  "data/sources/images/cma/1918.560.1.f.jpg": {
+    "accession": "1918.560.1.f",
+    "bytes": 271322,
+    "source": "cma",
+    "source_id": "98895",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.560.1.f/1918.560.1.f_web.jpg"
+  },
+  "data/sources/images/cma/1918.560.1.g.jpg": {
+    "accession": "1918.560.1.g",
+    "bytes": 325997,
+    "source": "cma",
+    "source_id": "98896",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.560.1.g/1918.560.1.g_web.jpg"
+  },
+  "data/sources/images/cma/1918.560.1.h.jpg": {
+    "accession": "1918.560.1.h",
+    "bytes": 338017,
+    "source": "cma",
+    "source_id": "98897",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.560.1.h/1918.560.1.h_web.jpg"
+  },
+  "data/sources/images/cma/1918.560.1.i.jpg": {
+    "accession": "1918.560.1.i",
+    "bytes": 355695,
+    "source": "cma",
+    "source_id": "98898",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.560.1.i/1918.560.1.i_web.jpg"
+  },
+  "data/sources/images/cma/1918.560.jpg": {
+    "accession": "1918.560",
+    "bytes": 359534,
+    "source": "cma",
+    "source_id": "98889",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.560/1918.560_web.jpg"
+  },
+  "data/sources/images/cma/1918.788.jpg": {
+    "accession": "1918.788",
+    "bytes": 92943,
+    "source": "cma",
+    "source_id": "99214",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.788/1918.788_web.jpg"
+  },
+  "data/sources/images/cma/1918.793.jpg": {
+    "accession": "1918.793",
+    "bytes": 117842,
+    "source": "cma",
+    "source_id": "99223",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.793/1918.793_web.jpg"
+  },
+  "data/sources/images/cma/1918.933.jpg": {
+    "accession": "1918.933",
+    "bytes": 396028,
+    "source": "cma",
+    "source_id": "99395",
+    "url": "https://openaccess-cdn.clevelandart.org/1918.933/1918.933_web.jpg"
+  },
+  "data/sources/images/cma/1919.1021.jpg": {
+    "accession": "1919.1021",
+    "bytes": 425374,
+    "source": "cma",
+    "source_id": "99451",
+    "url": "https://openaccess-cdn.clevelandart.org/1919.1021/1919.1021_web.jpg"
+  },
+  "data/sources/images/cma/1919.34.jpg": {
+    "accession": "1919.34",
+    "bytes": 232914,
+    "source": "cma",
+    "source_id": "99772",
+    "url": "https://openaccess-cdn.clevelandart.org/1919.34/1919.34_web.jpg"
+  },
+  "data/sources/images/cma/1919.75.jpg": {
+    "accession": "1919.75",
+    "bytes": 245125,
+    "source": "cma",
+    "source_id": "100253",
+    "url": "https://openaccess-cdn.clevelandart.org/1919.75/1919.75_web.jpg"
+  },
+  "data/sources/images/cma/1919.76.jpg": {
+    "accession": "1919.76",
+    "bytes": 279947,
+    "source": "cma",
+    "source_id": "100264",
+    "url": "https://openaccess-cdn.clevelandart.org/1919.76/1919.76_web.jpg"
+  },
+  "data/sources/images/cma/1919.77.jpg": {
+    "accession": "1919.77",
+    "bytes": 214820,
+    "source": "cma",
+    "source_id": "100275",
+    "url": "https://openaccess-cdn.clevelandart.org/1919.77/1919.77_web.jpg"
+  },
+  "data/sources/images/cma/1919.974.jpg": {
+    "accession": "1919.974",
+    "bytes": 162862,
+    "source": "cma",
+    "source_id": "100559",
+    "url": "https://openaccess-cdn.clevelandart.org/1919.974/1919.974_web.jpg"
+  },
+  "data/sources/images/cma/1920.393.jpg": {
+    "accession": "1920.393",
+    "bytes": 193172,
+    "source": "cma",
+    "source_id": "101665",
+    "url": "https://openaccess-cdn.clevelandart.org/1920.393/1920.393_web.jpg"
+  },
+  "data/sources/images/cma/1920.395.jpg": {
+    "accession": "1920.395",
+    "bytes": 85005,
+    "source": "cma",
+    "source_id": "101667",
+    "url": "https://openaccess-cdn.clevelandart.org/1920.395/1920.395_web.jpg"
+  },
+  "data/sources/images/cma/1920.397.jpg": {
+    "accession": "1920.397",
+    "bytes": 110602,
+    "source": "cma",
+    "source_id": "101669",
+    "url": "https://openaccess-cdn.clevelandart.org/1920.397/1920.397_web.jpg"
+  },
+  "data/sources/images/cma/1920.400.jpg": {
+    "accession": "1920.400",
+    "bytes": 101985,
+    "source": "cma",
+    "source_id": "101674",
+    "url": "https://openaccess-cdn.clevelandart.org/1920.400/1920.400_web.jpg"
+  },
+  "data/sources/images/cma/1920.401.jpg": {
+    "accession": "1920.401",
+    "bytes": 125856,
+    "source": "cma",
+    "source_id": "101675",
+    "url": "https://openaccess-cdn.clevelandart.org/1920.401/1920.401_web.jpg"
+  },
+  "data/sources/images/cma/2015.476.jpg": {
+    "accession": "2015.476",
+    "bytes": 141777,
+    "source": "cma",
+    "source_id": "79584",
+    "url": "https://openaccess-cdn.clevelandart.org/2015.476/2015.476_web.jpg"
+  },
+  "data/sources/images/cma/2020.174.jpg": {
+    "accession": "2020.174",
+    "bytes": 181309,
+    "source": "cma",
+    "source_id": "84460",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.174/2020.174_web.jpg"
+  },
+  "data/sources/images/cma/2020.175.jpg": {
+    "accession": "2020.175",
+    "bytes": 149899,
+    "source": "cma",
+    "source_id": "83457",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.175/2020.175_web.jpg"
+  },
+  "data/sources/images/cma/2020.176.jpg": {
+    "accession": "2020.176",
+    "bytes": 122504,
+    "source": "cma",
+    "source_id": "83458",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.176/2020.176_web.jpg"
+  },
+  "data/sources/images/cma/2020.177.jpg": {
+    "accession": "2020.177",
+    "bytes": 150276,
+    "source": "cma",
+    "source_id": "83459",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.177/2020.177_web.jpg"
+  },
+  "data/sources/images/cma/2020.178.jpg": {
+    "accession": "2020.178",
+    "bytes": 177224,
+    "source": "cma",
+    "source_id": "83460",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.178/2020.178_web.jpg"
+  },
+  "data/sources/images/cma/2020.179.jpg": {
+    "accession": "2020.179",
+    "bytes": 220931,
+    "source": "cma",
+    "source_id": "75575",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.179/2020.179_web.jpg"
+  },
+  "data/sources/images/cma/2020.180.jpg": {
+    "accession": "2020.180",
+    "bytes": 120663,
+    "source": "cma",
+    "source_id": "75573",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.180/2020.180_web.jpg"
+  },
+  "data/sources/images/cma/2020.181.jpg": {
+    "accession": "2020.181",
+    "bytes": 133640,
+    "source": "cma",
+    "source_id": "76526",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.181/2020.181_web.jpg"
+  },
+  "data/sources/images/cma/2020.182.jpg": {
+    "accession": "2020.182",
+    "bytes": 121509,
+    "source": "cma",
+    "source_id": "76527",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.182/2020.182_web.jpg"
+  },
+  "data/sources/images/cma/2020.183.jpg": {
+    "accession": "2020.183",
+    "bytes": 119107,
+    "source": "cma",
+    "source_id": "76522",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.183/2020.183_web.jpg"
+  },
+  "data/sources/images/cma/2020.184.jpg": {
+    "accession": "2020.184",
+    "bytes": 158999,
+    "source": "cma",
+    "source_id": "76523",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.184/2020.184_web.jpg"
+  },
+  "data/sources/images/cma/2020.185.jpg": {
+    "accession": "2020.185",
+    "bytes": 140128,
+    "source": "cma",
+    "source_id": "76524",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.185/2020.185_web.jpg"
+  },
+  "data/sources/images/cma/2020.186.jpg": {
+    "accession": "2020.186",
+    "bytes": 114628,
+    "source": "cma",
+    "source_id": "76525",
+    "url": "https://openaccess-cdn.clevelandart.org/2020.186/2020.186_web.jpg"
+  },
+  "data/sources/images/met/35967.jpg": {
+    "accession": null,
+    "bytes": 234917,
+    "source": "met",
+    "source_id": "35967",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP11577.jpg"
+  },
+  "data/sources/images/met/35968.jpg": {
+    "accession": null,
+    "bytes": 119623,
+    "source": "met",
+    "source_id": "35968",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP354272.jpg"
+  },
+  "data/sources/images/met/35970.jpg": {
+    "accession": null,
+    "bytes": 160230,
+    "source": "met",
+    "source_id": "35970",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP-16368-003.jpg"
+  },
+  "data/sources/images/met/35971.jpg": {
+    "accession": null,
+    "bytes": 84739,
+    "source": "met",
+    "source_id": "35971",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/13_100_25_O.jpg"
+  },
+  "data/sources/images/met/35972.jpg": {
+    "accession": null,
+    "bytes": 44372,
+    "source": "met",
+    "source_id": "35972",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153880.jpg"
+  },
+  "data/sources/images/met/35973.jpg": {
+    "accession": null,
+    "bytes": 40113,
+    "source": "met",
+    "source_id": "35973",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153881.jpg"
+  },
+  "data/sources/images/met/35974.jpg": {
+    "accession": null,
+    "bytes": 47948,
+    "source": "met",
+    "source_id": "35974",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153882.jpg"
+  },
+  "data/sources/images/met/35975.jpg": {
+    "accession": null,
+    "bytes": 44148,
+    "source": "met",
+    "source_id": "35975",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153883.jpg"
+  },
+  "data/sources/images/met/35976.jpg": {
+    "accession": null,
+    "bytes": 51648,
+    "source": "met",
+    "source_id": "35976",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153884.jpg"
+  },
+  "data/sources/images/met/35977.jpg": {
+    "accession": null,
+    "bytes": 39352,
+    "source": "met",
+    "source_id": "35977",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153840.jpg"
+  },
+  "data/sources/images/met/35978.jpg": {
+    "accession": null,
+    "bytes": 56414,
+    "source": "met",
+    "source_id": "35978",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153863.jpg"
+  },
+  "data/sources/images/met/35979.jpg": {
+    "accession": null,
+    "bytes": 152528,
+    "source": "met",
+    "source_id": "35979",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153564.jpg"
+  },
+  "data/sources/images/met/35980.jpg": {
+    "accession": null,
+    "bytes": 58331,
+    "source": "met",
+    "source_id": "35980",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153864.jpg"
+  },
+  "data/sources/images/met/35981.jpg": {
+    "accession": null,
+    "bytes": 41872,
+    "source": "met",
+    "source_id": "35981",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153865.jpg"
+  },
+  "data/sources/images/met/35982.jpg": {
+    "accession": null,
+    "bytes": 65249,
+    "source": "met",
+    "source_id": "35982",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153821.jpg"
+  },
+  "data/sources/images/met/35983.jpg": {
+    "accession": null,
+    "bytes": 48441,
+    "source": "met",
+    "source_id": "35983",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153822.jpg"
+  },
+  "data/sources/images/met/35984.jpg": {
+    "accession": null,
+    "bytes": 46995,
+    "source": "met",
+    "source_id": "35984",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153841.jpg"
+  },
+  "data/sources/images/met/35985.jpg": {
+    "accession": null,
+    "bytes": 157440,
+    "source": "met",
+    "source_id": "35985",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153565.jpg"
+  },
+  "data/sources/images/met/35986.jpg": {
+    "accession": null,
+    "bytes": 46268,
+    "source": "met",
+    "source_id": "35986",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153842.jpg"
+  },
+  "data/sources/images/met/35987.jpg": {
+    "accession": null,
+    "bytes": 50769,
+    "source": "met",
+    "source_id": "35987",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153866.jpg"
+  },
+  "data/sources/images/met/35988.jpg": {
+    "accession": null,
+    "bytes": 46178,
+    "source": "met",
+    "source_id": "35988",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153843.jpg"
+  },
+  "data/sources/images/met/35989.jpg": {
+    "accession": null,
+    "bytes": 49585,
+    "source": "met",
+    "source_id": "35989",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153844.jpg"
+  },
+  "data/sources/images/met/35990.jpg": {
+    "accession": null,
+    "bytes": 50684,
+    "source": "met",
+    "source_id": "35990",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153846.jpg"
+  },
+  "data/sources/images/met/35991.jpg": {
+    "accession": null,
+    "bytes": 47274,
+    "source": "met",
+    "source_id": "35991",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153867.jpg"
+  },
+  "data/sources/images/met/35992.jpg": {
+    "accession": null,
+    "bytes": 43455,
+    "source": "met",
+    "source_id": "35992",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153847.jpg"
+  },
+  "data/sources/images/met/35993.jpg": {
+    "accession": null,
+    "bytes": 66739,
+    "source": "met",
+    "source_id": "35993",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153868.jpg"
+  },
+  "data/sources/images/met/35994.jpg": {
+    "accession": null,
+    "bytes": 45718,
+    "source": "met",
+    "source_id": "35994",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153848.jpg"
+  },
+  "data/sources/images/met/35995.jpg": {
+    "accession": null,
+    "bytes": 55144,
+    "source": "met",
+    "source_id": "35995",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153849.jpg"
+  },
+  "data/sources/images/met/35996.jpg": {
+    "accession": null,
+    "bytes": 47195,
+    "source": "met",
+    "source_id": "35996",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153823.jpg"
+  },
+  "data/sources/images/met/35997.jpg": {
+    "accession": null,
+    "bytes": 55344,
+    "source": "met",
+    "source_id": "35997",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153869.jpg"
+  },
+  "data/sources/images/met/35998.jpg": {
+    "accession": null,
+    "bytes": 55017,
+    "source": "met",
+    "source_id": "35998",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153870.jpg"
+  },
+  "data/sources/images/met/35999.jpg": {
+    "accession": null,
+    "bytes": 59317,
+    "source": "met",
+    "source_id": "35999",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153850.jpg"
+  },
+  "data/sources/images/met/36000.jpg": {
+    "accession": null,
+    "bytes": 50321,
+    "source": "met",
+    "source_id": "36000",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153851.jpg"
+  },
+  "data/sources/images/met/36001.jpg": {
+    "accession": null,
+    "bytes": 43192,
+    "source": "met",
+    "source_id": "36001",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153824.jpg"
+  },
+  "data/sources/images/met/36002.jpg": {
+    "accession": null,
+    "bytes": 45736,
+    "source": "met",
+    "source_id": "36002",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153885.jpg"
+  },
+  "data/sources/images/met/36003.jpg": {
+    "accession": null,
+    "bytes": 57221,
+    "source": "met",
+    "source_id": "36003",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153852.jpg"
+  },
+  "data/sources/images/met/36004.jpg": {
+    "accession": null,
+    "bytes": 65341,
+    "source": "met",
+    "source_id": "36004",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153526.jpg"
+  },
+  "data/sources/images/met/36005.jpg": {
+    "accession": null,
+    "bytes": 174582,
+    "source": "met",
+    "source_id": "36005",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP154073.jpg"
+  },
+  "data/sources/images/met/36006.jpg": {
+    "accession": null,
+    "bytes": 72363,
+    "source": "met",
+    "source_id": "36006",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153523.jpg"
+  },
+  "data/sources/images/met/36007.jpg": {
+    "accession": null,
+    "bytes": 91209,
+    "source": "met",
+    "source_id": "36007",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153496.jpg"
+  },
+  "data/sources/images/met/36008.jpg": {
+    "accession": null,
+    "bytes": 356470,
+    "source": "met",
+    "source_id": "36008",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153527.jpg"
+  },
+  "data/sources/images/met/36009.jpg": {
+    "accession": null,
+    "bytes": 88897,
+    "source": "met",
+    "source_id": "36009",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153506.jpg"
+  },
+  "data/sources/images/met/36010.jpg": {
+    "accession": null,
+    "bytes": 88924,
+    "source": "met",
+    "source_id": "36010",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/13_200.jpg"
+  },
+  "data/sources/images/met/36011.jpg": {
+    "accession": null,
+    "bytes": 23474,
+    "source": "met",
+    "source_id": "36011",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP-44796-001.jpg"
+  },
+  "data/sources/images/met/36012.jpg": {
+    "accession": null,
+    "bytes": 51159,
+    "source": "met",
+    "source_id": "36012",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/13_220_8_20108.jpg"
+  },
+  "data/sources/images/met/36013.jpg": {
+    "accession": null,
+    "bytes": 66815,
+    "source": "met",
+    "source_id": "36013",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP-16966-002.jpg"
+  },
+  "data/sources/images/met/36014.jpg": {
+    "accession": null,
+    "bytes": 51748,
+    "source": "met",
+    "source_id": "36014",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/13_220_30_257361.jpg"
+  },
+  "data/sources/images/met/36015.jpg": {
+    "accession": null,
+    "bytes": 53016,
+    "source": "met",
+    "source_id": "36015",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP-33899-002.jpg"
+  },
+  "data/sources/images/met/36016.jpg": {
+    "accession": null,
+    "bytes": 15503,
+    "source": "met",
+    "source_id": "36016",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/13_220_35_O.jpg"
+  },
+  "data/sources/images/met/36017.jpg": {
+    "accession": null,
+    "bytes": 91149,
+    "source": "met",
+    "source_id": "36017",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/13_220_36_O1_sf.JPG"
+  },
+  "data/sources/images/met/36018.jpg": {
+    "accession": null,
+    "bytes": 38359,
+    "source": "met",
+    "source_id": "36018",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP165864_CRD.jpg"
+  },
+  "data/sources/images/met/36019.jpg": {
+    "accession": null,
+    "bytes": 36157,
+    "source": "met",
+    "source_id": "36019",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP166600_CRD.jpg"
+  },
+  "data/sources/images/met/36020.jpg": {
+    "accession": null,
+    "bytes": 76522,
+    "source": "met",
+    "source_id": "36020",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153522.jpg"
+  },
+  "data/sources/images/met/36021.jpg": {
+    "accession": null,
+    "bytes": 33272,
+    "source": "met",
+    "source_id": "36021",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/13_220_104.jpg"
+  },
+  "data/sources/images/met/36022.jpg": {
+    "accession": null,
+    "bytes": 53934,
+    "source": "met",
+    "source_id": "36022",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/146252.jpg"
+  },
+  "data/sources/images/met/36023.jpg": {
+    "accession": null,
+    "bytes": 130163,
+    "source": "met",
+    "source_id": "36023",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/13_220_115.jpg"
+  },
+  "data/sources/images/met/36024.jpg": {
+    "accession": null,
+    "bytes": 53508,
+    "source": "met",
+    "source_id": "36024",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP-16369-002.jpg"
+  },
+  "data/sources/images/met/36025.jpg": {
+    "accession": null,
+    "bytes": 56338,
+    "source": "met",
+    "source_id": "36025",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/13_220_117_O.jpg"
+  },
+  "data/sources/images/met/36026.jpg": {
+    "accession": null,
+    "bytes": 68579,
+    "source": "met",
+    "source_id": "36026",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/13_220_118_O.jpg"
+  },
+  "data/sources/images/met/36027.jpg": {
+    "accession": null,
+    "bytes": 160591,
+    "source": "met",
+    "source_id": "36027",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/13_220_123_O1_sf.jpg"
+  },
+  "data/sources/images/met/36028.jpg": {
+    "accession": null,
+    "bytes": 88782,
+    "source": "met",
+    "source_id": "36028",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/14_76_4-003.jpg"
+  },
+  "data/sources/images/met/36030.jpg": {
+    "accession": null,
+    "bytes": 41783,
+    "source": "met",
+    "source_id": "36030",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/16_151_d1.jpg"
+  },
+  "data/sources/images/met/36031.jpg": {
+    "accession": null,
+    "bytes": 66150,
+    "source": "met",
+    "source_id": "36031",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DT11853.jpg"
+  },
+  "data/sources/images/met/36032.jpg": {
+    "accession": null,
+    "bytes": 20890,
+    "source": "met",
+    "source_id": "36032",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP166564_CRD.jpg"
+  },
+  "data/sources/images/met/36033.jpg": {
+    "accession": null,
+    "bytes": 25498,
+    "source": "met",
+    "source_id": "36033",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP166575_CRD.jpg"
+  },
+  "data/sources/images/met/36035.jpg": {
+    "accession": null,
+    "bytes": 42417,
+    "source": "met",
+    "source_id": "36035",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP201218_CRD.jpg"
+  },
+  "data/sources/images/met/36036.jpg": {
+    "accession": null,
+    "bytes": 78039,
+    "source": "met",
+    "source_id": "36036",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/LC-22_92_cons-002.jpg"
+  },
+  "data/sources/images/met/36037.jpg": {
+    "accession": null,
+    "bytes": 80768,
+    "source": "met",
+    "source_id": "36037",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153498.jpg"
+  },
+  "data/sources/images/met/36038.jpg": {
+    "accession": null,
+    "bytes": 57516,
+    "source": "met",
+    "source_id": "36038",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP170106.jpg"
+  },
+  "data/sources/images/met/36039.jpg": {
+    "accession": null,
+    "bytes": 243432,
+    "source": "met",
+    "source_id": "36039",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153528.jpg"
+  },
+  "data/sources/images/met/36041.jpg": {
+    "accession": null,
+    "bytes": 36729,
+    "source": "met",
+    "source_id": "36041",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/29_100_476.JPG"
+  },
+  "data/sources/images/met/36042.jpg": {
+    "accession": null,
+    "bytes": 117341,
+    "source": "met",
+    "source_id": "36042",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP200858_CRD.jpg"
+  },
+  "data/sources/images/met/36044.jpg": {
+    "accession": null,
+    "bytes": 20695,
+    "source": "met",
+    "source_id": "36044",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/257575.jpg"
+  },
+  "data/sources/images/met/36046.jpg": {
+    "accession": null,
+    "bytes": 142159,
+    "source": "met",
+    "source_id": "36046",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP170154.jpg"
+  },
+  "data/sources/images/met/36047.jpg": {
+    "accession": null,
+    "bytes": 167577,
+    "source": "met",
+    "source_id": "36047",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP161848_CRD.jpg"
+  },
+  "data/sources/images/met/36048.jpg": {
+    "accession": null,
+    "bytes": 40442,
+    "source": "met",
+    "source_id": "36048",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP120039_CRD.jpg"
+  },
+  "data/sources/images/met/36049.jpg": {
+    "accession": null,
+    "bytes": 72790,
+    "source": "met",
+    "source_id": "36049",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP201351_CRD.jpg"
+  },
+  "data/sources/images/met/36050.jpg": {
+    "accession": null,
+    "bytes": 245474,
+    "source": "met",
+    "source_id": "36050",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP-44709-002.jpg"
+  },
+  "data/sources/images/met/36051.jpg": {
+    "accession": null,
+    "bytes": 231092,
+    "source": "met",
+    "source_id": "36051",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP-44711-002.jpg"
+  },
+  "data/sources/images/met/36052.jpg": {
+    "accession": null,
+    "bytes": 244995,
+    "source": "met",
+    "source_id": "36052",
+    "url": "https://images.metmuseum.org/CRDImages/as/web-large/DP153499.jpg"
+  },
+  "data/sources/images/smithsonian_fsg/F1893.32.jpg": {
+    "accession": "F1893.32",
+    "bytes": 169066,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390182369-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-6389_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1905.84.jpg": {
+    "accession": "F1905.84",
+    "bytes": 185070,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390185007-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7347_10_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1905.89.jpg": {
+    "accession": "F1905.89",
+    "bytes": 140619,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390185011-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5836_02_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1906.242a-b.jpg": {
+    "accession": "F1906.242a-b",
+    "bytes": 247841,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390185379-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7361_38_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1906.244.jpg": {
+    "accession": "F1906.244",
+    "bytes": 163321,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390185381-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5836_03_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1906.35.jpg": {
+    "accession": "F1906.35",
+    "bytes": 200512,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390185233-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7347_22_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1907.52.2.jpg": {
+    "accession": "F1907.52.2",
+    "bytes": 536858,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390185490-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5113_09_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.172.jpg": {
+    "accession": "F1909.172",
+    "bytes": 315236,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186496-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1909.172_001-000001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.195.jpg": {
+    "accession": "F1909.195",
+    "bytes": 212535,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186515-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8032_03_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.202.jpg": {
+    "accession": "F1909.202",
+    "bytes": 126699,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186521-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7479_05_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.209.jpg": {
+    "accession": "F1909.209",
+    "bytes": 195769,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186528-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7479_31_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.216.jpg": {
+    "accession": "F1909.216",
+    "bytes": 124438,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186534-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7480_06_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.224.jpg": {
+    "accession": "F1909.224",
+    "bytes": 255512,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186542-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7308_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.236.jpg": {
+    "accession": "F1909.236",
+    "bytes": 250844,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186552-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7460_25_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.237.jpg": {
+    "accession": "F1909.237",
+    "bytes": 266904,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186553-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7460_35_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.243d.jpg": {
+    "accession": "F1909.243d",
+    "bytes": 380978,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186561-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5413_04_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.244e.jpg": {
+    "accession": "F1909.244e",
+    "bytes": 414651,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186569-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-6050_05_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.245g.jpg": {
+    "accession": "F1909.245g",
+    "bytes": 381140,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186581-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5922_05_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.245j.jpg": {
+    "accession": "F1909.245j",
+    "bytes": 383666,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186584-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5922_08_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.245o.jpg": {
+    "accession": "F1909.245o",
+    "bytes": 364204,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186587-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5923_02_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.245u.jpg": {
+    "accession": "F1909.245u",
+    "bytes": 460676,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186592-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7112_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.246g.jpg": {
+    "accession": "F1909.246g",
+    "bytes": 312087,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186598-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-6543_08_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.249c.jpg": {
+    "accession": "F1909.249c",
+    "bytes": 372922,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186617-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5374_03_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.249g.jpg": {
+    "accession": "F1909.249g",
+    "bytes": 359238,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186621-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5374_07_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.249h.jpg": {
+    "accession": "F1909.249h",
+    "bytes": 386305,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186621-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-5374_08_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.251f.jpg": {
+    "accession": "F1909.251f",
+    "bytes": 415788,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186632-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7066_06_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.251o.jpg": {
+    "accession": "F1909.251o",
+    "bytes": 405737,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186641-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7067_05_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.262.jpg": {
+    "accession": "F1909.262",
+    "bytes": 161592,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186654-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7606_09_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.266.jpg": {
+    "accession": "F1909.266",
+    "bytes": 216492,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186658-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1909.266_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.268.jpg": {
+    "accession": "F1909.268",
+    "bytes": 209309,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186660-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7630_02_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.276a-b.jpg": {
+    "accession": "F1909.276a-b",
+    "bytes": 289477,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186667-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5992_12_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.290.jpg": {
+    "accession": "F1909.290",
+    "bytes": 216527,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186677-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7734_07_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.293a-b.jpg": {
+    "accession": "F1909.293a-b",
+    "bytes": 240656,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186680-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7755_18_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.396.jpg": {
+    "accession": "F1909.396",
+    "bytes": 682335,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186760-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7778_08_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.397.jpg": {
+    "accession": "F1909.397",
+    "bytes": 266420,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186761-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-6111_04_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1909.77.jpg": {
+    "accession": "F1909.77",
+    "bytes": 199586,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390186421-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7754_22_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.100.jpg": {
+    "accession": "F1911.100",
+    "bytes": 327269,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187788-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5993_06_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.108.jpg": {
+    "accession": "F1911.108",
+    "bytes": 270625,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187793-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5994_02_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.118.jpg": {
+    "accession": "F1911.118",
+    "bytes": 251225,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187800-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5994_11_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.124.jpg": {
+    "accession": "F1911.124",
+    "bytes": 137456,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187805-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-6742_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.125.jpg": {
+    "accession": "F1911.125",
+    "bytes": 214783,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187805-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-6742_03_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.131.jpg": {
+    "accession": "F1911.131",
+    "bytes": 187195,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187810-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7423_22_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.145a-c.jpg": {
+    "accession": "F1911.145a-c",
+    "bytes": 232149,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187821-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1911.145a-c_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.155e.jpg": {
+    "accession": "F1911.155e",
+    "bytes": 298938,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187835-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8142_08_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.161b.jpg": {
+    "accession": "F1911.161b",
+    "bytes": 156793,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187871-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7518_02_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.161h.jpg": {
+    "accession": "F1911.161h",
+    "bytes": 195895,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187876-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7518_08_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.163i.jpg": {
+    "accession": "F1911.163i",
+    "bytes": 250319,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187893-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7271_11_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.176.jpg": {
+    "accession": "F1911.176",
+    "bytes": 176694,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187939-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7451_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.188.jpg": {
+    "accession": "F1911.188",
+    "bytes": 370987,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187951-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-6052_07_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.277.jpg": {
+    "accession": "F1911.277",
+    "bytes": 223479,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188029-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5711_09_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.295.jpg": {
+    "accession": "F1911.295",
+    "bytes": 183338,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188043-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-8543_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.305.jpg": {
+    "accession": "F1911.305",
+    "bytes": 420138,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188053-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5716_08_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.306.jpg": {
+    "accession": "F1911.306",
+    "bytes": 207674,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188054-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5716_09_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.309.jpg": {
+    "accession": "F1911.309",
+    "bytes": 406261,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188056-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5907_12_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.35.jpg": {
+    "accession": "F1911.35",
+    "bytes": 138836,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187742-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7372_12_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.418.jpg": {
+    "accession": "F1911.418",
+    "bytes": 216130,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188223-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7755_30_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.433.jpg": {
+    "accession": "F1911.433",
+    "bytes": 194526,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188253-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7259_14_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.44.jpg": {
+    "accession": "F1911.44",
+    "bytes": 158286,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187748-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7726_02_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.477.jpg": {
+    "accession": "F1911.477",
+    "bytes": 435858,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188330-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7406_21_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.487.jpg": {
+    "accession": "F1911.487",
+    "bytes": 186564,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188346-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7468_09_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.490.jpg": {
+    "accession": "F1911.490",
+    "bytes": 490779,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188351-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7321_46_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.502a.jpg": {
+    "accession": "F1911.502a",
+    "bytes": 261902,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188371-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7430_04_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.51.jpg": {
+    "accession": "F1911.51",
+    "bytes": 104144,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187753-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7592_13_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.513.jpg": {
+    "accession": "F1911.513",
+    "bytes": 787071,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188400-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7474_17_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.519.jpg": {
+    "accession": "F1911.519",
+    "bytes": 219024,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188410-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5752_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.526.jpg": {
+    "accession": "F1911.526",
+    "bytes": 240905,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188422-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7480_34_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.54a-b.jpg": {
+    "accession": "F1911.54a-b",
+    "bytes": 153896,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187755-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7372_15_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.621.jpg": {
+    "accession": "F1911.621",
+    "bytes": 139398,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188559-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7700_04_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.624.jpg": {
+    "accession": "F1911.624",
+    "bytes": 242216,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188564-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7700_07_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.626.jpg": {
+    "accession": "F1911.626",
+    "bytes": 231438,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188567-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7700_09_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1911.64.jpg": {
+    "accession": "F1911.64",
+    "bytes": 140229,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390187762-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7727_03_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1912.40.jpg": {
+    "accession": "F1912.40",
+    "bytes": 182286,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188612-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1912.40_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1912.44.jpg": {
+    "accession": "F1912.44",
+    "bytes": 206344,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188615-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1912.44_001-000001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1913.111.jpg": {
+    "accession": "F1913.111",
+    "bytes": 170999,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188757-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7690_03_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1913.24.jpg": {
+    "accession": "F1913.24",
+    "bytes": 240291,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188693-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7756_10_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1913.43a-g.jpg": {
+    "accession": "F1913.43a-g",
+    "bytes": 198224,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188709-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7607_11_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1913.64.jpg": {
+    "accession": "F1913.64",
+    "bytes": 404047,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188722-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5751_04_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1913.72.jpg": {
+    "accession": "F1913.72",
+    "bytes": 321527,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188728-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5953_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1914.100.jpg": {
+    "accession": "F1914.100",
+    "bytes": 474305,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188920-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5933_02_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1914.126.jpg": {
+    "accession": "F1914.126",
+    "bytes": 143632,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188939-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1914.126_001-000001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1914.147b.jpg": {
+    "accession": "F1914.147b",
+    "bytes": 434600,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188957-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-6153_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1914.34.jpg": {
+    "accession": "F1914.34",
+    "bytes": 131560,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188862-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7727_14_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1914.57.jpg": {
+    "accession": "F1914.57",
+    "bytes": 226671,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188879-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8535_51_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1914.62.jpg": {
+    "accession": "F1914.62",
+    "bytes": 262110,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188893-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8330_06_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.10.jpg": {
+    "accession": "F1915.10",
+    "bytes": 348568,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188967-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7406_39_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.13.jpg": {
+    "accession": "F1915.13",
+    "bytes": 232323,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188970-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8494_08_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.137.jpg": {
+    "accession": "F1915.137",
+    "bytes": 147973,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189078-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7727_25_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.160.jpg": {
+    "accession": "F1915.160",
+    "bytes": 176600,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189097-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7737_09_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.2.jpg": {
+    "accession": "F1915.2",
+    "bytes": 330841,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188960-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1915.2_003_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.229.jpg": {
+    "accession": "F1915.229",
+    "bytes": 106214,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189154-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1915.229_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.31.jpg": {
+    "accession": "F1915.31",
+    "bytes": 414153,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188990-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5755_07_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.34.jpg": {
+    "accession": "F1915.34",
+    "bytes": 149025,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188992-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7727_17_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.36j.jpg": {
+    "accession": "F1915.36j",
+    "bytes": 324377,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189002-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8257_10_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.44a-b.jpg": {
+    "accession": "F1915.44a-b",
+    "bytes": 491341,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189009-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-6072_03_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.51.jpg": {
+    "accession": "F1915.51",
+    "bytes": 257539,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189014-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1915.51_001-000001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.6.jpg": {
+    "accession": "F1915.6",
+    "bytes": 214923,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390188963-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7472_11_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.60a-d.jpg": {
+    "accession": "F1915.60a-d",
+    "bytes": 137870,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189020-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7607_24_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.78a-b.jpg": {
+    "accession": "F1915.78a-b",
+    "bytes": 135283,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189030-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7759_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.79.jpg": {
+    "accession": "F1915.79",
+    "bytes": 163773,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189031-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7727_19_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.81.jpg": {
+    "accession": "F1915.81",
+    "bytes": 159377,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189032-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7727_20_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.82.jpg": {
+    "accession": "F1915.82",
+    "bytes": 136973,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189033-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7727_21_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1915.94.jpg": {
+    "accession": "F1915.94",
+    "bytes": 161069,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189041-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7727_22_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.114.jpg": {
+    "accession": "F1916.114",
+    "bytes": 178347,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189320-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7069_03_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.118.jpg": {
+    "accession": "F1916.118",
+    "bytes": 158991,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189323-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.118_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.148.jpg": {
+    "accession": "F1916.148",
+    "bytes": 135153,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189346-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.148_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.150.jpg": {
+    "accession": "F1916.150",
+    "bytes": 116583,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189349-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.150_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.156.jpg": {
+    "accession": "F1916.156",
+    "bytes": 185864,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189353-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.156_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.18.jpg": {
+    "accession": "F1916.18",
+    "bytes": 119576,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189246-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7728_04_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.186.jpg": {
+    "accession": "F1916.186",
+    "bytes": 257286,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189376-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8380_05_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.21.jpg": {
+    "accession": "F1916.21",
+    "bytes": 150953,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189248-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7728_05_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.231.jpg": {
+    "accession": "F1916.231",
+    "bytes": 186513,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189410-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7326_29_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.26.jpg": {
+    "accession": "F1916.26",
+    "bytes": 137399,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189252-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7705_30_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.269a-c.jpg": {
+    "accession": "F1916.269a-c",
+    "bytes": 87144,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189440-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.269_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.277.jpg": {
+    "accession": "F1916.277",
+    "bytes": 168419,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189445-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-6923_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.28.jpg": {
+    "accession": "F1916.28",
+    "bytes": 141832,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189253-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7728_06_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.302.jpg": {
+    "accession": "F1916.302",
+    "bytes": 163453,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189467-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7706_06_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.307.jpg": {
+    "accession": "F1916.307",
+    "bytes": 146251,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189470-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7706_08_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.316.jpg": {
+    "accession": "F1916.316",
+    "bytes": 138798,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189477-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7624_16_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.330.jpg": {
+    "accession": "F1916.330",
+    "bytes": 196730,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189486-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7690_25_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.347.jpg": {
+    "accession": "F1916.347",
+    "bytes": 173842,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189499-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7806_21_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.356.jpg": {
+    "accession": "F1916.356",
+    "bytes": 421754,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189505-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8546_23_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.404.jpg": {
+    "accession": "F1916.404",
+    "bytes": 158924,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189546-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5787_04_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.414a-b.jpg": {
+    "accession": "F1916.414a-b",
+    "bytes": 111748,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189555-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7781_13_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.416.jpg": {
+    "accession": "F1916.416",
+    "bytes": 87137,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189557-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.416_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.441.jpg": {
+    "accession": "F1916.441",
+    "bytes": 124716,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189576-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.441_005_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.448.jpg": {
+    "accession": "F1916.448",
+    "bytes": 127488,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189582-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7603_14_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.462.jpg": {
+    "accession": "F1916.462",
+    "bytes": 218643,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189593-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7706_18_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.481a-d.jpg": {
+    "accession": "F1916.481a-d",
+    "bytes": 154081,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189610-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7729_06_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.487a-b.jpg": {
+    "accession": "F1916.487a-b",
+    "bytes": 219124,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189614-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5854_06_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.488a-b.jpg": {
+    "accession": "F1916.488a-b",
+    "bytes": 291454,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189615-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7411_25_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.492a-b.jpg": {
+    "accession": "F1916.492a-b",
+    "bytes": 70008,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189618-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.492_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.494.jpg": {
+    "accession": "F1916.494",
+    "bytes": 84029,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189619-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.494_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.501.jpg": {
+    "accession": "F1916.501",
+    "bytes": 227377,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189625-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.501_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.503.jpg": {
+    "accession": "F1916.503",
+    "bytes": 201658,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189626-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.503_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.508.jpg": {
+    "accession": "F1916.508",
+    "bytes": 175521,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189630-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.508_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.510.jpg": {
+    "accession": "F1916.510",
+    "bytes": 263560,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189632-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1916.510_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.527.jpg": {
+    "accession": "F1916.527",
+    "bytes": 409845,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189645-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-5787_11_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.545.jpg": {
+    "accession": "F1916.545",
+    "bytes": 397200,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189661-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5673_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.563.jpg": {
+    "accession": "F1916.563",
+    "bytes": 410738,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189679-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7406_44_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.58.jpg": {
+    "accession": "F1916.58",
+    "bytes": 213863,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189275-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5772_04_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.583.jpg": {
+    "accession": "F1916.583",
+    "bytes": 198454,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189701-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-6376_03_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.585.jpg": {
+    "accession": "F1916.585",
+    "bytes": 437451,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189703-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5675_07_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.604.jpg": {
+    "accession": "F1916.604",
+    "bytes": 466172,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189717-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5676_09_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.630a-b.jpg": {
+    "accession": "F1916.630a-b",
+    "bytes": 113386,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189739-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7680_19_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.65.jpg": {
+    "accession": "F1916.65",
+    "bytes": 144449,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189280-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5772_09_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.711.jpg": {
+    "accession": "F1916.711",
+    "bytes": 199834,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189822-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7729_14_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.85.jpg": {
+    "accession": "F1916.85",
+    "bytes": 169795,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189297-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5779_09_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.89.jpg": {
+    "accession": "F1916.89",
+    "bytes": 172085,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189300-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5568_03_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1916.93.jpg": {
+    "accession": "F1916.93",
+    "bytes": 451988,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189303-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5780_02_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.102.jpg": {
+    "accession": "F1917.102",
+    "bytes": 298144,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189956-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5718_01_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.104.jpg": {
+    "accession": "F1917.104",
+    "bytes": 554867,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189957-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5719_03_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.107.jpg": {
+    "accession": "F1917.107",
+    "bytes": 349238,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189959-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1917.107_002_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.166.jpg": {
+    "accession": "F1917.166",
+    "bytes": 377358,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190004-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7680_30_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.207.jpg": {
+    "accession": "F1917.207",
+    "bytes": 447046,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190033-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5706_07_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.239a-b.jpg": {
+    "accession": "F1917.239a-b",
+    "bytes": 192378,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190060-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8536_10_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.241.jpg": {
+    "accession": "F1917.241",
+    "bytes": 193545,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190062-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8536_12_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.254.jpg": {
+    "accession": "F1917.254",
+    "bytes": 162105,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190071-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7624_32_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.350.jpg": {
+    "accession": "F1917.350",
+    "bytes": 260166,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190207-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1917.350_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.352.jpg": {
+    "accession": "F1917.352",
+    "bytes": 244226,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190211-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1917.352_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.388.jpg": {
+    "accession": "F1917.388",
+    "bytes": 92969,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190275-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8235_16_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.389.jpg": {
+    "accession": "F1917.389",
+    "bytes": 193462,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190277-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7624_35_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.392.jpg": {
+    "accession": "F1917.392",
+    "bytes": 110328,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190282-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1917.392_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.411.jpg": {
+    "accession": "F1917.411",
+    "bytes": 316628,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190315-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8536_13_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.51.jpg": {
+    "accession": "F1917.51",
+    "bytes": 234577,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189914-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1917.51_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.558.jpg": {
+    "accession": "F1917.558",
+    "bytes": 189332,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190548-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7748_29_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.63.jpg": {
+    "accession": "F1917.63",
+    "bytes": 176260,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189922-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1917.63_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.74.jpg": {
+    "accession": "F1917.74",
+    "bytes": 183849,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189931-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1917.74_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1917.82.jpg": {
+    "accession": "F1917.82",
+    "bytes": 206755,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390189937-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1917.82_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1918.13.jpg": {
+    "accession": "F1918.13",
+    "bytes": 290945,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190703-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8331_13_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1918.16.jpg": {
+    "accession": "F1918.16",
+    "bytes": 209759,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390190708-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1918.16_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1919.113.jpg": {
+    "accession": "F1919.113",
+    "bytes": 534855,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191130-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-5847_05_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1919.122.jpg": {
+    "accession": "F1919.122",
+    "bytes": 249284,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191137-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7484_12_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1919.129.jpg": {
+    "accession": "F1919.129",
+    "bytes": 267247,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191142-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1919.129_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1919.139.jpg": {
+    "accession": "F1919.139",
+    "bytes": 153571,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191149-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-5827_02_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1919.178.jpg": {
+    "accession": "F1919.178",
+    "bytes": 522263,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191179-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-5111_08_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1919.27.jpg": {
+    "accession": "F1919.27",
+    "bytes": 222822,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191053-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1919.27_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1919.36.jpg": {
+    "accession": "F1919.36",
+    "bytes": 188549,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191066-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7624_37_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1919.48.jpg": {
+    "accession": "F1919.48",
+    "bytes": 204026,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191083-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1919.48_001-000001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1919.49.jpg": {
+    "accession": "F1919.49",
+    "bytes": 115258,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191084-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1919.49_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1919.78.jpg": {
+    "accession": "F1919.78",
+    "bytes": 132640,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191105-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7737_23_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1919.80.jpg": {
+    "accession": "F1919.80",
+    "bytes": 180717,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191106-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-7729_31_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1919.93.jpg": {
+    "accession": "F1919.93",
+    "bytes": 175041,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191116-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8166_05_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1930.33.jpg": {
+    "accession": "F1930.33",
+    "bytes": 142104,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191297-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7588_11_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1930.80.jpg": {
+    "accession": "F1930.80",
+    "bytes": 249631,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191329-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-6330_02L_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1931.3.jpg": {
+    "accession": "F1931.3",
+    "bytes": 262923,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191346-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8020_06_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1932.38.jpg": {
+    "accession": "F1932.38",
+    "bytes": 236538,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390191396-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1932.38_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1946.8.jpg": {
+    "accession": "F1946.8",
+    "bytes": 118281,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1738321971613-1738321980210-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1946.8a-b_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1949.25.jpg": {
+    "accession": "F1949.25",
+    "bytes": 110332,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390192021-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-F1949.25_004_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1968.32a-b.jpg": {
+    "accession": "F1968.32a-b",
+    "bytes": 141407,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390192477-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7597_07_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1974.3.jpg": {
+    "accession": "F1974.3",
+    "bytes": 173048,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390192589-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7814_13_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1979.9.jpg": {
+    "accession": "F1979.9",
+    "bytes": 85905,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390192900-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7814_15_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1992.40.jpg": {
+    "accession": "F1992.40",
+    "bytes": 122423,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390193582-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7927_02_screen"
+  },
+  "data/sources/images/smithsonian_fsg/F1992.43.jpg": {
+    "accession": "F1992.43",
+    "bytes": 186205,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390193584-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7472_38_screen"
+  },
+  "data/sources/images/smithsonian_fsg/FSC-O-32.jpg": {
+    "accession": "FSC-O-32",
+    "bytes": 152184,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390196422-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-FSC-O-32_1_screen"
+  },
+  "data/sources/images/smithsonian_fsg/FSC-P-4209.jpg": {
+    "accession": "FSC-P-4209",
+    "bytes": 141304,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390199654-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-FSC-P-4209_1_screen"
+  },
+  "data/sources/images/smithsonian_fsg/FSC-PA-198.jpg": {
+    "accession": "FSC-PA-198",
+    "bytes": 255017,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390201840-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-8485_30_screen"
+  },
+  "data/sources/images/smithsonian_fsg/FSC-T-7.jpg": {
+    "accession": "FSC-T-7",
+    "bytes": 393395,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390202127-1",
+    "url": "https://ids.si.edu/ids/download?id=FS-8546_36_screen"
+  },
+  "data/sources/images/smithsonian_fsg/S1987.559.jpg": {
+    "accession": "S1987.559",
+    "bytes": 134752,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390203302-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-S1987.559_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/S1987.869.jpg": {
+    "accession": "S1987.869",
+    "bytes": 168885,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390203649-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-S1987.869_001_screen"
+  },
+  "data/sources/images/smithsonian_fsg/S1987.968a-b.jpg": {
+    "accession": "S1987.968a-b",
+    "bytes": 162954,
+    "source": "smithsonian_fsg",
+    "source_id": "ld1-1643390182193-1643390203840-0",
+    "url": "https://ids.si.edu/ids/download?id=FS-7282_42_screen"
+  }
+}
