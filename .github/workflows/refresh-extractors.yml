@@ -81,9 +81,8 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/sources/*.json
-          git commit -m "data: refresh extractor outputs
-
-Triggered by: ${{ github.event_name }}
-Includes: CMA / Met / Smithsonian FSG
-"
+          git commit \
+            -m "data: refresh extractor outputs" \
+            -m "Triggered by: ${{ github.event_name }}" \
+            -m "Includes: CMA / Met / Smithsonian FSG"
           git push
