@@ -25,3 +25,9 @@ venv/
 
 # Logs
 *.log
+
+# Large CC0 dumps used by data/sources/scripts/extract_*.py
+# (the extractor reads them locally; only the filtered output is committed)
+/cma.json
+/met-openaccess.csv
+/openaccess-*.csv

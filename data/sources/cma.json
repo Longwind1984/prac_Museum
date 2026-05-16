@@ -1,0 +1,3516 @@
+[
+  {
+    "_meta": {
+      "source": "cma",
+      "endpoint": "local-dump (openaccess-api.clevelandart.org unreachable from sandbox)",
+      "dump_path": "cma.json",
+      "filter": "department=Chinese Art AND title/type/culture matches Buddhist keywords AND CC0",
+      "target_count": 100,
+      "actual_count": 100,
+      "network_reachable": false,
+      "api_key_required": false,
+      "rate_limit_observed": "n/a (local file)",
+      "extracted_at": "2026-05-16T15:10:48+00:00"
+    }
+  },
+  {
+    "source": "cma",
+    "source_id": "93992",
+    "title_zh": null,
+    "title_en": "Stele with Sakyamuni and Bodhisattvas",
+    "period": "东魏",
+    "dynasty_en": "Eastern Wei",
+    "date_raw": "537",
+    "date_start": 537,
+    "date_end": 537,
+    "materials": [
+      "limestone"
+    ],
+    "dimensions": "Overall: 77.5 x 44.4 cm (30 1/2 x 17 1/2 in.)",
+    "provenance_or_findsite": "(Edgar Worch [1880–1972], New York, NY and Berlin, Germany, sold to the Cleveland Museum of Art) (?–1914) | The Cleveland Museum of Art (1914-)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1914.567",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1914.567/1914.567_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1914.567/1914.567_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1914.567/1914.567_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1914.567/1914.567_web.jpg",
+    "description": "According to the inscription, this stele was commissioned in 537 by Yuan'ning, prince of the Gaoping branch of the imperial Wei family, in memory of his deceased consort, in the hope that it would bring her to the Western paradise. It was carved by one of the finest craftsmen in the Eastern Wei capital of Ye in Hebei province. <br><br>Here, the Buddha's robe shows a careful arrangement of patterned drapery (large U-shaped folds and scallop-shaped folds at the hem), combining linear rhythms with…",
+    "source_url": "https://clevelandart.org/art/1914.567",
+    "tags": [
+      "China, Hebei province, Eastern Wei dynasty (534-550)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "limestone",
+      "stele"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "94667",
+    "title_zh": null,
+    "title_en": "Head of Bodhisattva",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "618–907",
+    "date_start": 618,
+    "date_end": 907,
+    "materials": [
+      "dark gray limestone"
+    ],
+    "dimensions": "Overall: 24.9 x 17.2 x 9 cm (9 13/16 x 6 3/4 x 3 9/16 in.)",
+    "provenance_or_findsite": "Worcester R. Warner [1846-1929], Cleveland, OH, given to the Cleveland Museum of Art (?-1915) | The Cleveland Museum of Art, Cleveland, OH (1915-)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1915.311",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1915.311/1915.311_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1915.311/1915.311_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1915.311/1915.311_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1915.311/1915.311_web.jpg",
+    "description": "Head of Bodhisattva, 618–907. China, from Lung-mên, Tang dynasty (618-907). Dark gray limestone; overall: 24.9 x 17.2 x 9 cm (9 13/16 x 6 3/4 x 3 9/16 in.). The Cleveland Museum of Art, Worcester R. Warner Collection, 1915.311",
+    "source_url": "https://clevelandart.org/art/1915.311",
+    "tags": [
+      "China, from Lung-mên, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "dark gray limestone"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "94676",
+    "title_zh": null,
+    "title_en": "Seated Amitayus Buddha",
+    "period": "北齐",
+    "dynasty_en": "Northern Qi",
+    "date_raw": "c. 570s",
+    "date_start": 550,
+    "date_end": 590,
+    "materials": [
+      "marble"
+    ],
+    "dimensions": "Overall: 110 x 66.1 cm (43 5/16 x 26 in.)",
+    "provenance_or_findsite": "Worcester R. Warner [1846–1929], Cleveland, OH, given to the Cleveland Museum of Art (?–1915) | The Cleveland Museum of Art, Cleveland, OH (1915–)",
+    "current_location": "241B Arts of Ancient China",
+    "accession_number": "1915.334.1",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1915.334.1/1915.334.1_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1915.334.1/1915.334.1_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1915.334.1/1915.334.1_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1915.334.1/1915.334.1_web.jpg",
+    "description": "Amitayus, the Buddha of Infinite Life, is seated in meditation on a double lotus pedestal. The pedestal was not made with the statue but the combination is faithful to the original artistic conception. The statue is an extremely rare example of a major type of Northern Qi Buddhist sculpture. The heavy, massive front highlights the sense of monumentality and the spiritual essence of the Buddha. <br><br>Today the sculpture is united with a pedestal that exhibits the rich, ornate style of early Ta…",
+    "source_url": "https://clevelandart.org/art/1915.334.1",
+    "tags": [
+      "China, Northern Qi dynasty (550-577)",
+      "Chinese Art",
+      "Sculpture",
+      "buddha",
+      "marble"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "94677",
+    "title_zh": null,
+    "title_en": "Fang Xuanling Pedestal",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "647",
+    "date_start": 647,
+    "date_end": 647,
+    "materials": [
+      "marble"
+    ],
+    "dimensions": "Overall: 66 cm (26 in.)",
+    "provenance_or_findsite": "Worcester R. Warner [1846–1929], Cleveland, OH, given to the Cleveland Museum of Art (?–1915) | The Cleveland Museum of Art, Cleveland, OH (1915–)",
+    "current_location": "241B Arts of Ancient China",
+    "accession_number": "1915.334.2",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1915.334.2/1915.334.2_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1915.334.2/1915.334.2_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1915.334.2/1915.334.2_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1915.334.2/1915.334.2_web.jpg",
+    "description": "This double lotus pedestal exhibits the rich, ornate style of early Tang sculpture. It was commissioned by the Duke of Liang, Fang Xuanling (578–648), for the blessing of his second son and daughter-in-law, the Tang imperial princess of Gaoyang. The iconography and inscription suggest that it originally went with a statue, now missing, of Shakyamuni, the historical Buddha, instead of Amitayus.<br><br>Today the pedestal is topped with Amitayus, the Buddha of Infinite Life, seated in meditation. …",
+    "source_url": "https://clevelandart.org/art/1915.334.2",
+    "tags": [
+      "China, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "marble"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "94789",
+    "title_zh": null,
+    "title_en": "Seated Buddha",
+    "period": "清",
+    "dynasty_en": "Qing",
+    "date_raw": "1700s–1800s",
+    "date_start": 1700,
+    "date_end": 1899,
+    "materials": [
+      "jade"
+    ],
+    "dimensions": "Overall: 31.6 x 27.4 cm (12 7/16 x 10 13/16 in.)",
+    "provenance_or_findsite": "Ralph King [1855–1926], Cleveland Heights, OH, given to the Cleveland Museum of Art (?–1915) | The Cleveland Museum of Art, Cleveland, OH (1915–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1915.352",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1915.352/1915.352_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1915.352/1915.352_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1915.352/1915.352_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1915.352/1915.352_web.jpg",
+    "description": "Seated Buddha, 1700s–1800s. China, Qing dynasty (1644-1911). Jade; overall: 31.6 x 27.4 cm (12 7/16 x 10 13/16 in.). The Cleveland Museum of Art, Gift of Ralph King, 1915.352",
+    "source_url": "https://clevelandart.org/art/1915.352",
+    "tags": [
+      "China, Qing dynasty (1644-1911)",
+      "Chinese Art",
+      "Jade",
+      "buddha",
+      "jade"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "95011",
+    "title_zh": null,
+    "title_en": "Sakyamuni Preaching: A Votive Stele",
+    "period": "北周",
+    "dynasty_en": "Northern Zhou",
+    "date_raw": "c. 565 BCE",
+    "date_start": -560,
+    "date_end": -570,
+    "materials": [
+      "Serpentinite"
+    ],
+    "dimensions": "Average: 13.7 x 9.9 x 5.3 cm (5 3/8 x 3 7/8 x 2 1/16 in.)",
+    "provenance_or_findsite": "(John Huntington Art and Polytechnic Trust, Cleveland, OH, sold to the Cleveland Museum of Art) (?–1915) | The Cleveland Museum of Art, Cleveland, OH (1915–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1915.561",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1915.561/1915.561_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1915.561/1915.561_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1915.561/1915.561_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1915.561/1915.561_web.jpg",
+    "description": "The stele shows the historic Buddha Sakyamuni preaching, his lotus throne being flanked by lions, two attendants, and two disciples. There is a date and inscriptions on both sides of the stone.",
+    "source_url": "https://clevelandart.org/art/1915.561",
+    "tags": [
+      "China, Northern Dynasties period (386–581 CE), Northern Zhou (557-581)",
+      "Chinese Art",
+      "Sculpture",
+      "Serpentinite",
+      "stele"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "95012",
+    "title_zh": null,
+    "title_en": "Buddha Triad",
+    "period": "北周",
+    "dynasty_en": "Northern Zhou",
+    "date_raw": "568",
+    "date_start": 568,
+    "date_end": 568,
+    "materials": [
+      "stone"
+    ],
+    "dimensions": "Overall: 21.3 x 11.7 cm (8 3/8 x 4 5/8 in.)",
+    "provenance_or_findsite": "(Dr. J. C. [John Calvin] Ferguson [1866-1945], Newton, MA, sold to the Cleveland Museum of Art) (?–1915) | The Cleveland Museum of Art, Cleveland, OH (1915–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1915.562",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1915.562/1915.562_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1915.562/1915.562_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1915.562/1915.562_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1915.562/1915.562_web.jpg",
+    "description": "Buddha Triad, 568. China, Northern Dynasties period (386–581 CE), Northern Zhou (557-581). Stone; overall: 21.3 x 11.7 cm (8 3/8 x 4 5/8 in.). The Cleveland Museum of Art, Gift of the John Huntington Art and Polytechnic Trust, 1915.562",
+    "source_url": "https://clevelandart.org/art/1915.562",
+    "tags": [
+      "China, Northern Dynasties period (386–581 CE), Northern Zhou (557-581)",
+      "Chinese Art",
+      "Sculpture",
+      "buddha",
+      "stone"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "95182",
+    "title_zh": null,
+    "title_en": "Corner Stone with Two Eleven-Headed Guanyin",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "c. 700",
+    "date_start": 650,
+    "date_end": 750,
+    "materials": [
+      "stone"
+    ],
+    "dimensions": "Overall: 35.6 x 24.2 cm (14 x 9 1/2 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1915.75",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1915.75/1915.75_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1915.75/1915.75_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1915.75/1915.75_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1915.75/1915.75_web.jpg",
+    "description": "Corner Stone with Two Eleven-Headed Guanyin, c. 700. China, Tang dynasty (618-907). Stone; overall: 35.6 x 24.2 cm (14 x 9 1/2 in.). The Cleveland Museum of Art, Gift of Mr. and Mrs. Ralph King, 1915.75",
+    "source_url": "https://clevelandart.org/art/1915.75",
+    "tags": [
+      "China, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "guanyin",
+      "stone"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "95184",
+    "title_zh": null,
+    "title_en": "Head of Bodhisattva Guanyin",
+    "period": "北魏",
+    "dynasty_en": "Northern Wei",
+    "date_raw": "c. 510–520",
+    "date_start": 510,
+    "date_end": 520,
+    "materials": [
+      "stone"
+    ],
+    "dimensions": "Overall: 36.2 cm (14 1/4 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1915.77",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1915.77/1915.77_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1915.77/1915.77_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1915.77/1915.77_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1915.77/1915.77_web.jpg",
+    "description": "Head of Bodhisattva Guanyin, c. 510–520. China, Six Dynasties period (317-581), Northern Wei dynasty (386-534). Stone; overall: 36.2 cm (14 1/4 in.). The Cleveland Museum of Art, Gift of Mr. and Mrs. Ralph King, 1915.77",
+    "source_url": "https://clevelandart.org/art/1915.77",
+    "tags": [
+      "China, Six Dynasties period (317-581), Northern Wei dynasty (386-534)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "guanyin",
+      "stone"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "96187",
+    "title_zh": "觀音坐像",
+    "title_en": "Seated Guanyin",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "c. 1450",
+    "date_start": 1400,
+    "date_end": 1499,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 22.1 x 16.7 cm (8 11/16 x 6 9/16 in.)",
+    "provenance_or_findsite": "Worcester R. Warner [1846–1929], Cleveland, OH, given to the Cleveland Museum of Art (?–1916) | The Cleveland Museum of Art, Cleveland, OH (1916–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1916.19",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1916.19/1916.19_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1916.19/1916.19_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1916.19/1916.19_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1916.19/1916.19_web.jpg",
+    "description": "A heavily jeweled Guanyin sits in the posture of royal ease on a double-lotus throne. Also known as Avalokitesvara or the Bodhisattava of Compassion, Guanyin postponed achieving enlightenment in order to assist all who cry out for help. This made Guanyin a very popular devotional figure for Buddhists. This gilt bronze's size suggests that it could have been placed on a private altar or shrine for personal devotion.",
+    "source_url": "https://clevelandart.org/art/1916.19",
+    "tags": [
+      "China, Ming dynasty (1368–1644)",
+      "Chinese Art",
+      "Sculpture",
+      "gilt bronze",
+      "guanyin"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "97604",
+    "title_zh": "石雕山水人物山子",
+    "title_en": "Landscape",
+    "period": "清",
+    "dynasty_en": "Qing",
+    "date_raw": "1644–1911",
+    "date_start": 1644,
+    "date_end": 1911,
+    "materials": [
+      "soapstone"
+    ],
+    "dimensions": "Overall: 15.3 x 22.3 x 9.6 cm (6 x 8 3/4 x 3 3/4 in.)",
+    "provenance_or_findsite": "Worcester R. Warner [1846–1929], Cleveland, OH, given to the Cleveland Museum of Art (?–1917) | The Cleveland Museum of Art, Cleveland, OH (1917–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1917.25",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1917.25/1917.25_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1917.25/1917.25_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1917.25/1917.25_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1917.25/1917.25_web.jpg",
+    "description": "A mountain scenery surrounded by water and fish is meticulously carved out of soapstone, with a pond, bridge, waterfall, and temple front in its center. The unidentified figure scene on the left includes an ox and a man wearing what appears to be a Korean hat. A Buddha figure hidden in the depth of the temple can be glimpsed from the backside. The inscribed pillar on the right reads “Stonegate Cave to Heaven (<em>shimen dongtian</em>)”. Indentations all over the stone suggest that the miniature…",
+    "source_url": "https://clevelandart.org/art/1917.25",
+    "tags": [
+      "China, Qing dynasty (1644-1911)",
+      "Chinese Art",
+      "Stone",
+      "soapstone"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "97651",
+    "title_zh": null,
+    "title_en": "Head of a Lohan",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1368–1644",
+    "date_start": 1368,
+    "date_end": 1644,
+    "materials": [
+      "earthenware"
+    ],
+    "dimensions": "Overall: 39.4 cm (15 1/2 in.)",
+    "provenance_or_findsite": "Purchased with funds from Worcester R. Warner [1846–1929] by Langdon Warner [1881–1955], given to the Cleveland Museum of Art (?–1917) | The Cleveland Museum of Art, Cleveland, OH (1917–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1917.293",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1917.293/1917.293_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1917.293/1917.293_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1917.293/1917.293_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1917.293/1917.293_web.jpg",
+    "description": "Head of a Lohan, 1368–1644. China, Ming dynasty (1368–1644). Earthenware; overall: 39.4 cm (15 1/2 in.). The Cleveland Museum of Art, Worcester R. Warner Collection, 1917.293",
+    "source_url": "https://clevelandart.org/art/1917.293",
+    "tags": [
+      "China, Ming dynasty (1368–1644)",
+      "Chinese Art",
+      "Sculpture",
+      "earthenware",
+      "lohan"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "97675",
+    "title_zh": null,
+    "title_en": "Head",
+    "period": "宋",
+    "dynasty_en": "Song",
+    "date_raw": "960–1279",
+    "date_start": 960,
+    "date_end": 1279,
+    "materials": [
+      "iron"
+    ],
+    "dimensions": "Overall: 7.4 cm (2 15/16 in.)",
+    "provenance_or_findsite": "Langdon Warner [1881–1955], Cambridge, MA, given to the Cleveland Museum of Art (?–1917) | The Cleveland Museum of Art, Cleveland, OH (1917–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1917.319",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1917.319/1917.319_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1917.319/1917.319_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1917.319/1917.319_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1917.319/1917.319_web.jpg",
+    "description": "The shaven head and face of this ascetic expresses character and personality. It may have once been part of a figure of a monk or <em>lohan</em>, an enlightened being with supernatural power.",
+    "source_url": "https://clevelandart.org/art/1917.319",
+    "tags": [
+      "China, Song dynasty (960-1279)",
+      "Chinese Art",
+      "Sculpture",
+      "iron"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "97677",
+    "title_zh": null,
+    "title_en": "Stele:  Maitreya as the Future Buddha",
+    "period": "北齐",
+    "dynasty_en": "Northern Qi",
+    "date_raw": "300s–500s CE",
+    "date_start": 317,
+    "date_end": 577,
+    "materials": [
+      "marble"
+    ],
+    "dimensions": "Overall: 86.4 x 50.8 cm (34 x 20 in.)",
+    "provenance_or_findsite": "Purchased with funds from Worcester R. Warner [1846–1929] and Cornelia Blakemore Warner [1858–1947] by Langdon Warner [1881–1955], as agent of the Cleveland Museum of Art (?–1917) | The Cleveland Museum of Art, Cleveland, OH (1917–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1917.320",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1917.320/1917.320_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1917.320/1917.320_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1917.320/1917.320_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1917.320/1917.320_web.jpg",
+    "description": "Stele: Maitreya as the Future Buddha, 300s–500s CE. China, Hebei, Six Dynasties period (317-581), Northern Qi dynasty (550-577). Marble; overall: 86.4 x 50.8 cm (34 x 20 in.). The Cleveland Museum of Art, Worcester R. Warner Collection, 1917.320",
+    "source_url": "https://clevelandart.org/art/1917.320",
+    "tags": [
+      "China, Hebei, Six Dynasties period (317-581), Northern Qi dynasty (550-577)",
+      "Chinese Art",
+      "Sculpture",
+      "buddha",
+      "maitreya",
+      "marble",
+      "stele"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "98272",
+    "title_zh": null,
+    "title_en": "Buddhist Panel",
+    "period": "汉",
+    "dynasty_en": "Han",
+    "date_raw": "1600s–1700s",
+    "date_start": 1600,
+    "date_end": 1799,
+    "materials": [
+      "Pair of hanging scrolls; ink and color on paper"
+    ],
+    "dimensions": "Overall: 203.2 x 31.4 cm (80 x 12 3/8 in.)",
+    "provenance_or_findsite": "Purchased with funds from Worcester R. Warner [1846–1929] and Cornelia Blakemore Warner [1858–1947] by Langdon Warner [1881–1955], as agent of the Cleveland Museum of Art (?–1917) | The Cleveland Museum of Art, Cleveland, OH (1917–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1917.95",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1917.95/1917.95_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1917.95/1917.95_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1917.95/1917.95_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1917.95/1917.95_web.jpg",
+    "description": "Buddhist Panel, 1600s–1700s. Pair of hanging scrolls; ink and color on paper; overall: 203.2 x 31.4 cm (80 x 12 3/8 in.). The Cleveland Museum of Art, The Worcester R. Warner Collection, 1917.95",
+    "source_url": "https://clevelandart.org/art/1917.95",
+    "tags": [
+      "Chinese Art",
+      "Painting",
+      "Pair of hanging scrolls; ink and color on paper",
+      "buddhist"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "98273",
+    "title_zh": null,
+    "title_en": "Buddhist Panel",
+    "period": "汉",
+    "dynasty_en": "Han",
+    "date_raw": "1600s–1700s",
+    "date_start": 1600,
+    "date_end": 1799,
+    "materials": [
+      "Hanging scroll; ink and color on paper"
+    ],
+    "dimensions": "Overall: 203.2 x 31.4 cm (80 x 12 3/8 in.)",
+    "provenance_or_findsite": "Purchased with funds from Worcester R. Warner [1846–1929] and Cornelia Blakemore Warner [1858–1947] by Langdon Warner [1881–1955], as agent of the Cleveland Museum of Art (?–1917) | The Cleveland Museum of Art, Cleveland, OH (1917–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1917.95.1",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1917.95.1/1917.95.1_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1917.95.1/1917.95.1_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1917.95.1/1917.95.1_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1917.95.1/1917.95.1_web.jpg",
+    "description": "Buddhist Panel, 1600s–1700s. China or Korea. Hanging scroll; ink and color on paper; overall: 203.2 x 31.4 cm (80 x 12 3/8 in.). The Cleveland Museum of Art, The Worcester R. Warner Collection, 1917.95.1",
+    "source_url": "https://clevelandart.org/art/1917.95.1",
+    "tags": [
+      "China or Korea",
+      "Chinese Art",
+      "Hanging scroll; ink and color on paper",
+      "Painting",
+      "buddhist"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "98274",
+    "title_zh": null,
+    "title_en": "Buddhist Panel",
+    "period": "汉",
+    "dynasty_en": "Han",
+    "date_raw": "1600s–1700s",
+    "date_start": 1600,
+    "date_end": 1799,
+    "materials": [
+      "Hanging scroll; ink and color on paper"
+    ],
+    "dimensions": "Overall: 30.5 cm (12 in.)",
+    "provenance_or_findsite": "Purchased with funds from Worcester R. Warner [1846–1929] and Cornelia Blakemore Warner [1858–1947] by Langdon Warner [1881–1955], as agent of the Cleveland Museum of Art (?–1917) | The Cleveland Museum of Art, Cleveland, OH (1917–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1917.95.2",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1917.95.2/1917.95.2_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1917.95.2/1917.95.2_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1917.95.2/1917.95.2_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1917.95.2/1917.95.2_web.jpg",
+    "description": "Buddhist Panel, 1600s–1700s. China or Korea. Hanging scroll; ink and color on paper; overall: 30.5 cm (12 in.). The Cleveland Museum of Art, The Worcester R. Warner Collection, 1917.95.2",
+    "source_url": "https://clevelandart.org/art/1917.95.2",
+    "tags": [
+      "China or Korea",
+      "Chinese Art",
+      "Hanging scroll; ink and color on paper",
+      "Painting",
+      "buddhist"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "98872",
+    "title_zh": null,
+    "title_en": "Buddha",
+    "period": "汉",
+    "dynasty_en": "Han",
+    "date_raw": "early 1900s",
+    "date_start": 1900,
+    "date_end": 1918,
+    "materials": [
+      "Hanging scroll; color on silk"
+    ],
+    "dimensions": "Overall: 108 x 75 cm (42 1/2 x 29 1/2 in.)",
+    "provenance_or_findsite": "Acquired in Korea by Langdon Warner.",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1918.547",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1918.547/1918.547_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1918.547/1918.547_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1918.547/1918.547_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1918.547/1918.547_web.jpg",
+    "description": "Buddha, early 1900s. China. Hanging scroll; color on silk; overall: 108 x 75 cm (42 1/2 x 29 1/2 in.). The Cleveland Museum of Art, Director's Contingent Fund, 1918.547",
+    "source_url": "https://clevelandart.org/art/1918.547",
+    "tags": [
+      "China",
+      "Chinese Art",
+      "Hanging scroll; color on silk",
+      "Painting",
+      "buddha"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "105410",
+    "title_zh": null,
+    "title_en": "Head of a Bodhisattva",
+    "period": "宋",
+    "dynasty_en": "Song",
+    "date_raw": "1100s",
+    "date_start": 1100,
+    "date_end": 1199,
+    "materials": [
+      "wood"
+    ],
+    "dimensions": "Overall: 86.4 x 40.6 x 38.1 cm (34 x 16 x 15 in.)",
+    "provenance_or_findsite": "(C. T. Loo 盧芹齋 [1880–1957] sold to the Cleveland Museum of Art) (?–1923) | The Cleveland Museum of Art, Cleveland, OH (1923–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1923.54",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1923.54/1923.54_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1923.54/1923.54_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1923.54/1923.54_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1923.54/1923.54_web.jpg",
+    "description": "This large head of a Bodhisattva figure, an enlightened being that vowed to help humans on earth, was once part of a monumental sculpture in a public Buddhist setting.",
+    "source_url": "https://clevelandart.org/art/1923.54",
+    "tags": [
+      "China, reportedly from Henan province, Northern Song (960-1127) to Jin dynasty (1115-1234)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "wood"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "105881",
+    "title_zh": "佛頭",
+    "title_en": "Head of Buddha",
+    "period": "北齐",
+    "dynasty_en": "Northern Qi",
+    "date_raw": "c. 570",
+    "date_start": 550,
+    "date_end": 590,
+    "materials": [
+      "limestone"
+    ],
+    "dimensions": "Overall: 62.2 x 54.6 cm (24 1/2 x 21 1/2 in.)",
+    "provenance_or_findsite": "C.T. Loo 盧芹齋 [1880–1957], Paris, France, and New York, NY, given to the Cleveland Museum of Art (?–1923) | The Cleveland Museum of Art, Cleveland, OH (1923–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1923.97",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1923.97/1923.97_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1923.97/1923.97_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1923.97/1923.97_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1923.97/1923.97_web.jpg",
+    "description": "At the Xiangtangshan Buddhist sites in Hebei province, cave-temple construction and image making were supported by the Northern Qi imperial court and nobility. Under the constant shadow of political uncertainty and the theory of the \"Law of the Decadence\" (or <em>mofa</em>, the deterioration of the True Law after the historical Buddha’s attainment of nirvana), the Buddhist faith was embraced as the ideal for rulership. The Buddha’s smile offers reassurance and consolation.",
+    "source_url": "https://clevelandart.org/art/1923.97",
+    "tags": [
+      "China, Hebei province, northern Xiangtangshan caves, South cave, Northern Qi dynasty (550-577)",
+      "Chinese Art",
+      "Sculpture",
+      "buddha",
+      "limestone"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "108532",
+    "title_zh": null,
+    "title_en": "Buddha in the Preaching Attitude",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "618–1279",
+    "date_start": 618,
+    "date_end": 1279,
+    "materials": [
+      "Fresco"
+    ],
+    "dimensions": "Overall: 49 x 35 cm (19 5/16 x 13 3/4 in.)",
+    "provenance_or_findsite": "(C. T. Loo 盧芹齋 [1880–1957]) | John L. Severance [1863–1936], Cleveland, OH, given to the Cleveland Museum of Art (?–1926) | The Cleveland Museum of Art, Cleveland, OH (1926–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1926.238",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1926.238/1926.238_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1926.238/1926.238_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1926.238/1926.238_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1926.238/1926.238_web.jpg",
+    "description": "Buddha in the Preaching Attitude, 618–1279. China, Tang dynasty (618-907) - Song dynasty (960-1279). Fresco; overall: 49 x 35 cm (19 5/16 x 13 3/4 in.). The Cleveland Museum of Art, Gift of John L. Severance, 1926.238",
+    "source_url": "https://clevelandart.org/art/1926.238",
+    "tags": [
+      "China, Tang dynasty (618-907) - Song dynasty (960-1279)",
+      "Chinese Art",
+      "Fresco",
+      "Painting",
+      "buddha"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "111503",
+    "title_zh": "菩薩",
+    "title_en": "Bodhisattva",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "700s",
+    "date_start": 700,
+    "date_end": 799,
+    "materials": [
+      "white marble"
+    ],
+    "dimensions": "Overall: 177.8 x 64 x 58.5 cm (70 x 25 3/16 x 23 1/16 in.); without base: 157.4 cm (61 15/16 in.)",
+    "provenance_or_findsite": "(Yamanaka and Company, New York, NY, sold to the Cleveland Museum of Art) (?–1929) | The Cleveland Museum of Art, Cleveland, OH (1929–)",
+    "current_location": "238 Chinese Ceramics",
+    "accession_number": "1929.981",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1929.981/1929.981_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1929.981/1929.981_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1929.981/1929.981_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1929.981/1929.981_web.jpg",
+    "description": "The bodhisattva is an enlightened being dedicated to the spiritual awakening of all beings. This white marble torso exemplifies the quest for refinement and plasticity of form that mark the golden era of Tang Chinese Buddhist sculpture. The statue was conceived with great power and grandeur. The slight sway of the hip on one side and upraised shoulder on the other result in an elegant S-curve. Emphatic lines cut into the stone create a sense of rhythm and reveal the sculptor’s skill and surenes…",
+    "source_url": "https://clevelandart.org/art/1929.981",
+    "tags": [
+      "China, Hebei province, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "white marble"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "111505",
+    "title_zh": null,
+    "title_en": "Section of a Dharani Pillar",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "618–907",
+    "date_start": 618,
+    "date_end": 907,
+    "materials": [
+      "limestone"
+    ],
+    "dimensions": "Overall: 50.2 x 40.4 cm (19 3/4 x 15 7/8 in.)",
+    "provenance_or_findsite": "(Yamanaka and Company, New York, NY, sold to the Cleveland Museum of Art) (?–1929) | The Cleveland Museum of Art, Cleveland, OH (1929–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1929.983",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1929.983/1929.983_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1929.983/1929.983_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1929.983/1929.983_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1929.983/1929.983_web.jpg",
+    "description": "This octagonal stone pillar, with Buddhist figures carved on its eight sides, is part of a <em>dharani</em> pillar commissioned by Buddhist believers to pay tribute to the dead. The eight inscriptions seen here are eulogies dedicated by eight families to their deceased family members. <br><br>Dharanis were a form of spell in Esoteric Buddhism said to possess supernatural power when being recited or carried and were incorporated into sutras, such as the <em>Buddha Usnisa Vijaya Dharani Sutra</em…",
+    "source_url": "https://clevelandart.org/art/1929.983",
+    "tags": [
+      "China, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "limestone"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "121206",
+    "title_zh": "阿彌陀佛",
+    "title_en": "Amitabha",
+    "period": null,
+    "dynasty_en": null,
+    "date_raw": "mid-1000s",
+    "date_start": 1040,
+    "date_end": 1060,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 23 cm (9 1/16 in.)",
+    "provenance_or_findsite": "(Heeramaneck Galleries, New York, NY, sold to the Cleveland Museum of Art) (?–1942) | The Cleveland Museum of Art, Cleveland, OH (1942–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1942.1082",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1942.1082/1942.1082_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1942.1082/1942.1082_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1942.1082/1942.1082_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1942.1082/1942.1082_web.jpg",
+    "description": "This delicately crafted statue of Amitabha, the Buddha of Infinite Light, bears testimony to the flowering of Buddhist art under the Liao Empire established by the Khitans, a nomadic Mongolian people, after the Tang persecution of Buddhists in 845. <br><br>The Liao rulers were devout Buddhists who commissioned substantial religious projects. Liao Buddhist artifacts reflecting close ties to the Tang traditions were likely executed by displaced or enslaved artisans as a result of the Khitan conqu…",
+    "source_url": "https://clevelandart.org/art/1942.1082",
+    "tags": [
+      "China, Yunnan province, Dali kingdom (938–1253)",
+      "Chinese Art",
+      "Sculpture",
+      "amitabha",
+      "gilt bronze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "121894",
+    "title_zh": null,
+    "title_en": "Box  with Ink Cakes:  Yellow Ink Stick in Shape of a  Buddhist \"Wheel of the Law\"",
+    "period": "清",
+    "dynasty_en": "Qing",
+    "date_raw": "1795–1820",
+    "date_start": 1795,
+    "date_end": 1820,
+    "materials": [
+      "Molded ink in yellow"
+    ],
+    "dimensions": "Case: 26.4 x 19.1 cm (10 3/8 x 7 1/2 in.); Lid: 26.5 x 19.2 cm (10 7/16 x 7 9/16 in.)",
+    "provenance_or_findsite": "Henry Watson Kent [1866–1948], given to the Cleveland Museum of Art (?–1942) | The Cleveland Museum of Art, Cleveland, OH (1942–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1942.206.e",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1942.206.e/1942.206.e_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1942.206.e/1942.206.e_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1942.206.e/1942.206.e_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1942.206.e/1942.206.e_web.jpg",
+    "description": "Ink cakes (also called ink sticks) are dissolved with the addition of water and then ground on the surface of a flat square stone into liquid ink for painting and calligraphy. The precious ink cakes here, however, have never been used.<br><br>The inscription on the side of the blue ink cake says that the set was commissioned by Chen Huai, Governor of Jiangxi Province.",
+    "source_url": "https://clevelandart.org/art/1942.206.e",
+    "tags": [
+      "China, Qing dynasty (1644-1911), Jiaqing reign (1795-1820)",
+      "Chinese Art",
+      "Miscellaneous",
+      "Molded ink in yellow",
+      "buddhist"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "122352",
+    "title_zh": null,
+    "title_en": "Stem Cup with Tibetan Characters and Buddhist Symbols",
+    "period": "清",
+    "dynasty_en": "Qing",
+    "date_raw": "1736–95",
+    "date_start": 1736,
+    "date_end": 1795,
+    "materials": [
+      "porcelain with underglaze blue decoration"
+    ],
+    "dimensions": "Diameter: 14.5 cm (5 11/16 in.); Overall: 13.4 cm (5 1/4 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1942.648",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1942.648/1942.648_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1942.648/1942.648_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1942.648/1942.648_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1942.648/1942.648_web.jpg",
+    "description": "Stem Cup with Tibetan Characters and Buddhist Symbols, 1736–95. China, Qing dynasty (1644-1911), Qianlong mark and reign (1736-95). Porcelain with underglaze blue decoration; diameter: 14.5 cm (5 11/16 in.); overall: 13.4 cm (5 1/4 in.). The Cleveland Museum of Art, Bequest of John L. Severance, 1942.648",
+    "source_url": "https://clevelandart.org/art/1942.648",
+    "tags": [
+      "Ceramic",
+      "China, Qing dynasty (1644-1911), Qianlong mark and reign (1736-95)",
+      "Chinese Art",
+      "buddhist",
+      "porcelain with underglaze blue decoration"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "127950",
+    "title_zh": "南海觀音",
+    "title_en": "Bodhisattva Guanyin of the South Sea",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1600s",
+    "date_start": 1600,
+    "date_end": 1699,
+    "materials": [
+      "Porcelain with white glaze, Dehua ware"
+    ],
+    "dimensions": "Overall: 45.2 cm (17 13/16 in.)",
+    "provenance_or_findsite": "Mrs. R. Henry [Emery May Holden] Norweb [1895-1984], Cleveland, OH, given to the Cleveland Museum of Art (?–1950) | The Cleveland Museum of Art, Cleveland, OH (1950–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1950.579",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1950.579/1950.579_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1950.579/1950.579_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1950.579/1950.579_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1950.579/1950.579_web.jpg",
+    "description": "Guanyin, the Buddhist bodhisattva of infinite compassion (Avalokiteshvara in Sanskrit), is the most revered enlightened being in East Asia. The bodhisattva perceives all beings in need of help and reveals himself in many forms. Here, his elaborate lotus pedestal rests on the crest of surging waves, identifying him as Guanyin of the South Seas. The Dehua kilns in Fujian province in southern China produced white porcelain figures for both the domestic and export markets. In China, such a figure m…",
+    "source_url": "https://clevelandart.org/art/1950.579",
+    "tags": [
+      "Ceramic",
+      "China, Fujian Province, Ming dynasty (1368-1644) - Qing dynasty (1644-1911)",
+      "Chinese Art",
+      "Porcelain with white glaze, Dehua ware",
+      "bodhisattva",
+      "guanyin"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "132964",
+    "title_zh": "黃花梨圈椅",
+    "title_en": "Pair of Roundback Armchairs: Lohan Type",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1600–1700s",
+    "date_start": 1600,
+    "date_end": 1799,
+    "materials": [
+      "Rosewood (huanghuali)"
+    ],
+    "dimensions": "Overall: 85.4 x 58.4 cm (33 5/8 x 23 in.); Chair: 86 x 63.5 x 47 cm (33 7/8 x 25 x 18 1/2 in.)",
+    "provenance_or_findsite": "George N. Kates [1895–1990] | Mrs. R. Henry [Emery May Holden] Norweb [1895–1984], Cleveland, OH, given to the Cleveland Museum of Art (?–1955) | The Cleveland Museum of Art, Cleveland, OH (1955–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1955.40",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1955.40/1955.40_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1955.40/1955.40_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1955.40/1955.40_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1955.40/1955.40_web.jpg",
+    "description": "In history, China moved from an original floor culture to high chairs and tables, developing a unique tradition of craftsmanship. Although still relatively unexplored, the manufacturing and styles of furniture differ by region. <br><br>These horseshoe-back armchairs were made in Jiangsu province. Their simplicity and minimalist elegance are characteristic of Suzhou-style furniture and aesthetics. The backs of the chairs are made of seven pieces of wood, joined and secured with an inserted woode…",
+    "source_url": "https://clevelandart.org/art/1955.40",
+    "tags": [
+      "China, Ming dynasty (1368–1644) to Qing dynasty (1644–1911)",
+      "Chinese Art",
+      "Furniture and woodwork",
+      "Rosewood (huanghuali)",
+      "lohan"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "132965",
+    "title_zh": "黃花梨圈椅",
+    "title_en": "Roundback Armchair: Lohan Type",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1600s–1700s",
+    "date_start": 1600,
+    "date_end": 1799,
+    "materials": [
+      "Rosewood (huanghuali)"
+    ],
+    "dimensions": "Overall: 85.4 x 58.4 cm (33 5/8 x 23 in.)",
+    "provenance_or_findsite": "George N. Kates [1895-1990] | Mrs. R. Henry [Emery May Holden] Norweb [1895-1984], Cleveland, OH, given to the Cleveland Museum of Art (?-1955) | The Cleveland Museum of Art, Cleveland, OH (1955-)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1955.40.1",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1955.40.1/1955.40.1_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1955.40.1/1955.40.1_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1955.40.1/1955.40.1_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1955.40.1/1955.40.1_web.jpg",
+    "description": "In history, China moved from an original floor culture to high chairs and tables, developing a unique tradition of craftsmanship. Although still relatively unexplored, the manufacturing and styles of furniture differ by region. <br><br>This horseshoe-back armchair was made in Jiangsu province. Its simplicity and minimalist elegance is characteristic of Suzhou-style furniture and aesthetics. The back of the chair is made of seven pieces of wood, joined and secured with an inserted wooden pin, a …",
+    "source_url": "https://clevelandart.org/art/1955.40.1",
+    "tags": [
+      "China, Ming dynasty (1368–1644) to Qing dynasty (1644–1911)",
+      "Chinese Art",
+      "Furniture and woodwork",
+      "Rosewood (huanghuali)",
+      "lohan"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "132966",
+    "title_zh": "黃花梨圈椅",
+    "title_en": "Roundback Armchair: Lohan Type",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1600s–1700s",
+    "date_start": 1600,
+    "date_end": 1799,
+    "materials": [
+      "Rosewood (huanghuali)"
+    ],
+    "dimensions": "Overall: 86 x 58.4 cm (33 7/8 x 23 in.)",
+    "provenance_or_findsite": "George N. Kates [1895-1990] | Mrs. R. Henry [Emery May Holden] Norweb [1895-1984], Cleveland, OH, given to the Cleveland Museum of Art (?-1955) | The Cleveland Museum of Art, Cleveland, OH (1955-)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1955.40.2",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1955.40.2/1955.40.2_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1955.40.2/1955.40.2_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1955.40.2/1955.40.2_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1955.40.2/1955.40.2_web.jpg",
+    "description": "In history, China moved from an original floor culture to high chairs and tables, developing a unique tradition of craftsmanship. Although still relatively unexplored, the manufacturing and styles of furniture differ by region. <br><br>This horseshoe-back armchair was made in Jiangsu province. Its simplicity and minimalist elegance is characteristic of Suzhou-style furniture and aesthetics. The back of the chair is made of seven pieces of wood, joined and secured with an inserted wooden pin, a …",
+    "source_url": "https://clevelandart.org/art/1955.40.2",
+    "tags": [
+      "China, Jiangsu province, Ming dynasty (1368–1644) or Qing dynasty (1644–1911)",
+      "Chinese Art",
+      "Furniture and woodwork",
+      "Rosewood (huanghuali)",
+      "lohan"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "133035",
+    "title_zh": null,
+    "title_en": "The New-born Buddha",
+    "period": "北魏",
+    "dynasty_en": "Northern Wei",
+    "date_raw": "400s CE",
+    "date_start": 400,
+    "date_end": 499,
+    "materials": [
+      "gilt bronze with inlays of blue glass and turquoise"
+    ],
+    "dimensions": "Overall: 19.4 cm (7 5/8 in.); Diameter of base: 6.8 cm (2 11/16 in.); Base: 3.1 cm (1 1/4 in.)",
+    "provenance_or_findsite": "(Walter Hochstadter [1914–2007], New York, NY, sold to the Cleveland Museum of Art) (?–1955) | The Cleveland Museum of Art, Cleveland, OH (1955–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1955.46",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1955.46/1955.46_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1955.46/1955.46_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1955.46/1955.46_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1955.46/1955.46_web.jpg",
+    "description": "This image of the newborn Buddha is rare and unusual. The common type represents him taking seven steps while proclaiming \"I am supreme in the Universe.\" Here, he is represented as being bathed by the nine Nagas, with both hands down.",
+    "source_url": "https://clevelandart.org/art/1955.46",
+    "tags": [
+      "China, Northern Wei dynasty (386-534)",
+      "Chinese Art",
+      "Sculpture",
+      "buddha",
+      "gilt bronze with inlays of blue glass and turquoise"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "134788",
+    "title_zh": "鬼神",
+    "title_en": "Monster Caryatid",
+    "period": "北齐",
+    "dynasty_en": "Northern Qi",
+    "date_raw": "late 500s",
+    "date_start": 575,
+    "date_end": 600,
+    "materials": [
+      "Limestone"
+    ],
+    "dimensions": "Overall: 28 x 40 cm (11 x 15 3/4 in.)",
+    "provenance_or_findsite": "(Frank Caro [1904–1980], New York, NY, to the Cleveland Museum of Art, purchased with funds from an anonymous donor) (?–1957) | The Cleveland Museum of Art, Cleveland, OH (1957–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1957.357",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1957.357/1957.357_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1957.357/1957.357_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1957.357/1957.357_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1957.357/1957.357_web.jpg",
+    "description": "This squatting monster with claws on its knees, braces its shoulders against an overhanging molding. The half-human, half-animal creature was likely part of a Buddhist cave-temple complex at Xiangtangshan, in Hebei Province, northwest China. Found in the lower registers of stone monuments of either architectural structures or statues of Buddhist deities, such monsters had a supportive function. Their scary appearance was believed to keep evil spirits away from the sacred sites.",
+    "source_url": "https://clevelandart.org/art/1957.357",
+    "tags": [
+      "China, possibly from Xiangtangshan, Northern Qi dynasty (550–577)",
+      "Chinese Art",
+      "Limestone",
+      "Sculpture"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "134789",
+    "title_zh": "蠻王禮佛圖",
+    "title_en": "Barbarian Royalty Worshiping the Buddha",
+    "period": "宋",
+    "dynasty_en": "Song",
+    "date_raw": "900s",
+    "date_start": 900,
+    "date_end": 999,
+    "materials": [
+      "Handscroll; ink and color on silk"
+    ],
+    "dimensions": "Painting section: 28.6 x 103.5 cm (11 1/4 x 40 3/4 in.); Overall with colophon: 28.6 x 667.7 cm (11 1/4 x 262 7/8 in.)",
+    "provenance_or_findsite": "Daoist Wukeliao 無可了道人 [1300s] (1300s) | Yuan imperial collection (seal of Emperor Wenzong, Tianli era [1328–30]), Beijing, China (c. 1328–30) | Qing imperial collection (seals of Emperors Qianlong [r. 1736–1795], Jiaqing [r. 1796–1820], and Xuantong [r. 1909–1911]), Beijing, China (c. 1736–1911) | (Walter Hochstadter [1914–2007], New York, NY, sold to Mr. and Mrs. Severance A. Millikin) (?–1957) | Severance A. [1895–1985] and Greta [Marguerite Steckerl] Millikin [1903–1989], Cleveland, OH, given to the Cleveland Museum of Art (1957) | The Cleveland Museum of Art, Cleveland, OH (1957–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1957.358",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1957.358/1957.358_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1957.358/1957.358_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1957.358/1957.358_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1957.358/1957.358_web.jpg",
+    "description": "This painting begins on the right with 15 people following a dignified figure wearing headgear with twin pheasant feathers. He extends an incense burner toward the Buddha, who is seated on his lotus throne and flanked by two haloed disciples and two Heavenly Kings. The worshipers’ diverse physical features, regional finery, and religious affiliations suggest the universal appeal of Buddhism. <br><br>The imagery was inspired by the foreign envoys who frequently came to the Chinese court to give …",
+    "source_url": "https://clevelandart.org/art/1957.358",
+    "tags": [
+      "China, Northern Song dynasty (960-1127)",
+      "Chinese Art",
+      "Handscroll; ink and color on silk",
+      "Painting",
+      "buddha"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "135584",
+    "title_zh": "十一面觀音菩薩",
+    "title_en": "Eleven-Headed Guanyin",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "early 700s",
+    "date_start": 700,
+    "date_end": 725,
+    "materials": [
+      "gray sandstone"
+    ],
+    "dimensions": "Overall: 129.6 x 63.6 x 25.4 cm (51 x 25 1/16 x 10 in.)",
+    "provenance_or_findsite": "(C.T. Loo 盧芹齋 [1880-1957], New York, NY and Paris, France, sold to the Cleveland Museum of Art) (?-1959) | The Cleveland Museum of Art, Cleveland, OH (1959-)",
+    "current_location": "ALOB Asian Lobby",
+    "accession_number": "1959.129",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1959.129/1959.129_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1959.129/1959.129_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1959.129/1959.129_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1959.129/1959.129_web.jpg",
+    "description": "Eleven-Headed Guanyin (十一面觀音菩薩), early 700s. China, Tang dynasty (618-907). Gray sandstone; overall: 129.6 x 63.6 x 25.4 cm (51 x 25 1/16 x 10 in.). The Cleveland Museum of Art, Gift of Severance and Greta Millikin, 1959.129",
+    "source_url": "https://clevelandart.org/art/1959.129",
+    "tags": [
+      "China, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "gray sandstone",
+      "guanyin"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "135586",
+    "title_zh": null,
+    "title_en": "Stele with Maitreya and Attendants",
+    "period": "北魏",
+    "dynasty_en": "Northern Wei",
+    "date_raw": "500",
+    "date_start": 450,
+    "date_end": 550,
+    "materials": [
+      "gray limestone"
+    ],
+    "dimensions": "Overall: 94.6 x 54.6 cm (37 1/4 x 21 1/2 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1959.130",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1959.130/1959.130_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1959.130/1959.130_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1959.130/1959.130_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1959.130/1959.130_web.jpg",
+    "description": "Buddhist statue steles (zaoxiang bei) were commissioned and donated to be set in temples. The making of Buddhist images allowed for personal devotion and accumulation of merits, but the erection of a stele was also an act of piety or gratitude by individual donors. As indicated by the inscription on the reverse side of this stele, it was commissioned in 500 by a monk for his parents, family, and religious teachers.",
+    "source_url": "https://clevelandart.org/art/1959.130",
+    "tags": [
+      "China, Northern Wei dynasty (386-534)",
+      "Chinese Art",
+      "Sculpture",
+      "gray limestone",
+      "maitreya",
+      "stele"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "135836",
+    "title_zh": "溪山蘭若圖",
+    "title_en": "Buddhist Retreat by Stream and Mountains",
+    "period": "宋",
+    "dynasty_en": "Song",
+    "date_raw": "960–85",
+    "date_start": 960,
+    "date_end": 985,
+    "materials": [
+      "Hanging scroll; ink on silk"
+    ],
+    "dimensions": "Painting only: 184.5 x 56.1 cm (72 5/8 x 22 1/16 in.); Overall with knobs: 260.5 x 77.4 cm (102 9/16 x 30 1/2 in.)",
+    "provenance_or_findsite": "Song government (Shang Shu Sheng yin 尚書省印), Beijing, China (960-1279) | Ming government (half-seal Si yin 司印), Beijing, China (1368–98) | Wu Ting 吳廷 (first half of 1600s) (first half of 1600s) | Liang Qingbiao 梁清標 [1620–1691] (1620–1691) | Geng Zhaozhong 耿昭忠 [1640–1686] (1640–86) | An Qi 安岐 [c. 1683–c. 1744] (c. 1683–c. 1744) | Qing imperial collection (seals of the Qianlong Emperor), Beijing. China (1736–95) | Shao Fu-hsing, Beijing, China (early 1900s) | Frank F. Cho, New York, NY (?–1959) | Katharine Holden Thayer [1898–1985], Gates Mills, OH, given to the Cleveland Museum of Art (?–1959) | The Cleveland Museum of Art, Cleveland, OH (1959–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1959.348",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1959.348/1959.348_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1959.348/1959.348_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1959.348/1959.348_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1959.348/1959.348_web.jpg",
+    "description": "Monk Juran served the Southern Tang (937–75) imperial house in Nanjing, where he studied with Dong Yuan (active 930s–60s). Both founded the southern landscape tradition, or Jiangnan school, known for gentle misty riverscapes in wet ink.<br> <br>Juran moved north to Kaifeng when the Southern Tang surrendered to the Northern Song, the impact of which may be seen in this painting, presumably painted after 976. A towering mountain dominates the composition, typically representing the style of the N…",
+    "source_url": "https://clevelandart.org/art/1959.348",
+    "tags": [
+      "China, Northern Song dynasty (960-1127)",
+      "Chinese Art",
+      "Hanging scroll; ink on silk",
+      "Painting",
+      "buddhist"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "136626",
+    "title_zh": "坐佛像",
+    "title_en": "Seated Buddha",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "600s",
+    "date_start": 618,
+    "date_end": 700,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 13.3 x 6.9 cm (5 1/4 x 2 11/16 in.); Figure: 9.9 cm (3 7/8 in.)",
+    "provenance_or_findsite": "Mrs. John Lyon [Georgia Forman Elliott] Collyer [1898–1994], given to the Cleveland Museum of Art (?–1961) | The Cleveland Museum of Art, Cleveland, OH (1961–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1961.18",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1961.18/1961.18_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1961.18/1961.18_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1961.18/1961.18_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1961.18/1961.18_web.jpg",
+    "description": "Portable Buddhist figures and objects like this gilt bronze had a variety of uses. They could have been carried in religious processions. Others could serve as donations, souvenirs, or votive items in the context of pilgrimages to religious sites. Their miniature size also made them appropriate for placement on private altars or shrines for personal devotion.",
+    "source_url": "https://clevelandart.org/art/1961.18",
+    "tags": [
+      "China, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "buddha",
+      "gilt bronze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "137218",
+    "title_zh": "觀音菩薩",
+    "title_en": "Bodhisattva Guanyin",
+    "period": "北齐",
+    "dynasty_en": "Northern Qi",
+    "date_raw": "late 500s–early 600s",
+    "date_start": 575,
+    "date_end": 625,
+    "materials": [
+      "sandstone with polychromy"
+    ],
+    "dimensions": "Overall: 138.8 x 38.2 x 27.4 cm (54 5/8 x 15 1/16 x 10 13/16 in.)",
+    "provenance_or_findsite": "(Mayuyama and Company, Tokyo, Japan, sold to the Cleveland Museum of Art) (?–1962) | The Cleveland Museum of Art, Cleveland, OH (1962–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1962.162",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1962.162/1962.162_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1962.162/1962.162_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1962.162/1962.162_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1962.162/1962.162_web.jpg",
+    "description": "The artistic excellence of this bodhisattva is further reinforced by comparable outstanding Chinese Buddhist sculptures excavated at Qingzhou in Shandong Province in 1996—one of the most sensational and significant archaeological finds of the 1900s. Like related types among the Qingzhou finds, this statute has a gently smiling face and meticulous detailing of splendid jewelry. A noticeable difference, however, is the unique <em>yingluo </em>瓔珞 (<em>mukt hara</em>) worn by the bodhisattva for pe…",
+    "source_url": "https://clevelandart.org/art/1962.162",
+    "tags": [
+      "China, late Northern Qi (550–577) or early Sui dynasty (581–618)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "guanyin",
+      "sandstone with polychromy"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "137276",
+    "title_zh": "僧人",
+    "title_en": "Adoring Monk",
+    "period": "北魏",
+    "dynasty_en": "Northern Wei",
+    "date_raw": "early 500s",
+    "date_start": 500,
+    "date_end": 525,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 14.9 cm (5 7/8 in.); Base: 3.6 x 5.2 x 3.9 cm (1 7/16 x 2 1/16 x 1 9/16 in.); Figure: 11.5 cm (4 1/2 in.)",
+    "provenance_or_findsite": "Mrs. Christian R. Holmes, New York, NY (by 1937–?) | Mrs. G. M. G. Forman, given to her daughter, Mrs. John Lyon [Georgia Forman Elliott] Collyer (after 1937–?) | Mrs. John Lyon [Georgia Forman Elliott] Collyer [1898–1994], given to the Cleveland Museum of Art (?–1962) | The Cleveland Museum of Art, Cleveland, OH (1962–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1962.213",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1962.213/1962.213_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1962.213/1962.213_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1962.213/1962.213_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1962.213/1962.213_web.jpg",
+    "description": "Portable Buddhist figures and objects like this gilt bronze had a variety of uses. They could have been carried in religious processions. Others could serve as donations, souvenirs, or votive items in the context of pilgrimages to religious sites. Their miniature size also made them appropriate for placement on private altars or shrines for personal devotion.",
+    "source_url": "https://clevelandart.org/art/1962.213",
+    "tags": [
+      "China, Northern Wei dynasty (386-534)",
+      "Chinese Art",
+      "Sculpture",
+      "gilt bronze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "137281",
+    "title_zh": "觀音菩薩",
+    "title_en": "Bodhisattva Guanyin",
+    "period": "隋",
+    "dynasty_en": "Sui",
+    "date_raw": "581–618",
+    "date_start": 581,
+    "date_end": 618,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 8.3 cm (3 1/4 in.)",
+    "provenance_or_findsite": "Mrs. John Lyon [Georgia Forman Elliott] Collyer [1898–1994], given to the Cleveland Museum of Art (?–1962) | The Cleveland Museum of Art, Cleveland, OH (1962–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1962.217",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1962.217/1962.217_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1962.217/1962.217_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1962.217/1962.217_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1962.217/1962.217_web.jpg",
+    "description": "Portable Buddhist figures and objects like this gilt bronze had a variety of uses. They could have been carried in religious processions. Others could serve as donations, souvenirs, or votive items in the context of pilgrimages to religious sites. Their miniature size also made them appropriate for placement on private altars or shrines for personal devotion.",
+    "source_url": "https://clevelandart.org/art/1962.217",
+    "tags": [
+      "China, Sui dynasty (581-618)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "gilt bronze",
+      "guanyin"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "139823",
+    "title_zh": null,
+    "title_en": "Standing Bodhisattva",
+    "period": "金",
+    "dynasty_en": "Jin",
+    "date_raw": "1200s",
+    "date_start": 1200,
+    "date_end": 1300,
+    "materials": [
+      "wood with traces of polychromy and gold leaf"
+    ],
+    "dimensions": "Overall: 146.1 x 57.2 cm (57 1/2 x 22 1/2 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1963.581",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1963.581/1963.581_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1963.581/1963.581_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1963.581/1963.581_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1963.581/1963.581_web.jpg",
+    "description": "Standing Bodhisattva, 1200s. China, Jin dynasty (1115-1234). Wood with traces of polychromy and gold leaf; overall: 146.1 x 57.2 cm (57 1/2 x 22 1/2 in.). The Cleveland Museum of Art, Andrew R. and Martha Holden Jennings Fund, 1963.581",
+    "source_url": "https://clevelandart.org/art/1963.581",
+    "tags": [
+      "China, Jin dynasty (1115-1234)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "wood with traces of polychromy and gold leaf"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "140151",
+    "title_zh": "阿彌陀佛",
+    "title_en": "Amida Buddha",
+    "period": "隋",
+    "dynasty_en": "Sui",
+    "date_raw": "581–618",
+    "date_start": 581,
+    "date_end": 618,
+    "materials": [
+      "limestone with traces of polychromy"
+    ],
+    "dimensions": "Overall: 51.4 x 20.3 cm (20 1/4 x 8 in.)",
+    "provenance_or_findsite": "K. Takenouchi, Tokyo, Japan | (N. V. Hammer, Inc., New York, NY, sold to the Cleveland Museum of Art) (?–1964) | The Cleveland Museum of Art, Cleveland, OH (1964–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1964.152",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1964.152/1964.152_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1964.152/1964.152_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1964.152/1964.152_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1964.152/1964.152_web.jpg",
+    "description": "The leaf-shaped halo of this seated Buddha bears the rare, unusual icon of the three nirmana Buddhas, which represents a symbolic homage of the Buddhas of the past, the present, and the future—manifestations of the Buddha in infinite time and space.<br><br>Another interpretation is that the three figures without halos represent souls reborn in the Western Paradise thanks to Amida Buddha's divine intervention.",
+    "source_url": "https://clevelandart.org/art/1964.152",
+    "tags": [
+      "China, Sui dynasty (581-618)",
+      "Chinese Art",
+      "Sculpture",
+      "buddha",
+      "limestone with traces of polychromy"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "140197",
+    "title_zh": "羅漢持桃; 羅漢托福狗",
+    "title_en": "Lohan (Arhat) Holding a Peach; Lohan (Arhat) Holding a Fu Dog",
+    "period": "金",
+    "dynasty_en": "Jin",
+    "date_raw": "1662–1722",
+    "date_start": 1662,
+    "date_end": 1722,
+    "materials": [
+      "porcelain with famille verte overglaze enamel decoration"
+    ],
+    "dimensions": "Overall: 24.3 x 12.6 cm (9 9/16 x 4 15/16 in.)",
+    "provenance_or_findsite": "Edmund Cogswell Converse [1849–1921], Greenwich, Connecticut | (American Art Galleries, NY, February 10, 1926, lot no. 305) (February 10, 1926) | John L. Severance [1863–1936], Cleveland, OH, by descent to Severance Millikin (1926-1936) | Severance A. [1895–1985] and Greta [Marguerite Steckerl] Millikin [1903–1989], Cleveland, OH, given to the Cleveland Museum of Art (1936–1964) | The Cleveland Museum of Art, Cleveland, OH (1964–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1964.191",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1964.191/1964.191_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1964.191/1964.191_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1964.191/1964.191_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1964.191/1964.191_web.jpg",
+    "description": "<em>Lohan </em>are disciples of Buddha with supernatural powers and eccentric behaviors. One lohan is holding the peach of longevity (<em>shoutao</em>), the other is holding the fu-dog, symbolizing good luck. With carefree smiles and playful gestures, these two figures embody a humorous attitude and a detachment from worldly affairs. This pair of porcelain figures was perhaps part of a house altar set or a decorative item in a household.",
+    "source_url": "https://clevelandart.org/art/1964.191",
+    "tags": [
+      "Ceramic",
+      "China, Jiangxi province, Jingdezhen kilns, Qing dynasty (1644–1911), Kangxi reign (1662–1722)",
+      "Chinese Art",
+      "arhat",
+      "lohan",
+      "porcelain with famille verte overglaze enamel decoration"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "140198",
+    "title_zh": "羅漢持桃",
+    "title_en": "Lohan (Arhat) Holding a Peach",
+    "period": "金",
+    "dynasty_en": "Jin",
+    "date_raw": "1662–1722",
+    "date_start": 1662,
+    "date_end": 1722,
+    "materials": [
+      "porcelain with famille verte overglaze enamel decoration"
+    ],
+    "dimensions": "Overall: 24.3 x 12.6 cm (9 9/16 x 4 15/16 in.)",
+    "provenance_or_findsite": "Edmund Cogswell Converse [1849–1921], Greenwich, Connecticut | (American Art Galleries, NY, February 10, 1926, lot no. 305) (February 10, 1926) | John L. Severance [1863–1936], Cleveland, OH, by descent to Severance Millikin (1926–1936) | Severance A. [1895–1985] and Greta [Marguerite Steckerl] Millikin [1903–1989], Cleveland, OH, given to the Cleveland Museum of Art (1936–1964) | The Cleveland Museum of Art, Cleveland, OH (1964–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1964.191.1",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1964.191.1/1964.191.1_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1964.191.1/1964.191.1_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1964.191.1/1964.191.1_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1964.191.1/1964.191.1_web.jpg",
+    "description": "<em>Lohan </em>are disciples of Buddha with supernatural powers and eccentric behaviors. This lohan is holding the peach of longevity (<em>shoutao</em>), while its mate is holding the fu-dog, symbolizing good luck. With carefree smiles and playful gestures, these two figures embody a humorous attitude and a detachment from worldly affairs. This pair of porcelain figures was perhaps part of a house altar set or a decorative item in a household.",
+    "source_url": "https://clevelandart.org/art/1964.191.1",
+    "tags": [
+      "Ceramic",
+      "China, Jiangxi province, Jingdezhen kilns, Qing dynasty (1644–1911), Kangxi reign (1662–1722)",
+      "Chinese Art",
+      "arhat",
+      "lohan",
+      "porcelain with famille verte overglaze enamel decoration"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "140199",
+    "title_zh": "羅漢托福狗",
+    "title_en": "Lohan (Arhat) Holding a Fu Dog",
+    "period": "金",
+    "dynasty_en": "Jin",
+    "date_raw": "1662–1722",
+    "date_start": 1662,
+    "date_end": 1722,
+    "materials": [
+      "porcelain with famille verte overglaze enamel decoration"
+    ],
+    "dimensions": "Overall: 24.3 x 12.6 cm (9 9/16 x 4 15/16 in.)",
+    "provenance_or_findsite": "Edmund Cogswell Converse [1849–1921], Greenwich, Connecticut | (American Art Galleries, NY, February 10, 1926, lot no. 305) (February 10, 1926) | John L. Severance [1863–1936], Cleveland, OH, by descent to Severance Millikin (1926–1936) | Severance A. [1895–1985] and Greta [Marguerite Steckerl] Millikin [1903–1989], Cleveland, OH, given to the Cleveland Museum of Art (1936–1964) | The Cleveland Museum of Art, Cleveland, OH (1964–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1964.191.2",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1964.191.2/1964.191.2_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1964.191.2/1964.191.2_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1964.191.2/1964.191.2_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1964.191.2/1964.191.2_web.jpg",
+    "description": "<em>Lohan </em>are disciples of Buddha with supernatural powers and eccentric behaviors. This lohan is holding the fu-dog, symbolizing good luck, while its mate is holding the peach of longevity (<em>shoutao</em>). With carefree smiles and playful gestures, these two figures embody a humorous attitude and a detachment from worldly affairs. This pair of porcelain figures was perhaps part of a house altar set or a decorative item in a household.",
+    "source_url": "https://clevelandart.org/art/1964.191.2",
+    "tags": [
+      "Ceramic",
+      "China, Jiangxi province, Jingdezhen kilns, Qing dynasty (1644-1911), Kangxi reign (1662-1722)",
+      "Chinese Art",
+      "arhat",
+      "lohan",
+      "porcelain with famille verte overglaze enamel decoration"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "140450",
+    "title_zh": null,
+    "title_en": "The Thousand Buddha Hall and the Pagoda of the \"Cloudy Cliff\" Monastery, from Twelve Views of Tiger Hill, Suzhou",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "after 1490",
+    "date_start": 1491,
+    "date_end": 1509,
+    "materials": [
+      "Album leaf; ink on paper or ink and slight color on paper"
+    ],
+    "dimensions": "Image: 31.1 x 41 cm (12 1/4 x 16 1/8 in.); Overall: 36.5 x 49.9 cm (14 3/8 x 19 5/8 in.)",
+    "provenance_or_findsite": "Hu Zhishou 胡之壽 [late 18th–mid 19th century] | Binliang 斌良 [1784–1847] | Hou Shigong 侯士恭 [late 19th–early 20th century] | (Walter Hochstadter [1914–2007], New York, NY, sold to the Cleveland Museum of Art) (?-1964) | The Cleveland Museum of Art, Cleveland, OH (1964-)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1964.371.7",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1964.371.7/1964.371.7_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1964.371.7/1964.371.7_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1964.371.7/1964.371.7_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1964.371.7/1964.371.7_web.jpg",
+    "description": "<em>Views of Tiger Hill</em> depicts a historic site a few miles northwest of Suzhou. The scenes simulate a visit from arriving by boat at the foot of the mountain to climbing to Cloudy Cliff Monastery. Representations of the artist’s mature style, Shen Zhou included views in subtle colors in the suite of monochrome scenes. <br><br>A Suzhou native, Shen Zhou was supported by family wealth and rejected an official career in favor of life as a retired scholar. Turning to painting in midlife, he i…",
+    "source_url": "https://clevelandart.org/art/1964.371.7",
+    "tags": [
+      "Album leaf; ink on paper or ink and slight color on paper",
+      "China, Ming dynasty (1368–1644)",
+      "Chinese Art",
+      "Painting",
+      "buddha"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "141749",
+    "title_zh": null,
+    "title_en": "Mi-lê:  Maitreya Buddha",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "683",
+    "date_start": 683,
+    "date_end": 683,
+    "materials": [
+      "limestone"
+    ],
+    "dimensions": "Overall: 33 x 20.4 cm (13 x 8 1/16 in.)",
+    "provenance_or_findsite": "Professor P. L. [Paul-Louis] Mercanton [1876–1963], Lausanne, Switzerland | (Sotheby's, London, England. 24 March 1964 sale, Lot no. 34. Sold to Moss) (24 March 1964) | (Robert Rousset [1901–1982], New York, NY, sold to the Cleveland Museum of Art) (?–1966) | The Cleveland Museum of Art, Cleveland, OH (1966–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1965.33",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1965.33/1965.33_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1965.33/1965.33_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1965.33/1965.33_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1965.33/1965.33_web.jpg",
+    "description": "Mi-lê: Maitreya Buddha, 683. China, Tang dynasty (618-907). Limestone; overall: 33 x 20.4 cm (13 x 8 1/16 in.). The Cleveland Museum of Art, Purchase from the J. H. Wade Fund, 1965.33",
+    "source_url": "https://clevelandart.org/art/1965.33",
+    "tags": [
+      "China, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "buddha",
+      "limestone",
+      "maitreya"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "141756",
+    "title_zh": null,
+    "title_en": "Sadaksari-Lokesvara Mandala",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "c. 1475–1525",
+    "date_start": 1475,
+    "date_end": 1525,
+    "materials": [
+      "wood"
+    ],
+    "dimensions": "Overall: 14.1 x 8.7 x 2.4 cm (5 9/16 x 3 7/16 x 15/16 in.)",
+    "provenance_or_findsite": "Mr. and Mrs. J. J. Klejman, New York, NY, given to the Cleveland Museum of Art (?–1965) | The Cleveland Museum of Art, Cleveland, OH (1965–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1965.336",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1965.336/1965.336_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1965.336/1965.336_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1965.336/1965.336_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1965.336/1965.336_web.jpg",
+    "description": "A quintet of Buddhist divinities are seated on lotus thrones supported by scrolling floral forms. They are carved in relief on a wooden block and arranged diagrammatically. This configuration establishes the icon to be a mandala.",
+    "source_url": "https://clevelandart.org/art/1965.336",
+    "tags": [
+      "Chinese Art",
+      "Sculpture",
+      "Tibet, Ming dynasty (1368-1644)",
+      "wood"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "141934",
+    "title_zh": null,
+    "title_en": "Guardian Lion",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "c. 600",
+    "date_start": 550,
+    "date_end": 650,
+    "materials": [
+      "white marble"
+    ],
+    "dimensions": "Overall: 78.8 cm (31 in.); Base: 49.6 x 41.8 cm (19 1/2 x 16 7/16 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "AAW Art Allée West",
+    "accession_number": "1965.473",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1965.473/1965.473_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1965.473/1965.473_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1965.473/1965.473_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1965.473/1965.473_web.jpg",
+    "description": "Lion sculptures like this example are often found at the entrance to Buddhist temples in China. It may seem as if they are there to protect the temple. Lions also have had strong associations with Buddhism since the religion’s origin; the dharma, or Buddhist doctrine, is said to be spread through his roar.",
+    "source_url": "https://clevelandart.org/art/1965.473",
+    "tags": [
+      "China, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "white marble"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "142032",
+    "title_zh": "觀音像",
+    "title_en": "Potalaka Guanyin",
+    "period": "五代",
+    "dynasty_en": "Five Dynasties",
+    "date_raw": "900s",
+    "date_start": 900,
+    "date_end": 999,
+    "materials": [
+      "Carved sandalwood with traces of paint"
+    ],
+    "dimensions": "Overall: 15.1 x 9.9 cm (5 15/16 x 3 7/8 in.)",
+    "provenance_or_findsite": "(Ellsworth and Goldie, Ltd., New York, NY, sold to the Cleveland Museum of Art) (?–1965) | The Cleveland Museum of Art, Cleveland, OH (1965–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1965.556",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1965.556/1965.556_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1965.556/1965.556_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1965.556/1965.556_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1965.556/1965.556_web.jpg",
+    "description": "This portable figure of Guanyin, the Bodhisattva of Compassion who vowed to stay on earth to help human beings, is carved of precious sandalwood. It is lavishly covered with garlands of flowers that retain traces of the original red paint. The small sculpture may have been used in a private devotional context.",
+    "source_url": "https://clevelandart.org/art/1965.556",
+    "tags": [
+      "Carved sandalwood with traces of paint",
+      "China, Five dynasties (907-960)",
+      "Chinese Art",
+      "Sculpture",
+      "guanyin"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "142279",
+    "title_zh": null,
+    "title_en": "Shakyamuni as an Ascetic",
+    "period": "元",
+    "dynasty_en": "Yuan",
+    "date_raw": "early 1300s",
+    "date_start": 1300,
+    "date_end": 1325,
+    "materials": [
+      "gilt bronze with polychromy"
+    ],
+    "dimensions": "Overall: 44.2 x 31.8 cm (17 3/8 x 12 1/2 in.)",
+    "provenance_or_findsite": "(Eduard Lingero, Belgium, sold to Claude De Marteau) (1940s?–1961) | (Claude De Marteau [d. 2017], Brussels, Belgium, sold to the Cleveland Museum of Art) (1961–1966) | The Cleveland Museum of Art, Cleveland, OH (1966–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1966.116",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1966.116/1966.116_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1966.116/1966.116_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1966.116/1966.116_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1966.116/1966.116_web.jpg",
+    "description": "This statue is of monumental scale and exceptionally fine workmanship. A work of this size and quality was likely to have been made in the official workshops under imperial auspices. The image of the ascetic Shakyamuni (the historical Buddha) is both powerful and immediate. Shakyamuni is portrayed in a state of contemplative meditation with closed eyes and an inward smile. He leans forward, head and hands resting on an upraised knee. The representation speaks eloquently of his withdrawal from t…",
+    "source_url": "https://clevelandart.org/art/1966.116",
+    "tags": [
+      "China, Yuan dynasty (1271–1368)",
+      "Chinese Art",
+      "Sculpture",
+      "gilt bronze with polychromy",
+      "shakyamuni"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "142639",
+    "title_zh": null,
+    "title_en": "Standing Guanyin",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "700s?",
+    "date_start": 700,
+    "date_end": 800,
+    "materials": [
+      "limestone"
+    ],
+    "dimensions": "Overall: 170.8 cm (67 1/4 in.)",
+    "provenance_or_findsite": "William Randolph Hearst; H. Kevorkian",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1966.364",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1966.364/1966.364_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1966.364/1966.364_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1966.364/1966.364_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1966.364/1966.364_web.jpg",
+    "description": "The statue is identified and dated by an inscription to 687. There is a marked restraint and stately elegance of the well-proportioned figure standing in a relaxed pose.",
+    "source_url": "https://clevelandart.org/art/1966.364",
+    "tags": [
+      "China, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "guanyin",
+      "limestone"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "143894",
+    "title_zh": "觀音菩薩",
+    "title_en": "Bodhisattva of Compassion (Avalokiteshvara)",
+    "period": null,
+    "dynasty_en": null,
+    "date_raw": "1647–48 or 1658",
+    "date_start": 1647,
+    "date_end": 1658,
+    "materials": [
+      "ivory"
+    ],
+    "dimensions": "Overall: 29.2 cm (11 1/2 in.)",
+    "provenance_or_findsite": "(J.J. Klejman, New York, NY, sold to the Cleveland Museum of Art) (?–1968) | The Cleveland Museum of Art, Cleveland, OH (1968–)",
+    "current_location": "237 Himalayan",
+    "accession_number": "1968.280",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1968.280/1968.280_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1968.280/1968.280_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1968.280/1968.280_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1968.280/1968.280_web.jpg",
+    "description": "Choying Dorje was one of the most influential monastic leaders in the history of Tibetan Buddhism. Known as the Tenth Karmapa, he was the head of the Karma Kagyu order of monks. His biographies state that from a young age he had a talent and passion for carving and painting images of bodhisattvas and other enlightened beings. Several of his original works survive, including this exceptionally rare ivory carving of Avalokiteshvara holding a lotus. Stylistically it is related to images from south…",
+    "source_url": "https://clevelandart.org/art/1968.280",
+    "tags": [
+      "Chinese Art",
+      "Ivory",
+      "Tibet",
+      "avalokiteshvara",
+      "bodhisattva",
+      "ivory"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "144223",
+    "title_zh": null,
+    "title_en": "Pedestal",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "mid-700s",
+    "date_start": 740,
+    "date_end": 760,
+    "materials": [
+      "ivory"
+    ],
+    "dimensions": "Overall: 7.8 cm (3 1/16 in.); Diameter of base: 9 cm (3 9/16 in.)",
+    "provenance_or_findsite": "(Christie's, London, England) | Frederick M. Mayer [1899–1974], New York, NY, given to the Cleveland Museum of Art (?–1968) | The Cleveland Museum of Art, Cleveland, OH (1968–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1968.70",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1968.70/1968.70_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1968.70/1968.70_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1968.70/1968.70_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1968.70/1968.70_web.jpg",
+    "description": "Small circular pedestal or stand for an icon or figure, most probably a Buddha. Starting from the base of the pedestal, there is a band of pearling or beading, a row of everted lotus petals, four dwarf-like creatures alternating with four square columns, a lotus leaf, another row of lotus petals, their stamens and anthers, and finally a row of alternating large and small elements retaining traces of a red stain and probably representing stylized lotus petals. The pedestal is in the form of a we…",
+    "source_url": "https://clevelandart.org/art/1968.70",
+    "tags": [
+      "China, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "ivory"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "144682",
+    "title_zh": null,
+    "title_en": "Stem Cup with Buddhist Emblems: Shufu Ware",
+    "period": "元",
+    "dynasty_en": "Yuan",
+    "date_raw": "1300s",
+    "date_start": 1300,
+    "date_end": 1399,
+    "materials": [
+      "porcelain with molded decoration and white glaze"
+    ],
+    "dimensions": "Case: 16.6 x 17.8 cm (6 9/16 x 7 in.); Overall: 10.2 x 15.3 cm (4 x 6 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1969.303",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1969.303/1969.303_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1969.303/1969.303_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1969.303/1969.303_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1969.303/1969.303_web.jpg",
+    "description": "Stem Cup with Buddhist Emblems: Shufu Ware, 1300s. China, Jiangxi Province, Yuan dynasty (1271–1368). Porcelain with molded decoration and white glaze; case: 16.6 x 17.8 cm (6 9/16 x 7 in.); overall: 10.2 x 15.3 cm (4 x 6 in.). The Cleveland Museum of Art, Gift of Mr. and Mrs. John J. Klejman, 1969.303",
+    "source_url": "https://clevelandart.org/art/1969.303",
+    "tags": [
+      "Ceramic",
+      "China, Jiangxi Province, Yuan dynasty (1271–1368)",
+      "Chinese Art",
+      "buddhist",
+      "porcelain with molded decoration and white glaze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "144683",
+    "title_zh": null,
+    "title_en": "Stem Cup with Buddhist Emblems: Shufu Ware",
+    "period": "元",
+    "dynasty_en": "Yuan",
+    "date_raw": "1300s",
+    "date_start": 1300,
+    "date_end": 1399,
+    "materials": [
+      "porcelain with molded decoration and white glaze"
+    ],
+    "dimensions": "Overall: 10.2 x 15.3 cm (4 x 6 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1969.303.a",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1969.303.a/1969.303.a_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1969.303.a/1969.303.a_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1969.303.a/1969.303.a_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1969.303.a/1969.303.a_web.jpg",
+    "description": "Stem Cup with Buddhist Emblems: Shufu Ware, 1300s. China, Jiangxi province, Yuan dynasty (1271-1368). Porcelain with molded decoration and white glaze; overall: 10.2 x 15.3 cm (4 x 6 in.). The Cleveland Museum of Art, Gift of Mr. and Mrs. John J. Klejman, 1969.303.a",
+    "source_url": "https://clevelandart.org/art/1969.303.a",
+    "tags": [
+      "Ceramic",
+      "China, Jiangxi province, Yuan dynasty (1271-1368)",
+      "Chinese Art",
+      "buddhist",
+      "porcelain with molded decoration and white glaze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "144684",
+    "title_zh": null,
+    "title_en": "Stem Cup with Buddhist Emblems (case)",
+    "period": "元",
+    "dynasty_en": "Yuan",
+    "date_raw": "1300s",
+    "date_start": 1300,
+    "date_end": 1399,
+    "materials": [
+      "wicker and wood with metal fittings"
+    ],
+    "dimensions": "Overall: 16.6 x 17.8 cm (6 9/16 x 7 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1969.303.b",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1969.303.b/1969.303.b_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1969.303.b/1969.303.b_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1969.303.b/1969.303.b_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1969.303.b/1969.303.b_web.jpg",
+    "description": "Stem Cup with Buddhist Emblems (case), 1300s. China, Yuan dynasty (1271-1368). Wicker and wood with metal fittings; overall: 16.6 x 17.8 cm (6 9/16 x 7 in.). The Cleveland Museum of Art, Gift of Mr. and Mrs. John J. Klejman, 1969.303.b",
+    "source_url": "https://clevelandart.org/art/1969.303.b",
+    "tags": [
+      "China, Yuan dynasty (1271-1368)",
+      "Chinese Art",
+      "Miscellaneous",
+      "buddhist",
+      "wicker and wood with metal fittings"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "144921",
+    "title_zh": null,
+    "title_en": "Bodhisattva Guanyin Seated in a Rock Grove",
+    "period": "清",
+    "dynasty_en": "Qing",
+    "date_raw": "1675–1700",
+    "date_start": 1675,
+    "date_end": 1700,
+    "materials": [
+      "opaque ochre and translucent red-orange amber"
+    ],
+    "dimensions": "Overall: 22.9 cm (9 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1970.129",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1970.129/1970.129_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1970.129/1970.129_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1970.129/1970.129_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1970.129/1970.129_web.jpg",
+    "description": "Bodhisattva Guanyin Seated in a Rock Grove, 1675–1700. China, Qing dynasty (1644-1911). Opaque ochre and translucent red-orange amber; overall: 22.9 cm (9 in.). The Cleveland Museum of Art, Gift of Lois Clarke, 1970.129",
+    "source_url": "https://clevelandart.org/art/1970.129",
+    "tags": [
+      "China, Qing dynasty (1644-1911)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "guanyin",
+      "opaque ochre and translucent red-orange amber"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "144922",
+    "title_zh": null,
+    "title_en": "Bodhisattva Guanyin Seated in a Rock Grove",
+    "period": "清",
+    "dynasty_en": "Qing",
+    "date_raw": "1675–1700",
+    "date_start": 1675,
+    "date_end": 1700,
+    "materials": [
+      "opaque ochre and translucent red-orange amber"
+    ],
+    "dimensions": "Overall: 22.9 cm (9 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1970.129.a",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1970.129.a/1970.129.a_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1970.129.a/1970.129.a_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1970.129.a/1970.129.a_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1970.129.a/1970.129.a_web.jpg",
+    "description": "Bodhisattva Guanyin Seated in a Rock Grove, 1675–1700. China, Qing dynasty (1644-1911). Opaque ochre and translucent red-orange amber; overall: 22.9 cm (9 in.). The Cleveland Museum of Art, Gift of Lois Clarke, 1970.129.a",
+    "source_url": "https://clevelandart.org/art/1970.129.a",
+    "tags": [
+      "China, Qing dynasty (1644-1911)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "guanyin",
+      "opaque ochre and translucent red-orange amber"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "144923",
+    "title_zh": null,
+    "title_en": "Bodhisattva Guanyin Seated in a Rock Grove",
+    "period": "清",
+    "dynasty_en": "Qing",
+    "date_raw": "1675–1700",
+    "date_start": 1675,
+    "date_end": 1700,
+    "materials": [
+      "opaque ochre and translucent red-orange amber"
+    ],
+    "dimensions": "Overall: 22.9 cm (9 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1970.129.b",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1970.129.b/1970.129.b_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1970.129.b/1970.129.b_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1970.129.b/1970.129.b_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1970.129.b/1970.129.b_web.jpg",
+    "description": "Bodhisattva Guanyin Seated in a Rock Grove, 1675–1700. China, Qing dynasty (1644-1911). Opaque ochre and translucent red-orange amber; overall: 22.9 cm (9 in.). The Cleveland Museum of Art, Gift of Lois Clarke, 1970.129.b",
+    "source_url": "https://clevelandart.org/art/1970.129.b",
+    "tags": [
+      "China, Qing dynasty (1644-1911)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "guanyin",
+      "opaque ochre and translucent red-orange amber"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "144928",
+    "title_zh": null,
+    "title_en": "Guanyin",
+    "period": "清",
+    "dynasty_en": "Qing",
+    "date_raw": "18th Century",
+    "date_start": 1700,
+    "date_end": 1800,
+    "materials": [
+      "amber"
+    ],
+    "dimensions": "Overall: 16.9 cm (6 5/8 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1970.133",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1970.133/1970.133_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1970.133/1970.133_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1970.133/1970.133_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1970.133/1970.133_web.jpg",
+    "description": "Guanyin, 18th Century. China, Qing dynasty (1644-1911). Amber; overall: 16.9 cm (6 5/8 in.). The Cleveland Museum of Art, Gift of Lois Clarke, 1970.133",
+    "source_url": "https://clevelandart.org/art/1970.133",
+    "tags": [
+      "China, Qing dynasty (1644-1911)",
+      "Chinese Art",
+      "Stone",
+      "amber",
+      "guanyin"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "144950",
+    "title_zh": null,
+    "title_en": "Pair of Seated Buddhas",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1500s",
+    "date_start": 1500,
+    "date_end": 1599,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 9.9 cm (3 7/8 in.)",
+    "provenance_or_findsite": "Mrs. John Lyon [Georgia Forman Elliott] Collyer [1898–1994], Akron, OH, given to the Cleveland Museum of Art (?–1970) | The Cleveland Museum of Art, Cleveland, OH (1970–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1970.149",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1970.149/1970.149_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1970.149/1970.149_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1970.149/1970.149_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1970.149/1970.149_web.jpg",
+    "description": "Pair of Seated Buddhas, 1500s. China, Ming dynasty (1368–1644). Gilt bronze; overall: 9.9 cm (3 7/8 in.). The Cleveland Museum of Art, Gift of Mrs. John Lyon Collyer in memory of her mother, Mrs. G. M. G. Forman, 1970.149",
+    "source_url": "https://clevelandart.org/art/1970.149",
+    "tags": [
+      "China, Ming dynasty (1368–1644)",
+      "Chinese Art",
+      "Sculpture",
+      "buddha",
+      "gilt bronze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "144951",
+    "title_zh": null,
+    "title_en": "Seated Buddha",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1500s",
+    "date_start": 1500,
+    "date_end": 1599,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 9.9 cm (3 7/8 in.)",
+    "provenance_or_findsite": "Mrs. John Lyon [Georgia Forman Elliott] Collyer [1898–1994], Akron, OH, given to the Cleveland Museum of Art (?–1970) | The Cleveland Museum of Art, Cleveland, OH (1970–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1970.149.1",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1970.149.1/1970.149.1_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1970.149.1/1970.149.1_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1970.149.1/1970.149.1_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1970.149.1/1970.149.1_web.jpg",
+    "description": "Seated Buddha, 1500s. China, Ming dynasty (1368–1644). Gilt bronze; overall: 9.9 cm (3 7/8 in.). The Cleveland Museum of Art, Gift of Mrs. John Lyon Collyer in memory of her mother, Mrs. G. M. G. Forman, 1970.149.1",
+    "source_url": "https://clevelandart.org/art/1970.149.1",
+    "tags": [
+      "China, Ming dynasty (1368–1644)",
+      "Chinese Art",
+      "Sculpture",
+      "buddha",
+      "gilt bronze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "144952",
+    "title_zh": null,
+    "title_en": "Seated Buddha",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1500s",
+    "date_start": 1500,
+    "date_end": 1599,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 9.9 cm (3 7/8 in.)",
+    "provenance_or_findsite": "Mrs. John Lyon [Georgia Forman Elliott] Collyer [1898–1994], Akron, OH, given to the Cleveland Museum of Art (?–1970) | The Cleveland Museum of Art, Cleveland, OH (1970–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1970.149.2",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1970.149.2/1970.149.2_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1970.149.2/1970.149.2_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1970.149.2/1970.149.2_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1970.149.2/1970.149.2_web.jpg",
+    "description": "Seated Buddha, 1500s. China, Ming dynasty (1368–1644). Gilt bronze; overall: 9.9 cm (3 7/8 in.). The Cleveland Museum of Art, Gift of Mrs. John Lyon Collyer in memory of her mother, Mrs. G. M. G. Forman, 1970.149.2",
+    "source_url": "https://clevelandart.org/art/1970.149.2",
+    "tags": [
+      "China, Ming dynasty (1368–1644)",
+      "Chinese Art",
+      "Sculpture",
+      "buddha",
+      "gilt bronze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "145010",
+    "title_zh": "出山釋迦圖",
+    "title_en": "Shakyamuni Emerging from the Mountains",
+    "period": "宋",
+    "dynasty_en": "Song",
+    "date_raw": "1244",
+    "date_start": 1244,
+    "date_end": 1244,
+    "materials": [
+      "hanging scroll; ink on paper"
+    ],
+    "dimensions": "Painting: 70.7 x 30.3 cm (27 13/16 x 11 15/16 in.); Overall with knobs: 166.4 x 49.9 cm (65 1/2 x 19 5/8 in.)",
+    "provenance_or_findsite": "Hisamatsu family 久松家, Shikoku\nIsland, Japan | Yamashita family 山下家, Japan | Hara family 原家, Yokohama, Japan | (Mayuyama & Co., Ltd., Tokyo, Japan, sold to the Cleveland Museum of Art) (?–1970) | The Cleveland Museum of Art, Cleveland, OH (1970–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1970.2",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1970.2/1970.2_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1970.2/1970.2_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1970.2/1970.2_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1970.2/1970.2_web.jpg",
+    "description": "Shakyamuni emerged from the mountains after years of ascetic practices, which anticipated his sermon in Deer Park and attainment of enlightenment under the bodhi tree. However, this figure of Shakyamuni can be interpreted as having already achieved enlightenment and reentered the earthly world to spread the dharma (Buddhist law). Chijue Daoching’s inscription mentions his indifferent glance at the morning star, suggesting nonattachment: <br><br>Entering the mountains he was much too thin and wi…",
+    "source_url": "https://clevelandart.org/art/1970.2",
+    "tags": [
+      "China, Southern Song dynasty (1127-1279)",
+      "Chinese Art",
+      "Painting",
+      "hanging scroll; ink on paper",
+      "shakyamuni"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "145411",
+    "title_zh": "十一面觀音菩薩",
+    "title_en": "Eleven-Headed Guanyin",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "late 600s",
+    "date_start": 675,
+    "date_end": 699,
+    "materials": [
+      "wood"
+    ],
+    "dimensions": "height: 62.9 cm (24 3/4 in.)",
+    "provenance_or_findsite": "(Mayuyama and Company, Tokyo, Japan, sold to the Cleveland Museum of Art) (?-1970) | The Cleveland Museum of Art, Cleveland, OH (1970-)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1970.66",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1970.66/1970.66_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1970.66/1970.66_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1970.66/1970.66_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1970.66/1970.66_web.jpg",
+    "description": "Guanyin, the bodhisattva of infinite compassion, can be identified by his attributes, carrying a tiny Amida Buddha in his crown, and holding a bottle with the nectar of life in his left hand. The eleven-headed Guanyin, in particular, has his eyes and ears open in all directions to hear, see, and help all those who are in distress. The garment and jewelry of this graceful figure remind us that the historic Buddha Shakyamuni was originally an Indian prince before he reached enlightenment. Upon hi…",
+    "source_url": "https://clevelandart.org/art/1970.66",
+    "tags": [
+      "China, Tang dynasty (618–907)",
+      "Chinese Art",
+      "Sculpture",
+      "guanyin",
+      "wood"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "145953",
+    "title_zh": "五百羅漢圖",
+    "title_en": "The Five Hundred Arhats",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1591–1626",
+    "date_start": 1591,
+    "date_end": 1626,
+    "materials": [
+      "Handscroll; ink and color on paper"
+    ],
+    "dimensions": "Overall: 39.5 x 2646.5 cm (15 9/16 x 1041 15/16 in.); Painting only: 37.7 x 2347 cm (14 13/16 x 924 in.)",
+    "provenance_or_findsite": "Qing imperial collection (seals of Emperor Qianlong, r. 1736–1795) (1736–95) | Cheng Qi 程琦 [1911–1988] by descent to his son, Stephen O. K. Chen (1960s?) | Stephen O. K. Chen [20th century], New York, sold to the Cleveland Museum of Art (?–1971) | The Cleveland Museum of Art, Cleveland, OH (1971–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1971.16",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1971.16/1971.16_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1971.16/1971.16_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1971.16/1971.16_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1971.16/1971.16_web.jpg",
+    "description": "More than 66 feet long, this handscroll depicts 447 <em>luohans</em>, 72 attendants, and the bodhisattva of compassion at its very end. Luohans (arhats in Sanskrit), disciples of the Buddha and protectors of the Buddha’s law, possess supernatural powers and take on myriad external appearances. The amusing assortment of characters are engaged in an array of religious, secular, and miraculous activities. The painter used stylistic features borrowed from earlier artists, carefully controlled lines…",
+    "source_url": "https://clevelandart.org/art/1971.16",
+    "tags": [
+      "China, Ming dynasty (1368–1644)",
+      "Chinese Art",
+      "Handscroll; ink and color on paper",
+      "Painting",
+      "arhat"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "146174",
+    "title_zh": "菩提樹下釋迦牟尼圖",
+    "title_en": "Shakyamuni under the Bodhi Tree",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1600–1650",
+    "date_start": 1600,
+    "date_end": 1650,
+    "materials": [
+      "hanging scroll; ink and color on silk"
+    ],
+    "dimensions": "Painting: 128.5 x 62 cm (50 9/16 x 24 7/16 in.); Overall with knobs: 259 x 82.5 cm (101 15/16 x 32 1/2 in.)",
+    "provenance_or_findsite": "(Alice Boney [1901–1988], New York, NY, sold to the Cleveland Museum of Art) (?–1971) | The Cleveland Museum of Art, Cleveland, OH (1971–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1971.68",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1971.68/1971.68_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1971.68/1971.68_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1971.68/1971.68_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1971.68/1971.68_web.jpg",
+    "description": "The historical Buddha Shakyamuni is seated in meditative posture upon the backs of three demons under the bodhi tree, where he achieved enlightenment. All three demons have horns like devils, and two have green skin. While they accommodate the Buddha, his weight seems to keep them under control. Since the Buddha’s hands do not conform to any accepted gesture, the specific religious event portrayed is unclear.",
+    "source_url": "https://clevelandart.org/art/1971.68",
+    "tags": [
+      "China, Ming dynasty (1368–1644)",
+      "Chinese Art",
+      "Painting",
+      "hanging scroll; ink and color on silk",
+      "shakyamuni"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "146713",
+    "title_zh": "白衣觀音",
+    "title_en": "White-Robed Guanyin",
+    "period": "宋",
+    "dynasty_en": "Song",
+    "date_raw": "late 1200s",
+    "date_start": 1275,
+    "date_end": 1300,
+    "materials": [
+      "Hanging scroll; ink on paper"
+    ],
+    "dimensions": "Painting: 104.5 x 42.2 cm (41 1/8 x 16 5/8 in.); Overall with knobs: 195.4 x 61.8 cm (76 15/16 x 24 5/16 in.)",
+    "provenance_or_findsite": "(Mayuyama and Company, Tokyo, Japan, sold to the Cleveland Museum of Art) (?–1972) | The Cleveland Museum of Art, Cleveland, OH (1972–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1972.160",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1972.160/1972.160_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1972.160/1972.160_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1972.160/1972.160_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1972.160/1972.160_web.jpg",
+    "description": "The figure here sits on a rocky elevation representing Potalaka in the Southern Sea, Avalokitesvara’s island home. A vase with a bamboo sprig holds pure water, the nectar of life. Bamboo shines through the figure’s halo, a way of seeing the illusionary world through the Buddhist truth. <br><br>Avalokitesvara (Guanyin in Chinese), the bodhisattva of compassion, was integrated into the Chan Buddhist canon of venerated beings. In this context, the bodhisattva is often depicted in its female manife…",
+    "source_url": "https://clevelandart.org/art/1972.160",
+    "tags": [
+      "China, Southern Song dynasty (1127-1279)",
+      "Chinese Art",
+      "Hanging scroll; ink on paper",
+      "Painting",
+      "guanyin"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "146714",
+    "title_zh": null,
+    "title_en": "Buddhist Triumphant over Temptation",
+    "period": "元",
+    "dynasty_en": "Yuan",
+    "date_raw": "c. 1300–1320",
+    "date_start": 1300,
+    "date_end": 1320,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 28.6 cm (11 1/4 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1972.161",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1972.161/1972.161_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1972.161/1972.161_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1972.161/1972.161_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1972.161/1972.161_web.jpg",
+    "description": "Buddhist Triumphant over Temptation, c. 1300–1320. China, Yuan dynasty (1271-1368). Gilt bronze; overall: 28.6 cm (11 1/4 in.). The Cleveland Museum of Art, Sundry Purchase Fund by Exchange, 1972.161",
+    "source_url": "https://clevelandart.org/art/1972.161",
+    "tags": [
+      "China, Yuan dynasty (1271-1368)",
+      "Chinese Art",
+      "Sculpture",
+      "buddhist",
+      "gilt bronze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "146721",
+    "title_zh": null,
+    "title_en": "Standing Disciple Mahakasyapa Holding a Cylindrical Reliquary",
+    "period": "北齐",
+    "dynasty_en": "Northern Qi",
+    "date_raw": "c. 550",
+    "date_start": 545,
+    "date_end": 555,
+    "materials": [
+      "limestone with traces of pigment"
+    ],
+    "dimensions": "Overall: 116 x 33 x 25 cm (45 11/16 x 13 x 9 13/16 in.)",
+    "provenance_or_findsite": "Edgar Worch [1880–1972], Paris, France | Victor Goloubew [1878–1945], Paris, France (by 1913–?) | (Étude Couturier et Nicolay, Hôtel Drouot sale, November 10, 1972, Paris, France) (November 10, 1972) | (Heim Gallery, Paris, France, sold to the Cleveland Museum of Art) (1972) | The Cleveland Museum of Art, Cleveland, OH (1972–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1972.166",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1972.166/1972.166_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1972.166/1972.166_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1972.166/1972.166_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1972.166/1972.166_web.jpg",
+    "description": "Mahakasyapa, the disciple of Shakyamuni, is presented with closed eyes in an expression of meditative concentration. He is holding a reliquary for the Buddha’s ashes, which symbolize the Buddha entering final spiritual attainment (nirvana) at death. The artistic simplicity exemplifies the spiritual content of this figure.",
+    "source_url": "https://clevelandart.org/art/1972.166",
+    "tags": [
+      "China, Hebei province, Southern Xiangtangshan caves, Northern Qi dynasty (550-577)",
+      "Chinese Art",
+      "Sculpture",
+      "limestone with traces of pigment"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "147571",
+    "title_zh": "等覺位十地菩薩; 天龍八部羅叉女衆",
+    "title_en": "The Bodhisattvas of the Ten Stages in Attaining the Most Perfect Knowledge; The Eight Hosts of Deva, Naga, and Yakshi",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1454",
+    "date_start": 1454,
+    "date_end": 1454,
+    "materials": [
+      "Pair of hanging scrolls; ink and color on silk"
+    ],
+    "dimensions": "Painting only: 140.5 x 79.1 cm (55 5/16 x 31 1/8 in.); Each overall with knobs: 227.2 x 120 cm (89 7/16 x 47 1/4 in.)",
+    "provenance_or_findsite": "Ming imperial collection [Jingtai era, 1450–1456] (1450-56) | (Shunichi Yabumoto Co., Ltd., Tokyo, Japan, sold to the Cleveland Museum of Art) (?-1973) | The Cleveland Museum of Art, Cleveland, OH (1973-)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1973.70",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1973.70/1973.70_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1973.70/1973.70_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1973.70/1973.70_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1973.70/1973.70_web.jpg",
+    "description": "The grandest of the Buddhist mortuary rites is the Water-Land (<em>shuilu</em>) ritual. This esoteric ceremony is conducted for the salvation of “all souls of the dead on land and sea.” The ostentatious ritual was performed for imperial ancestors and high officials from the Song (960–1279) to the Ming dynasties and drew large crowds. On the second day of the weeklong ceremony, paintings are hung in the inner altar. <br><br>These two scrolls belong to a set of 36 Water-Land ritual paintings that…",
+    "source_url": "https://clevelandart.org/art/1973.70",
+    "tags": [
+      "China, Ming dynasty (1368–1644)",
+      "Chinese Art",
+      "Painting",
+      "Pair of hanging scrolls; ink and color on silk",
+      "bodhisattva"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "147572",
+    "title_zh": "等覺位十地菩薩",
+    "title_en": "The Bodhisattvas of the Ten Stages in Attaining the Most Perfect Knowledge",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1454",
+    "date_start": 1454,
+    "date_end": 1454,
+    "materials": [
+      "hanging scroll; ink and color on silk"
+    ],
+    "dimensions": "Painting: 140.8 x 79.3 cm (55 7/16 x 31 1/4 in.); Overall with knobs: 227.8 x 120 cm (89 11/16 x 47 1/4 in.)",
+    "provenance_or_findsite": "Ming imperial collection [Jingtai era, 1450–1456] (1450–1456) | (Shunichi Yabumoto Co., Ltd., Tokyo, Japan, sold to the Cleveland Museum of Art) (?-1973) | The Cleveland Museum of Art, Cleveland, OH (1973-)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1973.70.1",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1973.70.1/1973.70.1_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1973.70.1/1973.70.1_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1973.70.1/1973.70.1_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1973.70.1/1973.70.1_web.jpg",
+    "description": "This painting represents bodhisattvas of the 10 stages of enlightenment undergoing the final processes toward Buddhahood. This and <a href=\"http://www.clevelandart.org/art/1973.70.2\"><u>CMA 1973.70.2</u></a> form part of a set of scrolls that were used to perform the Water-Land (<em>shuilu</em>) ritual. The sinuous curves of scarf and drapery, the layering of garments, and the minute detail all reflect the opulent visual atmosphere that surrounded the Ming worshipper in temples and spirit halls…",
+    "source_url": "https://clevelandart.org/art/1973.70.1",
+    "tags": [
+      "China, Ming dynasty (1368–1644)",
+      "Chinese Art",
+      "Painting",
+      "bodhisattva",
+      "hanging scroll; ink and color on silk"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "147934",
+    "title_zh": null,
+    "title_en": "Buddha Amitābha with Two Attending Bodhisattvas",
+    "period": "宋",
+    "dynasty_en": "Song",
+    "date_raw": "1200s",
+    "date_start": 1200,
+    "date_end": 1299,
+    "materials": [
+      "Hanging scroll; ink and color on silk"
+    ],
+    "dimensions": "Painting: 134 x 79.7 cm (52 3/4 x 31 3/8 in.); Overall with knobs: 224.5 x 101.5 cm (88 3/8 x 39 15/16 in.)",
+    "provenance_or_findsite": "(Nakanishi Bunzo, Kyoto, Japan, sold to the Cleveland Museum of Art) (?–1974) | The Cleveland Museum of Art, Cleveland, OH (1974–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1974.35",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1974.35/1974.35_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1974.35/1974.35_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1974.35/1974.35_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1974.35/1974.35_web.jpg",
+    "description": "The supreme deities that rule over the Western Paradise—Amitābha (阿彌陀 in Chinese), Avalokiteśvara (Guanyin 觀音), and Mahāsthāmaprāpta (Dashizhi 大勢至)—are here enclosed within a circle of light. To secure entry into that paradise for Buddhist followers of the Pure Land sect, one must recite the phrase <em>namo amituofo</em> (南無阿彌陀佛, Homage to the Buddha Amitābha). Here the phrase is repeated 10 times in calligraphy above the figures, reinforcing the need for continual recitation.",
+    "source_url": "https://clevelandart.org/art/1974.35",
+    "tags": [
+      "China, Southern Song dynasty (1127-1279)",
+      "Chinese Art",
+      "Hanging scroll; ink and color on silk",
+      "Painting",
+      "bodhisattva",
+      "buddha"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "147998",
+    "title_zh": null,
+    "title_en": "Manjusri Riding on a Lion",
+    "period": "辽",
+    "dynasty_en": "Liao",
+    "date_raw": "900s",
+    "date_start": 900,
+    "date_end": 999,
+    "materials": [
+      "bronze"
+    ],
+    "dimensions": "Overall: 17 x 10.2 cm (6 11/16 x 4 in.)",
+    "provenance_or_findsite": "(Yamanaka and Company, sold to the Cleveland Museum of Art) (?–1974) | The Cleveland Museum of Art, Cleveland, OH (1974–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1974.90",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1974.90/1974.90_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1974.90/1974.90_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1974.90/1974.90_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1974.90/1974.90_web.jpg",
+    "description": "The Bodhisattva of Wisdom, Manjusri, is seated on a lotus pedestal atop his vehicle, the lion. A bearded attendant stands beside the lion.",
+    "source_url": "https://clevelandart.org/art/1974.90",
+    "tags": [
+      "China, Liao dynasty (916-1125)",
+      "Chinese Art",
+      "Sculpture",
+      "bronze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "148381",
+    "title_zh": "釋迦三尊：釋迦摩尼與文殊菩薩普賢菩薩",
+    "title_en": "Shakyamuni Triad:  Buddha Attended by Manjushri and Samantabhadra",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "c. 900",
+    "date_start": 850,
+    "date_end": 950,
+    "materials": [
+      "Hanging scroll; ink and color on silk"
+    ],
+    "dimensions": "Painting: 94 x 61 cm (37 x 24 in.); Overall with knobs: 179.5 x 87 cm (70 11/16 x 34 1/4 in.)",
+    "provenance_or_findsite": "(Kinkichi Yamaoka, Tokyo, Japan, sold to the Cleveland Museum of Art) (?-1975) | The Cleveland Museum of Art, Cleveland, OH (1975-)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1975.92",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1975.92/1975.92_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1975.92/1975.92_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1975.92/1975.92_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1975.92/1975.92_web.jpg",
+    "description": "Shakyamuni Triad: Buddha Attended by Manjushri and Samantabhadra (釋迦三尊：釋迦摩尼與文殊菩薩普賢菩薩), c. 900. China, Tang dynasty (618-907). Hanging scroll; ink and color on silk; painting: 94 x 61 cm (37 x 24 in.); overall with knobs: 179.5 x 87 cm (70 11/16 x 34 1/4 in.). The Cleveland Museum of Art, Mr. and Mrs. William H. Marlatt Fund, 1975.92",
+    "source_url": "https://clevelandart.org/art/1975.92",
+    "tags": [
+      "China, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Hanging scroll; ink and color on silk",
+      "Painting",
+      "buddha",
+      "shakyamuni"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "148682",
+    "title_zh": "觀音菩薩",
+    "title_en": "Bodhisattva Guanyin",
+    "period": "辽",
+    "dynasty_en": "Liao",
+    "date_raw": "900s",
+    "date_start": 900,
+    "date_end": 999,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 43.8 cm (17 1/4 in.); Diameter of base: 14.6 cm (5 3/4 in.)",
+    "provenance_or_findsite": "R. T. Bruce, London, England | (J. E. Eskenazi, Ltd., London, England, sold to the Cleveland Museum of Art) (?–1976) | The Cleveland Museum of Art, Cleveland, OH (1976–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1976.14",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1976.14/1976.14_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1976.14/1976.14_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1976.14/1976.14_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1976.14/1976.14_web.jpg",
+    "description": "In Buddhism, a bodhisattva is a being who, just before reaching enlightenment, turns back to assist others to reach enlightenment first. This bodhisattva holds his hand palm forward, in a gesture that tells followers not to fear. In his other hand he carries a bottle that holds the elixir of immortality.",
+    "source_url": "https://clevelandart.org/art/1976.14",
+    "tags": [
+      "China, Liao dynasty (916-1125)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "gilt bronze",
+      "guanyin"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "148852",
+    "title_zh": null,
+    "title_en": "Seated Arhat with Two Attendants",
+    "period": "宋",
+    "dynasty_en": "Song",
+    "date_raw": "late 1200s",
+    "date_start": 1275,
+    "date_end": 1299,
+    "materials": [
+      "Hanging scroll; ink and color on silk"
+    ],
+    "dimensions": "Overall with knobs: 201 x 75.5 cm (79 1/8 x 29 3/4 in.); Painting only: 94 x 50 cm (37 x 19 11/16 in.)",
+    "provenance_or_findsite": "Matsukata Collection | Howard C. Hollis [1899–1985], New York, NY, and Cleveland, OH, consigned to Christie's for sale (?–1976) | (Christie's, London, England, June 8, 1976 sale, lot no. 31) (June 8, 1976) | (Mr. J. E. Eskenazi, Ltd., London, sold to the Cleveland Museum of Art) (1976) | The Cleveland Museum of Art, Cleveland, OH (1976–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1976.91",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1976.91/1976.91_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1976.91/1976.91_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1976.91/1976.91_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1976.91/1976.91_web.jpg",
+    "description": "Arhat, or Lohan (羅漢 in Chinese), were the disciples of the historical Buddha. Later tradition tended to picture them in sets of 16, 18, or as many as 500. This is one painting from a larger set, with a seated arhat portrayed on a grand scale, overshadowing his own attendant as well as the ferocious figure who approaches him with an offering of a wild goose.",
+    "source_url": "https://clevelandart.org/art/1976.91",
+    "tags": [
+      "China, Southern Song dynasty (1127-1279)",
+      "Chinese Art",
+      "Hanging scroll; ink and color on silk",
+      "Painting",
+      "arhat"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "149390",
+    "title_zh": "白衣觀音菩薩像",
+    "title_en": "White-Robed Guanyin",
+    "period": "元",
+    "dynasty_en": "Yuan",
+    "date_raw": "late 1200s–early 1300s",
+    "date_start": 1250,
+    "date_end": 1349,
+    "materials": [
+      "hanging scroll; ink on paper"
+    ],
+    "dimensions": "Painting: 78.7 x 31.7 cm (31 x 12 1/2 in.); Overall with knobs: 164 x 38 cm (64 9/16 x 14 15/16 in.)",
+    "provenance_or_findsite": "(Yamanaka and Company, Ltd., Kyoto, Japan, sold to the Cleveland Museum of Art) (?–1978) | The Cleveland Museum of Art, Cleveland, OH (1978–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1978.47.1",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1978.47.1/1978.47.1_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1978.47.1/1978.47.1_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1978.47.1/1978.47.1_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1978.47.1/1978.47.1_web.jpg",
+    "description": "Guanyin, the bodhisattva of infinite compassion (Avalokiteshvara, in Sanskrit), reveals himself in many forms. According to Buddhist belief, one such manifestation is the white-robed Guanyin sitting on a rock on the island of Putuo (Potalaka, in Sanskrit), located along the coast not far from Ningbo, in Zhejiang Province, China.<br><br>Here, the figure was swiftly drawn in only a few ink lines. The inscription above is by Zhongfeng Mingben, perhaps the most widely respected and influential Chan…",
+    "source_url": "https://clevelandart.org/art/1978.47.1",
+    "tags": [
+      "China, Yuan dynasty (1271-1368)",
+      "Chinese Art",
+      "Painting",
+      "guanyin",
+      "hanging scroll; ink on paper"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "149391",
+    "title_zh": "白衣觀音",
+    "title_en": "White-Robed Guanyin",
+    "period": "元",
+    "dynasty_en": "Yuan",
+    "date_raw": "late 1200s–early 1300s",
+    "date_start": 1250,
+    "date_end": 1349,
+    "materials": [
+      "hanging scroll; ink and gold on silk"
+    ],
+    "dimensions": "Painting: 80.7 x 25.7 cm (31 3/4 x 10 1/8 in.); Overall with knobs and cord: 168.2 x 44.5 cm (66 1/4 x 17 1/2 in.)",
+    "provenance_or_findsite": "(Yamanaka and Company, Ltd., Kyoto, Japan, sold to the Cleveland Museum of Art) (?–1978) | The Cleveland Museum of Art, Cleveland, OH (1978–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1978.47.2",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1978.47.2/1978.47.2_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1978.47.2/1978.47.2_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1978.47.2/1978.47.2_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1978.47.2/1978.47.2_web.jpg",
+    "description": "The original model for this ink drawing of Guanyin, the bodhisattva of infinite compassion (Avalokiteshvara in Sanskrit), is <a href=\"http://www.clevelandart.org/art/1978.47.1\"><u>CMA 1978.47.1</u></a>. This drawing is a later copy with the same image of the White-Robed Guanyin, but in reverse. The inscription above reads: <em>one of the 84,000 painted by the priest Insei</em>. <br><br>The inscription seems to indicate that the Japanese priest Insei repeatedly copied the image of the bodhisattv…",
+    "source_url": "https://clevelandart.org/art/1978.47.2",
+    "tags": [
+      "China, Yuan dynasty (1271-1368)",
+      "Chinese Art",
+      "Painting",
+      "guanyin",
+      "hanging scroll; ink and gold on silk"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "149595",
+    "title_zh": null,
+    "title_en": "Standing Bodhisattva",
+    "period": "隋",
+    "dynasty_en": "Sui",
+    "date_raw": "late 500s",
+    "date_start": 581,
+    "date_end": 599,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Average: 11.5 cm (4 1/2 in.)",
+    "provenance_or_findsite": "(Sotheby Parke Bernet, Inc., New York, NY, sold to the Cleveland Museum of Art) (1979) | The Cleveland Museum of Art, Cleveland, OH (1979-)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1979.20",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1979.20/1979.20_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1979.20/1979.20_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1979.20/1979.20_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1979.20/1979.20_web.jpg",
+    "description": "Standing Bodhisattva, late 500s. China, Sui dynasty (581-618). Gilt bronze; average: 11.5 cm (4 1/2 in.). The Cleveland Museum of Art, The Severance and Greta Millikin Purchase Fund, 1979.20",
+    "source_url": "https://clevelandart.org/art/1979.20",
+    "tags": [
+      "China, Sui dynasty (581-618)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "gilt bronze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "149618",
+    "title_zh": null,
+    "title_en": "Paintings after Ancient Masters: A Lohan [after Guanxiu]",
+    "period": "明",
+    "dynasty_en": "Ming",
+    "date_raw": "1598–1652",
+    "date_start": 1598,
+    "date_end": 1652,
+    "materials": [
+      "album leaf, ink and color on silk"
+    ],
+    "dimensions": "Overall: 30.2 x 26.7 cm (11 7/8 x 10 1/2 in.)",
+    "provenance_or_findsite": "Weng Tonghe 翁同龢 [1830–1904], by descent to  Wango H. C. Weng | (Wango H. C. Weng 翁萬戈 [1918–2020], Lyme, NH, sold to the Cleveland Museum of Art) (?–1979) | The Cleveland Museum of Art, Cleveland, OH (1979–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1979.27.2.13",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1979.27.2.13/1979.27.2.13_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1979.27.2.13/1979.27.2.13_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1979.27.2.13/1979.27.2.13_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1979.27.2.13/1979.27.2.13_web.jpg",
+    "description": "The twenty paintings in this double album by Chen Hongshou include landscapes, figures, and flowers. It also has one leaf featuring a woman, an often-used subject not found in the other albums from the latter part of his career. His late works are wonderful summations of Chen's peculiar and quirky art—archaistic, hyper-refined—but without accompanying shallowness or sentimentality.<br><br>His figures and landscapes in the late albums are miniaturized, not unlike the small Chinese gardens, or th…",
+    "source_url": "https://clevelandart.org/art/1979.27.2.13",
+    "tags": [
+      "China, Ming dynasty (1368–1644)",
+      "Chinese Art",
+      "Painting",
+      "album leaf, ink and color on silk",
+      "lohan"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "150025",
+    "title_zh": null,
+    "title_en": "Caparisoned Elephant",
+    "period": "辽",
+    "dynasty_en": "Liao",
+    "date_raw": "c. 1000s",
+    "date_start": 1000,
+    "date_end": 1100,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 18.5 cm (7 5/16 in.)",
+    "provenance_or_findsite": "(J. E. Eskenazi, Ltd., London, England, sold to the Cleveland Musuem of Art) (1980) | The Cleveland Museum of Art, Cleveland, OH (1980–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1980.24",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1980.24/1980.24_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1980.24/1980.24_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1980.24/1980.24_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1980.24/1980.24_web.jpg",
+    "description": "The six-tusked elephant holds the throne of Puxian (Samantabhadra), the Bodhisattva of Universal Virtue, who often appears with Wenshu (Manjusri), the Bodhisattva of Wisdom, on his lion-vehicle. This impressive gilt bronze statue is solidly cast, except for the hollow at the center of its belly. The richly ornate saddle cloth exhibits superb craftsmanship and vivid representations of dragons among clouds, echoing the worldly splendor of the Liao material culture.",
+    "source_url": "https://clevelandart.org/art/1980.24",
+    "tags": [
+      "China, Liao dynasty (916-1125)",
+      "Chinese Art",
+      "Sculpture",
+      "gilt bronze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "150036",
+    "title_zh": null,
+    "title_en": "Ascetic Holding a Skull",
+    "period": "北魏",
+    "dynasty_en": "Northern Wei",
+    "date_raw": "c. 500 CE",
+    "date_start": 450,
+    "date_end": 550,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 19.4 cm (7 5/8 in.); Figure: 18.1 cm (7 1/8 in.)",
+    "provenance_or_findsite": "Major General Sir Neill Malcolm [1869–1953], London, England (by 1935–?) | (Spink & Son, Ltd., London, England, sold to the Cleveland Museum of Art) (?–1980) | The Cleveland Museum of Art. Cleveland, OH (1980–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1980.25",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1980.25/1980.25_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1980.25/1980.25_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1980.25/1980.25_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1980.25/1980.25_web.jpg",
+    "description": "The figure holding the skull has been identified as Mrgasirsa, who sought Buddha’s teaching on how to determine the karma and transmigration of the arhats. Mrgasirsa appears with Vasistha in some of the wall paintings of the Mogao grottoes in Dunhuang.",
+    "source_url": "https://clevelandart.org/art/1980.25",
+    "tags": [
+      "China, Northern Wei dynasty (386-534)",
+      "Chinese Art",
+      "Sculpture",
+      "gilt bronze"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "150164",
+    "title_zh": null,
+    "title_en": "Standing Guanyin",
+    "period": "宋",
+    "dynasty_en": "Song",
+    "date_raw": "1127–1279",
+    "date_start": 1127,
+    "date_end": 1279,
+    "materials": [
+      "wood with traces of gesso, polychromy and gilding"
+    ],
+    "dimensions": "Overall: 162.9 x 55.9 cm (64 1/8 x 22 in.)",
+    "provenance_or_findsite": "(J. E. Eskenazi, Ltd., London, England, sold to the Cleveland Museum of Art) (?–1980) | The Cleveland Museum of Art, Cleveland, OH (1980–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1980.80",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1980.80/1980.80_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1980.80/1980.80_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1980.80/1980.80_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1980.80/1980.80_web.jpg",
+    "description": "Standing Guanyin, 1127–1279. China, Southern Song dynasty (1127–1279). Wood with traces of gesso, polychromy and gilding; overall: 162.9 x 55.9 cm (64 1/8 x 22 in.). The Cleveland Museum of Art, John L. Severance Fund, 1980.80",
+    "source_url": "https://clevelandart.org/art/1980.80",
+    "tags": [
+      "China, Southern Song dynasty (1127–1279)",
+      "Chinese Art",
+      "Sculpture",
+      "guanyin",
+      "wood with traces of gesso, polychromy and gilding"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "150493",
+    "title_zh": "十一面觀音菩薩",
+    "title_en": "Eleven-Headed Guanyin",
+    "period": "宋",
+    "dynasty_en": "Song",
+    "date_raw": "1100–1200",
+    "date_start": 1100,
+    "date_end": 1200,
+    "materials": [
+      "wood with polychromy and cut gold"
+    ],
+    "dimensions": "Overall: 218.5 cm (86 in.)",
+    "provenance_or_findsite": "(Sotheby's, New York, NY, sale October 19, 1944, lot 229, sold to C. T. Loo) (October 19, 1944) | (C. T. Loo 盧芹齋 [1880–1957], Paris and New York) (1944–1952) | Anne Valliant Burnett Tandy [1900–1980], Fort Worth, Texas, consigned to Sotheby's New York (?–1980) | (Sotheby's, New York, NY, sale November 6, 1981, lot 50) (November 6, 1981) | (J. E. Eskenazi, Ltd., London, England, sold to the Cleveland Museum of Art) (1981) | The Cleveland Museum of Art, Cleveland, OH (1981–)",
+    "current_location": "238 Chinese Ceramics",
+    "accession_number": "1981.53",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1981.53/1981.53_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1981.53/1981.53_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1981.53/1981.53_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1981.53/1981.53_web.jpg",
+    "description": "The bodhisattva is an enlightened being dedicated to the spiritual awakening of all beings. The compassionate bodhisattva Guanyin, in a variety of manifestations, is probably the most popular deity of worship in Chinese Buddhism. In the Esoteric Buddhist form shown here, this standing Guanyin has a total of eleven heads, with smaller ones above the principal head. The uppermost head represents the Buddha Amitabha, to whom he is closely related. The eleven heads symbolize the Buddha’s steps on t…",
+    "source_url": "https://clevelandart.org/art/1981.53",
+    "tags": [
+      "China, late Northern Song dynasty (960-1127) - Jin dynasty (1115-1234)",
+      "Chinese Art",
+      "Sculpture",
+      "guanyin",
+      "wood with polychromy and cut gold"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "150844",
+    "title_zh": null,
+    "title_en": "Shakyamuni with two attendants",
+    "period": "元",
+    "dynasty_en": "Yuan",
+    "date_raw": "1300s",
+    "date_start": 1300,
+    "date_end": 1399,
+    "materials": [
+      "Hanging scroll; ink, color, and gold on silk"
+    ],
+    "dimensions": "Overall: 293.5 x 136 cm (115 9/16 x 53 9/16 in.); Painting only: 218.4 x 112.8 cm (86 x 44 7/16 in.); with knobs: 293.5 x 144.2 cm (115 9/16 x 56 3/4 in.)",
+    "provenance_or_findsite": "(Fugendo Co., Ltd., Tokyo, Japan, sold to the Cleveland Museum of Art) (?–1982) | The Cleveland Museum of Art, Cleveland, OH (1982–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1982.25",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1982.25/1982.25_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1982.25/1982.25_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1982.25/1982.25_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1982.25/1982.25_web.jpg",
+    "description": "The historic Buddha Shakyamuni is seated on an elaborately decorated pedestal and flanked by two attendants making gestures of devotion. The unknown artist used gold and deeply hued pigments to depict the luxurious fabrics, particularly the golden medallions of swirling dragons and clouds on the Buddha’s red robe. <br><br>The painting itself is mounted in a Buddhist style with two tiers of fine silk borders. The inner border of gold brocade on a cream background surrounds the painting. The oute…",
+    "source_url": "https://clevelandart.org/art/1982.25",
+    "tags": [
+      "China, Yuan (1271-1368) or early Ming dynasty (1368-1644)",
+      "Chinese Art",
+      "Hanging scroll; ink, color, and gold on silk",
+      "Painting",
+      "shakyamuni"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "151530",
+    "title_zh": null,
+    "title_en": "Bodhisattva",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "early 700s",
+    "date_start": 700,
+    "date_end": 725,
+    "materials": [
+      "light gray limestone with traces of polychromy"
+    ],
+    "dimensions": "Overall: 34.2 cm (13 7/16 in.)",
+    "provenance_or_findsite": "(Osborne and Victor Hauge, Falls Church, VA, sold to the Cleveland Museum of Art) (?-1983) | The Cleveland Museum of Art, Cleveland, OH, 1983-present (1983-)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1983.76",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1983.76/1983.76_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1983.76/1983.76_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1983.76/1983.76_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1983.76/1983.76_web.jpg",
+    "description": "Bodhisattva, early 700s. China, Shanxi province, Taiyuan, Tianlongshan caves, Cave 6, Tang dynasty (618-907). Light gray limestone with traces of polychromy; overall: 34.2 cm (13 7/16 in.). The Cleveland Museum of Art, Leonard C. Hanna Jr. Fund, 1983.76",
+    "source_url": "https://clevelandart.org/art/1983.76",
+    "tags": [
+      "China, Shanxi province, Taiyuan, Tianlongshan caves, Cave 6, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "light gray limestone with traces of polychromy"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "151541",
+    "title_zh": "菩薩",
+    "title_en": "Bodhisattva",
+    "period": "唐",
+    "dynasty_en": "Tang",
+    "date_raw": "700s",
+    "date_start": 700,
+    "date_end": 799,
+    "materials": [
+      "dry lacquer"
+    ],
+    "dimensions": "Overall: 44 x 37 cm (17 5/16 x 14 9/16 in.)",
+    "provenance_or_findsite": "(C.T. Loo 盧芹齋 [1880–1957], Paris, France) (by 1933–?) | The Mount Trust of Captain Vivian Francis [1891–1968] and Mrs. Cornelia Stuyvesant Vanderbilt Bulkeley-Johnson [1900–1976], Churchill, Oxfordshire, England (?–1983) | (Christie's, London, England, 19 April 1983 sale, lot 42) (19 April 1983) | (J. E. Eskenazi, Ltd., London, UK, sold to the Cleveland Museum of Art) (1983) | The Cleveland Museum of Art, Cleveland, OH (1983–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1983.86",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1983.86/1983.86_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1983.86/1983.86_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1983.86/1983.86_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1983.86/1983.86_web.jpg",
+    "description": "The bodhisattva, an enlightened being dedicated to the spiritual awakening of all beings, is shown sitting in a relaxed pose, the eyes half-closed in an expression of profound meditation. The statue is modeled in a sensuous manner. <br><br>It is made using the dry lacquer technique whereby a clay core is first constructed and then overlaid with fabrics saturated with lacquer. Once the lacquer layers are set, the core is removed. This kind of hollow dry lacquer statue is lightweight and easy to …",
+    "source_url": "https://clevelandart.org/art/1983.86",
+    "tags": [
+      "China, Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "dry lacquer"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "152021",
+    "title_zh": null,
+    "title_en": "Water and Moon (Potala) Guanyin",
+    "period": "五代",
+    "dynasty_en": "Five Dynasties",
+    "date_raw": "900–1100",
+    "date_start": 900,
+    "date_end": 1100,
+    "materials": [
+      "gilt bronze"
+    ],
+    "dimensions": "Overall: 17.6 cm (6 15/16 in.)",
+    "provenance_or_findsite": "Mr. and Mrs. Richard C. Bull (?–December 6, 1983) | (Sotheby's New York, NY. Important Chinese Works of Art: The Collection of Mr. and Mrs. Richard C. Bull. 6 December 1983 sale, Lot 66) (December 6, 1983) | (Mr. J. E. Eskenazi, Ltd., London, England, sold to the Cleveland Museum of Art) (?–1984) | The Cleveland Museum of Art, Cleveland, OH (1984–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1984.7",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1984.7/1984.7_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1984.7/1984.7_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1984.7/1984.7_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1984.7/1984.7_web.jpg",
+    "description": "The Water and Moon Guanyin is seated in the posture called \"royal ease.\" His right leg is drawn up with folded knee; the left leg flexed. One hand rests on the upraised knee; the other extends downward to support weight on the palm. With gilding, the image assumes the splendor of divine dignity.",
+    "source_url": "https://clevelandart.org/art/1984.7",
+    "tags": [
+      "China, Five dynasties (907-960) - Song dynasty (960-1279)",
+      "Chinese Art",
+      "Sculpture",
+      "gilt bronze",
+      "guanyin"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "152022",
+    "title_zh": "觀音坐像",
+    "title_en": "Seated Guanyin",
+    "period": "宋",
+    "dynasty_en": "Song",
+    "date_raw": "late 1100s–1200s",
+    "date_start": 1175,
+    "date_end": 1234,
+    "materials": [
+      "wood with polychromy and gilding"
+    ],
+    "dimensions": "Overall: 138 cm (54 5/16 in.)",
+    "provenance_or_findsite": "Yamanaka & Co., Inc., New York, NY, consigned to Sotheby Parke Bernet Galleries, New York, for auction (? by 1943–May 1944) | (Sotheby Parke Bernet Galleries, New York.  \"Oriental Art: the Entire Stock of the New York Store with Additions from the Chicago Store of Yamanaka & Co., Inc.,\"  Part I. May 24–27, 1944 sale. Lot 782) (May 24–27, 1944) | Collection of Baron Jean Germain Léon Cassel van Doorn [1882–1952] (after 1944–by 1958) | Florence J. Gould [1895–1983], Juan-les Pins, France (after 1952–1984) | (Sotheby Parke Bernet, Monaco. \"Porcelaines de Chine et Objets d'art Chinois: Succession de Florence J. Gould.\" June 27, 1984 sale. Lot 104. Sold to J. E. Eskenazi ,Ltd.) (June 27, 1984) | (J. E. Eskenazi, Ltd., sold to the Cleveland Museum of Art) (June 27-September 24, 1984) | The Cleveland Museum of Art, Cleveland, OH (September 24, 1984–)",
+    "current_location": "241C Chinese Buddhist Sculptures",
+    "accession_number": "1984.70",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1984.70/1984.70_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1984.70/1984.70_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1984.70/1984.70_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1984.70/1984.70_web.jpg",
+    "description": "The South Sea Guanyin was originally seated on a rocky throne to represent the shore of his home in the mythical island of Potala. His right leg is raised, the arm resting on the folded knee in a relaxed position. With an expression of grace, calmness, and compassion, the Guanyin is especially appealing as the \"guide of souls\" who offers hope for salvation.",
+    "source_url": "https://clevelandart.org/art/1984.70",
+    "tags": [
+      "China, late Northern Song dynasty (960-1127) - Jin dynasty (1115-1234)",
+      "Chinese Art",
+      "Sculpture",
+      "guanyin",
+      "wood with polychromy and gilding"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "152259",
+    "title_zh": null,
+    "title_en": "Fragment with a Head of Bodhisattva",
+    "period": null,
+    "dynasty_en": null,
+    "date_raw": "c. 600–650",
+    "date_start": 600,
+    "date_end": 650,
+    "materials": [
+      "fresco"
+    ],
+    "dimensions": "Image: 11.7 x 11.7 cm (4 5/8 x 4 5/8 in.); Overall: 15.3 x 16 cm (6 x 6 5/16 in.)",
+    "provenance_or_findsite": "(Bukowski 's Zurich Auktionen); (John Suidmak, London)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1985.14",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1985.14/1985.14_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1985.14/1985.14_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1985.14/1985.14_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1985.14/1985.14_web.jpg",
+    "description": "Fragment with a Head of Bodhisattva, c. 600–650. Central Asia, Kizil. Fresco; image: 11.7 x 11.7 cm (4 5/8 x 4 5/8 in.); overall: 15.3 x 16 cm (6 x 6 5/16 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.14",
+    "source_url": "https://clevelandart.org/art/1985.14",
+    "tags": [
+      "Central Asia, Kizil",
+      "Chinese Art",
+      "Painting",
+      "bodhisattva",
+      "fresco"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "152270",
+    "title_zh": null,
+    "title_en": "Fragment with a Head of Bodhisattva",
+    "period": null,
+    "dynasty_en": null,
+    "date_raw": "600–650",
+    "date_start": 600,
+    "date_end": 650,
+    "materials": [
+      "fresco"
+    ],
+    "dimensions": "Image: 16.8 x 15.5 cm (6 5/8 x 6 1/8 in.); Overall: 23.2 x 20.6 cm (9 1/8 x 8 1/8 in.)",
+    "provenance_or_findsite": "(Galerie Koller, Zurich); (John Suidmak, London)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1985.15",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1985.15/1985.15_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1985.15/1985.15_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1985.15/1985.15_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1985.15/1985.15_web.jpg",
+    "description": "Fragment with a Head of Bodhisattva, 600–650. Central Asia, Kizil. Fresco; image: 16.8 x 15.5 cm (6 5/8 x 6 1/8 in.); overall: 23.2 x 20.6 cm (9 1/8 x 8 1/8 in.). The Cleveland Museum of Art, John L. Severance Fund, 1985.15",
+    "source_url": "https://clevelandart.org/art/1985.15",
+    "tags": [
+      "Central Asia, Kizil",
+      "Chinese Art",
+      "Painting",
+      "bodhisattva",
+      "fresco"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "153283",
+    "title_zh": "菩薩",
+    "title_en": "Bodhisattva",
+    "period": "隋",
+    "dynasty_en": "Sui",
+    "date_raw": "late 500s–early 600s",
+    "date_start": 575,
+    "date_end": 625,
+    "materials": [
+      "stone with polychromy and gilding"
+    ],
+    "dimensions": "Overall: 40.2 cm (15 13/16 in.)",
+    "provenance_or_findsite": "(James J. Lally, New York, NY, sold to the Cleveland Museum of Art) (?–1986) | The Cleveland Museum of Art, Cleveland, OH (1986–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1986.242",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1986.242/1986.242_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1986.242/1986.242_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1986.242/1986.242_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1986.242/1986.242_web.jpg",
+    "description": "Bodhisattva (菩薩), late 500s–early 600s. China, Sui dynasty (581-618) - Tang dynasty (618-907). Stone with polychromy and gilding; overall: 40.2 cm (15 13/16 in.). The Cleveland Museum of Art, Severance and Greta Millikin Purchase Fund, 1986.242",
+    "source_url": "https://clevelandart.org/art/1986.242",
+    "tags": [
+      "China, Sui dynasty (581-618) - Tang dynasty (618-907)",
+      "Chinese Art",
+      "Sculpture",
+      "bodhisattva",
+      "stone with polychromy and gilding"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "153780",
+    "title_zh": null,
+    "title_en": "Sakyamuni Buddha",
+    "period": "元",
+    "dynasty_en": "Yuan",
+    "date_raw": "1300s",
+    "date_start": 1300,
+    "date_end": 1399,
+    "materials": [
+      "Hanging scroll; ink and color on silk"
+    ],
+    "dimensions": "Image: 96.8 x 45.7 cm (38 1/8 x 18 in.); Overall: 203.2 x 69.2 cm (80 x 27 1/4 in.)",
+    "provenance_or_findsite": "Iwasaki Family",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1987.75",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1987.75/1987.75_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1987.75/1987.75_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1987.75/1987.75_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1987.75/1987.75_web.jpg",
+    "description": "Sakyamuni Buddha, 1300s. China, Yuan dynasty (1271-1368). Hanging scroll; ink and color on silk; image: 96.8 x 45.7 cm (38 1/8 x 18 in.); overall: 203.2 x 69.2 cm (80 x 27 1/4 in.). The Cleveland Museum of Art, John L. Severance Fund, 1987.75",
+    "source_url": "https://clevelandart.org/art/1987.75",
+    "tags": [
+      "China, Yuan dynasty (1271-1368)",
+      "Chinese Art",
+      "Hanging scroll; ink and color on silk",
+      "Painting",
+      "buddha"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "153850",
+    "title_zh": null,
+    "title_en": "Lohans",
+    "period": "元",
+    "dynasty_en": "Yuan",
+    "date_raw": "c. 1300–1350",
+    "date_start": 1300,
+    "date_end": 1350,
+    "materials": [
+      "color and gold on cotton"
+    ],
+    "dimensions": "Overall: 72 x 34 cm (28 3/8 x 13 3/8 in.)",
+    "provenance_or_findsite": "(Spink & Son, Ltd., London, England, sold to the Cleveland Museum of Art) (?–1988) | The Cleveland Museum of Art, Cleveland, OH (1988–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1988.103",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1988.103/1988.103_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1988.103/1988.103_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1988.103/1988.103_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1988.103/1988.103_web.jpg",
+    "description": "Lohans, c. 1300–1350. Sino-Tibetan, Yuan dynasty (1271-1368). Color and gold on cotton; overall: 72 x 34 cm (28 3/8 x 13 3/8 in.). The Cleveland Museum of Art, Leonard C. Hanna Jr. Fund, 1988.103",
+    "source_url": "https://clevelandart.org/art/1988.103",
+    "tags": [
+      "Chinese Art",
+      "Painting",
+      "Sino-Tibetan, Yuan dynasty (1271-1368)",
+      "color and gold on cotton",
+      "lohan"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "153856",
+    "title_zh": null,
+    "title_en": "Lohans",
+    "period": "元",
+    "dynasty_en": "Yuan",
+    "date_raw": "c. 1300–1350",
+    "date_start": 1300,
+    "date_end": 1350,
+    "materials": [
+      "color and gold on cotton"
+    ],
+    "dimensions": "Overall: 72.5 x 34.7 cm (28 9/16 x 13 11/16 in.)",
+    "provenance_or_findsite": null,
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1988.104",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1988.104/1988.104_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1988.104/1988.104_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1988.104/1988.104_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1988.104/1988.104_web.jpg",
+    "description": "Lohans, c. 1300–1350. Sino-Tibetan, Yuan dynasty (1271-1368). Color and gold on cotton; overall: 72.5 x 34.7 cm (28 9/16 x 13 11/16 in.). The Cleveland Museum of Art, Leonard C. Hanna Jr. Fund, 1988.104",
+    "source_url": "https://clevelandart.org/art/1988.104",
+    "tags": [
+      "Chinese Art",
+      "Painting",
+      "Sino-Tibetan, Yuan dynasty (1271-1368)",
+      "color and gold on cotton",
+      "lohan"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "154751",
+    "title_zh": "觀音坐像",
+    "title_en": "Seated Guanyin",
+    "period": "清",
+    "dynasty_en": "Qing",
+    "date_raw": "1600s-1700s",
+    "date_start": 1600,
+    "date_end": 1799,
+    "materials": [
+      "bamboo"
+    ],
+    "dimensions": "Overall: 15.7 x 9 cm (6 3/16 x 3 9/16 in.)",
+    "provenance_or_findsite": "(John Sparks, London); Severance and Greta Millikin",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1989.331",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1989.331/1989.331_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1989.331/1989.331_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1989.331/1989.331_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1989.331/1989.331_web.jpg",
+    "description": "Seated Guanyin (觀音坐像), 1600s-1700s. China, Qing dynasty (1644-1911). Bamboo; overall: 15.7 x 9 cm (6 3/16 x 3 9/16 in.). The Cleveland Museum of Art, Bequest of Mrs. Severance A. Millikin, 1989.331",
+    "source_url": "https://clevelandart.org/art/1989.331",
+    "tags": [
+      "China, Qing dynasty (1644-1911)",
+      "Chinese Art",
+      "Wood",
+      "bamboo",
+      "guanyin"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "155644",
+    "title_zh": "小型石塔",
+    "title_en": "Miniature Votive Stupa",
+    "period": "北魏",
+    "dynasty_en": "Northern Wei",
+    "date_raw": "435 CE",
+    "date_start": 435,
+    "date_end": 435,
+    "materials": [
+      "steatite"
+    ],
+    "dimensions": "Overall: 16.9 cm (6 5/8 in.)",
+    "provenance_or_findsite": "(Compagnie de la Chine et des Indes, Paris, France, sold to the Cleveland Museum of Art) (?-1990) | The Cleveland Museum of Art, Cleveland, OH (1990-)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1990.84",
+    "license": "CC0",
+    "image_urls": [
+      "https://openaccess-cdn.clevelandart.org/1990.84/1990.84_full.tif",
+      "https://openaccess-cdn.clevelandart.org/1990.84/1990.84_print.jpg",
+      "https://openaccess-cdn.clevelandart.org/1990.84/1990.84_web.jpg"
+    ],
+    "thumbnail_url": "https://openaccess-cdn.clevelandart.org/1990.84/1990.84_web.jpg",
+    "description": "This sutra pillar, inscribed with a sacred Buddhist text, belongs to a group of miniature stupas (<em>jingta</em>) that were found exclusively in the Gansu corridor, Northwest China. Ranging in date between AD 426–36, some of them bear the names of the lay Buddhist donors who commissioned them. A stupa is an architectural round structure built for the veneration of Buddhist relics. Miniature stupas may have commemorated the visit of a sacred site or represented donations to religious communitie…",
+    "source_url": "https://clevelandart.org/art/1990.84",
+    "tags": [
+      "China, Gansu province, Northern Wei dynasty (386-534)",
+      "Chinese Art",
+      "Sculpture",
+      "steatite"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  },
+  {
+    "source": "cma",
+    "source_id": "156878",
+    "title_zh": null,
+    "title_en": "Volume of Tibetan Buddhist Canon (Kanjur):  Chapter 8 of the Maha prajna paramita sutra",
+    "period": "清",
+    "dynasty_en": "Qing",
+    "date_raw": "1700s",
+    "date_start": 1700,
+    "date_end": 1799,
+    "materials": [
+      "vermillion block print on paper"
+    ],
+    "dimensions": null,
+    "provenance_or_findsite": "Mr. and Mrs. Frank R. Kaufman, given to the Cleveland Museum of Art (?–1992) | The Cleveland Museum of Art, Cleveland, OH (1992–)",
+    "current_location": "Cleveland Museum of Art",
+    "accession_number": "1992.88",
+    "license": "CC0",
+    "image_urls": [],
+    "thumbnail_url": null,
+    "description": "Volume of Tibetan Buddhist Canon (Kanjur): Chapter 8 of the Maha prajna paramita sutra, 1700s. China, Qing dynasty (1644-1911), Kangxi reign (1661-1722). Vermillion block print on paper. The Cleveland Museum of Art, Gift of Mr. and Mrs. Frank R. Kaufman, 1992.88",
+    "source_url": "https://clevelandart.org/art/1992.88",
+    "tags": [
+      "China, Qing dynasty (1644-1911), Kangxi reign (1661-1722)",
+      "Chinese Art",
+      "Print",
+      "buddhist",
+      "vermillion block print on paper"
+    ],
+    "extracted_at": "2026-05-16T15:10:48+00:00"
+  }
+]

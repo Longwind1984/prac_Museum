@@ -1,0 +1,5 @@
+# extract_cma.py uses only the Python stdlib (json / pathlib / re / datetime).
+# No third-party packages required. Tested on Python 3.11.
+
+# If you later swap json.load for streaming, uncomment:
+# ijson>=3.2
