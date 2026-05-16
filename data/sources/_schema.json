@@ -19,7 +19,7 @@
       "enum": [
         "met",
         "va",
-        "smithsonian",
+        "smithsonian_fsg",
         "cma",
         "dunhuang_open",
         "tianlongshan_uchicago"

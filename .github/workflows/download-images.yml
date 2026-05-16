@@ -1,0 +1,87 @@
+name: Download museum images (CC0/PD)
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Records per source to download (default 200)"
+        default: "200"
+        required: false
+      source:
+        description: "Single source: cma | smithsonian_fsg | met (blank=all)"
+        required: false
+      dynasty:
+        description: "Filter by dynasty_en, e.g. Northern Qi (blank=all)"
+        required: false
+  push:
+    branches:
+      - claude/install-superpower-plugin-bh2Mg
+    paths:
+      - "data/sources/cma.json"
+      - "data/sources/met.json"
+      - "data/sources/smithsonian_fsg.json"
+      - "data/sources/scripts/download_images.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: download-images-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  download:
+    if: "!contains(github.event.head_commit.message, '[skip-images]')"
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compute args
+        id: args
+        run: |
+          LIMIT="${{ github.event.inputs.limit }}"
+          [ -z "$LIMIT" ] && LIMIT=200
+          SOURCE="${{ github.event.inputs.source }}"
+          DYNASTY="${{ github.event.inputs.dynasty }}"
+          ARGS="--limit-per-source $LIMIT --rate-limit 0.5"
+          [ -n "$SOURCE" ] && ARGS="$ARGS --source $SOURCE"
+          [ -n "$DYNASTY" ] && ARGS="$ARGS --dynasty \"$DYNASTY\""
+          echo "args=$ARGS" >> "$GITHUB_OUTPUT"
+          echo "Computed args: $ARGS"
+
+      - name: Download images
+        run: |
+          set -euo pipefail
+          eval python data/sources/scripts/download_images.py ${{ steps.args.outputs.args }}
+
+      - name: Show what was added
+        run: |
+          du -sh data/sources/images/ || true
+          find data/sources/images -type f -name '*.jpg' | wc -l
+          ls data/sources/images/ 2>/dev/null || true
+
+      - name: Commit & push
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain data/sources/images/)" ]; then
+            echo "No new images to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/sources/images/
+          ADDED=$(git diff --cached --numstat data/sources/images/ | wc -l)
+          git commit -m "data: download $ADDED museum images via Actions [skip-images]
+
+Triggered by: ${{ github.event_name }}
+Args: ${{ steps.args.outputs.args }}
+"
+          git push

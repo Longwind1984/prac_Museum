@@ -1,5 +1,7 @@
-# extract_cma.py uses only the Python stdlib (json / pathlib / re / datetime).
-# No third-party packages required. Tested on Python 3.11.
+# All four extractor scripts use only the Python 3.11 stdlib:
+#   extract_cma.py / extract_met.py / extract_smithsonian_fsg.py / download_images.py
+# (json, csv, urllib.request, concurrent.futures, pathlib, re, datetime, argparse).
+# No third-party packages required.
 
-# If you later swap json.load for streaming, uncomment:
+# Optional, only if you swap json.load for streaming parsers on the 325 MB CMA dump:
 # ijson>=3.2

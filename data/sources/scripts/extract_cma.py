@@ -1,31 +1,23 @@
 #!/usr/bin/env python3
 """
-Extract Chinese Buddhist sculpture records from the Cleveland Museum of Art
+Extract all Chinese-Art CC0 records from the Cleveland Museum of Art
 open-access dump (cma.json at the repo root).
 
-Why a local file:
-  The live API https://openaccess-api.clevelandart.org/api/artworks is blocked
-  by the sandbox WAF in this environment (HTTP 403 on every probe). The user
-  pre-staged the full CC0 dump at /home/user/prac_Museum/cma.json so we work
-  off that. Re-fetching the dump: see README.md (curl from a host that can
-  reach openaccess-api.clevelandart.org).
+Source:
+  Live API https://openaccess-api.clevelandart.org/api/artworks
+  Full dump https://openaccess-api.clevelandart.org/artworks/  (single JSON)
+  Re-fetch from any host with normal egress; the sandbox where this script
+  was first authored could not reach the CDN.
 
 Filter:
-  department == "Chinese Art"
-  AND (title or culture or technique or type mentions Buddha / Buddhist /
-       Bodhisattva / stele / luohan / 佛 / 菩萨)
-  AND share_license_status starts with "CC0"
-  AND type in {"Sculpture","Stele","Stone","Architectural Element", ...}
-       or culture mentions a relevant Chinese dynasty.
+  department == "Chinese Art"  AND  share_license_status starts with "CC0"
 
-Output: data/sources/cma.json (array of unified records, <=100, with _meta).
-
-Idempotent: re-running overwrites the output file.
+Output:
+  data/sources/cma.json       — JSON array, [_meta, ...records]
 """
 from __future__ import annotations
 import datetime as _dt
 import json
-import os
 import re
 import sys
 from pathlib import Path
@@ -34,20 +26,13 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 SOURCE_DUMP = REPO_ROOT / "cma.json"
 OUT_PATH = REPO_ROOT / "data" / "sources" / "cma.json"
 
-MAX_RECORDS = 100
-
-KEYWORDS = [
-    "buddha", "buddhist", "bodhisattva", "stele", "luohan", "lohan",
-    "guanyin", "avalokiteshvara", "maitreya", "amitabha", "vairocana",
-    "shakyamuni", "dvarapala", "lokapala", "arhat",
-]
-
 DYNASTY_MAP_EN = {
     "northern wei": ("北魏", "Northern Wei", 386, 534),
     "eastern wei": ("东魏", "Eastern Wei", 534, 550),
     "western wei": ("西魏", "Western Wei", 535, 557),
     "northern qi": ("北齐", "Northern Qi", 550, 577),
     "northern zhou": ("北周", "Northern Zhou", 557, 581),
+    "six dynasties": ("六朝", "Six Dynasties", 220, 589),
     "sui": ("隋", "Sui", 581, 618),
     "tang": ("唐", "Tang", 618, 907),
     "five dynasties": ("五代", "Five Dynasties", 907, 960),
@@ -58,34 +43,17 @@ DYNASTY_MAP_EN = {
     "ming": ("明", "Ming", 1368, 1644),
     "qing": ("清", "Qing", 1644, 1912),
     "han": ("汉", "Han", -206, 220),
-    "six dynasties": ("六朝", "Six Dynasties", 220, 589),
+    "warring states": ("战国", "Warring States", -475, -221),
+    "zhou": ("周", "Zhou", -1046, -256),
+    "shang": ("商", "Shang", -1600, -1046),
+    "neolithic": ("新石器时代", "Neolithic", -10000, -2000),
 }
 
 
 def is_relevant(rec: dict) -> bool:
     if (rec.get("department") or "").strip() != "Chinese Art":
         return False
-    license_ = (rec.get("share_license_status") or "").upper()
-    if "CC0" not in license_:
-        return False
-    title = (rec.get("title") or "").lower()
-    type_ = (rec.get("type") or "").lower()
-    tech = (rec.get("technique") or "").lower()
-    # Title-level Buddhist hit OR (Sculpture/Stele type + description-level hit).
-    if any(kw in title for kw in KEYWORDS):
-        return True
-    sculptural = any(t in (type_ + " " + tech) for t in
-                     ("sculpture", "stele", "relief", "architectural", "stone"))
-    if sculptural:
-        blob_parts: list[str] = []
-        for key in ("tombstone", "description", "culture"):
-            v = rec.get(key)
-            if isinstance(v, str):
-                blob_parts.append(v)
-        blob = " ".join(blob_parts).lower()
-        if any(kw in blob for kw in KEYWORDS):
-            return True
-    return False
+    return "CC0" in (rec.get("share_license_status") or "").upper()
 
 
 def derive_dynasty(rec: dict) -> tuple[str | None, str | None]:
@@ -97,24 +65,21 @@ def derive_dynasty(rec: dict) -> tuple[str | None, str | None]:
         elif v:
             parts.append(str(v))
     blob = " ".join(parts).lower()
-    for key, (zh, en, _s, _e) in DYNASTY_MAP_EN.items():
+    # Longest-first so "northern wei" beats "wei" etc.
+    for key in sorted(DYNASTY_MAP_EN, key=len, reverse=True):
         if key in blob:
+            zh, en, _s, _e = DYNASTY_MAP_EN[key]
             return zh, en
     return None, None
 
 
 def derive_dates(rec: dict) -> tuple[int | None, int | None]:
-    s = rec.get("creation_date_earliest")
-    e = rec.get("creation_date_latest")
-    try:
-        s = int(s) if s is not None else None
-    except (ValueError, TypeError):
-        s = None
-    try:
-        e = int(e) if e is not None else None
-    except (ValueError, TypeError):
-        e = None
-    return s, e
+    def _i(x):
+        try:
+            return int(x) if x is not None else None
+        except (ValueError, TypeError):
+            return None
+    return _i(rec.get("creation_date_earliest")), _i(rec.get("creation_date_latest"))
 
 
 def derive_materials(rec: dict) -> list[str]:
@@ -127,7 +92,6 @@ def derive_materials(rec: dict) -> list[str]:
         mats.extend(s for s in support if isinstance(s, str))
     elif isinstance(support, str):
         mats.append(support)
-    # Dedupe, preserve order.
     seen, out = set(), []
     for m in mats:
         m = m.strip()
@@ -141,15 +105,16 @@ def derive_images(rec: dict) -> tuple[list[str], str | None]:
     imgs = rec.get("images") or {}
     urls: list[str] = []
     thumb = None
-    # CMA images dict has keys: web, print, full, square, ...
     if isinstance(imgs, dict):
         for k in ("full", "print", "web"):
             v = imgs.get(k)
             if isinstance(v, dict) and v.get("url"):
                 urls.append(v["url"])
-        sq = imgs.get("web") or imgs.get("square")
-        if isinstance(sq, dict):
-            thumb = sq.get("url")
+        for tk in ("web", "square"):
+            v = imgs.get(tk)
+            if isinstance(v, dict) and v.get("url"):
+                thumb = v["url"]
+                break
     return urls, thumb
 
 
@@ -163,12 +128,6 @@ def derive_tags(rec: dict) -> list[str]:
             for x in v:
                 if isinstance(x, str) and x.strip():
                     tags.add(x.strip())
-    title = rec.get("title") or ""
-    tomb = rec.get("tombstone") or ""
-    blob = (str(title) + " " + str(tomb)).lower()
-    for kw in KEYWORDS:
-        if kw in blob:
-            tags.add(kw)
     return sorted(tags)
 
 
@@ -204,7 +163,6 @@ def truncate(text: str | None, n: int = 500) -> str | None:
 def normalize(rec: dict) -> dict:
     zh, en = derive_dynasty(rec)
     ds, de = derive_dates(rec)
-    mats = derive_materials(rec)
     imgs, thumb = derive_images(rec)
     return {
         "source": "cma",
@@ -216,7 +174,7 @@ def normalize(rec: dict) -> dict:
         "date_raw": rec.get("creation_date"),
         "date_start": ds,
         "date_end": de,
-        "materials": mats,
+        "materials": derive_materials(rec),
         "dimensions": rec.get("measurements"),
         "provenance_or_findsite": _flatten_provenance(rec),
         "current_location": rec.get("current_location") or "Cleveland Museum of Art",
@@ -234,36 +192,32 @@ def normalize(rec: dict) -> dict:
 def main() -> int:
     if not SOURCE_DUMP.exists():
         print(f"ERROR: dump not found at {SOURCE_DUMP}", file=sys.stderr)
+        print("Fetch with: curl -o cma.json https://openaccess-api.clevelandart.org/artworks/",
+              file=sys.stderr)
         return 2
     with SOURCE_DUMP.open("r", encoding="utf-8") as f:
         data = json.load(f)
     out: list[dict] = []
-    seen_ids: set[str] = set()
+    seen: set[str] = set()
     for rec in data:
         if not is_relevant(rec):
             continue
         norm = normalize(rec)
-        if norm["source_id"] in seen_ids:
+        if norm["source_id"] in seen:
             continue
-        seen_ids.add(norm["source_id"])
+        seen.add(norm["source_id"])
         out.append(norm)
-        if len(out) >= MAX_RECORDS:
-            break
 
-    meta = {
-        "_meta": {
-            "source": "cma",
-            "endpoint": "local-dump (openaccess-api.clevelandart.org unreachable from sandbox)",
-            "dump_path": str(SOURCE_DUMP.relative_to(REPO_ROOT)),
-            "filter": "department=Chinese Art AND title/type/culture matches Buddhist keywords AND CC0",
-            "target_count": MAX_RECORDS,
-            "actual_count": len(out),
-            "network_reachable": False,
-            "api_key_required": False,
-            "rate_limit_observed": "n/a (local file)",
-            "extracted_at": _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="seconds"),
-        }
-    }
+    meta = {"_meta": {
+        "source": "cma",
+        "endpoint": "https://openaccess-api.clevelandart.org/api/artworks",
+        "method": "local CC0 dump filtered by department=Chinese Art AND license=CC0",
+        "dump_path": str(SOURCE_DUMP.relative_to(REPO_ROOT)),
+        "target_count": "all matching",
+        "actual_count": len(out),
+        "with_image_urls": sum(1 for r in out if r["image_urls"]),
+        "extracted_at": _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="seconds"),
+    }}
     payload = [meta] + out
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with OUT_PATH.open("w", encoding="utf-8") as f:
