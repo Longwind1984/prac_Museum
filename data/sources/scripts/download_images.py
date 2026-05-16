@@ -28,9 +28,11 @@ import argparse
 import json
 import random
 import sys
+import threading
 import time
 import urllib.error
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
@@ -122,6 +124,49 @@ def save_manifest(m: dict) -> None:
     MANIFEST_PATH.write_text(json.dumps(m, ensure_ascii=False, indent=2, sort_keys=True))
 
 
+_lock = threading.Lock()
+
+
+def _process_one(source: str, rec: dict, args: argparse.Namespace, manifest: dict,
+                 counters: dict) -> None:
+    op = out_path(source, rec)
+    if op.exists() and op.stat().st_size > 1024:
+        with _lock:
+            counters["skip"] += 1
+        return
+    url = best_image_url(source, rec)
+    if not url:
+        with _lock:
+            counters["fail"] += 1
+        return
+    if args.dry_run:
+        with _lock:
+            counters["done"] += 1
+            print(f"  DRY  {url}")
+        return
+    # Per-host courtesy delay (jitter avoids thundering herd).
+    time.sleep(args.rate_limit * (0.5 + random.random()))
+    data = http_get(url, timeout=args.timeout)
+    if not data or len(data) < 1024:
+        with _lock:
+            counters["fail"] += 1
+        return
+    op.parent.mkdir(parents=True, exist_ok=True)
+    op.write_bytes(data)
+    with _lock:
+        manifest[str(op.relative_to(REPO_ROOT))] = {
+            "source": source,
+            "source_id": rec.get("source_id"),
+            "accession": rec.get("accession_number"),
+            "url": url,
+            "bytes": len(data),
+        }
+        counters["done"] += 1
+        if counters["done"] % 25 == 0:
+            save_manifest(manifest)
+            print(f"  [{source}] done={counters['done']} skip={counters['skip']} fail={counters['fail']}")
+
+
 def process_source(source: str, args: argparse.Namespace, manifest: dict) -> tuple[int, int, int]:
     recs = load_records(source)
     if args.shuffle:
@@ -131,39 +176,13 @@ def process_source(source: str, args: argparse.Namespace, manifest: dict) -> tup
     if args.limit_per_source:
         recs = recs[: args.limit_per_source]
     print(f"\n[{source}] candidate records: {len(recs)}")
-    n_done = n_skip = n_fail = 0
-    for i, rec in enumerate(recs):
-        op = out_path(source, rec)
-        if op.exists() and op.stat().st_size > 1024:
-            n_skip += 1
-            continue
-        url = best_image_url(source, rec)
-        if not url:
-            n_fail += 1
-            continue
-        if args.dry_run:
-            print(f"  {i+1:>5}/{len(recs)}  DRY  {url}")
-            n_done += 1
-            continue
-        time.sleep(args.rate_limit)
-        data = http_get(url, timeout=args.timeout)
-        if not data or len(data) < 1024:
-            n_fail += 1
-            continue
-        op.parent.mkdir(parents=True, exist_ok=True)
-        op.write_bytes(data)
-        manifest[str(op.relative_to(REPO_ROOT))] = {
-            "source": source,
-            "source_id": rec.get("source_id"),
-            "accession": rec.get("accession_number"),
-            "url": url,
-            "bytes": len(data),
-        }
-        n_done += 1
-        if n_done % 20 == 0:
-            save_manifest(manifest)
-            print(f"  {i+1:>5}/{len(recs)}  done={n_done} skip={n_skip} fail={n_fail}")
-    return n_done, n_skip, n_fail
+    counters = {"done": 0, "skip": 0, "fail": 0}
+    workers = args.parallel.get(source, 4)
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futs = [pool.submit(_process_one, source, r, args, manifest, counters) for r in recs]
+        for _ in as_completed(futs):
+            pass
+    return counters["done"], counters["skip"], counters["fail"]
 
 
 def main() -> int:
@@ -176,21 +195,29 @@ def main() -> int:
     ap.add_argument("--shuffle", action="store_true",
                     help="Random sample (deterministic via --seed)")
     ap.add_argument("--seed", type=int, default=42)
-    ap.add_argument("--rate-limit", type=float, default=0.5,
-                    help="Seconds between requests per source (default 0.5)")
+    ap.add_argument("--rate-limit", type=float, default=0.3,
+                    help="Base seconds between requests within each source (default 0.3, jittered)")
     ap.add_argument("--timeout", type=int, default=30)
     ap.add_argument("--dry-run", action="store_true",
                     help="List URLs without downloading")
     args = ap.parse_args()
+    # Per-source worker counts. Met has 2 HTTPs per record (API+image) and a
+    # tighter API rate limit, so use fewer concurrent workers there.
+    args.parallel = {"cma": 6, "smithsonian_fsg": 6, "met": 4}
 
     sources = [args.source] if args.source else ["cma", "smithsonian_fsg", "met"]
     manifest = load_manifest()
     totals = {"done": 0, "skip": 0, "fail": 0}
-    for src in sources:
-        d, s, f = process_source(src, args, manifest)
-        totals["done"] += d
-        totals["skip"] += s
-        totals["fail"] += f
+    # Run sources in parallel — they hit different CDNs, no cross-contention.
+    with ThreadPoolExecutor(max_workers=len(sources)) as pool:
+        futs = {pool.submit(process_source, src, args, manifest): src for src in sources}
+        for f in as_completed(futs):
+            src = futs[f]
+            d, sk, fa = f.result()
+            totals["done"] += d
+            totals["skip"] += sk
+            totals["fail"] += fa
+            print(f"[{src}] FINISHED  done={d} skip={sk} fail={fa}")
     save_manifest(manifest)
     print(f"\nTOTAL  done={totals['done']}  skip={totals['skip']}  fail={totals['fail']}")
     print(f"Manifest: {MANIFEST_PATH.relative_to(REPO_ROOT)}")
