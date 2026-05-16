@@ -38,7 +38,7 @@ SOURCES_DIR = REPO_ROOT / "data" / "sources"
 IMG_DIR = SOURCES_DIR / "images"
 MANIFEST_PATH = IMG_DIR / "_manifest.json"
 
-UA = "Mozilla/5.0 (compatible; museum-rag-extractor/1.0; +https://github.com/Longwind1984/prac_museum)"
+UA = "Mozilla/5.0 (compatible; museum-rag-extractor/1.0.1; +https://github.com/Longwind1984/prac_museum)"
 
 
 def http_get(url: str, timeout: int = 30) -> bytes | None:
