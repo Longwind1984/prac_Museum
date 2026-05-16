@@ -9,6 +9,18 @@ RAG 主语料,也是 ADR-003 附录二「可泛化数据源框架」的样例落
 > 📷 **可视化样例:[gallery.md](./gallery.md)** — 自动生成的图像目录,按朝代分组,
 > 4,466 张真图、240 张缩略图直接 embed,可在 GitHub 网页视图直接看。
 
+> 🔎 **RAG-ready chunks:** [`rag_chunks.ndjson`](./rag_chunks.ndjson)(15,299 行,12.6 MB)
+> — 每条统一文本 + metadata + 图像引用,直接灌 Pinecone / pgvector / Chroma。
+> 配套 [`scripts/search.py`](./scripts/search.py) 提供无 LLM CLI 检索。
+
+```bash
+# 例:北齐佛造像 + 必须带本地图
+python data/sources/scripts/search.py --dynasty "Northern Qi" -q "buddh" --has-image
+
+# 例:北朝(386–581)石灰岩件
+python data/sources/scripts/search.py --material limestone --year-start 386 --year-end 581
+```
+
 ## 数据规模
 
 | 源 | 馆 | 条数 | 带图 URL | 许可 | 文件 |
