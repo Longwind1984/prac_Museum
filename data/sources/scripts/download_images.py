@@ -189,8 +189,8 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--source", choices=["cma", "smithsonian_fsg", "met"],
                     help="Process one source (default: all three)")
-    ap.add_argument("--limit-per-source", type=int, default=2000,
-                    help="Cap records processed per source (default 2000)")
+    ap.add_argument("--limit-per-source", type=int, default=3000,
+                    help="Cap records processed per source (default 3000)")
     ap.add_argument("--dynasty", help="Filter by dynasty_en, e.g. 'Northern Qi'")
     ap.add_argument("--shuffle", action="store_true",
                     help="Random sample (deterministic via --seed)")

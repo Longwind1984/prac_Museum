@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       limit:
-        description: "Records per source to download (default 2000)"
-        default: "2000"
+        description: "Records per source to download (default 3000)"
+        default: "3000"
         required: false
       source:
         description: "Single source: cma | smithsonian_fsg | met (blank=all)"
@@ -48,10 +48,11 @@ jobs:
         id: args
         run: |
           LIMIT="${{ github.event.inputs.limit }}"
-          [ -z "$LIMIT" ] && LIMIT=2000
+          [ -z "$LIMIT" ] && LIMIT=3000
           SOURCE="${{ github.event.inputs.source }}"
           DYNASTY="${{ github.event.inputs.dynasty }}"
-          ARGS="--limit-per-source $LIMIT --rate-limit 0.5"
+          # rate-limit 0.3 matches script default; concurrency already provides spacing
+          ARGS="--limit-per-source $LIMIT --rate-limit 0.3"
           [ -n "$SOURCE" ] && ARGS="$ARGS --source $SOURCE"
           [ -n "$DYNASTY" ] && ARGS="$ARGS --dynasty \"$DYNASTY\""
           echo "args=$ARGS" >> "$GITHUB_OUTPUT"
