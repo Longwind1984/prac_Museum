@@ -194,7 +194,13 @@ def main() -> int:
     save_manifest(manifest)
     print(f"\nTOTAL  done={totals['done']}  skip={totals['skip']}  fail={totals['fail']}")
     print(f"Manifest: {MANIFEST_PATH.relative_to(REPO_ROOT)}")
-    return 0 if totals["fail"] == 0 else 1
+    # Always exit 0 unless we wrote literally nothing — partial download failures
+    # (rate limits, individual broken URLs) are normal and should not fail CI.
+    # Only "0 done AND 0 skip" indicates a real outage worth alerting on.
+    if totals["done"] == 0 and totals["skip"] == 0:
+        print("CRITICAL: no images downloaded and none pre-existed.", file=sys.stderr)
+        return 2
+    return 0
 
 
 if __name__ == "__main__":
