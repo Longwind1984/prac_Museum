@@ -19,6 +19,20 @@
     header { padding: 24px 24px 12px; border-bottom: 1px solid var(--line); }
     h1 { font-size: 20px; margin: 0; font-weight: 600; letter-spacing: 0.5px; }
     .sub { color: var(--dim); font-size: 13px; margin-top: 4px; }
+    .disclaimer {
+      margin: 14px 0 4px;
+      padding: 12px 14px;
+      background: #1c1c24;
+      border: 1px solid var(--accent-2);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: #c8c8d0;
+    }
+    .disclaimer strong { color: var(--accent); }
+    .disclaimer a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-2); }
+    .disclaimer a:hover { border-bottom-color: var(--accent); }
     .filters { padding: 14px 24px; background: var(--panel); border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; position: sticky; top: 0; z-index: 10; }
     .filters label { font-size: 12px; color: var(--dim); }
     .filters select, .filters input { background: var(--bg); color: var(--ink); border: 1px solid var(--line); border-radius: 4px; padding: 5px 8px; font-size: 13px; font-family: inherit; }
@@ -62,6 +76,14 @@
   <header>
     <h1>一起看 · 中国艺术 CC0/PD 图鉴</h1>
     <div class="sub" id="sub">加载中…</div>
+    <div class="disclaimer">
+      <strong>这是数据资产浏览器,不是产品 demo。</strong>
+      它展示项目 RAG 底层的元数据 + 图像样本(15,299 条 / 4,466 张图,跨 3 家海外馆 CC0/PD);
+      「一起看」的产品形态(同伴、克制、不抢文物的光)见
+      <a href="https://github.com/Longwind1984/prac_Museum/blob/main/docs/PRD.md#4-产品愿景与定位" target="_blank" rel="noopener">PRD §4</a>
+      与
+      <a href="https://github.com/Longwind1984/prac_Museum/blob/main/docs/PRD.md#82-克制式屏幕设计" target="_blank" rel="noopener">§8.2</a>。
+    </div>
   </header>
   <div class="filters">
     <label>朝代:<select id="f-dynasty"><option value="">全部</option></select></label>

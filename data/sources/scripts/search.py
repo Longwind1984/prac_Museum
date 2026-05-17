@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
 """
-Filter + plain-text search over the unified RAG chunks.
+Baseline / sanity-check retrieval over the unified RAG chunks.
 
-No LLM, no vector DB, no third-party deps. Runs anywhere with Python 3.11+.
+Purpose: in the production form, a vector retriever + LLM sits on top of these
+chunks. This script exists *below* that — it validates that the data schema
+itself is complete, queryable, and free of integrity bugs (missing dynasty
+mappings, broken image paths, unparseable dates) BEFORE we plug in embeddings
+and an LLM. It is intentionally zero-dependency (stdlib only, Python 3.11+) so
+it can run anywhere — CI, a fresh laptop, a fork — without env setup.
+
+Use it as: a schema-integrity smoke test and a filter-facets debugger, not as
+the project's retrieval story.
 
 Examples:
   python data/sources/scripts/search.py --dynasty "Northern Qi" --has-image

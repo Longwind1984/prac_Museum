@@ -11,7 +11,9 @@ RAG 主语料,也是 ADR-003 附录二「可泛化数据源框架」的样例落
 
 > 🔎 **RAG-ready chunks:** [`rag_chunks.ndjson`](./rag_chunks.ndjson)(15,299 行,12.6 MB)
 > — 每条统一文本 + metadata + 图像引用,直接灌 Pinecone / pgvector / Chroma。
-> 配套 [`scripts/search.py`](./scripts/search.py) 提供无 LLM CLI 检索。
+> 配套 [`scripts/search.py`](./scripts/search.py) 是 **baseline / sanity-check
+> 检索工具**——在接入 LLM / 向量库之前,先用确定性查询验证数据 schema 完整性、
+> 过滤面可用性、字段映射正确性。生产形态下,RAG retriever + LLM 在此之上。
 
 ```bash
 # 例:北齐佛造像 + 必须带本地图

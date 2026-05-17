@@ -1,11 +1,33 @@
 name: Download museum images (CC0/PD)
 
+# =============================================================================
+# FROZEN — 2026-05-17 · Curator + Critic 双签
+# -----------------------------------------------------------------------------
+# 本工作流当前处于「冻结」状态。Critic 在 2026-05-17 boot-selfcheck review 中
+# 判定:已下 4,466 张图 / demo 切片实际仅需 ~88 张,利用率 1.97%。继续全量
+# 下载属于「过早投资」(Curator 宪法 §否决理由 4)。
+#
+# 后续触发规则:
+#   1. 必须由「30 件展品对照件清单」驱动,定向跑(用 source + dynasty 过滤);
+#   2. 单次 ≤ 200 张;
+#   3. 重启自动触发(cron / push)前需 Curator 重签 + Critic 复查。
+#
+# 当前状态:
+#   - push 触发已禁用(注释保留,日后重启时改回即可)
+#   - workflow_dispatch 仍可用(为应对 P0 修复 / 单件补图)
+#   - 默认 limit 从 5000 改为 200(强制走小批量)
+#
+# 参考:
+#   - agents/pm-critic/reviews/2026-05-17-boot-selfcheck.md(主要问题 #1 / 修 1)
+#   - commit 4e81375 提出的「再下 10,000 张」意图已撤回
+# =============================================================================
+
 on:
   workflow_dispatch:
     inputs:
       limit:
-        description: "Records per source to download (default 5000)"
-        default: "5000"
+        description: "Records per source to download (default 200, hard cap 200 per Critic redirect)"
+        default: "200"
         required: false
       source:
         description: "Single source: cma | smithsonian_fsg | met (blank=all)"
@@ -13,14 +35,16 @@ on:
       dynasty:
         description: "Filter by dynasty_en, e.g. Northern Qi (blank=all)"
         required: false
-  push:
-    branches:
-      - claude/install-superpower-plugin-bh2Mg
-    paths:
-      - "data/sources/cma.json"
-      - "data/sources/met.json"
-      - "data/sources/smithsonian_fsg.json"
-      - "data/sources/scripts/download_images.py"
+  # --- push 触发已冻结,2026-05-17 起停止自动跑 ----------------------------
+  # push:
+  #   branches:
+  #     - claude/install-superpower-plugin-bh2Mg
+  #   paths:
+  #     - "data/sources/cma.json"
+  #     - "data/sources/met.json"
+  #     - "data/sources/smithsonian_fsg.json"
+  #     - "data/sources/scripts/download_images.py"
+  # ------------------------------------------------------------------------
 
 permissions:
   contents: write
@@ -48,7 +72,13 @@ jobs:
         id: args
         run: |
           LIMIT="${{ github.event.inputs.limit }}"
-          [ -z "$LIMIT" ] && LIMIT=5000
+          [ -z "$LIMIT" ] && LIMIT=200
+          # Hard cap: refuse any limit > 200 while frozen (Critic redirect 2026-05-17)
+          if [ "$LIMIT" -gt 200 ]; then
+            echo "::error::limit=$LIMIT exceeds the 200-per-run cap set by 2026-05-17 Critic redirect."
+            echo "::error::To raise the cap, get Curator re-signoff and update download-images.yml header."
+            exit 1
+          fi
           SOURCE="${{ github.event.inputs.source }}"
           DYNASTY="${{ github.event.inputs.dynasty }}"
           # rate-limit 0.3 matches script default; concurrency already provides spacing
