@@ -6,28 +6,38 @@
 
 ## P0 — Phase 1 启动包
 
-### 1. PRD §3.3 重构:从单 persona 林知白 → 4 原则 + 多实例
+### 1. PRD §3.3 重构:从单 persona 林知白 → 4 原则 + 多实例 ✅
 - 来源:用户 2026-05-17 输入
-- Curator 签字:**待写**(强 / PRD 章节质量 + 招聘官信号:展示用户研究的严谨性)
-- 产出:更新 docs/PRD.md §3.3,引用 agents/user-voice/principles.md 与 instances.md
-- 状态:`draft`
+- Builder-B 2026-05-17 完成;Critic round2 PASS
+- 状态:**done**
 
-### 2. PM-Critic 开机自检:审 2025-05-16 / 17 的工作
+### 2. PM-Critic 开机自检:审 2025-05-16 / 17 的工作 ✅
 - 来源:团队 boot 流程
-- 范围:近 7 天 commit,特别是 4,466 张 Met 图下载 + RAG chunks pipeline + galleries
-- 期待问题:"这些产出推进了 PRD/商业故事的哪条具体论点?哪些是 over-engineering?"
-- Curator 签字:**待写**
-- 状态:`draft`
+- 输出:7 条「必须修」→ Builder-A/B 并行修复 → Critic round2 APPROVE
+- 评分:招聘官 2.7→4.0,投资人 2.2→3.3
+- 状态:**done**
 
-### 3. Strategy-Curator 数据相关性盘点
-- 任务:对 data/sources/ 下现有 15,299 条数据,逐源标注"对 PRD 哪条论点 / 哪个 KPI 有支撑"
-- 产出:agents/strategy-curator/data-relevance.md
-- 状态:`draft`
+### 3. Strategy-Curator 数据相关性盘点 ✅
+- 输出:强支撑 2.1%、无支撑 62.8%、大陆馆方 0 条 = 最大缺口
+- 状态:**done**
+
+### 修复批(2026-05-17 redirect 7 条「必须修」)✅
+- 修 1 冻结下载 / 修 2 §1.4 founding insight / 修 3 README 重排 / 修 4 index.html disclaimer / 修 5 §13.1 同步 / 修 6 §14.5 D-2/D-6/D-8 close / 修 7 「无 LLM」措辞清零
+- 全部 PASS(Critic round2 2026-05-17)
+- 状态:**done**
 
 ### 4. 展品清单 v0:山博佛风遗韵 + 上海重点馆
 - 任务:列出 demo 候选展品(30 件 ±),每件标注馆 / 朝代 / 选它的理由 / 跨馆对照件候选
 - 产出:agents/strategy-curator/exhibit-list.md(已建空架,待填)
-- 状态:`draft`
+- 状态:`draft`(依赖主线 #11 信息源调研结果,再启动)
+
+## P0 — 主线任务(2026-05-17 PM 直接交付)
+
+### 11. 信息源最佳素材调研(主线)
+- 来源:PM 2026-05-17 直接交付。「重新去做研究,获得可用的最佳素材」
+- 范围:重新盘 AI 博物馆智能导览项目的全部可能信息源——大陆馆方 / 海外 OA 补强 / 学术与二次源 / 现场场域
+- 期待产出:agents/researcher/reports/2026-05-17-{track}.md × 3 + 一份汇总优先级
+- 状态:Researcher 三 track 并行 in-flight
 
 ## P1 — 本周内
 
