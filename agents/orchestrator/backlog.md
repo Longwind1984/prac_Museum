@@ -33,11 +33,23 @@
 
 ## P0 — 主线任务(2026-05-17 PM 直接交付)
 
-### 11. 信息源最佳素材调研(主线)
-- 来源:PM 2026-05-17 直接交付。「重新去做研究,获得可用的最佳素材」
-- 范围:重新盘 AI 博物馆智能导览项目的全部可能信息源——大陆馆方 / 海外 OA 补强 / 学术与二次源 / 现场场域
-- 期待产出:agents/researcher/reports/2026-05-17-{track}.md × 3 + 一份汇总优先级
-- 状态:Researcher 三 track 并行 in-flight
+### 11. 信息源最佳素材调研(主线 · 第 1 步)✅
+- Researcher Track 1/2/3 完成,3 份 reports 已 commit
+- 状态:**done** — 输入到 #12
+
+### 12. Open Discovery Pipeline + 30 件 RAG bundle(主线 · 第 2 步)
+- 来源:PM 2026-05-17 项目级 pivot 决定
+- **核心**:用 AI agent 从分散来源拼出市面上不存在的中国文博 RAG 知识库;过程本身=核心 demo
+- 范围(锁定):山博佛风遗韵 15 件 + 上博本馆 5 件 + 上博东馆 5 件 + 震旦 5 件 = **30 件**
+- 每件 bundle 5 类源:馆方一手 / 跨馆对照 / 学术论文 / 现场场域 / 数字人文 OA
+- 时间盒:7 天 v0,先证明 pipeline,再加深;Curator/Critic 守过度工程线
+- 排程:
+  - 12.0 Researcher 样本 pipeline 可行性测试(3 件样本)— **in-flight**
+  - 12.1 ADR-006 Open Discovery Pipeline 草稿(Builder,样本完成后启动)
+  - 12.2 PRD §1.4 补"AI-driven discovery as USP"段(Builder,12.1 后)
+  - 12.3 30 件批量执行(Builder × Researcher,12.1 + 12.2 完成后)
+- 风险:微信公众号(ToS 灰区,不抓)/ 馆方 robots.txt / Phase 1 时间预算重排
+- 状态:`researcher-in-flight`
 
 ## P1 — 本周内
 
