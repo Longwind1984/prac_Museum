@@ -10,15 +10,17 @@
 
 ## 项目文档
 
-- [PRD v0](./docs/PRD.md) — 主产品需求文档（14 章）
+- [PRD v1](./docs/PRD.md) — 主产品需求文档（14 章 + 状态机 + 真实场景边界 + 平台约束）
+- [v0 评审团报告](./docs/review-v0.md) — 5 角色独立 review + 主席综合 Executive Summary
 - [ADR-001: 形态决策](./docs/ADR/001-form-factor.md) — 为什么选屏为主而非语音
 
 ## 项目阶段
 
 - [x] 定位与背景 v2
 - [x] PRD 章节大纲
-- [ ] **PRD v0 撰写中**
-- [ ] PRD v1（依据 review 反馈打磨）
+- [x] PRD v0
+- [x] v0 评审团 review（作品集 8.5 / 产品深度 7.5 / 落地可行性 6.0）
+- [x] **PRD v1**（P0/P1 共 5 项必改全部落地）
 - [ ] Figma 信息架构
 - [ ] Figma 高保真原型
 - [ ] （可选）Web demo 验证 AI 能力
