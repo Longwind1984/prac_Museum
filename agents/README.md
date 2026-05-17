@@ -42,6 +42,22 @@ backlog.md (Curator+Critic 联签) → builder/inbox.md → Builder 执行 → c
   → orchestrator/sync-log.md 留一行
 ```
 
+### Orchestrator autonomy(2026-05-17 · PM 当面授权)
+
+无成本、只消耗 token、且无破坏性后果、能提供确定性认知收益的测试,Orchestrator **直接跑,不必请示**。这是 high-agency + 解决问题能力的体现,反复请示反而是低 agency 的表现。
+
+**可直接跑的(无需请示)**:
+- API endpoint 可达性 / 文档查证 / 公开 ToS 阅读
+- 沙箱内 curl / dig / WebFetch / 只读测试
+- 多方案对照表的构建(实测各自的免费额度、限制、可达性)
+- 1-2 件样本 / mini PoC,目的是 de-risking 下一步决策
+
+**仍需请示的(不要扩权)**:
+- 任何涉及外部资源消耗(花钱、注册账号、绑卡、对外发信)— T3
+- 涉及产品方向、PRD 章节立场、人格边界的判断 — T2
+- 跨 30 min + 会阻塞其他工作的实验
+- 法律/版权/ToS 灰区(不确定时升级)
+
 ### Curator 一票否决
 
 任何任务进 builder/inbox.md **之前**,Curator 必须在该任务条目下写一行:
