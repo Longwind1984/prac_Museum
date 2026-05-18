@@ -358,7 +358,7 @@ nav.bottom .nav-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 
 <header>
   <button class="tap" id="btn-toc" aria-label="目录">≡</button>
-  <div class="brand">一起看 · v2 · 0518 <small>· 8 开口 + 4 沉默</small></div>
+  <div class="brand">一起看 · v2 · 0518 <small>· 9 开口 + 3 沉默</small></div>
   <button class="tap" id="btn-pause" aria-label="暂停">⏸</button>
   <button class="tap" id="btn-export" aria-label="导出">↗</button>
 </header>
@@ -385,7 +385,7 @@ nav.bottom .nav-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 <div class="toc-overlay" id="toc-overlay">
   <button class="toc-close" id="toc-close">×</button>
   <h2>今天的全部时刻</h2>
-  <div class="toc-sub">12 个触点 · 8 我开口 · 4 沉默 · 4 小时 · 0 RAG 主语料</div>
+  <div class="toc-sub">12 触点 · 9 我开口(含 1 echo) · 3 沉默 · 4 小时 · 0 RAG</div>
   <div id="toc-list"></div>
 </div>
 
@@ -510,7 +510,7 @@ const TPS = [
   },
   {
     id: 'echo-anchor',
-    chip: '玛雅 / 西潘 之间 · 我引用你',
+    chip: '我开口 4 · 我引用你',
     time: '~14:50',
     timeNote: '走出西潘厅之前',
     aiEcho: true, // special render: AI quotes anchor
@@ -520,7 +520,7 @@ const TPS = [
   },
   {
     id: 'spirit-translation',
-    chip: '大自然的精灵 · 我开口 4',
+    chip: '大自然的精灵 · 我开口 5',
     time: '15:00-15:45',
     timeNote: '入厅',
     ai: {
@@ -537,7 +537,7 @@ const TPS = [
   },
   {
     id: 'synth-sharp',
-    chip: '综合 · 我开口 5',
+    chip: '综合 · 我开口 6',
     time: '15:45',
     timeNote: '展厅出口 · 离厅前',
     ai: {
@@ -562,8 +562,7 @@ const TPS = [
   },
   {
     id: 'post',
-    chip: '离馆后 · 我开口 7',
-    chipKind: 'silent', // 视觉上 muted,但仍是开口 — 反映"AI 安静地说一段告别"
+    chip: '离馆后 · 我开口 8',
     time: '16:00+',
     timeNote: '地铁 / 公交 · 不回信',
     ai: {
@@ -581,7 +580,7 @@ const TPS = [
   },
   {
     id: 'next-day',
-    chip: '次日 22:30 · 我开口 8',
+    chip: '次日 22:30 · 我开口 9',
     time: '5/19 晚',
     timeNote: '一个问题',
     ai: {
@@ -953,7 +952,7 @@ function buildTeamExport() {
   });
   lines.push('## 产品反馈(请填)');
   lines.push('');
-  lines.push('1. **8 次"我开口"哪几个 work / 哪几个让你出戏?**');
+  lines.push('1. **9 次"我开口"(含 1 个 echo 引用你)哪几个 work / 哪几个让你出戏?**');
   lines.push('   - ');
   lines.push('2. **节流(每个开口后 30-60s 才能继续)对你的体验是什么感觉?**');
   lines.push('   - ');
