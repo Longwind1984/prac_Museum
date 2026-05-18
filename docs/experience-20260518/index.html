@@ -1,0 +1,1131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+<meta name="theme-color" content="#0d0c0a" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>一起看 · 首博 · 玛雅与安第斯 · 2026-05-18</title>
+<style>
+:root {
+  --bg: #0d0c0a;
+  --panel: #15140f;
+  --panel-2: #1e1c15;
+  --ink: #e8e2d4;
+  --dim: #7a7468;
+  --faint: #4a463e;
+  --line: #26221b;
+  --gold: #c9a96b;
+  --gold-dim: #6e5d3a;
+  --rust: #a35c3a;
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+body { min-height: 100vh; min-height: 100dvh; }
+
+/* ============ TOP BAR ============ */
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(13,12,10,0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: calc(var(--safe-top) + 10px) 16px 10px;
+  display: flex; align-items: center; gap: 10px;
+}
+.brand {
+  font-size: 11px; letter-spacing: 0.18em;
+  color: var(--gold); text-transform: uppercase;
+  flex: 1; font-weight: 500;
+}
+.tap {
+  width: 36px; height: 36px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: transparent; border: 1px solid var(--line);
+  border-radius: 18px; color: var(--ink);
+  cursor: pointer; font-size: 14px;
+  transition: border-color 0.15s, color 0.15s;
+}
+.tap:active { border-color: var(--gold); color: var(--gold); }
+.progress {
+  height: 2px; background: var(--line);
+  position: relative; overflow: hidden;
+}
+.progress-bar {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+  transition: width 0.4s ease;
+}
+
+/* ============ MAIN ============ */
+main {
+  padding: 28px 22px 140px;
+  max-width: 640px; margin: 0 auto;
+}
+
+/* phase chip */
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 10px; margin-bottom: 18px;
+  border: 1px solid var(--gold-dim); border-radius: 100px;
+  font-size: 11px; letter-spacing: 0.12em;
+  color: var(--gold); text-transform: uppercase;
+}
+.chip-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--gold);
+}
+.phase-time {
+  display: block; margin-bottom: 14px;
+  color: var(--dim); font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+.phase-time strong { color: var(--ink); font-weight: 500; }
+
+/* card: AI speak */
+.ai-speak {
+  position: relative;
+  background: var(--panel);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 18px 20px 18px 22px;
+  margin: 14px 0 24px;
+  font-family: "Songti SC", "Source Han Serif SC", "Noto Serif CJK SC", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.78;
+  letter-spacing: 0.01em;
+}
+.ai-speak-label {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 10px; letter-spacing: 0.2em;
+  color: var(--gold-dim); text-transform: uppercase;
+  margin-bottom: 10px; font-weight: 600;
+}
+.ai-speak p { margin: 0 0 12px; }
+.ai-speak p:last-child { margin-bottom: 0; }
+.ai-speak strong { color: var(--gold); font-weight: 600; }
+.ai-speak em { color: var(--ink); font-style: normal; border-bottom: 1px dashed var(--gold-dim); padding-bottom: 1px; }
+
+/* card: user action */
+.user-action {
+  margin: 22px 0 18px;
+}
+.user-action-label {
+  font-size: 11px; letter-spacing: 0.18em;
+  color: var(--dim); text-transform: uppercase;
+  margin-bottom: 10px; font-weight: 600;
+}
+.user-action-body {
+  font-size: 15.5px; line-height: 1.72;
+  color: var(--ink);
+}
+.user-action-body p { margin: 0 0 10px; }
+.user-action-body p:last-child { margin-bottom: 0; }
+.user-action-body ul { margin: 8px 0; padding-left: 22px; }
+.user-action-body li { margin-bottom: 6px; }
+.user-action-body code {
+  background: var(--panel-2);
+  padding: 1px 6px; border-radius: 3px;
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.92em; color: var(--gold);
+}
+
+/* anchor recall display */
+.anchor-recall {
+  margin: 18px 0;
+  padding: 16px 18px;
+  background: var(--panel-2);
+  border-left: 3px solid var(--rust);
+  border-radius: 0 4px 4px 0;
+}
+.anchor-recall-label {
+  font-size: 10px; letter-spacing: 0.2em;
+  color: var(--rust); text-transform: uppercase;
+  margin-bottom: 8px; font-weight: 600;
+}
+.anchor-recall-text {
+  font-family: "Songti SC", "Source Han Serif SC", Georgia, serif;
+  font-size: 16px; color: var(--ink);
+  font-style: italic; white-space: pre-wrap;
+}
+.anchor-recall-empty {
+  color: var(--faint); font-style: italic; font-size: 13px;
+}
+
+/* note area */
+.note-zone {
+  margin-top: 20px; padding-top: 18px;
+  border-top: 1px dashed var(--line);
+}
+.note-zone-label {
+  font-size: 11px; letter-spacing: 0.18em;
+  color: var(--dim); text-transform: uppercase;
+  margin-bottom: 10px; font-weight: 600;
+  display: flex; align-items: center; gap: 8px;
+}
+.note-zone-label .saved {
+  font-size: 10px; color: var(--gold); letter-spacing: 0.1em;
+  opacity: 0; transition: opacity 0.3s;
+}
+.note-zone-label .saved.show { opacity: 1; }
+
+textarea.note {
+  width: 100%; min-height: 90px;
+  background: var(--panel); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 12px 14px;
+  font-family: inherit; font-size: 15px; line-height: 1.6;
+  resize: vertical;
+  -webkit-appearance: none;
+}
+textarea.note:focus {
+  outline: none; border-color: var(--gold-dim);
+}
+textarea.note::placeholder { color: var(--faint); }
+
+.note-tools {
+  display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;
+}
+.tool-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid var(--line); border-radius: 100px;
+  color: var(--dim); font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+.tool-btn:active, .tool-btn:hover {
+  border-color: var(--gold-dim); color: var(--gold);
+}
+.tool-btn.recording {
+  border-color: var(--rust); color: var(--rust);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+.tool-btn svg { width: 14px; height: 14px; }
+.tool-btn input[type=file] { display: none; }
+
+.attachments {
+  margin-top: 12px;
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.attach-thumb {
+  width: 64px; height: 64px;
+  border-radius: 4px;
+  background: var(--panel-2);
+  background-size: cover; background-position: center;
+  border: 1px solid var(--line);
+  position: relative;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 18px;
+}
+.attach-thumb .x {
+  position: absolute; top: -6px; right: -6px;
+  background: var(--rust); color: white;
+  width: 18px; height: 18px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 10px; cursor: pointer;
+}
+.audio-thumb {
+  height: 36px; min-width: 130px;
+  display: inline-flex; align-items: center;
+  background: var(--panel-2); border-radius: 18px;
+  padding: 0 14px; gap: 8px;
+  border: 1px solid var(--line);
+  color: var(--ink); font-size: 12px;
+  cursor: pointer;
+}
+.audio-thumb.playing { border-color: var(--gold); color: var(--gold); }
+
+/* ============ NAV BOTTOM ============ */
+nav.bottom {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: rgba(13,12,10,0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+  padding: 14px 16px calc(14px + var(--safe-bottom));
+  display: flex; gap: 10px; align-items: center;
+  z-index: 30;
+}
+nav.bottom .nav-btn {
+  flex: 1; padding: 14px 16px;
+  background: var(--panel); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 8px;
+  font-size: 15px; font-weight: 500;
+  cursor: pointer; font-family: inherit;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+nav.bottom .nav-btn:active { background: var(--panel-2); }
+nav.bottom .nav-btn.primary {
+  background: var(--gold); color: #1a1610;
+  border-color: var(--gold);
+  font-weight: 600;
+}
+nav.bottom .nav-btn.primary:active { background: var(--gold-dim); }
+nav.bottom .nav-btn:disabled {
+  opacity: 0.3; cursor: not-allowed;
+}
+.nav-meta {
+  text-align: center; font-size: 10px;
+  color: var(--faint); letter-spacing: 0.15em;
+  margin-top: 6px; padding-bottom: 4px;
+}
+
+/* ============ INTRO / OUTRO ============ */
+.intro-block {
+  margin: 20px 0;
+  padding: 22px 22px;
+  background: var(--panel);
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+.intro-block h2 {
+  font-family: "Songti SC", "Source Han Serif SC", serif;
+  font-size: 21px; margin: 0 0 14px;
+  color: var(--gold); font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.intro-block p {
+  margin: 0 0 12px; line-height: 1.78;
+  color: var(--ink);
+}
+.intro-block p:last-child { margin-bottom: 0; }
+.intro-block strong { color: var(--gold); font-weight: 600; }
+
+/* ============ OVERLAY: PAUSE ============ */
+.pause-overlay {
+  position: fixed; inset: 0;
+  background: var(--bg);
+  z-index: 100;
+  display: none; align-items: center; justify-content: center;
+  flex-direction: column; padding: 40px;
+  text-align: center;
+}
+.pause-overlay.show { display: flex; }
+.pause-overlay h2 {
+  font-family: "Songti SC", serif;
+  font-size: 32px; color: var(--gold);
+  margin: 0 0 22px; font-weight: 400;
+}
+.pause-overlay p { color: var(--dim); margin: 6px 0; max-width: 320px; }
+.pause-overlay .tip {
+  margin-top: 36px; font-size: 11px;
+  color: var(--faint); letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ============ OVERLAY: TOC ============ */
+.toc-overlay {
+  position: fixed; inset: 0;
+  background: rgba(13,12,10,0.96);
+  backdrop-filter: blur(12px);
+  z-index: 90;
+  display: none; flex-direction: column;
+  padding: calc(var(--safe-top) + 20px) 20px calc(20px + var(--safe-bottom));
+  overflow-y: auto;
+}
+.toc-overlay.show { display: flex; }
+.toc-overlay h2 {
+  font-family: "Songti SC", serif;
+  font-size: 22px; color: var(--gold);
+  margin: 0 0 8px; font-weight: 500;
+}
+.toc-overlay .toc-sub {
+  font-size: 12px; color: var(--dim); margin-bottom: 24px;
+  letter-spacing: 0.12em;
+}
+.toc-overlay .toc-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 12px 14px; margin: 6px 0;
+  background: var(--panel); border-radius: 6px;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+.toc-overlay .toc-item:active { border-color: var(--gold-dim); }
+.toc-overlay .toc-item.current { border-color: var(--gold); }
+.toc-overlay .toc-item.has-note::after {
+  content: '●'; color: var(--gold);
+  font-size: 8px; align-self: center;
+}
+.toc-time {
+  color: var(--gold); font-size: 12px; font-weight: 600;
+  min-width: 52px; font-variant-numeric: tabular-nums;
+  padding-top: 1px;
+}
+.toc-title { color: var(--ink); font-size: 14px; flex: 1; line-height: 1.5; }
+.toc-close {
+  position: absolute; top: calc(var(--safe-top) + 14px); right: 14px;
+  width: 36px; height: 36px; border-radius: 18px;
+  background: var(--panel); border: 1px solid var(--line);
+  color: var(--ink); font-size: 18px;
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+
+/* ============ OVERLAY: EXPORT ============ */
+.export-overlay {
+  position: fixed; inset: 0;
+  background: rgba(13,12,10,0.96);
+  backdrop-filter: blur(12px);
+  z-index: 95;
+  display: none; flex-direction: column;
+  padding: calc(var(--safe-top) + 16px) 16px calc(16px + var(--safe-bottom));
+}
+.export-overlay.show { display: flex; }
+.export-overlay h2 {
+  font-family: "Songti SC", serif; font-size: 20px;
+  color: var(--gold); margin: 0 0 14px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.export-overlay textarea {
+  flex: 1; width: 100%;
+  background: var(--panel); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 14px;
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 12px; line-height: 1.55;
+  resize: none;
+}
+.export-actions {
+  display: flex; gap: 10px; margin-top: 12px;
+}
+
+/* skinny utility */
+.muted { color: var(--dim); }
+.divider {
+  height: 1px; background: var(--line);
+  margin: 28px 0;
+}
+@media (max-width: 380px) {
+  .ai-speak { padding: 16px 16px 16px 18px; font-size: 16px; }
+  main { padding: 24px 18px 140px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <button class="tap" id="btn-toc" aria-label="目录">≡</button>
+  <div class="brand">一起看 · 首博 · 0518</div>
+  <button class="tap" id="btn-pause" aria-label="暂停">⏸</button>
+  <button class="tap" id="btn-export" aria-label="导出">↗</button>
+</header>
+<div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+
+<main id="main"></main>
+
+<nav class="bottom">
+  <button class="nav-btn" id="btn-prev">← 上一步</button>
+  <button class="nav-btn primary" id="btn-next">继续 →</button>
+</nav>
+
+<!-- Pause -->
+<div class="pause-overlay" id="pause-overlay">
+  <h2>合上手机。</h2>
+  <p>慢慢看。</p>
+  <p>没想到就放空。</p>
+  <p class="tip">点屏幕任何位置返回</p>
+</div>
+
+<!-- TOC -->
+<div class="toc-overlay" id="toc-overlay">
+  <button class="toc-close" id="toc-close">×</button>
+  <h2>今天的全部时刻</h2>
+  <div class="toc-sub">14 个触点 · 4 小时 · 0 RAG 主语料 · 测产品哲学</div>
+  <div id="toc-list"></div>
+</div>
+
+<!-- Export -->
+<div class="export-overlay" id="export-overlay">
+  <h2>
+    <span>导出 · 反馈 markdown</span>
+    <button class="tap" id="export-close">×</button>
+  </h2>
+  <textarea id="export-text" readonly></textarea>
+  <div class="export-actions">
+    <button class="nav-btn" id="export-copy">复制全文</button>
+    <button class="nav-btn primary" id="export-download">下载 .md</button>
+  </div>
+</div>
+
+<script>
+(() => {
+'use strict';
+
+// ===== TOUCHPOINTS DATA =====
+const TPS = [
+  {
+    id: 'pre',
+    chip: '出发前',
+    time: '11:30',
+    timeNote: '地铁或路上 · 约 30 分钟',
+    intro: {
+      title: '在你进首博之前',
+      body: `
+<p>「玉米·黄金·美洲豹」是首博 2026 年开馆以来规模最大的特展,128 元单独收费——这件事很重要。<strong>商业大展的策展立场会受票务和合作博弈影响</strong>。</p>
+<p>三厅 + 5000 平米中国文物 + 5000 平米美洲文物**并置** + 5000 平米沉浸式体验。这个并置<strong>不是中性</strong>。它是当下中国主流叙事里一个具体姿态——"我们和他们一样有古文明,而且没被全毁"。这不是错,但它是一个<strong>选择</strong>。</p>
+<p>你今天的任务<strong>不是</strong>记 800 件名字、朝代、工艺、对照件。是:盯 <strong>3 件</strong>文物深看,其余漫游。</p>
+<p>这次实验测的不是"AI 同伴有多聪明"。测的是:零 RAG 主语料、克制 + 立场 + 对照 三件事能不能撑起同伴角色。</p>
+`,
+    },
+    ai: null,
+    user: '<p>读完上面这段。然后:在备忘录(任意一处,可以是下面的 note 区)写下 <strong>1 个</strong>你现在脑里浮现的关于玛雅 / 印加 / 安第斯的画面。一句话即可。今天结束我们会回看它。</p>',
+    anchor: 'set',
+    askPlaceholder: '一个画面,一句话即可。',
+  },
+  {
+    id: 'arrive',
+    chip: '入馆 · 不进厅',
+    time: '12:00',
+    timeNote: '5 分钟在大厅观察 + 不进厅',
+    ai: {
+      label: '我不开口',
+      body: `<p>这一段我保持沉默。</p><p>你看周围的人 —— 这是一个 128 元票特展,人群结构(年龄/带孩子/拿单反/拿讲解器)会告诉你这是一个什么类型的展。</p>`,
+    },
+    user: '<p>过安检 → 取展览票 → <strong>不要直接进厅</strong>。在大厅站 5 分钟,只观察。</p><p>然后:发一句话给我(在 note 区写一句即可)。内容随意:"我在大厅,人很多",或"我注意到 X"。这一句是为了 baseline。</p>',
+    askPlaceholder: '一句话观察。',
+  },
+  {
+    id: 'maya-pre',
+    chip: '玛雅厅 · 节奏建议',
+    time: '12:15',
+    timeNote: '玛雅的世界 · 75 分钟',
+    ai: {
+      label: '我开口 · 节奏建议',
+      body: `<p><strong>不要顺序看</strong>。</p>
+<p>前 15 分钟:全展厅快速走一圈,<em>不停</em>。看到什么"哇""哎""咦",在 note 区记一行(展品名 + 一个字)。目标:<strong>5-8 件</strong>"想多看一眼的"。</p>
+<p>中段 45 分钟:回头深看其中 <strong>2 件</strong>,其他略过。每件至少 5 分钟,说明牌完整读一遍。</p>
+<p>后 15 分钟:剩余漫游。</p>`,
+    },
+    user: '<p>开始走一圈。把 5-8 件想多看一眼的名字记在下面 note 区。</p>',
+    askPlaceholder: '逐件:展品名 + 一个字\n例如:\n玉面具复制品 · 大\n金器项链 · 巧',
+  },
+  {
+    id: 'maya-jade',
+    chip: '玛雅厅 · 我开口 1',
+    time: '~12:35',
+    timeNote: '走到第一件玉器时',
+    ai: {
+      label: '我开口 · 玉的意义网络',
+      body: `<p>今天有个特殊请求:遇到玉器时,<strong>先想一下"玉对你脑里意味着什么"</strong>再看说明牌。</p>
+<p>因为对玛雅人,玉不是君子、不是温润、不是儒家温度——</p>
+<p><strong>玉 = 玉米 = 王权 = 生命的呼吸</strong>。</p>
+<p>同一种石头,在两个文明里挂着完全不同的意义网络。</p>
+<p>这是今天最值得感受的事之一。</p>`,
+    },
+    user: '<p>站在你看到的第一件玉器前,先<strong>想 10 秒</strong>"玉对我意味着什么"。然后读说明牌。然后在 note 区写下:这两套意义之间最让你停的是什么差别?</p>',
+    askPlaceholder: '玉的差别,一句话。',
+  },
+  {
+    id: 'maya-replica',
+    chip: '玛雅厅 · 我开口 2',
+    time: '~13:00',
+    timeNote: '看到墓葬重构或重器时',
+    ai: {
+      label: '我开口 · 原件 vs 复制品',
+      body: `<p>注意一下说明牌的措辞:这件是<strong>原件</strong>还是<strong>复制品</strong>?</p>
+<p>展览大概率有一些复制品(例如帕卡尔王玉面具几乎确定在墨西哥城,不在这里),这件事本身就是博物馆叙事的一部分——<strong>什么必须是原件、什么可以是复制品、为什么没说</strong>,都是策展选择。</p>
+<p>不需要愤怒。只是注意到。</p>`,
+    },
+    user: '<p>这次走完一圈再回头深看时,刻意找一找标"复制""仿制""模型"的展品。在 note 区记下你找到的 1-2 个。</p>',
+    askPlaceholder: '复制品记录。',
+  },
+  {
+    id: 'maya-deep',
+    chip: '玛雅厅 · 我开口 3',
+    time: '~13:10',
+    timeNote: '快走一圈完成 · 准备深看',
+    ai: {
+      label: '我开口 · 深看 2 件',
+      body: `<p>你刚才记下的 5-8 件——挑 <strong>2 件</strong>深看。</p>
+<p><em>不要</em>挑"最有名"或"看起来最贵"的。</p>
+<p>挑你刚才"咦"了一下的——通常你最自然停的那件,是你内在地图里被勾到的点。</p>
+<p>每件至少 5 分钟。说明牌完整读一遍。</p>
+<p>如果某件让你<strong>"想起什么"</strong>——一个地方、一个人、一段经历——不告诉我也行,但在备忘录里标一个 <code>★</code>。今天结束我们会聊这些 ★。</p>`,
+    },
+    user: '<p>深看 2 件。下面 note 区,每件写 1-3 句"我看见了什么 / 想到了什么"。<strong>不要拍超过 10 张照片</strong>。少拍多看。</p>',
+    askPlaceholder: '深看 1: ...\n深看 2: ...\n(有 ★ 就标 ★)',
+  },
+  {
+    id: 'break',
+    chip: '中场 · 强制离厅',
+    time: '13:30',
+    timeNote: '吃饭 / 公共区 · 30 分钟',
+    ai: {
+      label: '我不开口',
+      body: `<p>离开展厅。馆内餐厅、咖啡区、馆外走廊都行。</p>
+<p><strong>不</strong>回顾笔记。<strong>不</strong>翻照片。吃点东西,坐着,看人。</p>
+<p>想到了就想。没想到就放空。</p>
+<p>4 小时不踩刹车的话,第 3 厅你会糊。</p>`,
+    },
+    user: '<p>放下手机。建议这一段直接点 <strong>⏸ 暂停</strong>(顶部按钮),屏幕变黑,30 分钟后再回来。</p>',
+    askPlaceholder: '这段不需要写东西。要写就写。',
+  },
+  {
+    id: 'sipan-1987',
+    chip: '西潘王陵 · 我开口 1',
+    time: '14:00',
+    timeNote: '王的宝藏 · 进厅 1 分钟内',
+    ai: {
+      label: '我开口 · 1987 才挖出来',
+      body: `<p>西潘王陵 <strong>1987 年才被发掘</strong>。</p>
+<p>这意味着:你今天看的东西,<em>40 年前,人类不知道它存在</em>。</p>
+<p>它不是"古老",它是"新发现的古老"。这是两件事。</p>
+<p>1987 年的故事本身值得知道——秘鲁考古学家 Walter Alva 接到警察通报"有人在 Huaca Rajada 盗墓挖到金器",才冲到现场抢救。</p>
+<p>换句话说,这一整厅你能看到的所有东西,<strong>是从盗墓贼手里被抢回来的</strong>。</p>`,
+    },
+    user: '<p>进厅之后第一件展品前,把这件事在脑里过一遍:它在 1987 年之前不存在于人类知识里。然后再看。</p>',
+    askPlaceholder: '这件事改变了你看的方式吗?',
+  },
+  {
+    id: 'sipan-burial',
+    chip: '西潘王陵 · 我开口 2',
+    time: '~14:25',
+    timeNote: '深看主墓重器时',
+    ai: {
+      label: '我开口 · 同葬的人',
+      body: `<p>西潘王下葬时,主墓伴有 <strong>451 件随葬器物</strong>。</p>
+<p>但更值得停一秒的是:同墓还埋有 <strong>3 个女人 + 2 个战士 + 1 个男孩 + 若干羊驼</strong>。</p>
+<p>说明牌大概率把这件事写得很轻——"殉葬""同葬""陪葬"之类的中性词。</p>
+<p>停一下。问自己:</p>
+<p><strong>这件事在我脑里是震撼、是猎奇、是历史的常态、还是别的什么?</strong></p>
+<p>没有正确答案。但你对这件事的第一反应,会告诉你你对"权力的暴力"在博物馆叙事里被怎样讲述这件事的<em>敏感度</em>。</p>`,
+    },
+    user: '<p>看西潘王主墓重器:花生项链(20 颗,每颗都是奇技)/ 贝壳胸甲 / 战士耳饰 / 仪式刀 / 黄金头饰。每件停至少 3 分钟。</p><p>下面 note 区:你对"殉葬"那件事的第一反应。<strong>3 句话以内</strong>。</p>',
+    askPlaceholder: '殉葬:第一反应,3 句话以内。',
+  },
+  {
+    id: 'sipan-moche',
+    chip: '西潘王陵 · 我开口 3',
+    time: '~14:55',
+    timeNote: '看完主墓 · 准备离厅',
+    ai: {
+      label: '我开口 · 莫切 ≠ 印加',
+      body: `<p>莫切文明(西潘王所属)<strong>不是</strong>印加。</p>
+<p>两者差了约 <strong>1000 年</strong>(莫切 公元 1-700 / 印加 公元 1400-1530)。</p>
+<p>但中文展览叙事经常把"安第斯古代文明"打成一团——这也是一种叙事简化。</p>
+<p>不用记朝代关系。但请记:<strong>"安第斯"不是一个时代,是一个地理</strong>。</p>
+<p>这是中国语境里很容易模糊掉的差别。</p>`,
+    },
+    user: '<p>离厅前回头看一眼整厅。不写东西也行。继续。</p>',
+    askPlaceholder: '',
+  },
+  {
+    id: 'spirit-translation',
+    chip: '大自然的精灵 · 我开口 1',
+    time: '15:00',
+    timeNote: '进厅',
+    ai: {
+      label: '我开口 · 翻译姿态',
+      body: `<p>"大自然的精灵"——这个翻译是中文展览的策展选择。</p>
+<p>原文(西班牙语 / 英语)大概率是 <em>espíritu</em> / <em>ánima</em> / <em>soul</em>,这些词在原语里宗教色彩很重——是"灵魂""神灵",不是"精灵"。</p>
+<p>中文用「精灵」<strong>去神化了</strong>。</p>
+<p>这是一个翻译姿态。可以注意到,然后接着看。</p>`,
+    },
+    user: '<p>这一厅相对轻——动物 motif。<strong>不要再深推</strong>。漫游为主。</p>',
+    askPlaceholder: '翻译这件事让你想到什么?(可空)',
+  },
+  {
+    id: 'spirit-laugh',
+    chip: '大自然的精灵 · 我开口 2',
+    time: '~15:25',
+    timeNote: '漫游中段',
+    ai: {
+      label: '我开口 · 找让你想笑的动物',
+      body: `<p>如果有件动物展品让你"想笑"——某个雕件突然萌、突然戏谑——<strong>记下来</strong>。</p>
+<p>幽默感的存在本身就是<em>反讲解员叙事</em>的证据——古代美洲人不是只在做权力符号,他们也在做好玩的东西。</p>`,
+    },
+    user: '<p>找到 1 件让你"想笑"或"想停一下"的动物。<strong>给它拍一张照</strong>(下面附件区)。一句话写它哪里逗到你。</p>',
+    askPlaceholder: '它哪里逗到我?',
+    suggestPhoto: true,
+  },
+  {
+    id: 'synth-sharp',
+    chip: '综合 · 我开口 1',
+    time: '15:45',
+    timeNote: '展厅出口 · 离厅前',
+    ai: {
+      label: '我开口 · 最尖锐的不对劲',
+      body: `<p>今天你看了三厅,一定有几个瞬间你觉得<strong>"不对劲"</strong>。</p>
+<p>不对劲<em>不一定是错</em>。它可能是:</p>
+<p>· 中文叙事在某个点上软化了 / 浪漫化了 / 民族主义化了</p>
+<p>· 翻译用词偏离了原意</p>
+<p>· 中国文物和美洲文物的并置让你觉得"这俩为什么放一起"</p>
+<p>· 商业大展的"震撼"语气让某件本应严肃的事(殉葬、抢救、流散)被轻盈化了</p>
+<p>· 你脑里某个固有印象被颠了</p>
+<p>挑 <strong>1 个</strong>最尖锐的"不对劲",写下来。一句话即可。</p>`,
+    },
+    user: '<p>下面 note 区。一句话。最尖锐的那个。</p>',
+    askPlaceholder: '一句话。最尖锐的那个不对劲。',
+  },
+  {
+    id: 'synth-anchor',
+    chip: '综合 · 我开口 2',
+    time: '~15:55',
+    timeNote: '离厅前最后一件事',
+    ai: {
+      label: '我开口 · 回看 anchor',
+      body: `<p>现在,回看 12:00 你写下的那个画面。</p>`,
+    },
+    anchor: 'recall',
+    user: '<p>下面 note 区。一句话:它变了吗?变了哪里?</p>',
+    askPlaceholder: '它变了吗?变了哪里?',
+  },
+  {
+    id: 'post',
+    chip: '离馆后',
+    time: '16:00+',
+    timeNote: '地铁 / 公交 · 不要回信',
+    ai: {
+      label: '我开口 · 给你读',
+      body: `<p>你今天看了 800 件文物中的多少件并不重要。</p>
+<p>重要的是:<strong>你脑里那张关于"古代美洲"的内在地图,有没有被搅动</strong>。</p>
+<p>一个标准看展同伴(讲解员、audio guide、ChatGPT)会在今天给你塞进很多名字、朝代、工艺、对照件。</p>
+<p>我故意没那么做——因为目标用户(你)如果走出馆后只记得"<em>玉对玛雅是玉米</em>"和"<em>3 女 2 战 1 男孩同葬</em>"这两件事,这就够了。</p>
+<p><strong>深的两件,比浅的二十件更值钱。</strong></p>
+<p>如果你今天发现自己在某件展品前突然走神、想到了某个不相关的事——一段路、一个人、一段对话——那是你内在地图的最 vital 部分在工作。<em>不要写下来</em>,让它继续在你脑里发酵。</p>
+<p>我们明晚再见。</p>`,
+    },
+    user: '<p>读完。可以关闭这页了。</p>',
+    askPlaceholder: '',
+  },
+  {
+    id: 'next-day',
+    chip: '次日 22:30',
+    time: '次日',
+    timeNote: '5/19 晚 · 一个问题',
+    ai: {
+      label: '我开口 · 唯一一个问题',
+      body: `<p>如果让你<strong>只跟一个朋友</strong>讲今天看的<strong>一件事</strong>,你会讲什么?</p>
+<p>你的答案 = 这次体验的真正交付物。</p>
+<p>不是 800 件文物,是这一个"还没消化完但已经必须讲出来的东西"。</p>`,
+    },
+    user: '<p>回到 chat 里,发"首博次日反馈"+ 你的答案。</p><p>或者就写在下面 note 区,导出 markdown 分享给我。</p>',
+    askPlaceholder: '一件事,跟一个朋友讲。',
+  },
+];
+
+// ===== STORAGE =====
+const KEY = 'yqk-shoubo-20260518';
+const state = {
+  idx: 0,
+  notes: {}, // id -> { text, photos: [base64], audios: [{name, blobUrl}], ts }
+  anchor: '',
+};
+
+function save() {
+  try {
+    const persist = {
+      idx: state.idx,
+      notes: {},
+      anchor: state.anchor,
+    };
+    for (const id in state.notes) {
+      persist.notes[id] = {
+        text: state.notes[id].text || '',
+        photos: state.notes[id].photos || [],
+        audioCount: (state.notes[id].audios || []).length,
+        ts: state.notes[id].ts,
+      };
+    }
+    localStorage.setItem(KEY, JSON.stringify(persist));
+  } catch (e) { console.warn('save failed', e); }
+}
+function load() {
+  try {
+    const raw = localStorage.getItem(KEY);
+    if (!raw) return;
+    const d = JSON.parse(raw);
+    state.idx = d.idx || 0;
+    state.anchor = d.anchor || '';
+    state.notes = {};
+    for (const id in (d.notes || {})) {
+      state.notes[id] = {
+        text: d.notes[id].text || '',
+        photos: d.notes[id].photos || [],
+        audios: [], // not persisted across reload
+        ts: d.notes[id].ts,
+      };
+    }
+  } catch (e) { console.warn('load failed', e); }
+}
+load();
+
+// ===== RENDER =====
+const $main = document.getElementById('main');
+const $progressBar = document.getElementById('progress-bar');
+const $btnPrev = document.getElementById('btn-prev');
+const $btnNext = document.getElementById('btn-next');
+
+function ensureNote(id) {
+  if (!state.notes[id]) state.notes[id] = { text:'', photos:[], audios:[], ts: Date.now() };
+  return state.notes[id];
+}
+
+function showSaved(el) {
+  const s = el.querySelector('.saved');
+  if (!s) return;
+  s.classList.add('show');
+  clearTimeout(s._t);
+  s._t = setTimeout(() => s.classList.remove('show'), 1300);
+}
+
+function render() {
+  const tp = TPS[state.idx];
+  const note = ensureNote(tp.id);
+
+  $main.innerHTML = '';
+
+  // chip
+  const chip = document.createElement('div');
+  chip.className = 'chip';
+  chip.innerHTML = `<span class="chip-dot"></span>${tp.chip}`;
+  $main.appendChild(chip);
+
+  // time
+  const t = document.createElement('div');
+  t.className = 'phase-time';
+  t.innerHTML = `<strong>${tp.time}</strong> · <span class="muted">${tp.timeNote || ''}</span>`;
+  $main.appendChild(t);
+
+  // pre-arrival intro
+  if (tp.intro) {
+    const b = document.createElement('div');
+    b.className = 'intro-block';
+    b.innerHTML = `<h2>${tp.intro.title}</h2>${tp.intro.body}`;
+    $main.appendChild(b);
+  }
+
+  // ai speak
+  if (tp.ai) {
+    const a = document.createElement('div');
+    a.className = 'ai-speak';
+    a.innerHTML = `<span class="ai-speak-label">🤖 ${tp.ai.label}</span>${tp.ai.body}`;
+    $main.appendChild(a);
+  }
+
+  // anchor recall
+  if (tp.anchor === 'recall') {
+    const ar = document.createElement('div');
+    ar.className = 'anchor-recall';
+    const txt = state.anchor.trim();
+    ar.innerHTML = `<div class="anchor-recall-label">你 12:00 写下的画面</div>` +
+      (txt
+        ? `<div class="anchor-recall-text">${escapeHtml(txt)}</div>`
+        : `<div class="anchor-recall-empty">(你没在出发前写画面。没关系,直接答下面的问题。)</div>`);
+    $main.appendChild(ar);
+  }
+
+  // user action
+  if (tp.user) {
+    const u = document.createElement('div');
+    u.className = 'user-action';
+    u.innerHTML = `<div class="user-action-label">你做的事</div><div class="user-action-body">${tp.user}</div>`;
+    $main.appendChild(u);
+  }
+
+  // note zone
+  const nz = document.createElement('div');
+  nz.className = 'note-zone';
+  nz.innerHTML = `
+    <div class="note-zone-label">
+      <span>记 · 仅本机保存</span>
+      <span class="saved">已保存</span>
+    </div>
+    <textarea class="note" placeholder="${escapeAttr(tp.askPlaceholder || '随便写。')}"></textarea>
+    <div class="note-tools">
+      <label class="tool-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l3-3h12l3 3v13a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><circle cx="12" cy="13" r="3.5"/></svg>
+        加照片
+        <input type="file" accept="image/*" capture="environment" id="file-photo">
+      </label>
+      <button class="tool-btn" id="btn-voice">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="3" width="6" height="13" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3"/></svg>
+        <span id="btn-voice-label">语音备忘</span>
+      </button>
+    </div>
+    <div class="attachments" id="attachments"></div>
+  `;
+  $main.appendChild(nz);
+
+  const $note = nz.querySelector('textarea.note');
+  $note.value = note.text || '';
+  if (tp.anchor === 'set' && state.anchor) $note.value = state.anchor;
+
+  $note.addEventListener('input', () => {
+    note.text = $note.value;
+    note.ts = Date.now();
+    if (tp.anchor === 'set') state.anchor = $note.value;
+    save();
+    showSaved(nz);
+  });
+
+  const $att = nz.querySelector('#attachments');
+  renderAttachments($att, note, tp.id);
+
+  nz.querySelector('#file-photo').addEventListener('change', (ev) => {
+    const f = ev.target.files[0];
+    if (!f) return;
+    const fr = new FileReader();
+    fr.onload = (e) => {
+      // compress to ~600px max width
+      const img = new Image();
+      img.onload = () => {
+        const max = 600;
+        const scale = Math.min(1, max / img.width, max / img.height);
+        const w = img.width * scale | 0, h = img.height * scale | 0;
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.78);
+        note.photos = note.photos || [];
+        note.photos.push(dataUrl);
+        save();
+        renderAttachments($att, note, tp.id);
+        showSaved(nz);
+      };
+      img.src = e.target.result;
+    };
+    fr.readAsDataURL(f);
+    ev.target.value = '';
+  });
+
+  // voice
+  const $vb = nz.querySelector('#btn-voice');
+  const $vlabel = nz.querySelector('#btn-voice-label');
+  let mediaRecorder = null;
+  let chunks = [];
+  $vb.addEventListener('click', async () => {
+    if (mediaRecorder && mediaRecorder.state === 'recording') {
+      mediaRecorder.stop();
+      return;
+    }
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      mediaRecorder = new MediaRecorder(stream);
+      chunks = [];
+      mediaRecorder.ondataavailable = (e) => chunks.push(e.data);
+      mediaRecorder.onstop = () => {
+        const blob = new Blob(chunks, { type: 'audio/webm' });
+        const url = URL.createObjectURL(blob);
+        note.audios = note.audios || [];
+        note.audios.push({ name: '录音 ' + (note.audios.length + 1), blobUrl: url, blob });
+        save();
+        renderAttachments($att, note, tp.id);
+        $vb.classList.remove('recording');
+        $vlabel.textContent = '语音备忘';
+        stream.getTracks().forEach(t => t.stop());
+        showSaved(nz);
+      };
+      mediaRecorder.start();
+      $vb.classList.add('recording');
+      $vlabel.textContent = '● 录音中 · 再点停止';
+    } catch (e) {
+      alert('麦克风权限被拒,或本浏览器不支持。可以改用手机自带录音 app,事后再补。');
+    }
+  });
+
+  // progress
+  $progressBar.style.width = ((state.idx + 1) / TPS.length * 100) + '%';
+
+  // nav state
+  $btnPrev.disabled = state.idx === 0;
+  $btnNext.disabled = state.idx === TPS.length - 1;
+  $btnNext.textContent = state.idx === TPS.length - 1 ? '完成 ✓' : '继续 →';
+
+  window.scrollTo(0, 0);
+}
+
+function renderAttachments($el, note, tpid) {
+  $el.innerHTML = '';
+  (note.photos || []).forEach((dataUrl, i) => {
+    const thumb = document.createElement('div');
+    thumb.className = 'attach-thumb';
+    thumb.style.backgroundImage = `url(${dataUrl})`;
+    const x = document.createElement('span');
+    x.className = 'x'; x.textContent = '×';
+    x.addEventListener('click', (e) => {
+      e.stopPropagation();
+      note.photos.splice(i, 1);
+      save();
+      renderAttachments($el, note, tpid);
+    });
+    thumb.appendChild(x);
+    $el.appendChild(thumb);
+  });
+  (note.audios || []).forEach((au, i) => {
+    const a = document.createElement('div');
+    a.className = 'audio-thumb';
+    a.innerHTML = `<span>▶</span><span>${au.name}</span>`;
+    let audio = null;
+    a.addEventListener('click', () => {
+      if (audio && !audio.paused) { audio.pause(); a.classList.remove('playing'); return; }
+      audio = new Audio(au.blobUrl);
+      audio.play();
+      a.classList.add('playing');
+      audio.onended = () => a.classList.remove('playing');
+    });
+    $el.appendChild(a);
+  });
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function escapeAttr(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;');
+}
+
+// ===== NAV =====
+$btnPrev.addEventListener('click', () => {
+  if (state.idx > 0) { state.idx--; save(); render(); }
+});
+$btnNext.addEventListener('click', () => {
+  if (state.idx < TPS.length - 1) { state.idx++; save(); render(); }
+});
+
+// ===== PAUSE =====
+const $pause = document.getElementById('pause-overlay');
+document.getElementById('btn-pause').addEventListener('click', () => {
+  $pause.classList.add('show');
+});
+$pause.addEventListener('click', () => $pause.classList.remove('show'));
+
+// ===== TOC =====
+const $toc = document.getElementById('toc-overlay');
+const $tocList = document.getElementById('toc-list');
+function buildTOC() {
+  $tocList.innerHTML = '';
+  TPS.forEach((tp, i) => {
+    const item = document.createElement('div');
+    item.className = 'toc-item' + (i === state.idx ? ' current' : '');
+    const hasNote = state.notes[tp.id] && (
+      (state.notes[tp.id].text||'').trim().length > 0 ||
+      (state.notes[tp.id].photos||[]).length > 0 ||
+      (state.notes[tp.id].audios||[]).length > 0
+    );
+    if (hasNote) item.classList.add('has-note');
+    item.innerHTML = `<span class="toc-time">${tp.time}</span><span class="toc-title">${tp.chip}</span>`;
+    item.addEventListener('click', () => {
+      state.idx = i; save(); render();
+      $toc.classList.remove('show');
+    });
+    $tocList.appendChild(item);
+  });
+}
+document.getElementById('btn-toc').addEventListener('click', () => { buildTOC(); $toc.classList.add('show'); });
+document.getElementById('toc-close').addEventListener('click', () => $toc.classList.remove('show'));
+
+// ===== EXPORT =====
+const $exp = document.getElementById('export-overlay');
+const $expText = document.getElementById('export-text');
+
+function buildExport() {
+  const lines = [];
+  lines.push('# 一起看 · 首博「玉米·黄金·美洲豹」体验日志');
+  lines.push('');
+  lines.push('**日期**:2026-05-18');
+  lines.push('**用户**:26 岁互联网 PM(新实例,与林知白同 cluster)');
+  lines.push('**展览**:首博「玉米·黄金·美洲豹——玛雅与安第斯古代文明大展」');
+  lines.push('');
+  if (state.anchor.trim()) {
+    lines.push('## Anchor(12:00 写下的画面)');
+    lines.push('');
+    lines.push('> ' + state.anchor.split('\n').join('\n> '));
+    lines.push('');
+  }
+  lines.push('## 触点笔记');
+  lines.push('');
+  TPS.forEach((tp) => {
+    const note = state.notes[tp.id];
+    if (!note) return;
+    const txt = (note.text || '').trim();
+    const photos = (note.photos || []).length;
+    const audios = (note.audios || []).length;
+    if (!txt && !photos && !audios) return;
+    lines.push(`### ${tp.time} · ${tp.chip}`);
+    lines.push('');
+    if (txt) { lines.push(txt); lines.push(''); }
+    if (photos) lines.push(`*[${photos} 张照片附件,见原始数据]*`);
+    if (audios) lines.push(`*[${audios} 段语音备忘,会话内可回放,关闭页面会丢失]*`);
+    lines.push('');
+  });
+
+  lines.push('## 产品反馈(填写完事后给团队)');
+  lines.push('');
+  lines.push('1. **🤖 我开口** 9 个时刻里,哪几个 work / 哪几个让你出戏?');
+  lines.push('   - ');
+  lines.push('2. **节奏** 75/30/60/45/15 分钟分段对你的注意力曲线合适吗?');
+  lines.push('   - ');
+  lines.push('3. **强制中场休息**(13:30 离厅 30 min)有没有用?');
+  lines.push('   - ');
+  lines.push('4. **"不告诉我也行"** 那种放低姿态的措辞,你的真实感受是?');
+  lines.push('   - ');
+  lines.push('5. **"不要拍超过 10 张照片"** 这种硬约束,你接受吗?');
+  lines.push('   - ');
+  lines.push('6. **0 RAG 也能做同伴**——有没有让你觉得"产品其实不需要那么多数据"?');
+  lines.push('   - ');
+  lines.push('7. 任何一个"如果是我做产品我会做不一样"的点');
+  lines.push('   - ');
+  lines.push('8. 作为新实例,你今天与林知白 / 陈砚秋 / 周允 的差异如何 surface?');
+  lines.push('   - ');
+  lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push('生成时间:' + new Date().toLocaleString('zh-CN'));
+  return lines.join('\n');
+}
+document.getElementById('btn-export').addEventListener('click', () => {
+  $expText.value = buildExport();
+  $exp.classList.add('show');
+});
+document.getElementById('export-close').addEventListener('click', () => $exp.classList.remove('show'));
+document.getElementById('export-copy').addEventListener('click', () => {
+  $expText.select();
+  document.execCommand('copy');
+  document.getElementById('export-copy').textContent = '✓ 已复制';
+  setTimeout(() => document.getElementById('export-copy').textContent = '复制全文', 1500);
+});
+document.getElementById('export-download').addEventListener('click', () => {
+  const blob = new Blob([$expText.value], { type: 'text/markdown' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = '首博-玛雅安第斯-体验日志-20260518.md';
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+// keyboard nav
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight') $btnNext.click();
+  if (e.key === 'ArrowLeft') $btnPrev.click();
+  if (e.key === 'Escape') {
+    $pause.classList.remove('show');
+    $toc.classList.remove('show');
+    $exp.classList.remove('show');
+  }
+});
+
+render();
+})();
+</script>
+</body>
+</html>
