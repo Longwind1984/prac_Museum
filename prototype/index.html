@@ -1,0 +1,2402 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#000000">
+<title>一起看 · 玛雅与安第斯</title>
+<style>
+:root {
+  --bg: #000;
+  --bg-card: #0a0a0a;
+  --bg-card-strong: #14110d;
+  --fg: #f0ebe1;
+  --fg-strong: #faf6ec;
+  --muted: #6a655c;
+  --muted-strong: #948c80;
+  --accent: #c8a55b;
+  --accent-dim: #8a7339;
+  --accent-faint: rgba(200, 165, 91, 0.15);
+  --hairline: #1f1c18;
+  --hairline-strong: #2c2823;
+
+  --serif: "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", "SimSun", serif;
+  --sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+
+  --t-fast: 220ms;
+  --t-med: 520ms;
+  --t-slow: 900ms;
+  --t-very-slow: 1600ms;
+
+  --space-1: 6px;
+  --space-2: 12px;
+  --space-3: 20px;
+  --space-4: 32px;
+  --space-5: 52px;
+  --space-6: 84px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: #050505;
+}
+
+body {
+  font-family: var(--serif);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "palt";
+  letter-spacing: 0.02em;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  letter-spacing: 0.02em;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--muted);
+}
+
+/* === PHONE FRAME (desktop) === */
+#phone {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 100vh;
+  margin: 0 auto;
+  background: var(--bg);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+@media (min-width: 520px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 0;
+  }
+  #phone {
+    height: min(880px, calc(100vh - 48px));
+    max-height: 880px;
+    border-radius: 44px;
+    border: 8px solid #181614;
+    box-shadow:
+      0 0 0 1px #2a2622 inset,
+      0 30px 80px rgba(0, 0, 0, 0.6),
+      0 0 100px rgba(200, 165, 91, 0.04);
+  }
+}
+
+/* === SCREEN === */
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5) var(--space-4) var(--space-4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-med) ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.screen.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.screen.no-pad {
+  padding: 0;
+}
+
+/* === TYPOGRAPHY === */
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.eyebrow.accent { color: var(--accent-dim); }
+
+.title-1 {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+
+.title-2 {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+}
+
+.title-3 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.body {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--fg);
+}
+
+.body-muted {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--muted-strong);
+}
+
+.caption {
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.hairline {
+  height: 1px;
+  background: var(--hairline);
+  margin: var(--space-3) 0;
+  border: 0;
+}
+
+.dot-divider {
+  display: inline-block;
+  margin: 0 8px;
+  color: var(--muted);
+}
+
+/* === CARDS === */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--hairline);
+  border-radius: 14px;
+  padding: var(--space-3) var(--space-3);
+  position: relative;
+}
+
+.card-strong {
+  background: var(--bg-card-strong);
+}
+
+.card-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  color: var(--accent-dim);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card-text {
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+.card-text.large {
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 999px;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  color: var(--fg);
+  background: transparent;
+  transition: all var(--t-fast) ease;
+  font-family: var(--serif);
+}
+
+.btn:hover, .btn:active {
+  border-color: var(--accent-dim);
+  color: var(--fg-strong);
+}
+
+.btn.primary {
+  border-color: var(--accent-dim);
+  color: var(--accent);
+}
+
+.btn.ghost {
+  border-color: transparent;
+  color: var(--muted-strong);
+}
+
+.btn.ghost:hover {
+  color: var(--fg);
+}
+
+.btn-row {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.btn-row.center {
+  justify-content: center;
+}
+
+.btn-row.between {
+  justify-content: space-between;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--muted-strong);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--t-fast) ease;
+  font-family: var(--serif);
+}
+
+.chip:hover, .chip.selected {
+  color: var(--fg-strong);
+  border-color: var(--accent-dim);
+}
+
+.chip.selected {
+  background: var(--accent-faint);
+}
+
+/* === PATTERN TAG (subtle meta) === */
+.pattern-tag {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  color: var(--muted);
+  opacity: 0.5;
+  z-index: 10;
+}
+
+.pattern-tag::before {
+  content: "PATTERN · ";
+  color: var(--accent-dim);
+  opacity: 0.7;
+}
+
+/* === BACK / FLOATING NAV === */
+.float-back {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--muted-strong);
+  z-index: 10;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.float-back:hover { color: var(--fg); }
+
+.float-back::before {
+  content: "← ";
+}
+
+/* === BOTTOM NAV === */
+#bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px var(--space-3) 20px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--muted);
+  pointer-events: none;
+  z-index: 20;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+#bottom-nav button {
+  pointer-events: auto;
+  font-size: inherit;
+  color: var(--muted);
+  letter-spacing: inherit;
+}
+
+#bottom-nav button:hover { color: var(--fg); }
+
+/* === MENU OVERLAY === */
+#menu {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.96);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-5) var(--space-4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-med) ease;
+}
+
+#menu.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--hairline);
+  cursor: pointer;
+}
+
+.menu-item:hover .menu-title { color: var(--fg-strong); }
+
+.menu-title {
+  font-size: 19px;
+  color: var(--fg);
+  transition: color var(--t-fast) ease;
+}
+
+.menu-pattern {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--accent-dim);
+}
+
+/* ====================================================== */
+/* === SCREEN-SPECIFIC STYLES === */
+/* ====================================================== */
+
+/* INTRO */
+#screen-intro {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#screen-intro .hero {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+#screen-intro .pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-bottom: var(--space-4);
+  animation: pulse 2400ms ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; box-shadow: 0 0 0 0 rgba(200,165,91,0.4); }
+  50% { opacity: 1; box-shadow: 0 0 0 8px rgba(200,165,91,0); }
+}
+
+#screen-intro .tagline {
+  color: var(--muted-strong);
+  margin-top: var(--space-3);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* PERSONA SEED */
+.seed-row {
+  margin: var(--space-3) 0;
+  padding-left: var(--space-3);
+  border-left: 1px solid var(--accent-dim);
+}
+
+.seed-row .seed-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--accent-dim);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.seed-row .seed-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--fg);
+}
+
+/* PREP / CHEAT SHEET */
+.motif-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-2);
+  margin: var(--space-3) 0;
+}
+
+.motif-cell {
+  text-align: center;
+  padding: var(--space-3) var(--space-1);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  background: var(--bg-card);
+}
+
+.motif-cell .glyph {
+  font-size: 26px;
+  color: var(--accent);
+  margin-bottom: 8px;
+  display: block;
+  font-family: var(--serif);
+}
+
+.motif-cell .name {
+  font-size: 14px;
+  color: var(--fg);
+}
+
+.motif-cell .sub {
+  font-family: var(--sans);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+.compare-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 15px;
+  color: var(--fg);
+}
+
+.compare-row:last-child { border-bottom: 0; }
+
+.compare-row .sep {
+  color: var(--accent-dim);
+  font-family: var(--sans);
+  font-size: 13px;
+}
+
+/* LOCK WIDGET */
+#screen-lock {
+  background:
+    radial-gradient(ellipse at center top, rgba(200,165,91,0.04) 0%, transparent 60%),
+    var(--bg);
+  justify-content: space-between;
+  padding: var(--space-6) var(--space-3) var(--space-4);
+}
+
+#screen-lock .time {
+  font-family: var(--sans);
+  font-size: 64px;
+  font-weight: 200;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: var(--fg-strong);
+}
+
+#screen-lock .date {
+  font-family: var(--sans);
+  font-size: 14px;
+  text-align: center;
+  color: var(--muted-strong);
+  margin-top: var(--space-1);
+  letter-spacing: 0.1em;
+}
+
+.lock-widget {
+  margin-top: auto;
+  margin-bottom: var(--space-3);
+  background: var(--bg-card-strong);
+  border-radius: 18px;
+  padding: 18px;
+  border: 1px solid var(--hairline);
+  cursor: pointer;
+  transition: all var(--t-fast) ease;
+}
+
+.lock-widget:hover { border-color: var(--accent-dim); }
+
+.lock-widget .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.lock-widget .app-name {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.lock-widget .loc {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--accent-dim);
+  letter-spacing: 0.12em;
+}
+
+.lock-widget .prompt {
+  margin-top: 12px;
+  font-size: 17px;
+  color: var(--fg);
+}
+
+.lock-widget .hint {
+  margin-top: 10px;
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+}
+
+/* WELCOME (M-01) */
+#screen-welcome {
+  justify-content: center;
+  align-items: center;
+}
+
+#screen-welcome .question {
+  font-size: 26px;
+  text-align: center;
+  line-height: 1.5;
+  color: var(--fg-strong);
+  margin-bottom: var(--space-6);
+}
+
+/* HALL LOBBY */
+#screen-hall-lobby {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#screen-hall-lobby .ack {
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  font-family: var(--sans);
+}
+
+/* ARTIFACT LIST */
+#screen-list {
+  padding-top: var(--space-5);
+}
+
+.list-eyebrow {
+  margin-bottom: var(--space-4);
+}
+
+.artifact-row {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-2);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background var(--t-fast) ease;
+  align-items: center;
+  margin-bottom: var(--space-1);
+}
+
+.artifact-row:hover, .artifact-row:active {
+  background: var(--bg-card);
+}
+
+.artifact-row .icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+}
+
+.artifact-row .icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: var(--accent-dim);
+  fill: none;
+  stroke-width: 1.2;
+}
+
+.artifact-row .info .name {
+  font-size: 17px;
+  color: var(--fg);
+}
+
+.artifact-row .info .meta {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+  letter-spacing: 0.08em;
+}
+
+.artifact-row .info .meta .motif {
+  color: var(--accent-dim);
+}
+
+/* ARTIFACT DETAIL */
+#screen-artifact {
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-5);
+}
+
+.artifact-hero {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.artifact-hero .silhouette {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto var(--space-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.artifact-hero .silhouette svg {
+  width: 100%;
+  height: 100%;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.2;
+  opacity: 0.85;
+}
+
+.artifact-hero .name {
+  font-size: 22px;
+  color: var(--fg-strong);
+  letter-spacing: 0.04em;
+}
+
+.artifact-hero .meta {
+  margin-top: 8px;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.artifact-hero .meta .motif {
+  color: var(--accent-dim);
+}
+
+.prompt-line {
+  text-align: center;
+  font-size: 19px;
+  color: var(--fg);
+  margin: var(--space-3) 0 var(--space-3);
+}
+
+.emoji-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: var(--space-3) 0;
+}
+
+.input-block {
+  margin-top: var(--space-3);
+  border-top: 1px solid var(--hairline);
+  padding-top: var(--space-3);
+}
+
+.input-block input {
+  width: 100%;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 17px;
+  letter-spacing: 0.04em;
+}
+
+.input-block .helper {
+  margin-top: 10px;
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.12em;
+}
+
+/* M-02 OUTPUT CARDS */
+.m02-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.m02-card {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: cardIn var(--t-slow) ease forwards;
+}
+
+.m02-card:nth-child(2) { animation-delay: 700ms; }
+
+@keyframes cardIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.m02-action-row {
+  margin-top: var(--space-4);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  opacity: 0;
+  animation: cardIn var(--t-slow) ease 1600ms forwards;
+}
+
+.m02-action-row .btn {
+  font-size: 13px;
+  padding: 12px 10px;
+  letter-spacing: 0.06em;
+}
+
+/* FOUR-CARD STACK (M-06) */
+#screen-four-card {
+  padding: 0;
+}
+
+.fc-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-5) var(--space-4) var(--space-5);
+}
+
+.fc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-4);
+}
+
+.fc-progress {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  color: var(--muted);
+}
+
+.fc-stack {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fc-card {
+  width: 100%;
+  background: var(--bg-card-strong);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 18px;
+  padding: var(--space-4) var(--space-3);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: fadeIn var(--t-med) ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.fc-card.fade-out {
+  animation: fadeOut var(--t-fast) ease forwards;
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateX(-20px); }
+}
+
+.fc-card .label {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  color: var(--accent-dim);
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+
+.fc-card .content {
+  font-size: 19px;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.fc-card .citation-list {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--hairline);
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted-strong);
+}
+
+.fc-card .citation-list .cit {
+  margin-bottom: 8px;
+}
+
+.fc-card .citation-list .cit .author {
+  color: var(--fg);
+}
+
+.fc-card .citation-list .cit .work {
+  font-style: italic;
+}
+
+.fc-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-3);
+}
+
+.fc-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.fc-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--hairline-strong);
+  transition: background var(--t-fast) ease;
+}
+
+.fc-dot.active {
+  background: var(--accent);
+}
+
+/* M-05 CLOSE PHONE */
+#screen-close-phone {
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#screen-close-phone .breathing {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+  animation: breathe 3000ms ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 0.8; transform: scale(1.2); }
+}
+
+#screen-close-phone .countdown {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+#screen-close-phone .reflect {
+  font-size: 22px;
+  color: var(--fg-strong);
+  letter-spacing: 0.04em;
+  opacity: 0;
+  animation: glowIn var(--t-very-slow) ease forwards;
+}
+
+@keyframes glowIn {
+  from { opacity: 0; filter: blur(8px); }
+  to { opacity: 1; filter: blur(0); }
+}
+
+#screen-close-phone .skip-hint {
+  position: absolute;
+  bottom: 80px;
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  opacity: 0;
+  animation: cardIn var(--t-med) ease 1200ms forwards;
+}
+
+/* M-03 DEFER */
+.defer-card {
+  background: var(--bg-card-strong);
+  border: 1px solid var(--accent-faint);
+  border-radius: 14px;
+  padding: var(--space-3);
+}
+
+.defer-card .body {
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.promise-tag {
+  display: flex;
+  align-items: center;
+  margin-top: var(--space-3);
+  padding: 12px 14px;
+  border: 1px dashed var(--accent-dim);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all var(--t-fast) ease;
+}
+
+.promise-tag:hover { background: var(--accent-faint); }
+
+.promise-tag .promise-icon {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  color: var(--accent);
+  margin-right: 12px;
+}
+
+.promise-tag .promise-text {
+  font-size: 14px;
+  color: var(--fg);
+}
+
+/* M-04 MEMORY WOW */
+#screen-memory-wow {
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#screen-memory-wow .reveal {
+  font-size: 22px;
+  line-height: 1.75;
+  color: var(--fg-strong);
+  letter-spacing: 0.03em;
+  max-width: 320px;
+  opacity: 0;
+  animation: glowIn var(--t-very-slow) ease 500ms forwards;
+}
+
+#screen-memory-wow .meta {
+  margin-top: var(--space-5);
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  opacity: 0;
+  animation: cardIn var(--t-med) ease 2400ms forwards;
+}
+
+/* M-08 MEMORY CARD */
+#screen-memory-card .mc {
+  border: 1px solid var(--hairline-strong);
+  border-radius: 18px;
+  padding: var(--space-4) var(--space-3);
+  background: var(--bg-card);
+  margin-top: var(--space-3);
+}
+
+#screen-memory-card .mc-section {
+  margin: var(--space-3) 0;
+}
+
+#screen-memory-card .mc-section-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: var(--accent-dim);
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+#screen-memory-card .mc-section-list {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--fg);
+}
+
+#screen-memory-card .mc-section-list .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+#screen-memory-card .mc-section-list .row .t {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+#screen-memory-card .quote-list .quote {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--hairline);
+}
+
+#screen-memory-card .quote-list .quote:last-child {
+  border-bottom: 0;
+}
+
+/* REVERSE THOUGHT */
+.reverse-input {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 14px;
+  background: var(--bg-card-strong);
+}
+
+.reverse-input textarea {
+  width: 100%;
+  min-height: 100px;
+  resize: none;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* CLOSING */
+#screen-closing {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* === UTILITIES === */
+.center { text-align: center; }
+.muted { color: var(--muted-strong); }
+.accent { color: var(--accent); }
+.mb1 { margin-bottom: var(--space-1); }
+.mb2 { margin-bottom: var(--space-2); }
+.mb3 { margin-bottom: var(--space-3); }
+.mb4 { margin-bottom: var(--space-4); }
+.mb5 { margin-bottom: var(--space-5); }
+.mt3 { margin-top: var(--space-3); }
+.mt4 { margin-top: var(--space-4); }
+.mt5 { margin-top: var(--space-5); }
+.spacer { flex: 1; }
+.hidden { display: none; }
+
+.no-cute-mark {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--accent-dim);
+  letter-spacing: 0.18em;
+  padding: 4px 10px;
+  border: 1px solid var(--accent-dim);
+  border-radius: 999px;
+  margin-top: var(--space-4);
+}
+
+</style>
+</head>
+<body>
+<div id="phone">
+
+<!-- ============================== -->
+<!-- SCREEN: INTRO -->
+<!-- ============================== -->
+<section class="screen active" id="screen-intro">
+  <div class="hero">
+    <div class="pulse"></div>
+    <div class="eyebrow accent">明日 · 首都博物馆</div>
+    <h1 class="title-1 mt3">玉米 / 黄金<br>美洲豹</h1>
+    <p class="tagline">
+      不是给你讲文物。<br>
+      是和你一起看文物。
+    </p>
+    <div class="no-cute-mark">无 cute · 无 KOL · 无打卡</div>
+  </div>
+  <div class="btn-row">
+    <button class="btn primary" data-go="persona-seed">开始</button>
+    <button class="btn ghost" data-action="menu">看章节</button>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: PERSONA SEED -->
+<!-- ============================== -->
+<section class="screen" id="screen-persona-seed">
+  <div class="pattern-tag">M-00 · SEED</div>
+  <div class="eyebrow mb3">今晚你告诉我的</div>
+  <h2 class="title-2 mb4">这些会成为<br>我此后回你的底色</h2>
+
+  <div class="seed-row">
+    <div class="seed-label">你是谁</div>
+    <div class="seed-text">3 年 PM · 在拉美 gap 了 6 个月 · 玛雅 / 安第斯不陌生但要弱化这部分</div>
+  </div>
+
+  <div class="seed-row">
+    <div class="seed-label">你想带走</div>
+    <div class="seed-text">对玛雅的系统性了解 · 玛雅与安第斯的母题 · 它们与中国古代文明的关联</div>
+  </div>
+
+  <div class="seed-row">
+    <div class="seed-label">你反感</div>
+    <div class="seed-text">被推 · 被讲座式喂 · 被催做笔记 · 走马观花看稀奇 · 对严肃性的消解</div>
+  </div>
+
+  <hr class="hairline">
+
+  <div class="caption">
+    上面三条 = 我的 system prompt。<br>
+    它们会让我在每一次开口前先过一道:<br>
+    「这一句是不是把它当 cosplay 道具？」 「这一句有没有把它放回那个文明的内核？」
+  </div>
+
+  <div class="spacer"></div>
+  <div class="btn-row">
+    <button class="btn primary" data-go="prep">继续</button>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: PRE-VISIT PREP -->
+<!-- ============================== -->
+<section class="screen" id="screen-prep">
+  <div class="pattern-tag">PRE · 母题</div>
+  <div class="eyebrow mb2">今晚预热</div>
+  <h2 class="title-2 mb4">三个母题<br>是这个展的骨</h2>
+
+  <div class="motif-grid">
+    <div class="motif-cell">
+      <span class="glyph">玉</span>
+      <div class="name">玉米</div>
+      <div class="sub">CREATION</div>
+    </div>
+    <div class="motif-cell">
+      <span class="glyph">金</span>
+      <div class="name">黄金</div>
+      <div class="sub">SOLAR · SACRED</div>
+    </div>
+    <div class="motif-cell">
+      <span class="glyph">豹</span>
+      <div class="name">美洲豹</div>
+      <div class="sub">KINGSHIP</div>
+    </div>
+  </div>
+
+  <p class="body-muted mb4">
+    它们都是物质 (玉米 / 金属 / 动物)，却各自承载一组深层意涵——<br>
+    <span class="accent">玉米</span>是创世物质（《波波尔·乌》里玛雅人由玉米造），<br>
+    <span class="accent">黄金</span>不是货币是「太阳的汗水」（与价值无关），<br>
+    <span class="accent">美洲豹</span>是王权的灵兽伴侣 + 战士形变（nahual）。
+  </p>
+
+  <hr class="hairline">
+
+  <div class="eyebrow accent mb3">三组真正深的中国对比</div>
+  <div class="body-muted">
+    我手里能立刻给的 3 处。明天看实物可以补 / 改 / 驳。
+  </div>
+
+  <div class="compare-row mt3">
+    <div>奥尔梅克 / 玛雅翡翠</div>
+    <div class="sep">≈</div>
+    <div>和田玉</div>
+  </div>
+  <div class="caption mb3">绿色硬玉作为最高神圣材料 · 三地独立发生</div>
+
+  <div class="compare-row">
+    <div>玛雅王者自身放血</div>
+    <div class="sep">vs</div>
+    <div>殷商王杀俘虏</div>
+  </div>
+  <div class="caption mb3">两种维持宇宙的路径 · 都答「王为什么神圣」</div>
+
+  <div class="compare-row">
+    <div>安第斯木乃伊</div>
+    <div class="sep">vs</div>
+    <div>中国宗庙牌位</div>
+  </div>
+  <div class="caption mb4">「活的祖先」 vs 「符号祖先」 · 本体论不同</div>
+
+  <div class="spacer"></div>
+  <div class="btn-row">
+    <button class="btn primary" data-go="lock">明天见</button>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: LOCK SCREEN (M-01) -->
+<!-- ============================== -->
+<section class="screen" id="screen-lock">
+  <div class="pattern-tag">M-01</div>
+  <div>
+    <div class="time" id="lock-time">14:02</div>
+    <div class="date">明日 · 周二</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="lock-widget" data-go="welcome">
+    <div class="top">
+      <div class="app-name">一起看</div>
+      <div class="loc">首博 · 三层</div>
+    </div>
+    <div class="prompt">三周没见。</div>
+    <div class="hint">点开 →</div>
+  </div>
+  <div class="caption center">默认沉默 · 不震 · 不响 · 不横幅</div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: WELCOME -->
+<!-- ============================== -->
+<section class="screen" id="screen-welcome">
+  <div class="pattern-tag">M-01</div>
+  <div class="question">今天还想看玛雅 / 安第斯吗？</div>
+  <div class="btn-row center">
+    <button class="btn" data-go="hall-lobby" data-intent="active">嗯</button>
+    <button class="btn" data-go="hall-lobby" data-intent="casual">随便看看</button>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: HALL LOBBY -->
+<!-- ============================== -->
+<section class="screen" id="screen-hall-lobby">
+  <div class="pattern-tag">M-01</div>
+  <div class="ack">（记下了）</div>
+  <div class="caption mt4 center">屏将熄。我不会主动找你。</div>
+  <div class="spacer"></div>
+  <div class="btn-row center">
+    <button class="btn ghost" data-go="list">→ 进入展厅（demo）</button>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: ARTIFACT LIST -->
+<!-- ============================== -->
+<section class="screen" id="screen-list">
+  <div class="pattern-tag">DEMO · 展品</div>
+  <div class="eyebrow list-eyebrow">三层 · 玉米 / 黄金 / 美洲豹</div>
+  <div class="body-muted mb4">
+    真实场景里你不会通过列表进入。你站在哪件前面，哪件就是「当前件」。<br>
+    这里给 4 件作为 demo 入口。
+  </div>
+
+  <div id="artifact-list-container"></div>
+
+  <div class="spacer"></div>
+  <hr class="hairline">
+  <div class="caption">
+    每件背后都会演示一组模式（M-02 / M-06 / M-05 / M-03 / M-04 / M-07）<br>
+    走完后可以触发 M-08 离馆收束。
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: ARTIFACT DETAIL -->
+<!-- ============================== -->
+<section class="screen" id="screen-artifact">
+  <div class="pattern-tag" id="artifact-pattern">M-02</div>
+  <div class="float-back" data-go="list">回展厅</div>
+
+  <div class="artifact-hero">
+    <div class="silhouette" id="artifact-silhouette"></div>
+    <div class="name" id="artifact-name"></div>
+    <div class="meta" id="artifact-meta"></div>
+  </div>
+
+  <div id="artifact-content"></div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: FOUR CARD (M-06) -->
+<!-- ============================== -->
+<section class="screen" id="screen-four-card">
+  <div class="pattern-tag">M-06</div>
+  <div class="float-back" id="fc-back">回</div>
+
+  <div class="fc-container">
+    <div class="fc-top">
+      <div class="eyebrow">观点对照</div>
+      <div class="fc-progress" id="fc-progress">1 / 4</div>
+    </div>
+
+    <div class="fc-stack" id="fc-stack"></div>
+
+    <div class="fc-nav">
+      <button class="btn ghost" id="fc-prev">←</button>
+      <div class="fc-dots" id="fc-dots"></div>
+      <button class="btn ghost" id="fc-next">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: CLOSE PHONE (M-05) -->
+<!-- ============================== -->
+<section class="screen" id="screen-close-phone">
+  <div class="pattern-tag">M-05</div>
+  <div id="cp-phase-1">
+    <div class="breathing"></div>
+    <div class="countdown" id="cp-countdown">30</div>
+    <div class="skip-hint" id="cp-skip">长按跳过 →</div>
+  </div>
+  <div id="cp-phase-2" class="hidden">
+    <div class="reflect" id="cp-reflect"></div>
+    <div class="input-block" style="width: 100%; max-width: 320px; margin-top: 40px;">
+      <input type="text" id="cp-input" placeholder="说一句你刚才看到的">
+      <div class="helper">回车继续</div>
+    </div>
+  </div>
+  <div id="cp-phase-3" class="hidden">
+    <div class="card" style="max-width: 320px;">
+      <div class="card-label">回应</div>
+      <div class="card-text" id="cp-reply"></div>
+    </div>
+    <div class="btn-row mt5">
+      <button class="btn" data-go="artifact" id="cp-back-btn">回这件</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: MEMORY WOW (M-04) -->
+<!-- ============================== -->
+<section class="screen" id="screen-memory-wow">
+  <div class="pattern-tag">M-04</div>
+  <div class="reveal" id="mw-text"></div>
+  <div class="meta">
+    全场仅打破沉默的合法路径之一
+  </div>
+  <div class="btn-row mt5" style="margin-top: 60px; opacity: 0; animation: cardIn var(--t-med) ease 3000ms forwards;">
+    <button class="btn ghost" data-go="artifact" id="mw-continue">继续看 →</button>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: MEMORY CARD (M-08) -->
+<!-- ============================== -->
+<section class="screen" id="screen-memory-card">
+  <div class="pattern-tag">M-08</div>
+  <div class="float-back" data-go="list">回</div>
+
+  <div class="eyebrow mb2">今日记忆卡</div>
+  <h2 class="title-2 mb3" id="mc-greeting">今天</h2>
+
+  <div class="mc">
+    <div class="mc-section">
+      <div class="mc-section-label">停最久</div>
+      <div class="mc-section-list" id="mc-dwell"></div>
+    </div>
+
+    <div class="mc-section">
+      <div class="mc-section-label">你说过</div>
+      <div class="mc-section-list quote-list" id="mc-quotes"></div>
+    </div>
+
+    <div class="mc-section">
+      <div class="mc-section-label">我留给你</div>
+      <div class="mc-section-list" id="mc-todo"></div>
+    </div>
+  </div>
+
+  <div class="caption mt4 center">
+    没有分享按钮 · 没有打卡 · 没有评级 (§9 reject list)
+  </div>
+
+  <div class="spacer"></div>
+  <div class="btn-row">
+    <button class="btn primary" data-go="reverse-thought">我有新的想法</button>
+    <button class="btn ghost" data-go="closing">结束</button>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: REVERSE THOUGHT (M-08 variant) -->
+<!-- ============================== -->
+<section class="screen" id="screen-reverse-thought">
+  <div class="pattern-tag">M-08 · 变体</div>
+  <div class="float-back" data-go="memory-card">回</div>
+
+  <div class="eyebrow mb3">我有新的想法</div>
+  <h2 class="title-3 mb3">写下来。<br>下次你来任何美洲文明展，我会回引这条。</h2>
+
+  <div class="reverse-input">
+    <textarea id="rt-input" placeholder="今天看完之后又想到..."></textarea>
+  </div>
+
+  <div class="btn-row mt4">
+    <button class="btn primary" id="rt-submit">收下</button>
+  </div>
+
+  <div id="rt-response" class="card mt4 hidden">
+    <div class="card-label">收下</div>
+    <div class="card-text" id="rt-reply"></div>
+  </div>
+
+  <div class="spacer"></div>
+  <div class="btn-row">
+    <button class="btn ghost" data-go="closing">结束</button>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- SCREEN: CLOSING -->
+<!-- ============================== -->
+<section class="screen" id="screen-closing">
+  <div class="pattern-tag">CLOSING</div>
+  <div class="spacer"></div>
+  <div class="eyebrow accent">明日 · 首博</div>
+  <h2 class="title-2 mt3 mb4">为明天准备好了</h2>
+  <p class="body-muted mb3">
+    实际去馆的时候，给我发一句 <span class="accent">「到了 + 楼层」</span>，<br>
+    我从那里接管。
+  </p>
+  <hr class="hairline">
+  <div class="eyebrow accent mb2">5 个快捷指令</div>
+  <div class="body" style="font-size: 14px; line-height: 2;">
+    「在 + 一句话」 → 双卡<br>
+    「我的看法」 → 四引用块<br>
+    「30 秒」 → 倒扣手机<br>
+    「为什么 / 怎么」 → 拒讲完 + 我记账<br>
+    「记一下：…」 → 静默写入<br>
+    「走了」 → 今日记忆卡
+  </div>
+  <hr class="hairline">
+  <div class="caption">
+    本 demo 是 wizard-of-oz 的可视化。<br>
+    明天的真实体验通过 chat 进行。<br>
+    这份 HTML 是给你（也给项目）的第一个 ground-truth。
+  </div>
+  <div class="spacer"></div>
+  <div class="btn-row">
+    <button class="btn" data-go="intro">从头</button>
+    <button class="btn ghost" data-action="menu">看章节</button>
+  </div>
+</section>
+
+<!-- ============================== -->
+<!-- BOTTOM NAV -->
+<!-- ============================== -->
+<div id="bottom-nav">
+  <button data-action="menu">章节</button>
+  <button data-action="reset">重头</button>
+</div>
+
+<!-- ============================== -->
+<!-- MENU -->
+<!-- ============================== -->
+<div id="menu">
+  <div class="float-back" data-action="close-menu" style="left: 24px;">关</div>
+  <div class="eyebrow mb3 mt5">所有章节</div>
+  <h2 class="title-2 mb4">8 个模式 + 上下文</h2>
+  <div id="menu-list">
+    <div class="menu-item" data-go="intro"><div class="menu-title">引言</div><div class="menu-pattern">COVER</div></div>
+    <div class="menu-item" data-go="persona-seed"><div class="menu-title">你的画像种子</div><div class="menu-pattern">M-00</div></div>
+    <div class="menu-item" data-go="prep"><div class="menu-title">母题预热</div><div class="menu-pattern">PRE</div></div>
+    <div class="menu-item" data-go="lock"><div class="menu-title">入馆 · 锁屏</div><div class="menu-pattern">M-01</div></div>
+    <div class="menu-item" data-go="welcome"><div class="menu-title">入馆 · 欢迎</div><div class="menu-pattern">M-01</div></div>
+    <div class="menu-item" data-go="list"><div class="menu-title">展品列表</div><div class="menu-pattern">DEMO</div></div>
+    <div class="menu-item" data-direct-artifact="jade-mask"><div class="menu-title">翡翠面具 · 先反问再亮观点</div><div class="menu-pattern">M-02</div></div>
+    <div class="menu-item" data-direct-fc="jade-mask"><div class="menu-title">翡翠面具 · 观点对照</div><div class="menu-pattern">M-06</div></div>
+    <div class="menu-item" data-direct-fc-card="jade-mask-4"><div class="menu-title">翡翠面具 · 学界争议</div><div class="menu-pattern">M-07</div></div>
+    <div class="menu-item" data-direct-artifact="textile"><div class="menu-title">安第斯纺织 · 合上手机入口</div><div class="menu-pattern">M-02</div></div>
+    <div class="menu-item" data-go="close-phone" data-from="textile"><div class="menu-title">合上手机 · 30 秒</div><div class="menu-pattern">M-05</div></div>
+    <div class="menu-item" data-direct-artifact="stela"><div class="menu-title">长纪年石碑 · 拒讲完</div><div class="menu-pattern">M-03</div></div>
+    <div class="menu-item" data-go="memory-wow" data-from="tumi"><div class="menu-title">黄金 tumi · 跨次记忆 wow</div><div class="menu-pattern">M-04</div></div>
+    <div class="menu-item" data-go="memory-card"><div class="menu-title">离馆 · 今日记忆卡</div><div class="menu-pattern">M-08</div></div>
+    <div class="menu-item" data-go="reverse-thought"><div class="menu-title">反向补记忆</div><div class="menu-pattern">M-08 变体</div></div>
+    <div class="menu-item" data-go="closing"><div class="menu-title">尾声 · 明日</div><div class="menu-pattern">END</div></div>
+  </div>
+</div>
+
+</div>
+
+<script>
+// =====================================
+// === DATA ===
+// =====================================
+
+const ARTIFACTS = {
+  'jade-mask': {
+    name: '翡翠面具',
+    fullName: '帕伦克王 K\'inich Janaab\' Pakal 翡翠死亡面具',
+    period: '7 世纪末',
+    origin: '帕伦克 · 王陵 13 号神庙',
+    motif: '玉 · 死亡 · 王',
+    silhouette: `<svg viewBox="0 0 100 100">
+      <ellipse cx="50" cy="52" rx="32" ry="42"/>
+      <circle cx="40" cy="46" r="3.5"/>
+      <circle cx="60" cy="46" r="3.5"/>
+      <path d="M50 50 L46 62 L54 62 Z"/>
+      <path d="M40 72 Q50 76 60 72"/>
+      <path d="M30 35 L25 25 M70 35 L75 25"/>
+    </svg>`,
+    emojis: ['庄严', '神秘', '冷', '凝视', '残缺', '碎'],
+    m02: {
+      '庄严': {
+        empathy: '嗯——这件确实严。',
+        stance: '我倾向这不是「装饰」。是把王者的脸物质化成永生的玉——和金缕玉衣同一逻辑。'
+      },
+      '神秘': {
+        empathy: '我也看了一会儿。',
+        stance: '神秘感来自闭眼。原本应有黑曜石眼瞳，现在是空——空让它从「肖像」变成「容器」。'
+      },
+      '冷': {
+        empathy: '玉是冷的物质。',
+        stance: '我倾向这是设计——翡翠的视觉温度本身被纳入「死亡」的物性。和田玉随葬同向。'
+      },
+      '凝视': {
+        empathy: '它在被看，也在看。',
+        stance: '王者死后通过「被玉化」继续看。这不是肖像功能，是 ontological 转换。'
+      },
+      '残缺': {
+        empathy: '是。少了一些片。',
+        stance: '残缺让人记得它是「拼合」的——玉不是天生的脸，是工匠把脸建造出来。'
+      },
+      '碎': {
+        empathy: '碎反而像。',
+        stance: '碎让人看见结构。我倾向当时也是这么看的——重要的不是「像不像 Pakal」，是「被玉做出来」。'
+      },
+      _default: {
+        empathy: '嗯。',
+        stance: '我倾向这件最值得停三分钟，因为它在物质和身份之间做了一次翻译——脸不再是肉，是玉。'
+      }
+    },
+    m06: {
+      museum: '帕伦克 K\'inich Janaab\' Pakal 王陵出土。翡翠片镶嵌死亡面具，配黑曜石眼、贝壳瞳孔。古典玛雅晚期王者葬仪典型。',
+      ai: '我倾向这件和金缕玉衣是同一种逻辑：玉是永生的物质媒介，王者通过「被玉化」完成神格转化。不是肖像，是身份的物相。',
+      dispute: {
+        summary: '面具的归属在学界曾有讨论。',
+        citations: [
+          { author: 'Schele & Mathews', year: 1998, work: 'The Code of Kings', view: '主张此面具为 Pakal 王本人' },
+          { author: 'David Stuart', year: 2005, work: 'The Inscriptions from Temple XIX at Palenque', view: '通过 glyphic 证据进一步确认此说' }
+        ],
+        hasOpposing: false
+      }
+    },
+    cp: '嗯，玉的冷不是描述，是这件本身的政治神学。'
+  },
+
+  'stela': {
+    name: '长纪年石碑',
+    fullName: '玛雅长纪年石碑 (stela，纪年式)',
+    period: '8–9 世纪 · 古典末期',
+    origin: '玛雅低地 (代表件)',
+    motif: '时间 · 字 · 王',
+    silhouette: `<svg viewBox="0 0 100 100">
+      <rect x="35" y="10" width="30" height="80" rx="2"/>
+      <line x1="40" y1="22" x2="60" y2="22"/>
+      <line x1="40" y1="32" x2="60" y2="32"/>
+      <line x1="40" y1="42" x2="60" y2="42"/>
+      <line x1="40" y1="52" x2="60" y2="52"/>
+      <line x1="40" y1="62" x2="60" y2="62"/>
+      <line x1="40" y1="72" x2="60" y2="72"/>
+      <line x1="40" y1="82" x2="60" y2="82"/>
+      <circle cx="44" cy="27" r="1"/>
+      <circle cx="56" cy="37" r="1"/>
+      <circle cx="50" cy="47" r="1"/>
+      <circle cx="44" cy="57" r="1"/>
+      <circle cx="56" cy="67" r="1"/>
+    </svg>`,
+    emojis: ['密', '字', '历法', '王', '难读', '深'],
+    m02: {
+      '密': {
+        empathy: '密得像不让人看懂。',
+        stance: '我倾向密是设定——长纪年要把时间「灌」进石头里。每个字格都是宇宙坐标。'
+      },
+      '字': {
+        empathy: '不像一般的字。',
+        stance: '表音和表意一起用——和甲骨文有结构相似，但起源完全独立。这是 convergent evolution。'
+      },
+      '历法': {
+        empathy: '它在记日期。',
+        stance: '不是日期。是从公元前 3114 年 8 月 11 日（创世）累计下来的天数——王把自己钉进宇宙时间。'
+      },
+      '王': {
+        empathy: '王在上面。',
+        stance: '我倾向王不是「被记下来」，是「通过被记下来才成为王」。文字是权力的物质化。'
+      },
+      '难读': {
+        empathy: '是。我也读不全。',
+        stance: '即使学者也只译出一部分。难读是它的一部分——通灵者才读得懂的设定。'
+      },
+      '深': {
+        empathy: '深。',
+        stance: '它把时间当成被穿透的实体——每一格都是一刻被定位。中国干支是循环的，玛雅长纪年是绝对的，这是根本不同。'
+      },
+      _default: {
+        empathy: '嗯，先看。',
+        stance: '我倾向重点不是看懂——是看见「文字 / 时间 / 王」三者怎么在一块石头上被绑成一件事。'
+      }
+    },
+    m06: {
+      museum: '玛雅古典晚期典型 stela。长纪年系统记年，含王者世系铭文。',
+      ai: '我倾向这件是「王把自己钉进宇宙时间」的物化——长纪年从创世日（公元前 3114 年）累积绝对天数。和中国干支的循环时间相反。',
+      dispute: {
+        summary: '关于长纪年起源是否在玛雅之前已成熟（Olmec / Izapa 阶段），学界有讨论。',
+        citations: [
+          { author: 'Joyce Marcus', year: 1992, work: 'Mesoamerican Writing Systems', view: '主张长纪年在前古典晚期已成形' },
+          { author: 'Stephen Houston', year: 2000, work: 'Cantons of Conquest', view: '强调古典玛雅期才完成系统化' }
+        ],
+        hasOpposing: true
+      }
+    },
+    crossArtifactDefer: {
+      trigger: '玛雅时间和中国时间怎么比？',
+      response: '说长就长了。等会儿到对照件 (黄金 tumi 旁的安第斯结绳 quipu) 再聊，三个文明的时间媒介摆一块儿能直接看。',
+      promiseTopic: '玛雅长纪年 vs 中国干支 vs 安第斯 quipu',
+      promiseFulfillAt: 'quipu (在 tumi 附近) 时再聊'
+    },
+    cp: '嗯，看石头里的时间。和我们日常的时间不是一回事。'
+  },
+
+  'textile': {
+    name: '安第斯纺织',
+    fullName: '帕拉卡斯 / 印加风格纺织 (cumbi 等级)',
+    period: '公元前 200 – 1500',
+    origin: '秘鲁南海岸 / 库斯科',
+    motif: '织 · 双性 · 政治',
+    silhouette: `<svg viewBox="0 0 100 100">
+      <rect x="20" y="20" width="60" height="60"/>
+      <line x1="20" y1="35" x2="80" y2="35"/>
+      <line x1="20" y1="50" x2="80" y2="50"/>
+      <line x1="20" y1="65" x2="80" y2="65"/>
+      <line x1="35" y1="20" x2="35" y2="80"/>
+      <line x1="50" y1="20" x2="50" y2="80"/>
+      <line x1="65" y1="20" x2="65" y2="80"/>
+      <rect x="27" y="27" width="6" height="6"/>
+      <rect x="57" y="42" width="6" height="6"/>
+      <rect x="42" y="57" width="6" height="6"/>
+      <rect x="72" y="72" width="0" height="0"/>
+    </svg>`,
+    emojis: ['密', '工', '色', '秩序', '不像衣', '复杂'],
+    m02: {
+      '密': {
+        empathy: '是顶级的密。',
+        stance: '安第斯顶级 cumbi 每平方厘米 100–300 根经线。这密度不是为了好看——是政治等级的物质化。'
+      },
+      '工': {
+        empathy: '工到不真实。',
+        stance: '一件 Inca 王的披风是几个 acllakuna（被选女工）一年的工作。和敦煌洞窟 / 大克鼎一样，是「不计成本」的等级表达。'
+      },
+      '色': {
+        empathy: '色是被设计的。',
+        stance: '安第斯把颜色 / 图案 / 经纬比 都纳入语义——一件织物能读出穿者的族群 / 等级 / 地理。是被穿在身上的政治地图。'
+      },
+      '秩序': {
+        empathy: '秩序感很强。',
+        stance: '这种秩序对应 hanan/hurin 双性宇宙观——上下 / 左右 / 男女都不是对立，是互生。和阴阳有结构相似。'
+      },
+      '不像衣': {
+        empathy: '它确实不是衣。',
+        stance: '安第斯的织物地位高于黄金。一件 cumbi 比同等重量金器更贵——黄金是太阳的汗水，纺织是被穿戴的宇宙图。'
+      },
+      '复杂': {
+        empathy: '它在让你读不懂。',
+        stance: '部分图案至今未被译出。和长纪年石碑同理——「读不懂」是它一部分。要被允许的人才能解码。'
+      },
+      _default: {
+        empathy: '看一会儿。',
+        stance: '我倾向这件不能当「布料」看。要当「文字」看——它是被穿戴的宇宙图 + 政治表。'
+      }
+    },
+    m06: {
+      museum: '安第斯顶级纺织 cumbi 级别。骆驼科纤维 (alpaca/vicuña) 与棉混织，植物 / 矿物染料。',
+      ai: '我倾向这件不是衣物。是被穿戴的政治宇宙图。安第斯把纺织置于黄金之上——这是它和欧洲 / 中国都不一样的根本价值序。',
+      dispute: {
+        summary: '关于 cumbi 等级的具体生产组织，学界有不同侧重。',
+        citations: [
+          { author: 'John Murra', year: 1962, work: '"Cloth and Its Functions in the Inca State"', view: '强调 cumbi 由国家垄断分配' },
+          { author: 'Joanne Pillsbury', year: 2002, work: 'In the Realm of Inka Color', view: '在地方传统的延续性上有更多侧重' }
+        ],
+        hasOpposing: true
+      }
+    },
+    cp: '嗯，密度本身就是话。',
+    cpFull: '嗯，密度本身就是话——每一根线在说「我有多少人 / 多少时间」。'
+  },
+
+  'tumi': {
+    name: '黄金 tumi 祭刀',
+    fullName: 'Sicán 文化黄金 tumi 仪式刀',
+    period: '900–1100',
+    origin: 'Lambayeque · 秘鲁北海岸',
+    motif: '黄金 · 太阳 · 仪式',
+    silhouette: `<svg viewBox="0 0 100 100">
+      <rect x="42" y="8" width="16" height="40" rx="2"/>
+      <circle cx="50" cy="20" r="3.5"/>
+      <line x1="50" y1="30" x2="50" y2="42"/>
+      <path d="M18 50 Q50 92 82 50 Z"/>
+      <line x1="50" y1="50" x2="50" y2="78"/>
+      <path d="M32 60 Q50 76 68 60" stroke-dasharray="2 2"/>
+    </svg>`,
+    emojis: ['黄', '锋', '神', '简', '重', '太阳'],
+    m02: {
+      '黄': {
+        empathy: '黄是被强调的。',
+        stance: '在安第斯，黄金不是货币。是「太阳的汗水」——西班牙人完全没法理解这点，所以才那么轻易掠走。'
+      },
+      '锋': {
+        empathy: '锋是用的。',
+        stance: '这是真的仪式刀，不是摆件。它砍过东西——美洲驼 / 偶尔人——为太阳维持运转。'
+      },
+      '神': {
+        empathy: '它就是神。',
+        stance: 'Sicán 黄金器物多带 Naylamp 主神面——刀的形态是神显现的物身。和商周「鼎是神」同向。'
+      },
+      '简': {
+        empathy: '形是简的。',
+        stance: '简是早期文明顶级神圣物的共同形式。简 = 不需要装饰加持 = 它本身就够。'
+      },
+      '重': {
+        empathy: '重。看起来很重。',
+        stance: '重量也是 prestige——能带得动的重金器 = 王者级身体。和商周大型青铜鼎逻辑同向。'
+      },
+      '太阳': {
+        empathy: '太阳的物身。',
+        stance: '安第斯太阳神 Inti 不是抽象的——它通过黄金「显形」。你看到的不是黄金做的太阳，是太阳本身的物质化。'
+      },
+      _default: {
+        empathy: '嗯。',
+        stance: '我倾向这件最值得在「材料即圣物」这个角度上停——和商周青铜「鼎」一脉。'
+      }
+    },
+    m06: {
+      museum: 'Lambayeque (Sicán) 文化黄金 tumi。仪式用刀，带 Naylamp 主神面。约公元 900–1100。',
+      ai: '我倾向这件最值得在「材料即圣物」这个角度上停——和商周「鼎」一脉。黄金不是贵金属，是太阳的物相。',
+      dispute: {
+        summary: 'Tumi 的具体仪式用途学界讨论较多。',
+        citations: [
+          { author: 'Izumi Shimada', year: 2009, work: 'The Sicán Universe', view: '主张 tumi 主要用于祭祀美洲驼，非人' },
+          { author: 'Walter Alva', year: 1994, work: 'Royal Tombs of Sipán', view: '强调更早 Moche 时期 tumi 可能用于王者随葬献祭' }
+        ],
+        hasOpposing: false
+      }
+    },
+    cp: '嗯，金的重不是负担，是神的体重。',
+    crossSessionMemory: '你刚才在翡翠面具前停了 6 分钟。那件和这件像一对——一个把王者的脸物质化为玉，一个把太阳的脸物质化为金。两件都答「神圣怎么进入物质」。'
+  }
+};
+
+const LIST_ORDER = ['jade-mask', 'stela', 'textile', 'tumi'];
+
+// =====================================
+// === STATE ===
+// =====================================
+
+const state = {
+  current: 'intro',
+  history: [],
+  visited: [],
+  dwells: {},   // artifactId -> seconds
+  quotes: [],   // [{artifact, text}]
+  promises: [],
+  fcIndex: 0,
+  fcArtifact: null,
+  currentArtifact: null,
+  intent: null,
+  cpFromArtifact: null,
+  cpReflectShown: false,
+  mwFromArtifact: null,
+  memoryWowShown: false,
+  reverseSent: false,
+};
+
+// =====================================
+// === SCREEN MANAGEMENT ===
+// =====================================
+
+function go(id, opts) {
+  opts = opts || {};
+  const cur = document.querySelector('.screen.active');
+  if (cur) cur.classList.remove('active');
+  const next = document.getElementById('screen-' + id);
+  if (next) next.classList.add('active');
+  state.history.push(state.current);
+  state.current = id;
+
+  // 关菜单
+  document.getElementById('menu').classList.remove('active');
+
+  // 每个 screen 进入的副作用
+  if (id === 'list') renderList();
+  if (id === 'artifact') renderArtifact(opts.artifactId || state.currentArtifact || 'jade-mask');
+  if (id === 'four-card') {
+    const aid = opts.artifactId || state.fcArtifact || state.currentArtifact || 'jade-mask';
+    renderFourCard(aid, opts.startCard || 0);
+  }
+  if (id === 'close-phone') startClosePhone(opts.from || state.cpFromArtifact || 'textile');
+  if (id === 'memory-wow') renderMemoryWow(opts.from || state.mwFromArtifact || 'tumi');
+  if (id === 'memory-card') renderMemoryCard();
+  if (id === 'reverse-thought') {
+    document.getElementById('rt-response').classList.add('hidden');
+    document.getElementById('rt-input').value = '';
+  }
+
+  // 自动滚顶
+  if (next) next.scrollTop = 0;
+}
+
+// =====================================
+// === RENDERERS ===
+// =====================================
+
+function renderList() {
+  const container = document.getElementById('artifact-list-container');
+  container.innerHTML = '';
+  LIST_ORDER.forEach(id => {
+    const a = ARTIFACTS[id];
+    const visited = state.visited.includes(id);
+    const row = document.createElement('div');
+    row.className = 'artifact-row';
+    row.dataset.aid = id;
+    row.innerHTML = `
+      <div class="icon">${a.silhouette}</div>
+      <div class="info">
+        <div class="name">${a.name}${visited ? ' <span class="caption accent" style="margin-left:8px;">· 已停</span>' : ''}</div>
+        <div class="meta">${a.period}<span class="dot-divider">·</span><span class="motif">${a.motif}</span></div>
+      </div>
+    `;
+    row.addEventListener('click', () => {
+      state.currentArtifact = id;
+      go('artifact', {artifactId: id});
+    });
+    container.appendChild(row);
+  });
+
+  // 加 footer link 到 memory card
+  const visitedCount = state.visited.length;
+  if (visitedCount >= 1) {
+    const goCard = document.createElement('div');
+    goCard.style.marginTop = '32px';
+    goCard.innerHTML = `
+      <hr class="hairline">
+      <button class="btn primary" style="margin-top: 12px;" data-go="memory-card">「走了」 · 今日记忆卡 →</button>
+    `;
+    container.appendChild(goCard);
+  }
+}
+
+function renderArtifact(id) {
+  const a = ARTIFACTS[id];
+  if (!a) return;
+  state.currentArtifact = id;
+  if (!state.visited.includes(id)) {
+    state.visited.push(id);
+    state.dwells[id] = (state.dwells[id] || 0) + (60 + Math.floor(Math.random() * 180)); // simulated dwell
+  }
+
+  document.getElementById('artifact-pattern').textContent = 'M-02';
+  document.getElementById('artifact-silhouette').innerHTML = a.silhouette;
+  document.getElementById('artifact-name').textContent = a.name;
+  document.getElementById('artifact-meta').innerHTML = `${a.period}<span class="dot-divider">·</span><span class="motif">${a.motif}</span>`;
+
+  const content = document.getElementById('artifact-content');
+  content.innerHTML = `
+    <div class="prompt-line">你怎么看 · ${a.name}</div>
+    <div class="emoji-row" id="emoji-row"></div>
+    <div class="input-block">
+      <input type="text" id="art-input" placeholder="或自己写一句">
+      <div class="helper">回车，或点上方一个词</div>
+    </div>
+  `;
+
+  const emojiRow = document.getElementById('emoji-row');
+  a.emojis.forEach(em => {
+    const chip = document.createElement('button');
+    chip.className = 'chip';
+    chip.textContent = em;
+    chip.addEventListener('click', () => triggerM02(id, em));
+    emojiRow.appendChild(chip);
+  });
+
+  const input = document.getElementById('art-input');
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const v = input.value.trim();
+      if (v) triggerM02(id, v);
+    }
+  });
+}
+
+function triggerM02(artifactId, userInput) {
+  const a = ARTIFACTS[artifactId];
+  const response = a.m02[userInput] || a.m02._default;
+
+  // record quote
+  state.quotes.push({artifact: a.name, text: userInput});
+
+  // render two-card stack
+  const content = document.getElementById('artifact-content');
+  content.innerHTML = `
+    <div class="prompt-line" style="opacity:0.6; font-size: 14px;">你说：${userInput}</div>
+    <div class="m02-stack">
+      <div class="m02-card card">
+        <div class="card-label">承接</div>
+        <div class="card-text large">${response.empathy}</div>
+      </div>
+      <div class="m02-card card card-strong">
+        <div class="card-label">我的立场</div>
+        <div class="card-text large">${response.stance}</div>
+      </div>
+    </div>
+    <div class="m02-action-row">
+      <button class="btn" data-fc="${artifactId}">我的看法 →</button>
+      <button class="btn" data-cp="${artifactId}">30 秒</button>
+      <button class="btn" data-defer="${artifactId}">为什么 / 怎么</button>
+      <button class="btn ghost" data-go="list">回展厅</button>
+    </div>
+  `;
+
+  document.getElementById('artifact-pattern').textContent = 'M-02';
+
+  // 第二件文物及之后，在 tumi 上触发 M-04 一次
+  if (state.visited.length >= 2 && artifactId === 'tumi' && !state.memoryWowShown) {
+    state.memoryWowShown = true;
+    state.mwFromArtifact = 'tumi';
+    setTimeout(() => {
+      // 提示用户「这里会触发 M-04」
+      const banner = document.createElement('div');
+      banner.style.cssText = 'margin-top: 32px; padding: 16px; border: 1px dashed var(--accent-dim); border-radius: 12px; text-align: center;';
+      banner.innerHTML = `
+        <div class="eyebrow accent" style="margin-bottom: 8px;">M-04 触发</div>
+        <div class="body-muted">DWELL ≥ mid + Memory ≠ cold + 频率门槛 ✓</div>
+        <button class="btn primary" style="margin-top: 12px;" data-go="memory-wow" data-from="tumi">看 wow 时刻 →</button>
+      `;
+      document.getElementById('artifact-content').appendChild(banner);
+    }, 3000);
+  }
+}
+
+function renderFourCard(artifactId, startCard) {
+  const a = ARTIFACTS[artifactId];
+  if (!a || !a.m06) return;
+  state.fcArtifact = artifactId;
+  state.fcIndex = startCard || 0;
+
+  // 取用户最近的 quote 用于卡 1
+  const userQuote = (state.quotes.filter(q => q.artifact === a.name).slice(-1)[0] || {}).text || '（先看）';
+
+  const cards = [
+    { label: '你刚才说', content: userQuote, type: 'quote' },
+    { label: '馆方', content: a.m06.museum, type: 'museum' },
+    { label: '我', content: a.m06.ai, type: 'ai' },
+    {
+      label: '学界',
+      content: a.m06.dispute.summary,
+      citations: a.m06.dispute.citations,
+      type: 'dispute',
+      hasOpposing: a.m06.dispute.hasOpposing
+    }
+  ];
+
+  const stack = document.getElementById('fc-stack');
+  const dotsEl = document.getElementById('fc-dots');
+  const progressEl = document.getElementById('fc-progress');
+
+  function renderCard(i) {
+    const c = cards[i];
+    stack.innerHTML = '';
+    const card = document.createElement('div');
+    card.className = 'fc-card';
+
+    let body = `<div class="label">${c.label}</div><div class="content">${c.content}</div>`;
+    if (c.type === 'dispute' && c.citations && c.citations.length) {
+      body += `<div class="citation-list">`;
+      c.citations.forEach(cit => {
+        body += `<div class="cit"><span class="author">${cit.author}</span>，<span class="work">${cit.work}</span> (${cit.year})<br>· ${cit.view}</div>`;
+      });
+      body += `</div>`;
+      if (c.hasOpposing) {
+        body += `<div class="caption" style="margin-top: 12px;">两派观点。先看，不选边。</div>`;
+      }
+    }
+    if (c.type === 'ai') {
+      body += `<div class="caption" style="margin-top: 16px;">立场词以「我倾向」开头，含具体观察依据。</div>`;
+    }
+    card.innerHTML = body;
+    stack.appendChild(card);
+
+    dotsEl.innerHTML = '';
+    for (let j = 0; j < cards.length; j++) {
+      const d = document.createElement('div');
+      d.className = 'fc-dot' + (j === i ? ' active' : '');
+      dotsEl.appendChild(d);
+    }
+    progressEl.textContent = `${i+1} / ${cards.length}`;
+    document.getElementById('artifact-pattern').textContent = i === 3 ? 'M-06 → M-07' : 'M-06';
+    document.querySelector('#screen-four-card .pattern-tag').textContent = i === 3 ? 'M-06 → M-07' : 'M-06';
+  }
+
+  renderCard(state.fcIndex);
+
+  document.getElementById('fc-next').onclick = () => {
+    if (state.fcIndex < cards.length - 1) {
+      state.fcIndex++;
+      renderCard(state.fcIndex);
+    }
+  };
+  document.getElementById('fc-prev').onclick = () => {
+    if (state.fcIndex > 0) {
+      state.fcIndex--;
+      renderCard(state.fcIndex);
+    }
+  };
+  document.getElementById('fc-back').onclick = () => go('artifact', {artifactId});
+
+  // swipe
+  let startX = 0;
+  stack.ontouchstart = (e) => { startX = e.touches[0].clientX; };
+  stack.ontouchend = (e) => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (dx < -50 && state.fcIndex < cards.length - 1) { state.fcIndex++; renderCard(state.fcIndex); }
+    if (dx > 50 && state.fcIndex > 0) { state.fcIndex--; renderCard(state.fcIndex); }
+  };
+}
+
+function startClosePhone(from) {
+  state.cpFromArtifact = from;
+  const a = ARTIFACTS[from];
+  const phase1 = document.getElementById('cp-phase-1');
+  const phase2 = document.getElementById('cp-phase-2');
+  const phase3 = document.getElementById('cp-phase-3');
+  phase1.classList.remove('hidden');
+  phase2.classList.add('hidden');
+  phase3.classList.add('hidden');
+
+  let remain = 30;
+  const cd = document.getElementById('cp-countdown');
+  cd.textContent = remain;
+  let interval;
+  let skipped = false;
+  let skipDown = false;
+  let skipTimer = null;
+
+  function tick() {
+    remain--;
+    cd.textContent = remain;
+    if (remain <= 0) {
+      clearInterval(interval);
+      toPhase2();
+    }
+  }
+
+  function toPhase2() {
+    if (skipped) return;
+    skipped = true;
+    clearInterval(interval);
+    phase1.classList.add('hidden');
+    phase2.classList.remove('hidden');
+    document.getElementById('cp-reflect').textContent = '看清了什么没看清的？';
+    const inp = document.getElementById('cp-input');
+    inp.value = '';
+    setTimeout(() => inp.focus(), 600);
+    inp.onkeydown = (e) => {
+      if (e.key === 'Enter') {
+        const v = inp.value.trim();
+        if (v) {
+          state.quotes.push({artifact: a.name + ' (合上手机后)', text: v});
+          phase2.classList.add('hidden');
+          phase3.classList.remove('hidden');
+          document.getElementById('cp-reply').textContent = a.cpFull || a.cp || '嗯。';
+        }
+      }
+    };
+  }
+
+  interval = setInterval(tick, 1000);
+
+  // skip via long press
+  const skipBtn = document.getElementById('cp-skip');
+  skipBtn.onmousedown = skipBtn.ontouchstart = () => {
+    skipDown = true;
+    skipTimer = setTimeout(() => { if (skipDown) toPhase2(); }, 400);
+  };
+  skipBtn.onmouseup = skipBtn.ontouchend = () => {
+    skipDown = false;
+    if (skipTimer) clearTimeout(skipTimer);
+  };
+
+  document.getElementById('cp-back-btn').onclick = () => {
+    go('artifact', {artifactId: from});
+  };
+}
+
+function renderMemoryWow(from) {
+  state.mwFromArtifact = from;
+  const a = ARTIFACTS[from];
+  if (a && a.crossSessionMemory) {
+    document.getElementById('mw-text').textContent = a.crossSessionMemory;
+  } else {
+    document.getElementById('mw-text').textContent = '你刚才在前一件停了好几分钟。这件可能和那件是同一个脉络的。';
+  }
+  document.getElementById('mw-continue').onclick = () => go('artifact', {artifactId: from});
+}
+
+function triggerDefer(artifactId) {
+  const a = ARTIFACTS[artifactId];
+  const d = a.crossArtifactDefer;
+  if (!d) {
+    // 默认 defer
+    const content = document.getElementById('artifact-content');
+    content.innerHTML = `
+      <div class="defer-card">
+        <div class="card-label">M-03 · 拒讲完</div>
+        <div class="body">说长就长了。等会儿到对照件再聊——那时候你能直接比。</div>
+        <div class="promise-tag" onclick="window.alert('已加入承诺队列。到了对照件位置我会兑现。')">
+          <span class="promise-icon">⏳</span>
+          <span class="promise-text">对照件提醒</span>
+        </div>
+      </div>
+      <div class="btn-row mt4">
+        <button class="btn" data-go="list">回展厅</button>
+      </div>
+    `;
+    document.getElementById('artifact-pattern').textContent = 'M-03';
+    state.promises.push({artifact: a.name, topic: '跨件对照'});
+    return;
+  }
+  const content = document.getElementById('artifact-content');
+  content.innerHTML = `
+    <div class="prompt-line" style="opacity:0.6; font-size: 14px;">你问：${d.trigger}</div>
+    <div class="defer-card mt3">
+      <div class="card-label">M-03 · 拒讲完 + 长程承诺</div>
+      <div class="body">${d.response}</div>
+      <div class="promise-tag">
+        <span class="promise-icon">⏳</span>
+        <span class="promise-text">已记账 · ${d.promiseFulfillAt}</span>
+      </div>
+    </div>
+    <div class="btn-row mt4">
+      <button class="btn" data-go="list">回展厅</button>
+      <button class="btn ghost" data-direct-artifact="${artifactId}">重新看</button>
+    </div>
+  `;
+  document.getElementById('artifact-pattern').textContent = 'M-03';
+  state.promises.push({artifact: a.name, topic: d.promiseTopic, fulfillAt: d.promiseFulfillAt});
+}
+
+function renderMemoryCard() {
+  // mc-greeting
+  const today = new Date();
+  const visitedCount = state.visited.length;
+  document.getElementById('mc-greeting').innerHTML = visitedCount > 0
+    ? `今天你看了 ${visitedCount} 件`
+    : '今天先空一张';
+
+  // dwell top 3
+  const dwellEl = document.getElementById('mc-dwell');
+  const sorted = Object.entries(state.dwells).sort((a, b) => b[1] - a[1]).slice(0, 3);
+  if (sorted.length === 0) {
+    dwellEl.innerHTML = '<div class="caption">还没停下过。明天去馆里跑一遍。</div>';
+  } else {
+    dwellEl.innerHTML = sorted.map(([id, sec]) => {
+      const a = ARTIFACTS[id];
+      const m = Math.floor(sec / 60), s = sec % 60;
+      return `<div class="row"><span>${a.name}</span><span class="t">${m}分${s.toString().padStart(2,'0')}秒</span></div>`;
+    }).join('');
+  }
+
+  // quotes
+  const qEl = document.getElementById('mc-quotes');
+  const recentQuotes = state.quotes.slice(-3);
+  if (recentQuotes.length === 0) {
+    qEl.innerHTML = '<div class="caption">你今天还没说什么。</div>';
+  } else {
+    qEl.innerHTML = recentQuotes.map(q => `
+      <div class="quote">
+        <div>「${q.text}」</div>
+        <div class="caption">${q.artifact}</div>
+      </div>
+    `).join('');
+  }
+
+  // todo
+  const tEl = document.getElementById('mc-todo');
+  const todos = [];
+  todos.push('1 · David Stuart (2005) Temple XIX 铭文 · 翡翠面具断代');
+  if (state.promises.length > 0) {
+    state.promises.slice(0, 1).forEach(p => {
+      todos.push(`2 · 没聊完的：${p.topic}`);
+    });
+  } else {
+    todos.push('2 · 没聊到的：美洲豹王座 (M-04 我们这次没走到)');
+  }
+  todos.push('3 · 三组中国对照可以补：玉米/粟 · 豹/龙 · 翡翠/和田玉');
+  tEl.innerHTML = todos.map(t => `<div>${t}</div>`).join('');
+}
+
+// =====================================
+// === GLOBAL EVENT BINDING ===
+// =====================================
+
+document.addEventListener('click', (e) => {
+  // data-go
+  const goEl = e.target.closest('[data-go]');
+  if (goEl) {
+    const target = goEl.dataset.go;
+    const from = goEl.dataset.from;
+    if (from) {
+      if (target === 'close-phone') state.cpFromArtifact = from;
+      if (target === 'memory-wow') state.mwFromArtifact = from;
+    }
+    const intent = goEl.dataset.intent;
+    if (intent) state.intent = intent;
+    go(target);
+    return;
+  }
+  // data-direct-artifact
+  const da = e.target.closest('[data-direct-artifact]');
+  if (da) {
+    state.currentArtifact = da.dataset.directArtifact;
+    go('artifact', {artifactId: da.dataset.directArtifact});
+    return;
+  }
+  // data-direct-fc
+  const dfc = e.target.closest('[data-direct-fc]');
+  if (dfc) {
+    state.currentArtifact = dfc.dataset.directFc;
+    go('four-card', {artifactId: dfc.dataset.directFc, startCard: 0});
+    return;
+  }
+  // data-direct-fc-card
+  const dfcc = e.target.closest('[data-direct-fc-card]');
+  if (dfcc) {
+    const parts = dfcc.dataset.directFcCard.split('-');
+    const aid = parts.slice(0, parts.length - 1).join('-');
+    const card = parseInt(parts[parts.length - 1], 10) - 1;
+    state.currentArtifact = aid;
+    go('four-card', {artifactId: aid, startCard: card});
+    return;
+  }
+  // data-fc
+  const fcEl = e.target.closest('[data-fc]');
+  if (fcEl) {
+    go('four-card', {artifactId: fcEl.dataset.fc, startCard: 0});
+    return;
+  }
+  // data-cp
+  const cpEl = e.target.closest('[data-cp]');
+  if (cpEl) {
+    state.cpFromArtifact = cpEl.dataset.cp;
+    go('close-phone', {from: cpEl.dataset.cp});
+    return;
+  }
+  // data-defer
+  const dfEl = e.target.closest('[data-defer]');
+  if (dfEl) {
+    triggerDefer(dfEl.dataset.defer);
+    return;
+  }
+  // data-action
+  const actEl = e.target.closest('[data-action]');
+  if (actEl) {
+    const action = actEl.dataset.action;
+    if (action === 'menu') document.getElementById('menu').classList.add('active');
+    if (action === 'close-menu') document.getElementById('menu').classList.remove('active');
+    if (action === 'reset') {
+      // 全部 reset
+      Object.keys(state).forEach(k => {
+        if (Array.isArray(state[k])) state[k] = [];
+        else if (typeof state[k] === 'object' && state[k] !== null) state[k] = {};
+        else if (typeof state[k] === 'number') state[k] = 0;
+        else if (typeof state[k] === 'boolean') state[k] = false;
+        else state[k] = null;
+      });
+      state.history = [];
+      go('intro');
+    }
+    return;
+  }
+});
+
+// reverse thought submit
+document.getElementById('rt-submit').addEventListener('click', () => {
+  const v = document.getElementById('rt-input').value.trim();
+  if (!v) return;
+  state.quotes.push({artifact: '（离馆后）', text: v});
+  document.getElementById('rt-reply').textContent = '收下。下次你来任何美洲文明展，我提醒你这一条。';
+  document.getElementById('rt-response').classList.remove('hidden');
+  state.reverseSent = true;
+});
+
+// =====================================
+// === INIT ===
+// =====================================
+
+// 设置 lock screen 时间
+(function() {
+  const now = new Date();
+  const h = (now.getHours() + 1) % 24; // 模拟明天大约时间
+  const m = '02';
+  document.getElementById('lock-time').textContent = `${h.toString().padStart(2, '0')}:${m}`;
+})();
+
+// 初始 list render
+renderList();
+
+</script>
+</body>
+</html>
