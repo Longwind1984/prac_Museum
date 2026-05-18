@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+<meta name="theme-color" content="#000000" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<title>一起看 · 首博 · v4(极简 · AI 不在)· 2026-05-18</title>
+<style>
+:root {
+  --bg: #000000;        /* 纯黑 — v4 黑屏哲学 */
+  --bg-card: #0a0907;
+  --panel: #12100c;
+  --ink: #e8e2d4;
+  --dim: #6a655a;
+  --faint: #2a2620;
+  --line: #1c1a14;
+  --gold: #c9a96b;
+  --gold-dim: #6e5d3a;
+  --rust: #8a4a2d;
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; user-select: none; }
+textarea, input { user-select: text; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+  overflow: hidden;
+}
+body { width: 100vw; height: 100vh; height: 100dvh; position: relative; }
+
+/* =====================
+   BLACKOUT MODE(默认)
+   ===================== */
+#blackout {
+  position: fixed; inset: 0;
+  background: #000;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.breath-dot {
+  width: 1px; height: 1px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 8px 1px rgba(201,169,107,0.18);
+  position: absolute;
+  bottom: calc(80px + var(--safe-bottom));
+  left: 50%; transform: translateX(-50%);
+  animation: breath 4.2s ease-in-out infinite;
+  cursor: pointer;
+  /* expand tap target without visual change */
+  padding: 30px;
+  margin: -30px;
+}
+@keyframes breath {
+  0%, 100% { opacity: 0.4; box-shadow: 0 0 6px 1px rgba(201,169,107,0.12); }
+  50% { opacity: 1; box-shadow: 0 0 12px 2px rgba(201,169,107,0.28); }
+}
+.breath-hint {
+  position: absolute;
+  bottom: calc(30px + var(--safe-bottom));
+  left: 50%; transform: translateX(-50%);
+  font-size: 9px; color: var(--faint);
+  letter-spacing: 0.3em; text-transform: uppercase;
+  opacity: 0; transition: opacity 1s ease;
+  pointer-events: none;
+}
+.breath-hint.show { opacity: 1; }
+.peek-time {
+  position: absolute;
+  bottom: calc(150px + var(--safe-bottom));
+  left: 50%; transform: translateX(-50%);
+  color: var(--gold-dim);
+  font-size: 11px; letter-spacing: 0.18em;
+  font-variant-numeric: tabular-nums;
+  opacity: 0; transition: opacity 0.6s ease;
+  pointer-events: none;
+  text-align: center; white-space: nowrap;
+}
+.peek-time.show { opacity: 1; }
+.peek-time strong { color: var(--gold); font-weight: 500; }
+
+/* small hidden gesture: triple-tap top to open dogfood export */
+.dev-hit {
+  position: absolute;
+  top: 0; left: 0; right: 0; height: calc(var(--safe-top) + 40px);
+  z-index: 2; opacity: 0;
+}
+
+/* =====================
+   TOUCHPOINT MODE
+   ===================== */
+#touchpoint {
+  position: fixed; inset: 0;
+  background: var(--bg);
+  z-index: 5;
+  display: none;
+  flex-direction: column;
+  padding: calc(var(--safe-top) + 24px) 22px calc(var(--safe-bottom) + 24px);
+  overflow-y: auto;
+}
+#touchpoint.show { display: flex; }
+.tp-meta {
+  font-size: 10px; letter-spacing: 0.2em;
+  color: var(--dim); text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.tp-time { color: var(--gold-dim); font-size: 13px; font-variant-numeric: tabular-nums; margin-bottom: 22px; }
+
+.ai-speak {
+  background: var(--bg-card);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 22px 22px 22px 24px;
+  margin: 4px 0 28px;
+  font-family: "Songti SC", "Source Han Serif SC", "Noto Serif CJK SC", Georgia, serif;
+  font-size: 18px; line-height: 1.82;
+  animation: tpFadeIn 0.8s ease-out;
+}
+@keyframes tpFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.ai-speak p { margin: 0 0 14px; }
+.ai-speak p:last-child { margin-bottom: 0; }
+.ai-speak strong { color: var(--gold); font-weight: 600; }
+
+.sys-text {
+  margin: 0 0 24px;
+  color: var(--ink); font-size: 15.5px; line-height: 1.78;
+  animation: tpFadeIn 0.8s ease-out 0.2s both;
+}
+.sys-text p { margin: 0 0 12px; }
+.sys-text p:last-child { margin-bottom: 0; }
+.sys-text strong { color: var(--gold); font-weight: 600; }
+
+.tp-action {
+  margin: 8px 0 18px;
+  color: var(--ink); font-size: 15px; line-height: 1.7;
+  animation: tpFadeIn 0.8s ease-out 0.3s both;
+}
+.tp-action strong { color: var(--gold); font-weight: 600; }
+
+textarea.note {
+  width: 100%; min-height: 90px;
+  background: var(--bg-card); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 14px 14px;
+  font-family: inherit; font-size: 15px; line-height: 1.65;
+  resize: vertical; -webkit-appearance: none;
+  margin: 8px 0 0;
+  animation: tpFadeIn 0.8s ease-out 0.4s both;
+}
+textarea.note:focus { outline: none; border-color: var(--gold-dim); }
+textarea.note::placeholder { color: var(--faint); }
+
+.done-row {
+  margin-top: auto;
+  padding-top: 32px;
+  display: flex; justify-content: center;
+}
+.done-btn {
+  padding: 14px 32px;
+  background: transparent;
+  border: 1px solid var(--gold-dim);
+  border-radius: 100px;
+  color: var(--gold); font-size: 14px;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+.done-btn:active { background: var(--panel); border-color: var(--gold); }
+
+/* =====================
+   POSTSCRIPT MODE
+   滑动条 12 卡:今天我克制住没说的事
+   ===================== */
+#postscript {
+  position: fixed; inset: 0;
+  background: var(--bg);
+  z-index: 5; display: none;
+}
+#postscript.show { display: flex; flex-direction: column; }
+.ps-header {
+  padding: calc(var(--safe-top) + 24px) 22px 16px;
+}
+.ps-title {
+  font-family: "Songti SC", serif;
+  color: var(--gold); font-size: 20px; font-weight: 500;
+  margin: 0 0 8px;
+  letter-spacing: 0.02em;
+}
+.ps-sub {
+  color: var(--dim); font-size: 12px;
+  letter-spacing: 0.05em; line-height: 1.6;
+}
+/* faint anchor as background — Innovator R3 #2 */
+.ps-anchor-bg {
+  position: absolute;
+  top: calc(var(--safe-top) + 14px);
+  right: 22px; left: 22px;
+  font-family: "Songti SC", serif;
+  font-size: 14px; color: var(--ink);
+  opacity: 0.06;
+  pointer-events: none;
+  text-align: right;
+  white-space: pre-wrap;
+  letter-spacing: 0.01em;
+  max-height: 80px; overflow: hidden;
+  font-style: normal;
+}
+.ps-scroll {
+  flex: 1;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 0 30px;
+  scrollbar-width: none;
+}
+.ps-scroll::-webkit-scrollbar { display: none; }
+.ps-card {
+  flex-shrink: 0;
+  width: 86vw; max-width: 480px;
+  margin: 0 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 28px 24px;
+  scroll-snap-align: center;
+  display: flex; flex-direction: column;
+}
+.ps-card:first-child { margin-left: 22px; }
+.ps-card:last-child { margin-right: 22px; }
+.ps-card-idx {
+  font-size: 10px; letter-spacing: 0.2em;
+  color: var(--gold-dim); text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.ps-card-title {
+  font-family: "Songti SC", serif;
+  font-size: 16px; color: var(--gold);
+  margin-bottom: 14px; font-weight: 500;
+}
+.ps-card-body {
+  font-size: 14.5px; line-height: 1.75;
+  color: var(--ink);
+}
+.ps-card-body strong { color: var(--gold); font-weight: 600; }
+.ps-card.final {
+  background: transparent;
+  border: 1px dashed var(--gold-dim);
+  text-align: center;
+  justify-content: center; align-items: center;
+}
+.ps-card.final .ps-card-title {
+  font-size: 18px; margin-bottom: 22px;
+}
+.ps-card.final .ps-card-body { font-size: 14px; color: var(--dim); margin-bottom: 28px; }
+.close-btn {
+  padding: 12px 28px;
+  background: transparent;
+  border: 1px solid var(--gold);
+  border-radius: 100px;
+  color: var(--gold); font-size: 13px;
+  letter-spacing: 0.18em;
+  cursor: pointer; font-family: inherit;
+}
+.ps-dots {
+  display: flex; gap: 6px;
+  padding: 10px 0 calc(20px + var(--safe-bottom));
+  justify-content: center;
+}
+.ps-dot {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--faint);
+  transition: background 0.3s, transform 0.3s;
+}
+.ps-dot.seen { background: var(--gold-dim); }
+.ps-dot.active { background: var(--gold); transform: scale(1.5); }
+
+/* =====================
+   CLOSED MODE
+   ===================== */
+#closed {
+  position: fixed; inset: 0;
+  background: #000; z-index: 5;
+  display: none;
+  align-items: center; justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+}
+#closed.show { display: flex; }
+#closed h2 {
+  font-family: "Songti SC", serif;
+  font-size: 22px; color: var(--gold);
+  margin: 0 0 28px; font-weight: 400;
+  letter-spacing: 0.05em;
+}
+#closed p { color: var(--dim); font-size: 13px; text-align: center; max-width: 280px; margin: 6px 0; }
+
+/* =====================
+   DEV EXPORT (triple-tap top)
+   ===================== */
+#export {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.96); z-index: 100;
+  display: none; flex-direction: column;
+  padding: calc(var(--safe-top) + 16px) 16px calc(16px + var(--safe-bottom));
+}
+#export.show { display: flex; }
+#export-head {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 14px;
+}
+#export-head h2 { font-family: "Songti SC", serif; font-size: 17px; color: var(--gold); margin: 0; flex: 1; }
+#export textarea {
+  flex: 1; width: 100%;
+  background: var(--bg-card); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 14px;
+  font-family: ui-monospace, monospace;
+  font-size: 12px; line-height: 1.55;
+  resize: none;
+}
+.export-actions { display: flex; gap: 10px; margin-top: 12px; }
+.export-btn {
+  flex: 1; padding: 12px;
+  background: var(--panel); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 6px;
+  font-size: 13px; cursor: pointer; font-family: inherit;
+}
+.export-btn.primary { background: var(--gold); color: #1a1610; border-color: var(--gold); font-weight: 600; }
+.tap {
+  width: 34px; height: 34px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: transparent; border: 1px solid var(--line);
+  border-radius: 17px; color: var(--ink);
+  cursor: pointer; font-size: 14px;
+}
+</style>
+</head>
+<body>
+
+<!-- DEV gesture zone (triple-tap top edge to summon export — Innovator 砍掉 export UI 但 dogfood 必需) -->
+<div class="dev-hit" id="dev-hit"></div>
+
+<!-- BLACKOUT MODE: 默认状态。1px 呼吸金点 + 长按 1.5s 露下次时点 -->
+<div id="blackout">
+  <div class="breath-dot" id="breath-dot"></div>
+  <div class="breath-hint" id="breath-hint">长按 · 看下次</div>
+  <div class="peek-time" id="peek-time"></div>
+</div>
+
+<!-- TOUCHPOINT MODE -->
+<div id="touchpoint"></div>
+
+<!-- POSTSCRIPT MODE -->
+<div id="postscript">
+  <div class="ps-anchor-bg" id="ps-anchor"></div>
+  <div class="ps-header">
+    <div class="ps-title">今天我克制住没说的事</div>
+    <div class="ps-sub">12 张卡。横向滑。滑到底 app 会关掉。</div>
+  </div>
+  <div class="ps-scroll" id="ps-scroll"></div>
+  <div class="ps-dots" id="ps-dots"></div>
+</div>
+
+<!-- CLOSED MODE -->
+<div id="closed">
+  <h2>明晚见。</h2>
+  <p>app 现在关了。</p>
+  <p>不要回头打开它读笔记 — 让它发酵。</p>
+  <p style="margin-top: 28px; font-size: 11px; letter-spacing: 0.15em; color: var(--faint); text-transform: uppercase;">2026-05-18 21:30 后再来</p>
+</div>
+
+<!-- DEV EXPORT (triple-tap top) -->
+<div id="export">
+  <div id="export-head">
+    <h2>导出 · dogfood 反馈</h2>
+    <button class="tap" id="export-close">×</button>
+  </div>
+  <textarea id="export-text" readonly></textarea>
+  <div class="export-actions">
+    <button class="export-btn" id="export-copy">复制</button>
+    <button class="export-btn primary" id="export-download">下载 .md</button>
+  </div>
+</div>
+
+<script>
+(() => {
+'use strict';
+
+/* ===============================================================
+   v4 · 极简 · AI 不在
+   核心反 v3 表演性 + 落地 Innovator R3 三决定:
+   - 1px 呼吸金点 替代 v3 status badge(不 narrate AI 状态,只证明没死)
+   - anchor set 一次永不 recall(只作 PS 段极淡背景图)
+   - 砍 TOC / nav prev/next / state chips / status sheet(触点过了就过)
+   - 长按 1.5s 金点 → 露下次触点时点 + 4 秒淡出
+   - 短按金点 → 进入下一触点(若已到时点;否则提示"还没到")
+   - 5 触点而已:pre / maya-jade / sipan-burial / synth-sharp / next-day
+   - 完成 5 触点后,进入 PS 滑动条(12 张:今天克制住没说的事)
+   - 滑到底 → app 自我关闭(显示"明晚见。")
+   - dogfood export 隐藏:连击顶部 3 次唤起
+   =============================================================== */
+
+const TPS = [
+  {
+    id: 'pre',
+    label: '出发前',
+    time: '11:30',
+    suggestedTs: null, // 任何时候都可以进
+    sys: `<p>「玉米·黄金·美洲豹」是首博 2026 开馆以来最大特展,128 元票。<strong>商业大展的策展立场会受票务和合作博弈影响。</strong></p>
+<p>布局:5000 美洲 + 5000 中国 + 5000 沉浸。<strong>并置不是中性</strong>。</p>
+<p>今天盯 <strong>3 件</strong>深看。其余漫游。</p>`,
+    action: `<p>下面写下 <strong>1 个</strong>你脑里浮现的关于玛雅 / 印加 / 安第斯的画面。一句话。</p>`,
+    askPlaceholder: '一个画面,一句话。',
+    anchor: 'set',
+    next: { suggestedTime: '12:35', hint: '到玛雅厅第一件玉器前再开这页。' },
+  },
+  {
+    id: 'maya-jade',
+    label: '玛雅 · 玉',
+    time: '~12:35',
+    suggestedTs: '12:30',
+    ai: `<p>对玛雅人,玉不是君子。</p>
+<p><strong>玉 = 玉米 = 王权 = 生命的呼吸。</strong></p>
+<p>同一种石头,两个完全不同的意义网络。</p>`,
+    action: '<p>看玉器之后,在下面写 1-2 行。然后关 app。</p>',
+    askPlaceholder: '玉的差别。',
+    next: { suggestedTime: '14:30', hint: '看完玛雅,看完西潘主墓,在那里再开。' },
+  },
+  {
+    id: 'sipan-burial',
+    label: '西潘 · 同葬',
+    time: '~14:30',
+    suggestedTs: '14:30',
+    ai: `<p>西潘王陵 1987 才挖出来。从盗墓贼手里抢回来的。</p>
+<p>主墓 451 件随葬器物。</p>
+<p>同墓还埋有 <strong>3 个女人 + 2 个战士 + 1 个男孩</strong> + 若干羊驼。</p>
+<p>说明牌大概率写得很轻。</p>
+<p>我看到这就一直想停一下。你呢。</p>`,
+    action: '<p>你对"同葬"那件事的第一反应。3 句话以内。</p>',
+    askPlaceholder: '同葬:第一反应。',
+    next: { suggestedTime: '15:50', hint: '离厅前。' },
+  },
+  {
+    id: 'synth-sharp',
+    label: '一句话',
+    time: '15:50',
+    suggestedTs: '15:50',
+    ai: `<p>今天有几个瞬间你觉得"不对劲"。</p>
+<p>不对劲不一定是错。</p>
+<p>挑 1 个,写下来,一句话。</p>`,
+    action: '<p>一句话。最尖锐的那个不对劲。</p>',
+    askPlaceholder: '一句话。',
+    next: { suggestedTime: '次日 19:00 后', hint: '明天傍晚再开。' },
+  },
+  {
+    id: 'next-day',
+    label: '次日 · 一个问题',
+    time: '5/19 晚',
+    suggestedTs: null, // anytime
+    ai: `<p>只跟一个朋友讲昨天的一件事,你讲什么。</p>`,
+    action: '<p>下面写一段。或回到 chat 发"首博次日反馈"+ 你的答案。</p>',
+    askPlaceholder: '一件事。',
+    next: null, // 进 PS
+  },
+];
+
+const PS_CARDS = [
+  { title: '入馆大厅', body: `<p>今天 128 元的票,周围人结构会告诉你这是什么类型的展。</p><p>我没说,因为你会自己看。</p>` },
+  { title: '玛雅厅节奏', body: `<p>75 分钟。建议:快走一圈记 5-8 件想多看的,回头深看 <strong>2 件</strong>,其他漫游。</p><p>我没说,因为节奏是你的。</p>` },
+  { title: '原件 vs 复制品', body: `<p>帕卡尔王玉面具几乎确定在墨西哥城,不在这里。</p><p>留意"复制""仿制""模型"等措辞——什么必须是原件、什么可以是复制品、为什么没说,都是策展选择。</p>` },
+  { title: '深看挑哪 2 件', body: `<p>不要挑最有名 / 最贵的。</p><p>挑你"咦"了一下的那件——通常你最自然停的那件,是你心里的某根弦被勾到了。</p>` },
+  { title: '中场强制离厅', body: `<p>4 小时不踩刹车的话,第 3 厅你会糊。</p><p>13:30 离厅 30 分钟,馆内餐厅 / 公共区。<strong>不</strong>翻笔记<strong>不</strong>翻照片。</p>` },
+  { title: '西潘 1987 抢救', body: `<p>1987 年秘鲁考古学家 Walter Alva 接到警察通报"盗墓贼挖到金器",冲到现场抢救。</p><p>你今天看的所有西潘文物,<strong>是从盗墓贼手里被抢回来的</strong>。</p><p>我提了同葬,没提抢救,因为一次只能停在一件事上。</p>` },
+  { title: '莫切 ≠ 印加', body: `<p>莫切(西潘王所属)和印加差了约 1000 年。</p><p>"安第斯古代文明"经常被打成一团——这也是叙事简化。</p><p>"安第斯"是地理,不是时代。</p>` },
+  { title: '大自然的精灵', body: `<p>中文展览的翻译:精灵。</p><p>原文 espíritu / ánima / soul——是"灵魂""神灵"。</p><p>中文用「精灵」<strong>去神化了</strong>。这是一个翻译姿态。</p>` },
+  { title: '找让你想笑的动物', body: `<p>大自然厅:如果有件动物让你想笑——某个雕件突然萌、突然戏谑——那是古代美洲人的幽默感被你接到了。</p><p>幽默感是反讲解员叙事最锐的证据。</p>` },
+  { title: '回看你 12:00 的画面', body: `<p>它变了吗?变了哪里?或者它一直在?或者它已经被取代了?</p><p>这一问不需要答 — 它在你脑里就好。</p>` },
+  { title: '深的两件,比浅的二十件更值钱', body: `<p>如果走出馆后你只记得"玉对玛雅是玉米"和"3 女 2 战 1 男孩同葬"这两件事,这就够了。</p><p>不写笔记不翻照片——让它继续在你脑里发酵。</p>` },
+  { title: '你的私人触发', body: `<p>如果你今天在某件展品前突然走神、想到了某个不相关的事——一段路、一个人、一段对话——那是你内在地图最 vital 的部分在工作。</p><p>不要写下来。让它继续发酵。</p>` },
+];
+
+// ===== Storage =====
+const KEY = 'yqk-shoubo-v4-20260518';
+const state = {
+  idx: 0, // next touchpoint to open
+  anchor: '',
+  notes: {}, // id -> { text, ts }
+  completed: {}, // id -> bool
+  postscript: false, // in PS mode?
+  closed: false, // app closed?
+};
+function save() {
+  try {
+    localStorage.setItem(KEY, JSON.stringify(state));
+  } catch (e) {}
+}
+function load() {
+  try {
+    const raw = localStorage.getItem(KEY); if (!raw) return;
+    const d = JSON.parse(raw);
+    state.idx = d.idx || 0;
+    state.anchor = d.anchor || '';
+    state.notes = d.notes || {};
+    state.completed = d.completed || {};
+    state.postscript = d.postscript || false;
+    state.closed = d.closed || false;
+  } catch (e) {}
+}
+load();
+
+// ===== Mode switch =====
+function setMode(mode) {
+  document.getElementById('blackout').style.display = mode === 'blackout' ? 'flex' : 'none';
+  document.getElementById('touchpoint').classList.toggle('show', mode === 'touchpoint');
+  document.getElementById('postscript').classList.toggle('show', mode === 'postscript');
+  document.getElementById('closed').classList.toggle('show', mode === 'closed');
+}
+
+// ===== Time parsing =====
+function nowHHMM() {
+  const d = new Date();
+  return d.getHours() + ':' + String(d.getMinutes()).padStart(2,'0');
+}
+function isPastSuggested(suggestedHHMM) {
+  if (!suggestedHHMM) return true;
+  const [sh, sm] = suggestedHHMM.split(':').map(Number);
+  const d = new Date();
+  const cur = d.getHours() * 60 + d.getMinutes();
+  return cur >= (sh * 60 + sm);
+}
+
+// ===== Blackout interactions =====
+const $dot = document.getElementById('breath-dot');
+const $hint = document.getElementById('breath-hint');
+const $peek = document.getElementById('peek-time');
+let pressTimer = null;
+let pressedAt = 0;
+let didLongPress = false;
+
+function showBreathHint() {
+  $hint.classList.add('show');
+  setTimeout(() => $hint.classList.remove('show'), 2500);
+}
+
+function getNextHint() {
+  if (state.postscript) return null;
+  if (state.closed) return null;
+  const tp = TPS[state.idx];
+  if (!tp) return null;
+  // show: next touchpoint suggested time + tap hint
+  if (tp.suggestedTs && !isPastSuggested(tp.suggestedTs)) {
+    return `约 <strong>${tp.suggestedTs}</strong> · ${tp.label}`;
+  }
+  return `<strong>${tp.label}</strong> 已可进 · 短按金点`;
+}
+
+function showPeek() {
+  const txt = getNextHint();
+  if (!txt) {
+    $peek.innerHTML = '今天的触点都过完了。';
+  } else {
+    $peek.innerHTML = txt;
+  }
+  $peek.classList.add('show');
+  setTimeout(() => $peek.classList.remove('show'), 4000);
+}
+
+$dot.addEventListener('pointerdown', (e) => {
+  pressedAt = Date.now();
+  didLongPress = false;
+  pressTimer = setTimeout(() => {
+    didLongPress = true;
+    showPeek();
+  }, 1500);
+});
+$dot.addEventListener('pointerup', (e) => {
+  clearTimeout(pressTimer);
+  const elapsed = Date.now() - pressedAt;
+  if (!didLongPress && elapsed < 1500) {
+    // short tap → try to enter next touchpoint
+    if (state.closed) return;
+    if (state.postscript) {
+      setMode('postscript');
+      renderPS();
+      return;
+    }
+    const tp = TPS[state.idx];
+    if (!tp) {
+      // shouldn't happen but handle
+      state.postscript = true; save(); setMode('postscript'); renderPS();
+      return;
+    }
+    if (tp.suggestedTs && !isPastSuggested(tp.suggestedTs)) {
+      // not yet — show peek instead
+      showPeek();
+      return;
+    }
+    // enter touchpoint
+    renderTouchpoint(tp);
+    setMode('touchpoint');
+  }
+});
+$dot.addEventListener('pointerleave', () => { clearTimeout(pressTimer); });
+
+// Show breath-hint occasionally so user knows long-press exists
+let firstVisit = !localStorage.getItem(KEY + '-hinted');
+if (firstVisit) {
+  setTimeout(() => { showBreathHint(); localStorage.setItem(KEY + '-hinted', '1'); }, 1200);
+}
+
+// ===== Touchpoint render =====
+const $tp = document.getElementById('touchpoint');
+function renderTouchpoint(tp) {
+  $tp.innerHTML = '';
+  const meta = document.createElement('div');
+  meta.className = 'tp-meta';
+  meta.textContent = tp.label;
+  $tp.appendChild(meta);
+
+  const time = document.createElement('div');
+  time.className = 'tp-time';
+  time.textContent = tp.time;
+  $tp.appendChild(time);
+
+  if (tp.sys) {
+    const s = document.createElement('div');
+    s.className = 'sys-text';
+    s.innerHTML = tp.sys;
+    $tp.appendChild(s);
+  }
+
+  if (tp.ai) {
+    const a = document.createElement('div');
+    a.className = 'ai-speak';
+    a.innerHTML = tp.ai;
+    $tp.appendChild(a);
+  }
+
+  if (tp.action) {
+    const ac = document.createElement('div');
+    ac.className = 'tp-action';
+    ac.innerHTML = tp.action;
+    $tp.appendChild(ac);
+  }
+
+  const ta = document.createElement('textarea');
+  ta.className = 'note';
+  ta.placeholder = tp.askPlaceholder || '随便写。';
+  if (!state.notes[tp.id]) state.notes[tp.id] = { text: '' };
+  ta.value = (tp.anchor === 'set' && state.anchor) ? state.anchor : (state.notes[tp.id].text || '');
+  ta.addEventListener('input', () => {
+    state.notes[tp.id] = { text: ta.value, ts: Date.now() };
+    if (tp.anchor === 'set') state.anchor = ta.value;
+    save();
+  });
+  $tp.appendChild(ta);
+
+  const row = document.createElement('div');
+  row.className = 'done-row';
+  const btn = document.createElement('button');
+  btn.className = 'done-btn';
+  btn.textContent = state.idx === TPS.length - 1 ? '完成 · 进入 PS' : '我看完了 · 关 app';
+  btn.addEventListener('click', () => {
+    state.completed[tp.id] = true;
+    state.idx = state.idx + 1;
+    if (state.idx >= TPS.length) {
+      state.postscript = true;
+      save();
+      setMode('postscript');
+      renderPS();
+    } else {
+      save();
+      setMode('blackout');
+    }
+  });
+  row.appendChild(btn);
+  $tp.appendChild(row);
+
+  // also expose next hint at bottom (very small)
+  if (tp.next) {
+    const hint = document.createElement('div');
+    hint.style.cssText = 'margin: 20px 0 0; color: var(--faint); font-size: 11px; text-align: center; letter-spacing: 0.15em; line-height: 1.7;';
+    hint.innerHTML = `下次:<strong style="color: var(--gold-dim);">${tp.next.suggestedTime}</strong><br/>${tp.next.hint}`;
+    $tp.appendChild(hint);
+  }
+
+  $tp.scrollTop = 0;
+}
+
+// ===== Postscript render =====
+const $ps = document.getElementById('ps-scroll');
+const $psDots = document.getElementById('ps-dots');
+const $psAnchor = document.getElementById('ps-anchor');
+
+function renderPS() {
+  $psAnchor.textContent = state.anchor || '';
+  $ps.innerHTML = '';
+  $psDots.innerHTML = '';
+  PS_CARDS.forEach((c, i) => {
+    const card = document.createElement('div');
+    card.className = 'ps-card';
+    card.innerHTML = `
+      <div class="ps-card-idx">${i+1} / ${PS_CARDS.length + 1}</div>
+      <div class="ps-card-title">${c.title}</div>
+      <div class="ps-card-body">${c.body}</div>
+    `;
+    $ps.appendChild(card);
+
+    const dot = document.createElement('div');
+    dot.className = 'ps-dot' + (i === 0 ? ' active' : '');
+    dot.dataset.idx = i;
+    $psDots.appendChild(dot);
+  });
+  // final card
+  const finalCard = document.createElement('div');
+  finalCard.className = 'ps-card final';
+  finalCard.innerHTML = `
+    <div class="ps-card-idx">${PS_CARDS.length + 1} / ${PS_CARDS.length + 1}</div>
+    <div class="ps-card-title">读完了。</div>
+    <div class="ps-card-body">把 app 关掉。<br/>不要回来读笔记。</div>
+    <button class="close-btn" id="ps-close">关掉</button>
+  `;
+  $ps.appendChild(finalCard);
+  const finalDot = document.createElement('div');
+  finalDot.className = 'ps-dot';
+  finalDot.dataset.idx = PS_CARDS.length;
+  $psDots.appendChild(finalDot);
+
+  document.getElementById('ps-close').addEventListener('click', () => {
+    state.closed = true; save();
+    setMode('closed');
+  });
+
+  // sync dots on scroll
+  let scrollTimer = null;
+  $ps.addEventListener('scroll', () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      const cardWidth = $ps.children[0].offsetWidth + 24;
+      const idx = Math.round($ps.scrollLeft / cardWidth);
+      Array.from($psDots.children).forEach((d, i) => {
+        d.classList.toggle('active', i === idx);
+        if (i < idx) d.classList.add('seen');
+      });
+    }, 80);
+  });
+}
+
+// ===== Initial mode =====
+function bootMode() {
+  if (state.closed) { setMode('closed'); return; }
+  if (state.postscript) { setMode('postscript'); renderPS(); return; }
+  setMode('blackout');
+}
+bootMode();
+
+// ===== Hidden dev export (triple-tap top) =====
+let tapCount = 0;
+let tapResetTimer = null;
+document.getElementById('dev-hit').addEventListener('click', () => {
+  tapCount++;
+  clearTimeout(tapResetTimer);
+  tapResetTimer = setTimeout(() => { tapCount = 0; }, 1200);
+  if (tapCount >= 3) {
+    tapCount = 0;
+    showExport();
+  }
+});
+
+function showExport() {
+  const lines = ['# 团队 · 首博 v4 dogfood · 2026-05-18', '', '**版本**:v4(极简 · AI 不在 · 黑屏默认 · 1px 呼吸金点)', ''];
+  if (state.anchor.trim()) {
+    lines.push('## 12:00 写下的画面', '', '> ' + state.anchor.split('\n').join('\n> '), '');
+  }
+  lines.push('## 5 触点笔记', '');
+  TPS.forEach(tp => {
+    const n = state.notes[tp.id]; if (!n?.text?.trim()) return;
+    lines.push(`### ${tp.time} · ${tp.label}`, '');
+    lines.push('> ' + n.text.split('\n').join('\n> '), '');
+  });
+  lines.push('## v4 专项反馈', '');
+  lines.push('1. **1px 呼吸金点替代 status badge**:你长按过几次?短按几次?');
+  lines.push('   - ');
+  lines.push('2. **黑屏默认**:在博物馆里掏出手机看一片黑,你的第一反应是?(慌 / 安 / 烦)');
+  lines.push('   - ');
+  lines.push('3. **5 触点 vs v1 17 触点 vs v2 12 触点 vs v3 11 触点**:更少触点让你觉得是"AI 不在了"还是"AI 终于让我自己看"?');
+  lines.push('   - ');
+  lines.push('4. **anchor 永不 recall(只在 PS 背景图极淡铺底)**:你注意到背景的字了吗?');
+  lines.push('   - ');
+  lines.push('5. **PS 滑动条(12 张克制住的事)**:你滑到第几张就想关?滑完之后什么感觉?');
+  lines.push('   - ');
+  lines.push('6. **v4 vs v2/v3:哪个版本对你而言最像"朋友"?**');
+  lines.push('   - ');
+  lines.push('7. **Innovator 押注:"AI 几乎完全不在"是不是更接近同伴本质?**');
+  lines.push('   - ');
+  document.getElementById('export-text').value = lines.join('\n');
+  document.getElementById('export').classList.add('show');
+}
+document.getElementById('export-close').addEventListener('click', () => {
+  document.getElementById('export').classList.remove('show');
+});
+document.getElementById('export-copy').addEventListener('click', () => {
+  const t = document.getElementById('export-text');
+  t.select(); document.execCommand('copy');
+  document.getElementById('export-copy').textContent = '✓ 已复制';
+  setTimeout(() => document.getElementById('export-copy').textContent = '复制', 1500);
+});
+document.getElementById('export-download').addEventListener('click', () => {
+  const blob = new Blob([document.getElementById('export-text').value], { type: 'text/markdown' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = '首博 v4 dogfood-20260518.md';
+  a.click(); URL.revokeObjectURL(url);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.getElementById('export').classList.remove('show');
+  }
+});
+})();
+</script>
+</body>
+</html>
