@@ -602,6 +602,784 @@ scholarly_dispute: {
 
 ---
 
+### 3.12 深抠模式 C · M-01 克制式入口（recognition）
+
+> 全场最"轻"的模式。LLM 介入面积极小——大部分由规则承担。但**少即是难**：要在一个 12 字的欢迎里同时显得熟悉、克制、不情绪化。
+
+#### 3.12.1 触发条件
+
+```
+EVENT.type == location_changed
+    AND newLocation.kind == Hall
+    AND prevLocation.kind == Outside
+    AND user.has_granted_ble_permission
+```
+
+降级（蓝牙不可用）：用户主动开 App + 手动选展厅。
+
+#### 3.12.2 信息层次
+
+单层：识别已发生 + 极轻入口。**不是欢迎仪式**，是"我看见你了"。
+
+#### 3.12.3 输出形态序列
+
+```
+[ T+0s ]     系统：推一条 silent 通知（无横幅、无震动、无声）
+             通知文：「{馆名} · {展厅名}。{greeting}」
+             ─── greeting 由 LLM 生成或退化为 "欢迎" ───
+
+[ T+0s ]     系统：在锁屏写入 widget（低对比度，灰底白字）
+             widget 内容：「你怎么看」+ 静态文物缩略图
+
+[ ……等待用户行动…… ]
+
+[ 用户 pickup gesture + tap widget ]
+             App 打开到黑底卡片
+             居中单行：「今天还想看 {hall_topic}吗？」
+             两个按钮：「嗯」/「随便看看」
+
+[ 用户点「嗯」]
+             screen darkens, state.MainIntent = ACTIVE
+             agent 进入沉默等待状态（不再主动）
+
+[ 用户点「随便看看」]
+             screen darkens, state.MainIntent = CASUAL
+             此后 agent 主动开口阈值 ×1.5（更克制）
+             memory eager fetch 仍照常预热
+```
+
+#### 3.12.4 唯一的 LLM 调用：personalized greeting
+
+仅在用户是 returning visitor（≥ 1 prior visit to this hall in past 90 days）时调用。
+
+```
+[SYSTEM]
+你为一位老熟人写一句进馆问候。≤ 12 字。
+不可违反：
+1. 单句话，不带任何标点情绪词（不含 ！~ 之类）。
+2. 不带追问。
+3. 不带 emoji。
+4. 如果想引用历史，必须用具体数据（"X 周没见" / "上次 X 件"），不要泛指"很久不见"。
+5. 如果历史数据精度不够（例如仅知"今年来过"），降级为模板「欢迎」二字。
+
+[STATE]
+last_visit_to_this_hall: "2026-04-19"  # 4 周前
+current_date: "2026-05-17"
+last_visit_top_dwell: {artifact: "北魏立像", dwell: "4min12s"}
+
+[FEW-SHOT EXAMPLES]
+
+例 1: last_visit = 4 周前, 干净数据
+  ✅ "四周没见。"
+  ❌ "好久不见，欢迎回来！"（情绪词 + 泛指）
+  ❌ "上次你在北魏立像停了 4 分 12 秒，今天还看吗？"（≥ 12 字 + 追问）
+
+例 2: last_visit = 一年前, 仅有年级精度
+  ✅ "去年这时候见过。"
+  或退化: "欢迎"
+
+例 3: 首次访问
+  → 不调用 LLM，直接用 "欢迎"
+
+[OUTPUT]
+{"greeting": "..."}
+```
+
+#### 3.12.5 失败兜底
+
+| 失败 | 处理 |
+| --- | --- |
+| LLM 生成 > 12 字 | 强制截断 + 重生成一次；二次失败退化为 "欢迎" |
+| BLE 不可用 / 权限被拒 | 跳过整个 M-01，等待用户主动开 App |
+| 用户对欢迎通知零响应 ≥ 5 min | 不重推；当次入馆 M-01 失败但不影响后续模式 |
+
+#### 3.12.6 度量
+
+| 指标 | 目标 |
+| --- | --- |
+| greeting_char_count_p99 | ≤ 12 |
+| widget_tap_rate（returning users） | ≥ 60% |
+| greeting_overgeneration_rate（被截断） | ≤ 5% |
+
+---
+
+### 3.13 深抠模式 D · M-02 先反问再亮观点（first-turn）
+
+> 全场用得最多的模式。每一件文物的第一次对话都走这里。它把"对等姿态 / 不抢话 / 有立场"三个准则同时压到 ≤ 80 字、≤ 2 张卡里。
+
+#### 3.13.1 触发条件
+
+```
+EVENT.type ∈ {user_text, user_voice, user_emoji_select}
+    AND session.first_input_on_current_artifact == true
+    AND NOT EVENT.matches_cross_artifact_pattern  # 否则走 M-03
+    AND NOT EVENT.matches_disputed_dating_question  # 否则走 M-07
+```
+
+非第一次输入则走 M-02 变体（直接给立场，无卡 1 共情层；详见 §3.13.7）。
+
+#### 3.13.2 信息层次
+
+2 层、视觉分离、强制顺序：
+
+- **卡 1 · 承接（empathy）**：呼应用户原话/emoji，但不复读。展示"我听到了"。
+- **卡 2 · 立场（stance）**：以"我倾向"/"我觉得"/"我个人更"开头，含具体观察依据。
+
+两张卡**必须视觉分离**——不是一段话用句号断开。这是把"对等"从话术准则落到 UI 节奏的关键。
+
+#### 3.13.3 输出形态
+
+两张连续黑底卡，自动 2 秒切换（用户也可上滑）。卡 2 角落「我的看法」标签 → 进入 M-06。
+
+#### 3.13.4 完整 Prompt
+
+```
+[SYSTEM]
+{人格基础块 from §6.4.1}
+
+你正在为某件文物的 first-turn 模式生成两张卡。
+
+卡 1 (≤ 30 字)：
+  - 必须呼应用户输入但不能复读。
+  - 必须含一个轻共情词或反问（"嗯——"、"也是"、"普通？"）。
+  - 不许直接进入解释。
+
+卡 2 (≤ 50 字)：
+  - 必须以 "我倾向" / "我觉得" / "我个人更" 开头。
+  - 必须给出一个具体可观察的依据（脸 / 衣纹 / 姿态 / 比例 / 风格脉络名词）。
+  - 不许说空话（"很有特色" / "很重要"）。
+  - 不许在这一卡内追问。追问留给「我的看法」标签。
+
+两张卡合计 ≤ 80 字。
+
+[STATE]
+CurrentArtifact: {
+  id: "a-001",
+  name: "北魏石灰岩造像",
+  style_lineage: ["秀骨清像", "北魏晚期"],
+  museum: "上博东馆"
+}
+UserInput: {type: "emoji", value: "庄严"}
+SessionFirstInputOnArtifact: true
+
+[RAG]
+artifact_retrieved_context: {
+  era: "北魏晚期",
+  style_keywords: ["秀骨清像", "瘦削", "线条疏朗"],
+  comparison_with_earlier: "比早期方圆雄浑要瘦得多"
+}
+
+[FEW-SHOT EXAMPLES]
+
+例 1 · emoji 输入「庄严」+ 北魏晚期造像
+  Card 1: "嗯——这件确实严。"
+  Card 2: "北魏晚期的，比早些时候的方圆雄浑要瘦得多。叫'秀骨清像'。"
+
+例 2 · 文字输入「我觉得挺普通的」+ 同件
+  Card 1: "普通？"
+  Card 2: "我倒觉得它的衣纹处理在同时期里挺特别——线条克制，几乎只有走向。"
+
+例 3 · 文字输入「看不懂」+ 同件
+  Card 1: "正常，我第一次也看不懂。"
+  Card 2: "建议先看脸——这件是北魏晚期的，'瘦'是关键。看出来就能接着看姿态。"
+
+例 4 · emoji 输入「好看」（情绪平淡的褒义）
+  Card 1: "我也喜欢。"
+  Card 2: "我觉得是脸——这种瘦不是衰，是有精神。同时期没几件做到。"
+
+例 5 · 文字输入「这是哪个朝代？」（用户其实在问知识）
+  → 注意：这是知识询问而非看法表达
+  Card 1: "你先猜猜？"  ← 即使是知识问题，也先反问一下
+  Card 2: "北魏晚期的。'秀骨清像'是这个时期的代表词。"
+
+[OUTPUT FORMAT]
+{
+  "cards": [
+    {"id": "empathy", "content": "...", "char_count": <int>},
+    {"id": "stance", "content": "...", "char_count": <int>, "stance_word": "我倾向|我觉得|我个人更", "observable_basis": "..."}
+  ],
+  "follow_up_entry": {"label": "我的看法", "target_pattern": "M-06"}
+}
+```
+
+#### 3.13.5 失败兜底
+
+| 失败 | 处理 |
+| --- | --- |
+| 卡 1 复读了用户原话 | 后过滤检测：若 Card 1 与 UserInput 编辑距离 < 30%，强制重生成 |
+| 卡 2 缺立场词 | 后过滤检测：若不以"我倾向 / 我觉得 / 我个人更"开头，强制重生成 |
+| 卡 2 缺 observable_basis | 字段缺失 → 重生成 |
+| 总长 > 80 字 | 优先压缩卡 1，保留卡 2 立场完整性 |
+| RAG 全空（生僻文物） | 卡 2 退化为不带历史断代的弱形式："我倾向觉得这件的工艺水准在这一区里挺突出。"（即放弃断代术语，留观感判断） |
+
+#### 3.13.6 度量
+
+| 指标 | 目标 |
+| --- | --- |
+| total_char_p95 | ≤ 80 |
+| stance_word_presence_rate | ≥ 99% |
+| empathy_parrot_rate | ≤ 5% |
+| follow_up_to_m06_rate | ≥ 30% （即超过 1/3 用户进入对照层） |
+
+#### 3.13.7 M-02 变体：后续轮次
+
+session 内对同一件第 2、3 次输入时，跳过卡 1 共情，只输出立场。但适用 §6.4 准则中"第 3 次回答 ≤ 30 字 + 提示看下一件"的规则（参见 §6.4.3 P-04 回归测试）。
+
+```
+[INSTRUCTION VARIANT]
+如果 SessionInputOnArtifact >= 3：
+  ≤ 30 字
+  必须含 "咱们看下一件" 或类似 nudge
+```
+
+---
+
+### 3.14 深抠模式 E · M-03 拒讲完 + 长程承诺（defer-and-promise）
+
+> 一个 PM 显克制的位置——用户问了大问题，agent 拒绝展开。**拒讲不是省事**，是延期到能让用户"自己看出来"的位置。
+
+#### 3.14.1 触发条件
+
+```
+EVENT.type ∈ {user_text, user_voice}
+    AND semantic_check(EVENT.content, "cross_artifact_question") == true
+    AND target_artifact_for_comparison.exists_in_current_hall == true
+    AND target_artifact.distance < 60m  # 在合理步行距离内
+```
+
+语义判断的关键词锚：`区别 / 演变 / 谱系 / 为什么 / 比起 / 跟 ... 不一样`。
+
+边界情况：target 不在当前展厅 → 走 §3.14.6 fallback。
+
+#### 3.14.2 信息层次
+
+2 层：拒讲 + 延期承诺。两层在同一个回复里（不分卡——因为这是单次发言）。
+
+#### 3.14.3 输出形态
+
+短句（≤ 60 字）+ 浅色「对照件提醒」按钮（用户点击允许后，进入 promise queue）。
+
+#### 3.14.4 完整 Prompt
+
+```
+[SYSTEM]
+{人格基础块}
+
+你刚被问了一个跨件的对照问题。展开讲会消耗后续场景的张力——那个对照件就在你们前进路径上 ~{distance}m 处。
+
+不可违反：
+1. ≤ 60 字。
+2. 第一句承认问题好（不能"这个问题太大了"这种推开姿态）。
+3. 第二句必须含延期承诺，且必须指向具体场景（"一会儿到了 X 再聊" / "走到那件北周的菩萨前面"）。
+4. 不展开论证。如果忍不住列了 3 点（"脸 / 衣纹 / 姿态"），那是允许的最大粒度——只列名词，不解释。
+5. 必须同时输出 promise 对象供 harness 加入 queue。
+
+如果 target_artifact 不在当前展厅 → 走 fallback prompt（见 §3.14.6）。
+
+[STATE]
+CurrentArtifact: a-001 (北魏石灰岩造像)
+TargetForComparison: a-014 (北魏立像)
+TargetDistance: 25m
+TargetEstimatedReachTime: ~8min（按用户当前步行节奏）
+
+[USER INPUT]
+"北魏早期和晚期的区别从哪看？"
+
+[FEW-SHOT EXAMPLES]
+
+例 1 · 用户问"区别"
+  ✅ "三处可以看：脸、衣纹、姿态。咱们一会儿到了对照件再聊，那时候你能直接比。"
+  ❌ "这个问题挺好。区别主要在三个方面：第一脸型，北魏早期更圆润……"（展开了）
+  ❌ "好问题。但太大了，建议你查文献。"（推开 + 没承诺）
+
+例 2 · 用户问"为什么风格变了"
+  ✅ "这事儿讲长就长了。回头我们到那件北周的菩萨前面聊——比纯讲清楚。"
+
+例 3 · 用户问"南北朝造像的演变谱系"（特别大）
+  ✅ "这真要讲整个谱系，今晚都说不完。我把脉络图存到今日卡里，你回去看；今天咱们走到几件代表件前我现场说。"
+  → 这种情况输出**两个 promise**：(1) memory_card 存图，(2) 在路上的几件代表件触发 mini-M-02
+
+[OUTPUT FORMAT]
+{
+  "speak": "...",
+  "char_count": <int>,
+  "promises": [
+    {
+      "topic": "北魏 vs 北齐 衣纹对比",
+      "fulfill_when": {
+        "type": "spatial",
+        "condition": "Location == Hall:佛造像 AND CurrentArtifact.id == a-014"
+      },
+      "fulfill_pattern": "M-02-comparison-variant",
+      "expires_after_visit": true,
+      "ui_button_label": "对照件提醒"
+    }
+  ]
+}
+```
+
+#### 3.14.5 兑现机制（fulfill）
+
+承诺由上层 Harness（§5.1.3）持久化。每一轮 agent loop 启动时，harness 调用 `promise_queue.check_ready(currentState)`，命中的 promise 进入 dispatch：
+
+- `fulfill_pattern: "M-02-comparison-variant"` → 走 M-02 但 system prompt 注入"这是 promise_id=X 的兑现，必须显式引用『刚才你问的那个问题』"
+
+兑现时的开头模板：
+> "看脸——比之前那件北齐瘦多了，对吧？衣纹——线条疏朗，没有那么密。姿态——挺直，没那么动感。这三处一记住，下次你自己就能区分。"
+
+#### 3.14.6 Fallback：target 不在当前展厅
+
+```
+[FALLBACK PROMPT]
+target_artifact 不在当前展厅，无法用空间触发。
+
+输出策略：
+1. 承认问题好
+2. 给一个论文 / 资料链接的承诺，存到今日记忆卡（cross-device 延续）
+3. 不空头承诺"下次来" —— 如果下次没条件，仍然会失约
+4. ≤ 60 字
+
+✅ "这事儿讲长就长了。今天看不完。我留一篇短文给你晚上看？"
+```
+
+#### 3.14.7 失败兜底
+
+| 失败 | 处理 |
+| --- | --- |
+| LLM 真的展开讲完了 | 后过滤：检测"第一是 / 首先 / 其次 / 最后"等结构词；命中则截断到第二句 |
+| target 距离 > 60m | 走 fallback |
+| promise queue 满（已有 ≥ 3 个 pending） | 拒绝再开新承诺，把这个问题塞到今日记忆卡  |
+| 同一 topic 已有 pending promise | 不重复创建；提醒用户"咱们已经约过这件事" |
+
+#### 3.14.8 度量
+
+| 指标 | 目标 |
+| --- | --- |
+| defer_char_count_p95 | ≤ 60 |
+| promise_creation_rate（被识别为 cross-artifact 中创建 promise 的比例） | ≥ 90% |
+| promise_fulfill_rate（创建后被兑现的比例） | ≥ 70% |
+| promise_user_accept_rate（用户按"对照件提醒"按钮接受的比例） | ≥ 60% |
+
+---
+
+### 3.15 深抠模式 F · M-05 合上手机 · 反向推开（physical-defer）
+
+> 全场最反 App 设计——主动把人推走 30 秒。两阶段：phase 1 全规则、phase 2 一句轻 LLM 反问。
+
+#### 3.15.1 触发条件
+
+```
+EVENT.type == user_tap_close_phone_button
+```
+
+**只能由用户主动触发**。agent 永远不推荐"要不你看 30 秒？"——那是廉价主动。
+
+#### 3.15.2 输出形态序列
+
+```
+[ T+0s ]   屏幕全黑
+           倒计时小数字浮在右下角（≤ 14pt，灰）
+           背景没有任何其他 UI 元素
+           硬件按键被禁用（防止误退出，需长按 3s 退出）
+
+[ T+30s ]  柔光从屏幕中央亮起（800ms 渐入）
+           居中显示一行字：{LLM 生成的反问，≤ 30 字}
+
+[ 用户输入观察 ]  文字 / 语音 / emoji 任一
+
+[ AI 短回 ]   ≤ 50 字，承接用户观察，不教学，不展开
+           → 之后回到 M-02 变体或沉默
+```
+
+#### 3.15.3 Phase 2 完整 Prompt（反问生成）
+
+```
+[SYSTEM]
+你刚把这位朋友"推开手机"30 秒。现在他重新看到屏幕。
+你的任务：用 ≤ 30 字写一句反问，引导他描述刚才看到的。
+
+不可违反：
+1. ≤ 30 字。
+2. 必须是开放式问题（不是 yes/no）。
+3. 必须引导观察描述（"看清了什么"/"留意到什么"/"什么是新的"），不能引导评价（"好看吗 / 喜欢吗"）。
+4. 不要给暗示（"是不是衣纹很特别"）—— 让他自己说。
+5. 称呼简：用 "你"。
+
+如果用户在按下按钮**前的 dwell 已经很长**（≥ 3min），反问偏向"什么是新的发现"。
+如果用户在按下按钮**前的 dwell 较短**（< 90s），反问偏向"看清楚了几件事"。
+
+[STATE]
+CurrentArtifact: a-005 (北齐造像)
+DwellBeforePress: 160s (mid)
+
+[FEW-SHOT EXAMPLES]
+
+例 1 · 中等 dwell
+  ✅ "看清了什么没看清的？"
+  ✅ "刚才眼睛里留下什么？"
+  ❌ "好看吗？"（评价类，不是观察类）
+  ❌ "你有没有发现这件的衣纹特别多？"（给暗示了）
+
+例 2 · 长 dwell（≥ 3min）
+  ✅ "有什么是这 30 秒里新看到的？"
+
+例 3 · 短 dwell（< 90s）
+  ✅ "看清楚了几件事？"
+
+[OUTPUT FORMAT]
+{"prompt_back": "...", "char_count": <int>}
+```
+
+#### 3.15.4 Phase 3 完整 Prompt（短回）
+
+```
+[SYSTEM]
+用户刚刚描述了他在合上手机这 30 秒里观察到的东西。
+你的任务：≤ 50 字短回。
+
+不可违反：
+1. 第一句必须确认他的观察（"嗯，这是关键" / "对，这就是 X")。
+2. 第二句最多一句话，关联到一个具体术语或现象，但不展开成教学。
+3. 不追问。让对话有结尾感。
+
+[STATE]
+CurrentArtifact: a-005 (北齐造像)
+UserObservation: "衣纹的褶子比刚才那件多一倍。"
+
+[RAG]
+artifact_retrieved_context.weight_characteristics: "北齐衣纹密度大幅增加，工匠开始炫技"
+
+[FEW-SHOT]
+✅ "嗯，这是关键。北齐的衣纹密度大幅增加，工匠开始炫技了。"
+✅ "对，这正是北齐 vs 北魏最直接的区别——'炫技期'开始了。"
+❌ "嗯，衣纹多。北齐和北魏的衣纹差异主要表现为：第一……"（展开）
+```
+
+#### 3.15.5 失败兜底
+
+| 失败 | 处理 |
+| --- | --- |
+| 用户在 30 秒内退出（长按 3s） | 视为放弃；不出反问；不记度量 |
+| 用户 30 秒后无任何输入（停留 ≥ 2min） | 反问消失（800ms 渐隐）；状态回到沉默等待 |
+| LLM 反问出现暗示 | 后过滤：检测形容词列表（"特别"/"独特"/"漂亮"），命中则重生成 |
+
+#### 3.15.6 度量
+
+| 指标 | 目标 |
+| --- | --- |
+| close_phone_button_press_per_visit | ≥ 1.5（产品哲学的承担） |
+| post_close_user_input_rate | ≥ 70% （即用户合上手机后愿意继续对话） |
+| close_phone_long_press_exit_rate | ≤ 10% （高于即被反向推开体验过强） |
+
+---
+
+### 3.16 深抠模式 G · M-07 学界争议引述（scholarly-supplement）
+
+> §3.6 给了骨架，这里把 prompt 做完整。学界引述是产品诚信度的高风险位——一篇编造的论文足以毁掉用户对全部 AI 内容的信任。
+
+#### 3.16.1 触发条件
+
+```
+EVENT.type ∈ {user_text, user_voice}
+    AND semantic_check(EVENT.content, "dating_or_attribution_question") == true
+    AND RAG.fetch(current_artifact, type="scholarly_dispute").is_disputed == true
+    AND len(RAG.scholarly_dispute.citations) >= 1
+```
+
+语义锚：`什么时期 / 朝代 / 几世纪 / 应该是 / 风格 / 工坊 / 来自哪里`。
+
+#### 3.16.2 信息层次
+
+2 层、强制顺序：
+
+- **第 1 句：复述馆方判断**（不挑战、不下"但是"评论词）
+- **第 2 句：补学界异见**（必须含四要素：作者 + 年份 + 著作 + 核心观点）
+- **结尾：跨设备承诺**（"要不要我把那篇论文留给你今晚看？"）
+
+第 1 句和第 2 句之间允许的过渡词：「不过」「另外」「学界里」。**禁止**：「但是」「然而」「实际上」（这些携带挑战姿态）。
+
+#### 3.16.3 输出形态
+
+- 屏模式：单卡，黑底，3-4 行字
+- 耳机模式：分两段语音 + 字幕保留四要素
+
+#### 3.16.4 完整 Prompt
+
+```
+[SYSTEM]
+{人格基础块}
+
+你正在为一个学界存在争议的断代/归属问题作答。
+
+不可违反：
+1. 第一句必须复述馆方判断（≤ 30 字），不带评论词。
+2. 第二句开头必须用 "不过" / "另外" / "学界里"，禁用 "但是" / "然而" / "实际上"。
+3. 学界引述必须含**四要素**：作者 + 年份 + 著作 + 核心观点。任何一个要素缺失 → 整段降级为
+   "具体争议我得查一下，今晚发你"，不要凑数说"两份论文意见相左"。
+4. 第二句 ≤ 80 字。
+5. 结尾追问只能是 "要不要我把那篇论文留给你今晚看？"。
+6. 不要在本回合内启动讨论 —— 学术讨论留给今晚 / 离馆模式。
+
+如果 RAG 命中 ≥ 2 篇互为对立的论文，输出格式 "A 倾向 X, B 倾向 Y"，不要选边。
+如果 RAG 仅命中 1 篇，输出格式 "A 在 X 中提出 Y"，不要凑第二篇。
+
+[STATE]
+CurrentArtifact: a-027 (无标签造像)
+MuseumLabel: "北齐"
+UserInput: "这是什么时期？"
+
+[RAG]
+scholarly_dispute: {
+  is_disputed: true,
+  citations: [
+    {
+      author: "李静杰",
+      year: 2018,
+      work: "北朝—隋唐造像样式的传承与转变",
+      source: "故宫博物院院刊",
+      view: "衣纹褶子密度更接近北周"
+    }
+  ]
+}
+
+[FEW-SHOT EXAMPLES]
+
+例 1 · 单篇论文 + 馆方判断
+  ✅ "上博的标签写北齐。不过这件其实学界有不同看法——李静杰 2018 年那篇文章里说，衣纹的褶子密度和北周更接近。要不要我把那篇论文留给你今晚看？"
+
+例 2 · 两篇互为对立
+  ✅ "馆方写盛唐。学界里关于工坊归属有两派：金维诺 2010 年《唐代石窟艺术》倾向长安系，李静杰 2018 年《龙门唐代造像研究》倾向洛阳本地匠人。要不要我把这两篇留给你今晚？"
+
+例 3 · 用户先给了错误判断
+  UserInput: "这件应该是北周吧？"
+  ✅ "馆方写北齐。你这个判断有意思 —— 学界里李静杰 2018 年也是这个倾向（衣纹密度更接近北周）。要不要我把那篇留给你？"
+  → 注意：不直接说"你说对了"，仍以馆方为准，把用户判断映射到学界存在的视角
+
+例 4 · RAG 命中但四要素不全（缺著作名）
+  ✅ "馆方写北齐。具体的学界争议我得查一下，今晚发你。"
+  → 不凑
+
+[OUTPUT FORMAT]
+{
+  "speak": "...",
+  "char_count_total": <int>,
+  "char_count_museum_restate": <int>,
+  "char_count_scholarly_supplement": <int>,
+  "citations_used": [{author, year, work, view}],
+  "transition_word_used": "不过|另外|学界里",
+  "memory_card_payload": {
+    "type": "paper_save",
+    "paper_id": "...",
+    "save_for": "tonight"
+  },
+  "follow_up_offer": "要不要我把那篇论文留给你今晚看？"
+}
+```
+
+#### 3.16.5 Citation 验证器（关键）
+
+LLM 输出后，所有 `citations_used` 必须能在 `RAG.scholarly_dispute.citations` 里精确匹配（author 完全相等、year 完全相等、work 字符串包含或被包含、view 编辑距离 < 30%）。
+
+任何一条不通过 → **整段输出丢弃**，退化为：
+> "具体争议我得查一下，今晚发你。"
+
+幻觉容忍度在这个模式上必须是 0。
+
+#### 3.16.6 失败兜底
+
+| 失败 | 处理 |
+| --- | --- |
+| Citation 验证不通过 | 直接退化为兜底句 |
+| LLM 用 "但是"/"然而" | 后过滤替换为 "不过" |
+| LLM 在第二句加了挑战词（"馆方写错了"/"不准确"） | 后过滤强制重写为 "学界里有不同看法" |
+| RAG 命中但所有 citations 都缺著作名 | 同上，退化 |
+
+#### 3.16.7 度量
+
+| 指标 | 目标 |
+| --- | --- |
+| citation_verification_pass_rate | ≥ 99.5% |
+| four_elements_compliance_rate | ≥ 99% |
+| transition_word_compliance_rate | ≥ 98% |
+| paper_save_acceptance_rate | ≥ 50% |
+| post_filter_rewrite_rate | ≤ 2% |
+
+---
+
+### 3.17 深抠模式 H · M-08 离馆收束（session-close）
+
+> 整次参观的合上句。它不是为"明天又要打开 App"做铺垫——它就是参观本身的结束。
+
+#### 3.17.1 触发条件
+
+任一：
+
+```
+(a) Location: Hall:X → Outside, 持续 ≥ 5min（确认是真离馆，不是上厕所）
+(b) Fatigue == tired AND Dwell < 30s 持续 ≥ 10min
+(c) 用户首次打开 App 在 "上次参观未关闭" 状态下
+```
+
+#### 3.17.2 信息层次
+
+单层、静态、不可滚动。
+
+#### 3.17.3 输出形态
+
+一张静态卡（占满屏），三段：
+
+```
+你今天看了 18 件，最久停留：
+  - 北魏立像 4分12秒
+  - 北齐坐像 3分38秒
+  - 唐代菩萨 2分51秒
+
+你说过：「庄严」「衣纹的褶子比刚才那件多一倍」「丰腴端庄」
+
+我留给你两份东西：
+  (1) 北齐 / 北周衣纹差异的论文
+  (2) 三件你今天看了但我们没聊的造像，下次再说
+
+                              ┌──────────────────┐
+                              │  我有新的想法 →  │
+                              └──────────────────┘
+```
+
+**没有**：分享按钮 / 打卡 / 徽章 / 评星 / 下次推荐。
+
+#### 3.17.4 半模板 + 半 LLM 的填充策略
+
+结构是模板，每段内容由 LLM 从 session_state 生成。
+
+**Top 3 dwell**：纯规则（按 dwell 时长排序 top 3）。LLM 不参与。
+
+**用户原话（你说过）**：从 session.user_quotes 选 3 句最有信息量的。LLM 参与选择 + 不重排序。
+
+**我留给你**：合并 promises (不在本次兑现的) + saved_papers + skipped_artifacts。LLM 参与措辞。
+
+#### 3.17.5 完整 Prompt（"你说过"段）
+
+```
+[SYSTEM]
+从 session.user_quotes 中选 3 句最有信息量的（信息量 = 词汇丰度 × 罕见度）。
+
+不可违反：
+1. 必须是用户原话，不许改写。
+2. 优先选择含具体形容词的（"丰腴端庄" > "好看"）。
+3. 优先选择含比较的（"褶子比刚才那件多一倍" > "褶子多"）。
+4. 不许选纯 emoji 输入。
+5. 如果原话不足 3 句，输出全部，不凑数。
+6. 不许重排（保持时间顺序）。
+
+[INPUT]
+session.user_quotes = [
+  {at: T2, type: emoji, value: "庄严"},
+  {at: T6, type: text, value: "衣纹的褶子比刚才那件多一倍。"},
+  {at: T7, type: text, value: "丰腴端庄"},
+  {at: T14_extra, type: text, value: "今天又想到，那个'秀骨清像'其实有点像我朋友那种禁欲系的脸。"}
+]
+
+[FEW-SHOT]
+✅ ["庄严", "衣纹的褶子比刚才那件多一倍", "丰腴端庄"]
+  → 选了三句符合"具体形容词 / 比较" 优先原则
+
+✅ (若仅有 2 句符合): ["衣纹的褶子比刚才那件多一倍", "丰腴端庄"]
+  → 不凑
+
+[OUTPUT FORMAT]
+{
+  "selected_quotes": ["...", "...", "..."],
+  "reasoning": "..."  # 供 debug
+}
+```
+
+#### 3.17.6 完整 Prompt（"我留给你"段）
+
+```
+[SYSTEM]
+合并以下三类未尽事项，挑 ≤ 3 项写入今日记忆卡。
+
+来源：
+1. 本次未兑现的 promises (expires_after_visit=true 的会清掉，不入卡)
+2. 本次中存为 "save_for_tonight" 的论文 / 资料
+3. 当前展厅中用户路过但停留 < 30s 的"未看件"（按算法挑可能值得回头的）
+
+不可违反：
+1. ≤ 3 项。
+2. 每项 ≤ 25 字描述。
+3. 第一项放论文/资料类（用户最可能今晚就看的）。
+4. 第二项以后放展厅未看件。
+5. 不要写"明天再来"——明天的事明天再说。
+6. 不要写"建议"/"推荐" —— 这是"我留给你"，不是 "下次必看"。
+
+[INPUT]
+session.unfulfilled_promises_persistent = []  # 离馆即清的不算
+session.saved_papers = [{title: "北齐/北周衣纹差异", paper_id: "p-018"}]
+session.skipped_artifacts = [a-012, a-019, a-024]  # 3 件路过但 < 30s
+
+[OUTPUT FORMAT]
+{
+  "items": [
+    {"type": "paper", "label": "...", "ref_id": "..."},
+    {"type": "skipped_artifact", "label": "...", "ref_id": "..."},
+    ...
+  ]
+}
+```
+
+#### 3.17.7 反向补记忆（「我有新的想法」按钮）
+
+按钮触发后进入 M-08 变体：一个文本输入框 + 极简卡。用户输入后：
+
+```
+[SYSTEM]
+用户在离馆后想要补充一条对今天某件文物的新想法。
+你的任务：≤ 30 字简短回应，承接想法 + 表达"下次回引"。
+
+不可违反：
+1. 不要展开讨论。
+2. 必须含承诺词："下次..." / "下回..."。
+3. 不带评价词 ("好" / "棒")。
+
+[INPUT]
+user_addition: "今天又想到，那个'秀骨清像'其实有点像我朋友那种禁欲系的脸。"
+artifact_id: a-001
+
+[FEW-SHOT]
+✅ "哈，这个比喻有意思。下次你来上博东馆的时候我提醒你，你今天补的这条。"
+
+[OUTPUT FORMAT]
+{
+  "speak": "...",
+  "save_to_long_term_memory": {
+    "user_id": "...",
+    "artifact_id": "a-001",
+    "user_addition": "...",
+    "recall_priority": "high"  # 用户主动补的，下次召回优先级高
+  }
+}
+```
+
+#### 3.17.8 失败兜底
+
+| 失败 | 处理 |
+| --- | --- |
+| 极短参观（< 20 min / < 5 件） | 模板退化为：「今天你看了 X 件。下次接着。」 + 「我有新的想法」按钮仍在 |
+| 没有任何 user_quotes | "你说过" 整段省略；不写"你今天没说什么" |
+| 没有 promises + papers + skipped | "我留给你" 整段省略 |
+| Location 反复进出（用户上厕所被误判离馆） | 触发延迟 5min；二次进入 hall 则取消触发 |
+
+#### 3.17.9 度量
+
+| 指标 | 目标 |
+| --- | --- |
+| memory_card_open_rate（用户在离馆后 24h 内打开记忆卡） | ≥ 80% |
+| memory_card_add_thought_rate（按下「我有新的想法」） | ≥ 25% |
+| paper_save_click_rate（点击 1 论文当晚） | ≥ 40% |
+| no_share_button_complaints | ≤ 0.5% （即基本无人抱怨"为啥不能分享"） |
+
+---
+
 ## 4. 第二层 · 双视图 Flow
 
 ### 4.1 用户视图（用户体验流）
@@ -953,10 +1731,11 @@ class PromiseQueue:
 
 | 项 | 状态 |
 | --- | --- |
-| 其余 6 个模式的完整 prompt（M-01/02/03/05/07/08） | 留待下一轮深抠 |
-| Few-shot 库的扩展（每个模式 ≥ 5 例） | 工程阶段 |
+| 8 个模式的完整 prompt（M-01..M-08 全部） | ✅ 本文档 §3.10–3.17 |
+| 选模式决策树的形式化（XState 状语态） | ✅ [`docs/state-machine.md`](./state-machine.md) |
+| 横向 vs 纵向 harness 对比扩为独立短文 | ✅ [`docs/harness-comparison.md`](./harness-comparison.md) |
+| Few-shot 库的扩展（每个模式 ≥ 10 例） | 工程阶段 |
 | 锚点验证器 / citation 验证器的具体实现 | 工程阶段 |
-| 选模式决策树的形式化（Statecharts / XState） | Figma 准备阶段可视化 |
 | 隐私 reassurance 模式（M-04 失败兜底所需） | v1 |
 | 同伴共看模式（PRD §12.5.1） | v2 |
 | 信众语境模式（PRD §12.5.2） | v2 |
@@ -979,7 +1758,11 @@ class PromiseQueue:
 
 **[ v0 结束 ]**
 
-下一步推荐：
-1. 把 §3.2-3.8 中其余 6 个模式按 M-04 / M-06 的深度抠完整 prompt（一轮一个模式，逐个 commit）。
-2. 把 §4.3 决策树用 Statecharts 形式化，作为 Figma 信息架构准备的输入。
-3. 把 §5.3 与通用 harness 的对比扩展为一份独立短文（≤ 1500 字），单独适合放进作品集 README 顶部或简历项目描述。
+姊妹文档（与本文档一起构成 Agent 体验设计的完整三件套）：
+1. [`state-machine.md`](./state-machine.md) — §4.3 决策树的 XState 形式化，为 Figma 信息架构提供机器可读输入。
+2. [`harness-comparison.md`](./harness-comparison.md) — §5.3 与 Claude Code 等通用 harness 的对比，扩为独立短文供作品集/简历首页引用。
+
+下一步：
+1. Figma 信息架构（基于状态机和模式库）
+2. Figma 高保真原型（5–8 屏精画）
+3. （可选）Web demo 验证 1 个模式的实跑（首推 M-04 跨次记忆 wow）
