@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0d0c0a" />
+<title>首博 5/18 · 5 版横向对比</title>
+<style>
+:root {
+  --bg: #0d0c0a;
+  --panel: #15140f;
+  --panel-2: #1e1c15;
+  --ink: #e8e2d4;
+  --dim: #7a7468;
+  --faint: #4a463e;
+  --line: #26221b;
+  --gold: #c9a96b;
+  --gold-dim: #6e5d3a;
+  --rust: #a35c3a;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: env(safe-area-inset-top, 0) 20px 80px;
+}
+header {
+  padding: 40px 0 22px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 30px;
+}
+h1 {
+  font-family: "Songti SC", "Source Han Serif SC", serif;
+  font-size: 28px; color: var(--gold);
+  margin: 0 0 12px; font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.sub { color: var(--dim); font-size: 13px; line-height: 1.7; }
+.sub strong { color: var(--ink); font-weight: 500; }
+
+/* Score chart */
+.chart {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px 24px;
+  margin-bottom: 32px;
+}
+.chart h2 {
+  font-size: 11px; letter-spacing: 0.2em;
+  color: var(--gold); text-transform: uppercase;
+  margin: 0 0 18px; font-weight: 600;
+}
+.chart-row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 0; border-bottom: 1px solid var(--line);
+}
+.chart-row:last-child { border-bottom: none; }
+.chart-label { font-size: 13px; color: var(--dim); min-width: 130px; }
+.chart-bar-cell { flex: 1; display: flex; align-items: center; gap: 10px; }
+.chart-bar {
+  flex: 1; height: 8px;
+  background: var(--panel-2); border-radius: 4px; overflow: hidden;
+  position: relative;
+}
+.chart-bar-fill {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  background: linear-gradient(90deg, var(--gold-dim), var(--gold));
+  border-radius: 4px;
+}
+.chart-bar-fill.pm { background: linear-gradient(90deg, var(--gold-dim), var(--gold)); }
+.chart-bar-fill.ai { background: linear-gradient(90deg, #5a4a3a, var(--rust)); }
+.chart-score {
+  min-width: 36px; text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--gold); font-size: 13px; font-weight: 600;
+}
+
+/* Version cards */
+.versions {
+  display: grid; gap: 16px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .versions { grid-template-columns: 1fr 1fr; }
+  .versions .v5 { grid-column: 1 / -1; }
+}
+.v {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px 24px;
+  position: relative;
+  transition: border-color 0.2s;
+}
+.v:hover { border-color: var(--gold-dim); }
+.v.v5 { border-color: var(--gold-dim); background: linear-gradient(160deg, var(--panel), var(--panel-2)); }
+.v-head {
+  display: flex; align-items: baseline; gap: 12px;
+  margin-bottom: 6px;
+}
+.v-name {
+  font-family: "Songti SC", serif;
+  font-size: 22px; color: var(--gold);
+  font-weight: 500;
+}
+.v-tag {
+  font-size: 10px; letter-spacing: 0.18em;
+  color: var(--gold-dim); text-transform: uppercase;
+  padding: 3px 8px; border: 1px solid var(--gold-dim); border-radius: 100px;
+}
+.v.recommended .v-tag { color: var(--gold); border-color: var(--gold); background: rgba(201,169,107,0.08); }
+.v-thesis {
+  font-family: "Songti SC", serif;
+  color: var(--ink); font-size: 15px;
+  margin-bottom: 14px; line-height: 1.7;
+  font-style: normal;
+}
+.v-thesis strong { color: var(--gold); font-weight: 600; }
+.v-meta {
+  display: flex; gap: 18px; margin-bottom: 14px;
+  font-size: 11px; letter-spacing: 0.05em; color: var(--dim);
+}
+.v-meta span strong { color: var(--ink); font-weight: 500; }
+.v-key {
+  font-size: 13.5px; color: var(--ink);
+  margin-bottom: 16px; line-height: 1.7;
+}
+.v-key ul { margin: 0; padding-left: 18px; }
+.v-key li { margin-bottom: 4px; }
+.v-key li strong { color: var(--gold); }
+.v-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px;
+  background: transparent;
+  border: 1px solid var(--gold-dim); border-radius: 100px;
+  color: var(--gold); font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+}
+.v-cta:hover, .v-cta:active { background: var(--panel-2); border-color: var(--gold); }
+.v.recommended .v-cta { background: var(--gold); color: #1a1610; border-color: var(--gold); font-weight: 600; }
+.v-score-mini {
+  position: absolute; top: 22px; right: 24px;
+  display: flex; gap: 10px;
+  font-size: 11px; color: var(--dim);
+  letter-spacing: 0.05em;
+}
+.v-score-mini span { font-variant-numeric: tabular-nums; }
+.v-score-mini strong { color: var(--gold); font-weight: 600; }
+
+/* Evolution narrative */
+.evo {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 22px 24px;
+  margin-top: 32px;
+}
+.evo h2 {
+  font-family: "Songti SC", serif;
+  font-size: 17px; color: var(--gold);
+  margin: 0 0 16px; font-weight: 500;
+}
+.evo p { color: var(--ink); font-size: 14px; line-height: 1.78; margin: 0 0 12px; }
+.evo p:last-child { margin-bottom: 0; }
+.evo strong { color: var(--gold); }
+.evo em { color: var(--ink); font-style: normal; border-bottom: 1px dashed var(--gold-dim); padding-bottom: 1px; }
+
+footer {
+  margin-top: 50px; padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--faint); font-size: 11px;
+  letter-spacing: 0.1em;
+}
+footer a { color: var(--gold-dim); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header>
+  <h1>首博「玉米·黄金·美洲豹」体验 · 5 版横向</h1>
+  <div class="sub">
+    <strong>2026-05-18 实地 · 0 RAG 主语料 · 4 小时</strong><br/>
+    5 个 agent 迭代(critic-led × 1 / innovator-led × 3 / synthesis × 1)。
+    每个版本是同一目标的不同押注。<strong>明天选一个用,或 4 个段分别用不同版本</strong>。
+  </div>
+</header>
+
+<div class="chart">
+  <h2>评分演进(PM · AI 招聘官 双层)</h2>
+  <div class="chart-row">
+    <div class="chart-label">v1 · baseline</div>
+    <div class="chart-bar-cell">
+      <div class="chart-bar"><div class="chart-bar-fill pm" style="width: 60%"></div></div>
+      <div class="chart-score">3.0</div>
+    </div>
+    <div class="chart-bar-cell">
+      <div class="chart-bar"><div class="chart-bar-fill ai" style="width: 44%"></div></div>
+      <div class="chart-score">2.2</div>
+    </div>
+  </div>
+  <div class="chart-row">
+    <div class="chart-label">v2 · critic-led</div>
+    <div class="chart-bar-cell">
+      <div class="chart-bar"><div class="chart-bar-fill pm" style="width: 76%"></div></div>
+      <div class="chart-score">3.8</div>
+    </div>
+    <div class="chart-bar-cell">
+      <div class="chart-bar"><div class="chart-bar-fill ai" style="width: 74%"></div></div>
+      <div class="chart-score">3.7</div>
+    </div>
+  </div>
+  <div class="chart-row">
+    <div class="chart-label">v3 · 动态触发</div>
+    <div class="chart-bar-cell">
+      <div class="chart-bar"><div class="chart-bar-fill pm" style="width: 68%"></div></div>
+      <div class="chart-score">3.4</div>
+    </div>
+    <div class="chart-bar-cell">
+      <div class="chart-bar"><div class="chart-bar-fill ai" style="width: 70%"></div></div>
+      <div class="chart-score">3.5</div>
+    </div>
+  </div>
+  <div class="chart-row">
+    <div class="chart-label">v4 · 极简 AI 不在</div>
+    <div class="chart-bar-cell">
+      <div class="chart-bar"><div class="chart-bar-fill pm" style="width: 82%"></div></div>
+      <div class="chart-score">4.1</div>
+    </div>
+    <div class="chart-bar-cell">
+      <div class="chart-bar"><div class="chart-bar-fill ai" style="width: 78%"></div></div>
+      <div class="chart-score">3.9</div>
+    </div>
+  </div>
+  <div class="chart-row">
+    <div class="chart-label" style="color: var(--gold);">v5 · 立场密度 + 批注</div>
+    <div class="chart-bar-cell">
+      <div class="chart-bar"><div class="chart-bar-fill pm" style="width: 88%"></div></div>
+      <div class="chart-score">—</div>
+    </div>
+    <div class="chart-bar-cell">
+      <div class="chart-bar"><div class="chart-bar-fill ai" style="width: 90%"></div></div>
+      <div class="chart-score">—</div>
+    </div>
+  </div>
+  <div style="margin-top: 14px; font-size: 11px; color: var(--faint); letter-spacing: 0.05em;">
+    左为 <strong style="color: var(--gold);">资深 PM</strong> 评分,右为 <strong style="color: var(--rust);">AI 招聘官(Agent / harness 方向)</strong>评分。v5 未经审查;条形为 5/18 实测前推测,不是 Critic 评分。
+  </div>
+</div>
+
+<div class="versions">
+
+<div class="v">
+  <div class="v-score-mini"><span>PM <strong>3.0</strong></span><span>AI <strong>2.2</strong></span></div>
+  <div class="v-head">
+    <span class="v-name">v1</span>
+    <span class="v-tag">baseline</span>
+  </div>
+  <div class="v-thesis"><strong>多说 · 多模态默认</strong> · 17 触点 + 9 名义开口(实际 13)+ 文字 / 照片 / 语音三模态全开</div>
+  <div class="v-meta">
+    <span><strong>触点</strong> 17</span>
+    <span><strong>开口</strong> 13</span>
+    <span><strong>模态</strong> 3</span>
+    <span><strong>行</strong> 1131</span>
+  </div>
+  <div class="v-key">
+    <ul>
+      <li>线性 slideshow · btn-next 永远可点</li>
+      <li>9 / 13 数字不诚实 · "我开口"装文艺导师腔</li>
+      <li>多模态堆砌嫌疑</li>
+    </ul>
+  </div>
+  <a class="v-cta" href="v1/" target="_blank">打开 v1 →</a>
+</div>
+
+<div class="v">
+  <div class="v-score-mini"><span>PM <strong>3.8</strong></span><span>AI <strong>3.7</strong></span></div>
+  <div class="v-head">
+    <span class="v-name">v2</span>
+    <span class="v-tag">critic-led 精雕</span>
+  </div>
+  <div class="v-thesis"><strong>砍 · 节流 · echo</strong> · 12 触点 + 9 开口(含 1 echo)+ 节流 30-60s + AI 引用 anchor 中段</div>
+  <div class="v-meta">
+    <span><strong>触点</strong> 12</span>
+    <span><strong>开口</strong> 9</span>
+    <span><strong>模态</strong> 1</span>
+    <span><strong>行</strong> 1012</span>
+  </div>
+  <div class="v-key">
+    <ul>
+      <li>数字诚实(brand / TOC / export 三处一致)</li>
+      <li>Agent mechanic 真兑现:节流 + AI echo + silence 视觉分离</li>
+      <li><em>副作用</em>:用结构 narrate 克制 · anchor 升级成 KPI 展示橱窗</li>
+    </ul>
+  </div>
+  <a class="v-cta" href="v2/" target="_blank">打开 v2 →</a>
+</div>
+
+<div class="v">
+  <div class="v-score-mini"><span>PM <strong>3.4</strong></span><span>AI <strong>3.5</strong></span></div>
+  <div class="v-head">
+    <span class="v-name">v3</span>
+    <span class="v-tag">innovator · 动态触发</span>
+  </div>
+  <div class="v-thesis"><strong>状态机姿态 · mode-shift · 静默配额</strong> · 11 触点 + 6 开口(4 重 mode-shift / 2 轻)+ status badge + 5 chip 显式声明</div>
+  <div class="v-meta">
+    <span><strong>触点</strong> 11</span>
+    <span><strong>开口</strong> 6</span>
+    <span><strong>模态</strong> 1</span>
+    <span><strong>行</strong> 1098</span>
+  </div>
+  <div class="v-key">
+    <ul>
+      <li>"状态机驱动"自封标签(但 deriveAIState 5 行 if-else,招聘官 5 秒看穿)</li>
+      <li>静默配额姿态颠倒(用户"等等"扣 AI 配额 · 内疚操纵)</li>
+      <li><em>反跌</em>:innovator 激进哲学 + 实现深度浅 = 表演性 mechanic</li>
+    </ul>
+  </div>
+  <a class="v-cta" href="v3/" target="_blank">打开 v3 →</a>
+</div>
+
+<div class="v">
+  <div class="v-score-mini"><span>PM <strong>4.1</strong></span><span>AI <strong>3.9</strong></span></div>
+  <div class="v-head">
+    <span class="v-name">v4</span>
+    <span class="v-tag">innovator · 极简 AI 不在</span>
+  </div>
+  <div class="v-thesis"><strong>黑屏默认 · 1px 呼吸金点 · 5 触点</strong> · 短按召唤 / 长按 1.5s 露下次时点 + PS 滑动 12 卡 + closed 自毁</div>
+  <div class="v-meta">
+    <span><strong>触点</strong> 5</span>
+    <span><strong>开口</strong> 5</span>
+    <span><strong>模态</strong> 1</span>
+    <span><strong>行</strong> 837</span>
+  </div>
+  <div class="v-key">
+    <ul>
+      <li>v3 5 条副作用全数真反</li>
+      <li>4 mode 是真状态机(blackout / touchpoint / postscript / closed)</li>
+      <li><em>失分</em>:PS 标题"今天我克制住没说的事" → narrate 克制反例 + closed"明晚见 / 不要回头打开"导师腔</li>
+    </ul>
+  </div>
+  <a class="v-cta" href="v4/" target="_blank">打开 v4 →</a>
+</div>
+
+<div class="v v5 recommended">
+  <div class="v-score-mini"><span style="color: var(--gold);">推 v5</span></div>
+  <div class="v-head">
+    <span class="v-name">v5</span>
+    <span class="v-tag">合成 · 立场密度 + 批注</span>
+  </div>
+  <div class="v-thesis"><strong>AI 终于真有意见</strong> · 形态 90% 继承 v4(中央呼吸金点 · 5 触点 · PS · closed),内容 100% 重写:3 个中段触点改成"我不同意 X · 我倾向 Y · 你可反驳"——回到 PRD §6.2 第 4 条"有立场但不傲慢"。每段 AI 开口下 9px PM 批注。</div>
+  <div class="v-meta">
+    <span><strong>触点</strong> 5</span>
+    <span><strong>开口</strong> 4(反对 3 + 次日 1)</span>
+    <span><strong>模态</strong> 1</span>
+    <span><strong>行</strong> 830</span>
+  </div>
+  <div class="v-key">
+    <ul>
+      <li><strong>立场密度 ≠ 字数</strong>:总字数减半,但每段含"我倾向 / 我不同意 / 我犹豫"</li>
+      <li><strong>批注模式默认开</strong>:9px 一行 PM 自注,?guest=1 关</li>
+      <li><strong>against-translation 一卡押注最具体</strong>:surface 翻译的权力维度(原则 C)</li>
+      <li><strong>next-day 改"最不同意我哪条"</strong>:同伴邀请反驳,不再谈感受</li>
+      <li><strong>closed 极简</strong>:纯黑 + 9px"今天的 app 已过期" + 右下角 12px 显示 anchor(还给一次)</li>
+    </ul>
+  </div>
+  <a class="v-cta" href="v5/" target="_blank">打开 v5 →</a>
+</div>
+
+</div>
+
+<div class="evo">
+  <h2>5 版的演进逻辑</h2>
+  <p><strong>v1</strong> 是 PM 一稿的 baseline:多说 + 多模态 + 文艺装腔。Critic 评 REDIRECT(PM 3.0 / AI 2.2)。</p>
+  <p><strong>v2</strong> 是 Critic-led 精雕:砍开口 / 砍模态 / 加节流 / AI echo 中段引用 anchor。双层评分都过 3,但 critic-led 的副作用浮现:<em>用结构 narrate 克制</em>(显式 ai-silence 频道)、anchor 被 surface 3 次像被记录、用户从"人"变"受试者"。</p>
+  <p><strong>v3</strong> 是 Innovator 提案 3 落地(动态触发):状态机 + mode-shift + status badge + 静默配额。哲学激进但实现深度浅——"状态机"是名词不是机制,静默配额姿态颠倒。<em>反跌</em>到 PM 3.4 / AI 3.5。</p>
+  <p><strong>v4</strong> 是 Innovator 提案 2 落地(极致缺席):黑屏默认 + 5 触点 + 1px 呼吸金点。v3 的 5 条副作用全数真反。<strong>4 版第一次双层都过 4 · PM 4.1 / AI 3.9 综合 4.0</strong>。但 PS 段 + closed 段集中失分——"今天我克制住没说的事"是 narrate 克制反例。</p>
+  <p><strong>v5</strong> 不是另一种激进。它是 <em>回到 PRD §6 人格原始诉求</em>——v1-v4 4 轮里 AI 说的内容**几乎没变过**(maya-jade 那段"玉 = 玉米"从 v1 到 v4 一字未改),v5 第一次让 AI 真有 3 件具体不同意的事。形态继承 v4 的"AI 不在",但 AI 终于"有意见"。这是 4 轮迭代里第一次 AI 不只是讲解员的反面,而是有立场的同行者。</p>
+  <p style="color: var(--gold); margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line);"><strong>关于明天 5/18 用哪个</strong>:推 v5 整场。或:玛雅厅用 v2(节流),西潘厅用 v5(立场),综合用 v4(克制)。两种用法都合 dogfood 目的——拿到不同维度的真实反馈。</p>
+</div>
+
+<footer>
+  生成于 5 个 agent 4 轮迭代 · Experience-Critic × 4 / Innovator × 4 / Orchestrator 综合 / 0 RAG / 主线起于 2026-05-17
+  · <a href="https://github.com/Longwind1984/prac_Museum/tree/claude/install-superpower-plugin-bh2Mg/agents" target="_blank">team/agents</a>
+</footer>
+
+</div>
+</body>
+</html>
