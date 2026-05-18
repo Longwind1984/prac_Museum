@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+<meta name="theme-color" content="#0d0c0a" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>一起看 · 首博 · v3(动态触发)· 2026-05-18</title>
+<style>
+:root {
+  --bg: #0d0c0a;
+  --panel: #15140f;
+  --panel-2: #1e1c15;
+  --ink: #e8e2d4;
+  --dim: #7a7468;
+  --faint: #4a463e;
+  --line: #26221b;
+  --gold: #c9a96b;
+  --gold-dim: #6e5d3a;
+  --rust: #a35c3a;
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
+}
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body {
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  font-size: 16px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+body { min-height: 100vh; min-height: 100dvh; }
+
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(13,12,10,0.94);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: calc(var(--safe-top) + 10px) 14px 8px;
+  display: flex; align-items: center; gap: 8px;
+}
+.brand {
+  font-size: 11px; letter-spacing: 0.16em;
+  color: var(--gold); flex: 1; font-weight: 500;
+}
+.brand small { color: var(--dim); margin-left: 6px; letter-spacing: 0.08em; }
+.tap {
+  width: 34px; height: 34px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: transparent; border: 1px solid var(--line);
+  border-radius: 17px; color: var(--ink);
+  cursor: pointer; font-size: 14px;
+}
+.tap:active { border-color: var(--gold); color: var(--gold); }
+
+/* ============ STATUS BADGE (v3 核心) ============ */
+.status-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  height: 28px; padding: 0 10px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+  font-size: 10px; letter-spacing: 0.06em;
+  color: var(--dim); cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.status-badge:active { border-color: var(--gold-dim); }
+.status-badge .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--dim);
+  transition: background 0.3s, transform 0.3s;
+}
+.status-badge.listening .dot { background: var(--gold-dim); animation: breathe 3s ease-in-out infinite; }
+.status-badge.waiting .dot { background: var(--rust); }
+.status-badge.soon .dot { background: var(--gold); animation: pulse-fast 1s ease-in-out infinite; }
+.status-badge.speaking .dot { background: var(--gold); transform: scale(1.4); }
+.status-badge.away .dot { background: var(--faint); }
+.status-badge.speaking { color: var(--gold); border-color: var(--gold-dim); }
+@keyframes breathe { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+@keyframes pulse-fast { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+/* state chip picker (sticky 下行,显式声明) */
+.state-bar {
+  position: sticky; top: calc(var(--safe-top) + 50px); z-index: 49;
+  background: rgba(13,12,10,0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 8px 14px;
+  display: flex; gap: 6px; overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.state-bar::-webkit-scrollbar { display: none; }
+.state-chip {
+  flex-shrink: 0;
+  padding: 6px 12px;
+  border: 1px solid var(--line); border-radius: 100px;
+  background: transparent; color: var(--dim);
+  font-size: 12px; letter-spacing: 0.04em;
+  cursor: pointer; font-family: inherit;
+}
+.state-chip:active { background: var(--panel); }
+.state-chip.active { border-color: var(--gold); color: var(--gold); background: var(--panel); }
+
+/* ============ MAIN ============ */
+main {
+  padding: 24px 22px 140px;
+  max-width: 640px; margin: 0 auto;
+}
+
+.phase-label {
+  display: inline-block;
+  font-size: 11px; letter-spacing: 0.12em;
+  color: var(--gold); text-transform: uppercase;
+  margin-bottom: 10px; font-weight: 500;
+}
+.phase-time { display: block; margin-bottom: 16px; color: var(--dim); font-size: 13px; font-variant-numeric: tabular-nums; }
+.phase-time strong { color: var(--ink); font-weight: 500; }
+
+/* AI speak — 真出现时 */
+.ai-speak {
+  position: relative;
+  background: var(--panel);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+  padding: 18px 20px 18px 22px;
+  margin: 14px 0 24px;
+  font-family: "Songti SC", "Source Han Serif SC", "Noto Serif CJK SC", Georgia, serif;
+  font-size: 17px; line-height: 1.78; letter-spacing: 0.01em;
+  animation: aiFadeIn 0.6s ease-out;
+}
+@keyframes aiFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.ai-speak-label {
+  display: block; font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 10px; letter-spacing: 0.2em;
+  color: var(--gold-dim); text-transform: uppercase;
+  margin-bottom: 10px; font-weight: 600;
+}
+.ai-speak p { margin: 0 0 12px; }
+.ai-speak p:last-child { margin-bottom: 0; }
+.ai-speak strong { color: var(--gold); font-weight: 600; }
+
+/* Sys-text (no AI speak, no narrate "克制") — 反 v2 副作用 */
+.sys-text {
+  margin: 14px 0 22px;
+  color: var(--ink); font-size: 15px; line-height: 1.75;
+}
+.sys-text p { margin: 0 0 12px; }
+.sys-text p:last-child { margin-bottom: 0; }
+.sys-text strong { color: var(--gold); font-weight: 600; }
+
+/* User action */
+.user-action { margin: 18px 0; }
+.user-action-label {
+  font-size: 11px; letter-spacing: 0.18em;
+  color: var(--dim); text-transform: uppercase;
+  margin-bottom: 10px; font-weight: 600;
+}
+.user-action-body { font-size: 15.5px; line-height: 1.72; color: var(--ink); }
+.user-action-body p { margin: 0 0 10px; }
+.user-action-body p:last-child { margin-bottom: 0; }
+.user-action-body code {
+  background: var(--panel-2); padding: 1px 6px; border-radius: 3px;
+  font-family: ui-monospace, monospace; font-size: 0.92em; color: var(--gold);
+}
+
+/* Note */
+.note-zone { margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--line); }
+.note-zone-label {
+  font-size: 11px; letter-spacing: 0.18em;
+  color: var(--dim); text-transform: uppercase;
+  margin-bottom: 10px; font-weight: 600;
+  display: flex; align-items: center; gap: 8px;
+}
+.note-zone-label .saved {
+  font-size: 10px; color: var(--gold); letter-spacing: 0.1em;
+  opacity: 0; transition: opacity 0.3s;
+}
+.note-zone-label .saved.show { opacity: 1; }
+textarea.note {
+  width: 100%; min-height: 80px;
+  background: var(--panel); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 12px 14px;
+  font-family: inherit; font-size: 15px; line-height: 1.6;
+  resize: vertical; -webkit-appearance: none;
+}
+textarea.note:focus { outline: none; border-color: var(--gold-dim); }
+textarea.note::placeholder { color: var(--faint); }
+
+.note-tools { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.tool-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid var(--line); border-radius: 100px;
+  color: var(--dim); font-size: 13px;
+  cursor: pointer; font-family: inherit;
+}
+.tool-btn:active { border-color: var(--gold-dim); color: var(--gold); }
+.tool-btn svg { width: 14px; height: 14px; }
+.tool-btn input[type=file] { display: none; }
+
+.attachments { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+.attach-thumb {
+  width: 64px; height: 64px; border-radius: 4px;
+  background-size: cover; background-position: center;
+  border: 1px solid var(--line); position: relative;
+}
+.attach-thumb .x {
+  position: absolute; top: -6px; right: -6px;
+  background: var(--rust); color: white;
+  width: 18px; height: 18px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 10px; cursor: pointer;
+}
+
+/* anchor recall (synth) */
+.ai-recall {
+  margin: 18px 0;
+  padding: 16px 18px;
+  background: var(--panel-2);
+  border-left: 3px solid var(--rust);
+  border-radius: 0 4px 4px 0;
+}
+.ai-recall-label {
+  font-size: 10px; letter-spacing: 0.2em;
+  color: var(--rust); text-transform: uppercase;
+  margin-bottom: 8px; font-weight: 600;
+}
+.ai-recall-quote {
+  font-family: "Songti SC", "Source Han Serif SC", Georgia, serif;
+  font-size: 16px; color: var(--ink);
+  padding: 6px 0 8px 12px;
+  border-left: 2px solid var(--rust);
+  white-space: pre-wrap;
+}
+.ai-recall-empty { color: var(--faint); font-style: normal; font-size: 13px; }
+
+/* ============ MODE SHIFT (核心 v3 mechanic) ============ */
+.mode-shift {
+  margin: 16px 0 24px;
+  padding: 12px 14px;
+  background: rgba(201, 169, 107, 0.04);
+  border: 1px dashed var(--gold-dim);
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--gold-dim);
+  display: flex; align-items: center; gap: 10px;
+}
+.mode-shift-text { flex: 1; letter-spacing: 0.02em; }
+.mode-shift .yes, .mode-shift .later {
+  padding: 6px 12px; border-radius: 100px;
+  border: 1px solid var(--gold-dim);
+  background: transparent; color: var(--gold);
+  font-size: 11px; cursor: pointer; font-family: inherit;
+  letter-spacing: 0.05em;
+}
+.mode-shift .yes:active { background: var(--panel-2); }
+.mode-shift .later { color: var(--dim); border-color: var(--line); }
+.mode-shift .later:active { color: var(--ink); }
+
+/* ============ NAV BOTTOM ============ */
+nav.bottom {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: rgba(13,12,10,0.96);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+  padding: 12px 16px calc(12px + var(--safe-bottom));
+  z-index: 30;
+}
+nav.bottom .row { display: flex; gap: 10px; align-items: center; }
+nav.bottom .nav-btn {
+  flex: 1; padding: 14px 16px;
+  background: var(--panel); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 8px;
+  font-size: 15px; font-weight: 500;
+  cursor: pointer; font-family: inherit;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+nav.bottom .nav-btn:active { background: var(--panel-2); }
+nav.bottom .nav-btn.primary { background: var(--gold); color: #1a1610; border-color: var(--gold); font-weight: 600; }
+nav.bottom .nav-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* ============ STATUS SHEET (从底部弹) ============ */
+.sheet-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 80; display: none;
+}
+.sheet-overlay.show { display: block; }
+.sheet {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: var(--bg);
+  border-radius: 16px 16px 0 0;
+  padding: 20px 22px calc(28px + var(--safe-bottom));
+  z-index: 81;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  border-top: 1px solid var(--line);
+}
+.sheet.show { transform: translateY(0); }
+.sheet-handle {
+  width: 36px; height: 4px; border-radius: 2px;
+  background: var(--line); margin: 0 auto 18px;
+}
+.sheet h3 {
+  font-family: "Songti SC", serif;
+  font-size: 17px; color: var(--gold);
+  margin: 0 0 14px; font-weight: 500;
+}
+.sheet-row { margin-bottom: 16px; }
+.sheet-row-label {
+  font-size: 10px; letter-spacing: 0.16em;
+  color: var(--dim); text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.sheet-row-body { color: var(--ink); font-size: 14.5px; line-height: 1.65; }
+.sheet-row-body strong { color: var(--gold); }
+.quota-display {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 12px; border-radius: 100px;
+  background: var(--panel-2); border: 1px solid var(--line);
+  color: var(--gold); font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+.quota-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); display: inline-block;
+}
+.quota-display.exhausted { color: var(--dim); }
+.quota-display.exhausted .quota-dot { background: var(--faint); }
+
+/* TOC */
+.toc-overlay {
+  position: fixed; inset: 0;
+  background: rgba(13,12,10,0.96);
+  backdrop-filter: blur(12px); z-index: 90;
+  display: none; flex-direction: column;
+  padding: calc(var(--safe-top) + 20px) 20px calc(20px + var(--safe-bottom));
+  overflow-y: auto;
+}
+.toc-overlay.show { display: flex; }
+.toc-overlay h2 { font-family: "Songti SC", serif; font-size: 22px; color: var(--gold); margin: 0 0 8px; font-weight: 500; }
+.toc-overlay .toc-sub { font-size: 12px; color: var(--dim); margin-bottom: 24px; letter-spacing: 0.12em; }
+.toc-overlay .toc-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 12px 14px; margin: 6px 0;
+  background: var(--panel); border-radius: 6px;
+  border: 1px solid var(--line); cursor: pointer;
+}
+.toc-overlay .toc-item:active { border-color: var(--gold-dim); }
+.toc-overlay .toc-item.current { border-color: var(--gold); }
+.toc-overlay .toc-item.has-note::after { content: '●'; color: var(--gold); font-size: 8px; align-self: center; }
+.toc-time { color: var(--gold); font-size: 12px; font-weight: 600; min-width: 52px; font-variant-numeric: tabular-nums; padding-top: 1px; }
+.toc-title { color: var(--ink); font-size: 14px; flex: 1; line-height: 1.5; }
+.toc-close {
+  position: absolute; top: calc(var(--safe-top) + 14px); right: 14px;
+  width: 36px; height: 36px; border-radius: 18px;
+  background: var(--panel); border: 1px solid var(--line);
+  color: var(--ink); font-size: 18px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* Export */
+.export-overlay {
+  position: fixed; inset: 0;
+  background: rgba(13,12,10,0.96);
+  backdrop-filter: blur(12px); z-index: 95;
+  display: none; flex-direction: column;
+  padding: calc(var(--safe-top) + 16px) 16px calc(16px + var(--safe-bottom));
+}
+.export-overlay.show { display: flex; }
+.export-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.export-head h2 { font-family: "Songti SC", serif; font-size: 18px; color: var(--gold); margin: 0; flex: 1; }
+.export-tabs { display: flex; gap: 8px; margin-bottom: 12px; }
+.export-tabs button {
+  flex: 1; padding: 8px 12px;
+  background: var(--panel); color: var(--dim);
+  border: 1px solid var(--line); border-radius: 6px;
+  font-size: 13px; cursor: pointer; font-family: inherit;
+}
+.export-tabs button.active { color: var(--gold); border-color: var(--gold-dim); }
+.export-overlay textarea {
+  flex: 1; width: 100%;
+  background: var(--panel); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 6px;
+  padding: 14px;
+  font-family: ui-monospace, monospace;
+  font-size: 12px; line-height: 1.55;
+  resize: none;
+}
+.export-actions { display: flex; gap: 10px; margin-top: 12px; }
+
+.muted { color: var(--dim); }
+@media (max-width: 380px) {
+  .ai-speak { padding: 16px 16px 16px 18px; font-size: 16px; }
+  main { padding: 24px 18px 140px; }
+  .state-bar { padding: 8px 10px; }
+  .state-chip { padding: 6px 10px; font-size: 11px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <button class="tap" id="btn-toc" aria-label="目录">≡</button>
+  <div class="brand">一起看 · v3 · 0518 <small>· 动态触发</small></div>
+  <button class="status-badge" id="status-badge">
+    <span class="dot"></span>
+    <span class="text">我在听</span>
+  </button>
+  <button class="tap" id="btn-export" aria-label="导出">↗</button>
+</header>
+
+<div class="state-bar" id="state-bar">
+  <!-- state chips dynamically rendered -->
+</div>
+
+<main id="main"></main>
+
+<nav class="bottom">
+  <div class="row">
+    <button class="nav-btn" id="btn-prev">← 上一步</button>
+    <button class="nav-btn primary" id="btn-next">继续 →</button>
+  </div>
+</nav>
+
+<div class="sheet-overlay" id="sheet-overlay"></div>
+<div class="sheet" id="sheet">
+  <div class="sheet-handle"></div>
+  <h3 id="sheet-status">我在听</h3>
+  <div class="sheet-row">
+    <div class="sheet-row-label">此刻 AI 在等什么</div>
+    <div class="sheet-row-body" id="sheet-waiting">等你点开第一卡。</div>
+  </div>
+  <div class="sheet-row">
+    <div class="sheet-row-label">AI 猜你在</div>
+    <div class="sheet-row-body" id="sheet-guess">— 你还没说。</div>
+  </div>
+  <div class="sheet-row">
+    <div class="sheet-row-label">静默配额(今日还能主动 surface 的次数)</div>
+    <div class="sheet-row-body">
+      <span class="quota-display" id="quota">
+        <span class="quota-dot"></span>
+        <span id="quota-text">3 / 3</span>
+      </span>
+      <div style="margin-top: 8px; color: var(--dim); font-size: 12px;">余额减少意味着 AI 真主动 surface 了一次。用完今天不再主动 surface(除非你点开问)。</div>
+    </div>
+  </div>
+</div>
+
+<div class="toc-overlay" id="toc-overlay">
+  <button class="toc-close" id="toc-close">×</button>
+  <h2>今天的全部时刻</h2>
+  <div class="toc-sub">11 触点 · 6 我开口(4 重 + 2 轻) · 0 RAG · 状态机驱动</div>
+  <div id="toc-list"></div>
+</div>
+
+<div class="export-overlay" id="export-overlay">
+  <div class="export-head">
+    <h2>导出</h2>
+    <button class="tap" id="export-close">×</button>
+  </div>
+  <div class="export-tabs">
+    <button class="active" data-tab="log">用户日志</button>
+    <button data-tab="team">团队反馈</button>
+  </div>
+  <textarea id="export-text" readonly></textarea>
+  <div class="export-actions">
+    <button class="nav-btn" id="export-copy">复制</button>
+    <button class="nav-btn primary" id="export-download">下载 .md</button>
+  </div>
+</div>
+
+<script>
+(() => {
+'use strict';
+
+/* ============================================================
+   v3 · 动态触发 · 状态机驱动
+   核心差异(vs v2):
+   - 6 触点 + 4 重开口 mode-shift("我说一句吗"+ 等等/好)
+   - 5 chip 显式状态声明(大厅/玛雅/西潘/精灵/已出馆)= ground truth
+   - status badge 永驻 + 5 个状态(我在听/我在等你/一会儿说/现在/不在)
+   - 静默配额(3)可见,被消耗 = AI 真 surface 了一次
+   - 无 throttle / 无 autoPause(反 v2 家长姿态)
+   - anchor 只 set + recall 一次(去 v2 echo-anchor 副作用)
+   ============================================================ */
+
+const STATES = [
+  { id: 'lobby', label: '大厅' },
+  { id: 'maya', label: '玛雅厅' },
+  { id: 'sipan', label: '西潘厅' },
+  { id: 'spirit', label: '精灵厅' },
+  { id: 'left', label: '已出馆' },
+];
+
+const TPS = [
+  {
+    id: 'pre',
+    chip: '出发前',
+    time: '11:30',
+    timeNote: '地铁 / 路上',
+    sys: `<p>「玉米·黄金·美洲豹」是首博 2026 开馆以来规模最大的特展,128 元票。<strong>商业大展的策展立场会受票务和合作博弈影响。</strong></p>
+<p>布局:5000 平米美洲文物 + 5000 平米中国文物<strong>并置</strong> + 5000 平米沉浸体验。并置不是中性——是当下中国主流叙事里的一个姿态。</p>
+<p>你的任务:盯 <strong>3 件</strong>深看,其余漫游。</p>`,
+    user: '<p>下面 note 区写下 <strong>1 个</strong>你现在脑里浮现的关于玛雅 / 印加 / 安第斯的画面。一句话。今天结束我们再看它。</p>',
+    askPlaceholder: '一个画面,一句话。',
+    anchor: 'set',
+  },
+  {
+    id: 'arrive',
+    chip: '入馆 12:00',
+    time: '12:00',
+    timeNote: '大厅 · 5 分钟观察',
+    suggestState: 'lobby',
+    sys: `<p>过安检 → 取展览票。<strong>不要直接进厅</strong>。在大厅站 5 分钟。</p><p>这一段我没有什么要说的。看周围的人,看见什么写一句。</p>`,
+    user: '<p>下面 note 区,一句话。</p>',
+    askPlaceholder: '一句话观察。',
+  },
+  {
+    id: 'maya-jade',
+    chip: '玛雅厅 · 我开口 1(重)',
+    time: '12:15-13:30',
+    timeNote: '玛雅的世界 · 75 分钟',
+    suggestState: 'maya',
+    requiresModeShift: true,
+    modeShiftQuestion: '我想说一句关于玉的。',
+    ai: {
+      label: '玉',
+      body: `<p>对玛雅人,玉不是君子。</p>
+<p><strong>玉 = 玉米 = 王权 = 生命的呼吸。</strong></p>
+<p>同一种石头,两个完全不同的意义网络。</p>`,
+    },
+    user: `<p>这一厅 75 分钟。建议:快走一圈记 5-8 件,回头深看 <strong>2 件</strong>。</p><p><strong>不要拍超过 10 张照片</strong>。少拍多看。</p>`,
+    askPlaceholder: '深看 1: ...\n深看 2: ...',
+  },
+  {
+    id: 'break',
+    chip: '中场',
+    time: '13:30',
+    timeNote: '离厅 30 分钟',
+    suggestState: null, // 中场,无厅
+    sys: `<p>离开展厅。馆内餐厅 / 公共区。</p><p>不回顾笔记。不翻照片。吃点东西。</p>`,
+    user: '<p>这一段没事可做。如果你想暂停 chat,点右上 ⏸(我会进入"不在"状态,不打扰)。</p>',
+    askPlaceholder: '不用写。',
+    aiState: 'away', // override AI state to "不在" during this card
+  },
+  {
+    id: 'sipan-1987',
+    chip: '西潘王陵 · 我开口 2(重)',
+    time: '14:00-14:25',
+    timeNote: '王的宝藏 · 入厅',
+    suggestState: 'sipan',
+    requiresModeShift: true,
+    modeShiftQuestion: '我想说西潘的发现年份。',
+    ai: {
+      label: '1987',
+      body: `<p>西潘王陵 <strong>1987 年才被发掘</strong>。40 年前,人类不知道它存在。</p>
+<p>1987 年:秘鲁考古学家 Walter Alva 接到警察通报"盗墓贼挖到金器",冲到现场抢救。</p>
+<p>你今天看的,<strong>是从盗墓贼手里被抢回来的</strong>。</p>`,
+    },
+    user: '<p>进厅。看主墓的 4-5 件:花生项链 / 贝壳胸甲 / 战士耳饰 / 黄金头饰 / 仪式刀。每件停至少 3 分钟。</p>',
+    askPlaceholder: '看到的:',
+  },
+  {
+    id: 'sipan-burial',
+    chip: '西潘王陵 · 我开口 3(重)',
+    time: '~14:35',
+    timeNote: '主墓深看 · 中段',
+    suggestState: 'sipan',
+    requiresModeShift: true,
+    modeShiftQuestion: '我想说同葬的人。',
+    ai: {
+      label: '同葬',
+      body: `<p>主墓 451 件随葬器物。</p>
+<p>同墓还埋有 <strong>3 个女人 + 2 个战士 + 1 个男孩</strong> + 若干羊驼。</p>
+<p>说明牌大概率写得很轻——"殉葬""陪葬""同葬"。</p>
+<p>我看到这就一直想停一下。你呢。</p>`,
+    },
+    user: '<p>下面 note 区:你对"同葬"那件事的第一反应。<strong>3 句话以内</strong>。</p>',
+    askPlaceholder: '同葬:第一反应,3 句话以内。',
+  },
+  {
+    id: 'spirit-translation',
+    chip: '大自然的精灵 · 我开口 4(轻)',
+    time: '15:00-15:40',
+    timeNote: '入厅 · 漫游为主',
+    suggestState: 'spirit',
+    // 轻开口 — 不需要 mode-shift
+    ai: {
+      label: '翻译姿态',
+      body: `<p>"大自然的精灵"是中文展览的翻译。</p>
+<p>原文(西班牙语 / 英语)大概率是 espíritu / ánima / soul——是"灵魂""神灵",不是"精灵"。</p>
+<p>中文用「精灵」去神化了。</p>`,
+    },
+    user: '<p>这一厅相对轻。漫游。如果有件动物让你想笑或想停,在下面写一句,可以拍一张。</p>',
+    askPlaceholder: '想笑 / 想停的:',
+    allowPhoto: true,
+  },
+  {
+    id: 'synth-sharp',
+    chip: '综合 · 我开口 5(重)',
+    time: '15:45',
+    timeNote: '展厅出口 · 离厅前',
+    suggestState: 'spirit',
+    requiresModeShift: true,
+    modeShiftQuestion: '最后一段。我说一句吗。',
+    ai: {
+      label: '一句话',
+      body: `<p>今天有几个瞬间你觉得"不对劲"。</p>
+<p>不对劲不一定是错。</p>
+<p>挑 1 个,写下来,一句话。</p>`,
+    },
+    user: '<p>一句话。最尖锐的那个不对劲。</p>',
+    askPlaceholder: '一句话。最尖锐的不对劲。',
+  },
+  {
+    id: 'recall',
+    chip: '综合 · 回看 anchor',
+    time: '~15:55',
+    timeNote: '离厅前最后一件事',
+    suggestState: 'left',
+    aiAnchorRecall: true,
+    user: '<p>一句话:它变了吗?变了哪里?</p>',
+    askPlaceholder: '它变了吗?变了哪里?',
+  },
+  {
+    id: 'post',
+    chip: '离馆后',
+    time: '16:00+',
+    timeNote: '地铁 / 公交 · 读完就关',
+    suggestState: 'left',
+    sys: `<p>你看了 800 件中的多少件并不重要。</p>
+<p>重要的是:你脑里那张"古代美洲"的内在地图,有没有被搅动。</p>
+<p>如果走出馆后你只记得"玉对玛雅是玉米"和"3 女 2 战 1 男孩同葬"这两件事——<strong>深的两件,比浅的二十件更值钱</strong>。</p>
+<p>如果你在某件展品前突然走神想起别的事——不要写下来,让它继续在你脑里发酵。</p>
+<p>明晚见。</p>`,
+    user: '<p>可以关闭这页。</p>',
+    askPlaceholder: '',
+  },
+  {
+    id: 'next-day',
+    chip: '次日 22:30',
+    time: '5/19 晚',
+    timeNote: '一个问题',
+    suggestState: 'left',
+    requiresModeShift: true,
+    modeShiftQuestion: '昨天的展。我问一个问题吗。',
+    ai: {
+      label: '一个问题',
+      body: `<p>只跟一个朋友讲昨天的一件事,你讲什么。</p>`,
+    },
+    user: '<p>下面写一段。或回到 chat 发"首博次日反馈" + 你的答案。</p>',
+    askPlaceholder: '一件事。',
+  },
+];
+
+// ===== STORAGE =====
+const KEY = 'yqk-shoubo-v3-20260518';
+const state = {
+  idx: 0,
+  notes: {},
+  anchor: '',
+  declaredState: null,         // 显式状态(用户点 chip 后)
+  quietQuota: 3,               // 静默配额
+  modeShiftAccepted: {},       // tpId -> bool (是否已确认 mode-shift)
+  aiSurfaceCount: {},          // tpId -> 次数(主要给 dogfood 统计用)
+};
+function save() {
+  try {
+    const persist = {
+      idx: state.idx,
+      anchor: state.anchor,
+      declaredState: state.declaredState,
+      quietQuota: state.quietQuota,
+      modeShiftAccepted: state.modeShiftAccepted,
+      notes: {},
+    };
+    for (const id in state.notes) {
+      const n = state.notes[id];
+      persist.notes[id] = { text: n.text||'', photos: n.photos||[], ts: n.ts };
+    }
+    localStorage.setItem(KEY, JSON.stringify(persist));
+  } catch (e) {}
+}
+function load() {
+  try {
+    const raw = localStorage.getItem(KEY); if (!raw) return;
+    const d = JSON.parse(raw);
+    state.idx = d.idx || 0;
+    state.anchor = d.anchor || '';
+    state.declaredState = d.declaredState || null;
+    state.quietQuota = (typeof d.quietQuota === 'number') ? d.quietQuota : 3;
+    state.modeShiftAccepted = d.modeShiftAccepted || {};
+    state.notes = {};
+    for (const id in (d.notes||{})) {
+      state.notes[id] = { text: d.notes[id].text||'', photos: d.notes[id].photos||[], ts: d.notes[id].ts };
+    }
+  } catch (e) {}
+}
+load();
+
+const $main = document.getElementById('main');
+const $btnPrev = document.getElementById('btn-prev');
+const $btnNext = document.getElementById('btn-next');
+const $stateBar = document.getElementById('state-bar');
+const $statusBadge = document.getElementById('status-badge');
+const $sheet = document.getElementById('sheet');
+const $sheetOverlay = document.getElementById('sheet-overlay');
+
+function ensureNote(id) {
+  if (!state.notes[id]) state.notes[id] = { text:'', photos:[], ts: Date.now() };
+  return state.notes[id];
+}
+function showSaved(el) {
+  const s = el.querySelector('.saved'); if (!s) return;
+  s.classList.add('show');
+  clearTimeout(s._t); s._t = setTimeout(() => s.classList.remove('show'), 1300);
+}
+function escapeHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function escapeAttr(s) { return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;'); }
+
+// ===== State Machine: derive AI status =====
+function deriveAIState() {
+  const tp = TPS[state.idx];
+  // explicit override (e.g., break)
+  if (tp.aiState) return tp.aiState;
+  // requires mode-shift, not yet accepted = waiting
+  if (tp.requiresModeShift && !state.modeShiftAccepted[tp.id]) return 'waiting';
+  // ai about to speak (just past mode-shift) → speaking
+  if (tp.ai && (state.modeShiftAccepted[tp.id] || !tp.requiresModeShift)) return 'speaking';
+  return 'listening';
+}
+
+function aiStateLabel(s) {
+  return ({
+    listening: '我在听',
+    waiting: '我在等你',
+    soon: '一会儿说',
+    speaking: '现在',
+    away: '不在',
+  })[s] || '我在听';
+}
+
+function updateStatusBadge() {
+  const s = deriveAIState();
+  $statusBadge.className = 'status-badge ' + s;
+  $statusBadge.querySelector('.text').textContent = aiStateLabel(s);
+  // also keep sheet status synced
+  document.getElementById('sheet-status').textContent = aiStateLabel(s);
+}
+
+// ===== State chips =====
+function renderStateBar() {
+  $stateBar.innerHTML = '';
+  STATES.forEach((st) => {
+    const c = document.createElement('button');
+    c.className = 'state-chip' + (state.declaredState === st.id ? ' active' : '');
+    c.textContent = st.label;
+    c.addEventListener('click', () => {
+      state.declaredState = (state.declaredState === st.id) ? null : st.id;
+      save();
+      renderStateBar();
+      renderSheet();
+    });
+    $stateBar.appendChild(c);
+  });
+}
+
+// ===== Status Sheet =====
+function renderSheet() {
+  const tp = TPS[state.idx];
+  // waiting
+  let waiting = '没什么 pending — 你随便。';
+  if (tp.requiresModeShift && !state.modeShiftAccepted[tp.id]) {
+    waiting = '我有一句关于"' + (tp.ai?.label || '这件') + '"想说。等你点"好"。';
+  } else if (tp.user && !state.notes[tp.id]?.text?.trim()) {
+    waiting = '等你写一句下面的 note(完全可以不写,但 AI 不会主动推进)。';
+  }
+  document.getElementById('sheet-waiting').textContent = waiting;
+
+  // guess
+  let guess = '— 你还没点上面的 chip 告诉我你在哪。我只能跟着卡片猜。';
+  if (state.declaredState) {
+    const lbl = STATES.find(s => s.id === state.declaredState)?.label || '';
+    guess = '你显式声明在:' + lbl + '。这是 ground truth,我相信你。';
+  } else if (tp.suggestState) {
+    const lbl = STATES.find(s => s.id === tp.suggestState)?.label;
+    if (lbl) guess = '我跟着卡片猜你在:' + lbl + '。不对就点上方 chip 改我。';
+  }
+  document.getElementById('sheet-guess').textContent = guess;
+
+  // quota
+  const qt = document.getElementById('quota-text');
+  const qel = document.getElementById('quota');
+  qt.textContent = state.quietQuota + ' / 3';
+  qel.classList.toggle('exhausted', state.quietQuota <= 0);
+}
+
+$statusBadge.addEventListener('click', () => {
+  renderSheet();
+  $sheet.classList.add('show');
+  $sheetOverlay.classList.add('show');
+});
+$sheetOverlay.addEventListener('click', () => {
+  $sheet.classList.remove('show');
+  $sheetOverlay.classList.remove('show');
+});
+
+// ===== Render =====
+function render() {
+  const tp = TPS[state.idx];
+  ensureNote(tp.id);
+  $main.innerHTML = '';
+
+  // chip-like label
+  const lbl = document.createElement('div');
+  lbl.className = 'phase-label';
+  lbl.textContent = tp.chip;
+  $main.appendChild(lbl);
+
+  // time
+  const t = document.createElement('div');
+  t.className = 'phase-time';
+  t.innerHTML = `<strong>${tp.time}</strong> · <span class="muted">${tp.timeNote || ''}</span>`;
+  $main.appendChild(t);
+
+  // sys text (no AI block)
+  if (tp.sys) {
+    const s = document.createElement('div');
+    s.className = 'sys-text';
+    s.innerHTML = tp.sys;
+    $main.appendChild(s);
+  }
+
+  // AI section: either mode-shift gate, then ai-speak; or ai directly (light open)
+  if (tp.ai) {
+    if (tp.requiresModeShift && !state.modeShiftAccepted[tp.id]) {
+      // Show mode-shift dialog
+      const ms = document.createElement('div');
+      ms.className = 'mode-shift';
+      ms.innerHTML = `
+        <span class="mode-shift-text">${tp.modeShiftQuestion || '我说一句吗。'}</span>
+        <button class="later" id="ms-later">等等</button>
+        <button class="yes" id="ms-yes">好</button>
+      `;
+      $main.appendChild(ms);
+      document.getElementById('ms-yes').addEventListener('click', () => {
+        state.modeShiftAccepted[tp.id] = true;
+        // consume quiet quota IF AI is surfacing unsolicited (and user said yes)
+        // Note: in this design, AI only ever speaks after user invite,
+        // so we DON'T consume quota on user accept — quota represents AI's right to surface uninvited.
+        // We instead track: if user said "later" twice, that's a signal — keep simple here.
+        if (!state.aiSurfaceCount[tp.id]) state.aiSurfaceCount[tp.id] = 0;
+        state.aiSurfaceCount[tp.id]++;
+        save();
+        render();
+      });
+      document.getElementById('ms-later').addEventListener('click', () => {
+        // skip this ai block for now; user can re-trigger from sheet or proceed
+        state.modeShiftAccepted[tp.id] = false;
+        // dec quiet quota — user used a "later" — AI's invite was declined,
+        // so AI loses some "right to surface" today (negative-space rule)
+        if (state.quietQuota > 0) state.quietQuota -= 1;
+        save();
+        renderSheet();
+        updateStatusBadge();
+        // remove the mode-shift block but don't expand ai
+        document.querySelector('.mode-shift')?.remove();
+      });
+    } else {
+      // Render AI speak directly
+      const a = document.createElement('div');
+      a.className = 'ai-speak';
+      a.innerHTML = `<span class="ai-speak-label">${tp.ai.label}</span>${tp.ai.body}`;
+      $main.appendChild(a);
+    }
+  }
+
+  // Anchor recall
+  if (tp.aiAnchorRecall) {
+    const e = document.createElement('div');
+    e.className = 'ai-recall';
+    const txt = state.anchor.trim();
+    e.innerHTML = `<div class="ai-recall-label">你 12:00 写下的</div>` +
+      (txt
+        ? `<div class="ai-recall-quote">${escapeHtml(txt)}</div>`
+        : `<div class="ai-recall-empty">(你没写。)</div>`);
+    $main.appendChild(e);
+  }
+
+  // User action
+  if (tp.user) {
+    const u = document.createElement('div');
+    u.className = 'user-action';
+    u.innerHTML = `<div class="user-action-label">你做的事</div><div class="user-action-body">${tp.user}</div>`;
+    $main.appendChild(u);
+  }
+
+  // Note zone
+  const nz = document.createElement('div');
+  nz.className = 'note-zone';
+  const photoBtn = tp.allowPhoto ? `
+    <label class="tool-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l3-3h12l3 3v13a1 1 0 01-1 1H4a1 1 0 01-1-1z"/><circle cx="12" cy="13" r="3.5"/></svg>
+      加照片
+      <input type="file" accept="image/*" capture="environment" id="file-photo">
+    </label>` : '';
+  nz.innerHTML = `
+    <div class="note-zone-label">
+      <span>记 · 仅本机</span>
+      <span class="saved">已保存</span>
+    </div>
+    <textarea class="note" placeholder="${escapeAttr(tp.askPlaceholder || '随便写。')}"></textarea>
+    <div class="note-tools">${photoBtn}</div>
+    <div class="attachments" id="attachments"></div>
+  `;
+  $main.appendChild(nz);
+
+  const note = state.notes[tp.id];
+  const $note = nz.querySelector('textarea.note');
+  $note.value = (tp.anchor === 'set' && state.anchor) ? state.anchor : (note.text || '');
+  $note.addEventListener('input', () => {
+    note.text = $note.value; note.ts = Date.now();
+    if (tp.anchor === 'set') state.anchor = $note.value;
+    save(); showSaved(nz);
+  });
+
+  const $att = nz.querySelector('#attachments');
+  renderAttachments($att, note);
+  const $photoInput = nz.querySelector('#file-photo');
+  if ($photoInput) {
+    $photoInput.addEventListener('change', (ev) => {
+      const f = ev.target.files[0]; if (!f) return;
+      const fr = new FileReader();
+      fr.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          const max = 600;
+          const scale = Math.min(1, max / img.width, max / img.height);
+          const w = img.width * scale | 0, h = img.height * scale | 0;
+          const canvas = document.createElement('canvas');
+          canvas.width = w; canvas.height = h;
+          canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+          note.photos = note.photos || [];
+          note.photos.push(canvas.toDataURL('image/jpeg', 0.78));
+          save(); renderAttachments($att, note); showSaved(nz);
+        };
+        img.src = e.target.result;
+      };
+      fr.readAsDataURL(f);
+      ev.target.value = '';
+    });
+  }
+
+  // auto-suggest declared state when card has one (gentle)
+  if (tp.suggestState && tp.suggestState !== state.declaredState && !state.declaredState) {
+    // visual nudge only — sheet says "我跟着卡片猜"
+  }
+
+  $btnPrev.disabled = state.idx === 0;
+  $btnNext.disabled = state.idx === TPS.length - 1;
+  $btnNext.textContent = state.idx === TPS.length - 1 ? '完成 ✓' : '继续 →';
+
+  updateStatusBadge();
+  renderSheet();
+  window.scrollTo(0, 0);
+}
+
+function renderAttachments($el, note) {
+  $el.innerHTML = '';
+  (note.photos || []).forEach((dataUrl, i) => {
+    const thumb = document.createElement('div');
+    thumb.className = 'attach-thumb';
+    thumb.style.backgroundImage = `url(${dataUrl})`;
+    const x = document.createElement('span');
+    x.className = 'x'; x.textContent = '×';
+    x.addEventListener('click', (e) => {
+      e.stopPropagation(); note.photos.splice(i, 1); save();
+      renderAttachments($el, note);
+    });
+    thumb.appendChild(x);
+    $el.appendChild(thumb);
+  });
+}
+
+// Navigation
+$btnPrev.addEventListener('click', () => { if (state.idx > 0) { state.idx--; save(); render(); } });
+$btnNext.addEventListener('click', () => { if (state.idx < TPS.length - 1) { state.idx++; save(); render(); } });
+
+// TOC
+const $toc = document.getElementById('toc-overlay');
+const $tocList = document.getElementById('toc-list');
+function buildTOC() {
+  $tocList.innerHTML = '';
+  TPS.forEach((tp, i) => {
+    const item = document.createElement('div');
+    let cls = 'toc-item' + (i === state.idx ? ' current' : '');
+    const note = state.notes[tp.id];
+    if (note && ((note.text||'').trim() || (note.photos||[]).length)) cls += ' has-note';
+    item.className = cls;
+    item.innerHTML = `<span class="toc-time">${tp.time}</span><span class="toc-title">${tp.chip}</span>`;
+    item.addEventListener('click', () => { state.idx = i; save(); render(); $toc.classList.remove('show'); });
+    $tocList.appendChild(item);
+  });
+}
+document.getElementById('btn-toc').addEventListener('click', () => { buildTOC(); $toc.classList.add('show'); });
+document.getElementById('toc-close').addEventListener('click', () => $toc.classList.remove('show'));
+
+// Export
+const $exp = document.getElementById('export-overlay');
+const $expText = document.getElementById('export-text');
+let exportTab = 'log';
+function buildLogExport() {
+  const lines = ['# 我的首博日志 · 2026-05-18 · v3', ''];
+  if (state.anchor.trim()) {
+    lines.push('## 12:00 我写下的画面', '', '> ' + state.anchor.split('\n').join('\n> '), '');
+  }
+  TPS.forEach((tp) => {
+    const note = state.notes[tp.id]; if (!note) return;
+    const txt = (note.text || '').trim(); const photos = (note.photos||[]).length;
+    if (!txt && !photos) return;
+    lines.push(`### ${tp.time} · ${tp.chip}`, '');
+    if (txt) { lines.push(txt, ''); }
+    if (photos) lines.push(`*[${photos} 张照片]*`, '');
+  });
+  lines.push('---', '生成:' + new Date().toLocaleString('zh-CN'));
+  return lines.join('\n');
+}
+function buildTeamExport() {
+  const lines = ['# 团队 · 首博 v3 dogfood · 2026-05-18', '', '**版本**:v3(动态触发 / mode-shift / 静默配额)', ''];
+  lines.push('## 体验记录摘要', '');
+  TPS.forEach((tp) => {
+    const note = state.notes[tp.id]; if (!note?.text?.trim()) return;
+    lines.push(`### ${tp.time} · ${tp.chip}`, '');
+    lines.push('> ' + note.text.split('\n').join('\n> '), '');
+  });
+  lines.push('## v3 专项反馈(请填)', '');
+  lines.push('1. **mode-shift("我说一句吗" + 等等/好)4 个重开口前出现,有没有让你觉得"被尊重"vs"啰嗦"?**');
+  lines.push('   - ');
+  lines.push('2. **状态吊牌(右上)是否有起到"AI 状态可见"的作用?有没有真点开看过?**');
+  lines.push('   - ');
+  lines.push(`3. **静默配额(剩 ${state.quietQuota}/3)**,你"等等"了几次?这个配额对你的体感是什么?`);
+  lines.push('   - ');
+  lines.push('4. **5 chip 状态声明(大厅/玛雅/西潘/精灵/已出馆),你点了几次?有真用到吗?**');
+  lines.push('   - ');
+  lines.push('5. **v3 vs v2:你更喜欢哪个?在什么具体维度?**');
+  lines.push('   - ');
+  lines.push('6. **mode-shift 后的 AI 立场内容(玉/1987/同葬/最尖锐)还是和 v2 一样吗?有没有因为"被邀请"的姿态而读得更深?**');
+  lines.push('   - ');
+  return lines.join('\n');
+}
+function refreshExport() {
+  $expText.value = exportTab === 'log' ? buildLogExport() : buildTeamExport();
+  document.querySelectorAll('.export-tabs button').forEach(b => {
+    b.classList.toggle('active', b.dataset.tab === exportTab);
+  });
+}
+document.getElementById('btn-export').addEventListener('click', () => { exportTab='log'; refreshExport(); $exp.classList.add('show'); });
+document.getElementById('export-close').addEventListener('click', () => $exp.classList.remove('show'));
+document.querySelectorAll('.export-tabs button').forEach(b => {
+  b.addEventListener('click', () => { exportTab = b.dataset.tab; refreshExport(); });
+});
+document.getElementById('export-copy').addEventListener('click', () => {
+  $expText.select(); document.execCommand('copy');
+  document.getElementById('export-copy').textContent='✓ 已复制';
+  setTimeout(()=>document.getElementById('export-copy').textContent='复制', 1500);
+});
+document.getElementById('export-download').addEventListener('click', () => {
+  const blob = new Blob([$expText.value], { type: 'text/markdown' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = exportTab === 'log' ? '首博日志-v3-20260518.md' : '首博团队反馈-v3-20260518.md';
+  a.click(); URL.revokeObjectURL(url);
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' && !$btnNext.disabled) $btnNext.click();
+  if (e.key === 'ArrowLeft') $btnPrev.click();
+  if (e.key === 'Escape') {
+    $sheet.classList.remove('show');
+    $sheetOverlay.classList.remove('show');
+    $toc.classList.remove('show'); $exp.classList.remove('show');
+  }
+});
+
+renderStateBar();
+render();
+})();
+</script>
+</body>
+</html>
