@@ -1,0 +1,415 @@
+{
+  "$schema": "claude-handoff/v1",
+  "handoff_id": "rag-knowledge-base-2026-05-17",
+  "created_at": "2026-05-17",
+  "from_thread": "Orchestrator 主会话(团队启动 + 项目级 pivot + 体验设计 5 轮迭代)",
+  "to_thread": "新会话 · RAG 知识库建设主线(继续推进)",
+  "scope_in": "在博物馆 AI 同伴 APP 通用能力里,完善 RAG 部分 —— 找到真实可用的文物图片、地理地形图、说明牌文字、学术叙事等数据源,完成 30 件展品的 knowledge bundle",
+  "scope_out": [
+    "体验设计(已 5 轮迭代收敛到 docs/experience-20260518/v5/,不要继续动)",
+    "PRD §6 人格 / §9 Reject List / §12 边界 的改写(动则触发 T2 升级)",
+    "项目级 PRD 与 ADR 的 v1 写作(等 RAG 基础设施落地后再回)"
+  ],
+
+  "project_one_liner": "「一起看」是一个面向文博中度爱好者的 AI 原生伴游 side project,目标用户是 AI PM(Agent / harness 方向)岗位的招聘官 + 投资人视角作为辅助。项目 founding insight:做面向中国大陆用户的 AI 文博产品,最稳的图像底座反而在海外馆(ADR-003 附录二,已提升至 PRD §1.4)。",
+
+  "pivot_2026_05_17": {
+    "from": "我们已经有 15,299 条海外 OA chunks + 4,466 张图,做'查得到'的 RAG",
+    "to": "30 件展品 × N 类来源 = 用 AI agent 从分散源拼出'市面上不存在的中国文博 RAG 知识库',过程本身就是核心 demo",
+    "why": "Curator 数据相关性盘点发现 强支撑只 2.1% / 无支撑 62.8%,最大缺口是大陆馆方 0 条;扩量解决不了相关性。Critic 首轮指出:招聘官想看的'独立建项目能力'是从模糊命题到清晰决策,不是'我能 stand up data pipeline'。pivot 把'AI 发现+整理'本身作为产品 USP",
+    "scope_locked": {
+      "museums": ["山西博物院 · 佛风遗韵", "上海博物馆 · 本馆", "上海博物馆 · 东馆", "震旦博物馆"],
+      "items_per_museum": [15, 5, 5, 5],
+      "total_items": 30,
+      "source_classes_per_item": [
+        "A · 馆方一手(官网页面 / 说明牌 / 策展声明)",
+        "B · 跨馆对照(已有的 CMA / Smithsonian / Met + 计划接入的 AIC / Harvard / Penn)",
+        "C · 学术论文(BMFEA / 山西大学云冈学知识库 / Google Scholar OA)",
+        "D · 现场场域(audio guide 转录 / 微信公众号长文 / 媒体深度报道)",
+        "E · 数字人文 OA(数字敦煌 / 龙门 3D / 云冈数字博物馆 / CBETA 等)"
+      ],
+      "timebox_v0": "7 天证明 pipeline 可跑,再加深;Curator/Critic 守过度工程线",
+      "honest_time_estimate": "30 件总工时 110-150 小时。PM full-time 3 周 / 兼职 1.5h/天 6-8 周 / 大陆 IP 严重卡 10-12 周。不要承诺'agent 一周搞定'"
+    }
+  },
+
+  "user_requirements": {
+    "target_user_principles_4": {
+      "A": "反对'博物馆=超市'式的浅层窥探。目标用户极度反感某博主主张'逛博物馆就像逛超市,只要看懂朝代生产日期,感受古人生活方式'这种叙事",
+      "B": "对照本宣科讲解员的直觉反感。承认有少数大咖讲解人提供高质洞察,但绝大多数讲解员只是背诵客观描述,远远不够",
+      "C": "觉察博物馆叙事=权力结构。博物馆本身就是叙事,叙事一定与权力结构绑定。尤其在中国大陆这样极权体制下的社会视角,觉察这种隐身叙事是有益的",
+      "D": "目的是阅读知识结构网络,而非消遣。高价值目的=读懂现实器物背后的知识结构(布展者意图 / 用户自我认同 / 结构性批判 / 跨展览跨馆的网络连接)"
+    },
+    "instances_confirmed_by_pm": [
+      "林知白:30 岁互联网 PM,北京,语气冷静、对 AI 助手警觉",
+      "陈砚秋:24 岁艺术史/人类学硕士,上海高校,对原则 C 已结构化",
+      "周允:42 岁私募合伙人,广州,短耐心 + 高资源,读博物馆即读权力结构",
+      "PM 自己(2026-05-17 加入):26 岁互联网 PM,3 年从业,半年拉美旅行经历(不预设)"
+    ],
+    "anti_personas_4_classes": [
+      "A 类:期待 AI 讲解员模式的用户(违反原则 B)",
+      "B 类:把博物馆当打卡 / 短视频素材的用户(违反原则 A)",
+      "C 类:期待娱乐化历史故事的用户(违反原则 D)",
+      "D 类:期待 AI 替他选择立场的用户(违反 PRD §6 人格的克制)"
+    ],
+    "files_to_read": [
+      "agents/user-voice/principles.md",
+      "agents/user-voice/instances.md",
+      "docs/PRD.md §3.3 — 重写后的 4 原则 + 多实例章节",
+      "docs/PRD.md §3.4 — 反 persona"
+    ]
+  },
+
+  "research_conclusions": {
+    "tracks_completed": {
+      "track1_mainland_museums": {
+        "what_we_searched": "山博 / 上博 / 上博东 / 震旦 / 故宫 / 国博 / 龙门云冈,以及展览说明牌、audio guide、馆方公众号、图录、策展声明 5 类现场场域信息",
+        "headline_finding": "**大陆馆方缺口形态 = '有展示·无接入'**。7 馆全部有 C 端在线藏品库 / 数字展厅 / 小程序,但无一家开放 API / CC0 / 批量下载。'数据存在但只对人不对机'。",
+        "actionable": [
+          "山博官网 URL 可枚举(shanximuseum.com/sx/collection/detail/id/{N}),是唯一能堵'大陆 0 条'洞的源",
+          "上博官网关键词检索可用",
+          "7 馆官网'展览'栏目策展声明文字 —— 公开 / 无反爬 / 直接对应原则 D —— 被低估的高 P0 源"
+        ],
+        "dead_ends": [
+          "中国文物云 / 国家文物局 180TB 完全不对外开放,媒体语气误导",
+          "龙门 / 云冈 PB 级数据封微信小程序 —— 数字化最高 ≠ 开放度最高",
+          "微信公众号 RSS 被平台持续封杀,无合规稳定程序化访问",
+          "沙箱 IP 对所有大陆馆 + tls.uchicago.edu 都 403"
+        ],
+        "report_path": "agents/researcher/reports/2026-05-17-track1-cn-museums-and-site-content.md"
+      },
+      "track2_overseas_oa": {
+        "what_we_searched": "14+ 海外馆藏中国艺术品,以及 Europeana / Wikimedia / IIIF 等聚合源",
+        "headline_finding": "**'海外亚洲艺术 powerhouse' ≠ 'CC0 powerhouse'**。MFA Boston / Asian Art Museum SF / Nelson-Atkins / ROM / Musée Guimet / Cernuschi / Rietberg 全部跳过(无 API / 图像版权全保留 / OA 政策只是规划未上线)",
+        "top_3_to_add": [
+          "**Art Institute of Chicago (AIC)**:CC0 + 公开 API + 馆藏天龙山佛首。与 CMA 卢芹斋系 / Met 241C 入藏渠道完全不同,预估北朝—初唐 +30-60 件、天龙山 specific +3-5",
+          "**Harvard Art Museums**:CC0 + IIIF + REST API + Dataverse CSV 镜像 + Winthrop 收藏(Gallery 1610)的北朝/初唐中国佛教雕塑专门陈列,字段密度对标 CMA,预估 +30-80 件",
+          "**Penn Museum CSV + tls.uchicago.edu 跨馆 accession 索引(组合)**:Penn CC BY 4.0 + 5 件天龙山佛头;配合天龙山项目可升级 demo 到'同一文物的跨馆物理坐标' wow moment"
+        ],
+        "license_caveats": [
+          "**V&A 是 license 灰区**(非商用、非 CC0)。建议仅入元数据 + 缩略图,**不入向量索引**",
+          "**British Museum SPARQL** 是工程陷阱(CC BY-NC-SA + endpoint 维护起伏)",
+          "**OpenROM** 是建筑改造项目,不是开放数据(命名陷阱)"
+        ],
+        "real_cc0_camp": "Met、Smithsonian、CMA、Harvard、AIC、Yale(PD 件)、Brooklyn(OASC)、Walters、NGA;Penn / 台北故宫是 CC BY 4.0 半 OA",
+        "report_path": "agents/researcher/reports/2026-05-17-track2-overseas-oa.md"
+      },
+      "track3_academic_secondary": {
+        "value_position": "**不是 RAG 主语料,是 PRD §7 T7「观点对照层」的立场弹药**。直接服务用户原则 C(觉察权力结构) + 原则 D(知识结构网络)。单件文物的描述 metadata 已够多,真正缺的是'学者立场对照'",
+        "top_3_digital_humanities": [
+          "**芝大天龙山项目**(ADR-003 已选定题材,公开页面文字即对照素材)",
+          "**芝大响堂山项目**:**ADR/Curator/exhibit-list 此前完全漏盘 —— 本轮单点最大新发现**。北齐响堂山造像流散海外的数字重组项目",
+          "**数字敦煌 2024 开放素材库**:个人 / 研究免费,对全球 78 国开放,**比 ADR-003 描述更宽松**"
+        ],
+        "reverse_gold_mines": [
+          "**BMFEA 瑞典学报**:1929 至今 75+ 卷,CC-BY 允许向量化,archive.org 全卷可下 —— 应补入 ADR-003",
+          "**山西大学云冈学文献知识库** `ygx.sxu.edu.cn`:L4 仓储金矿,北朝佛教博硕论文 PDF 直接下载"
+        ],
+        "honest_caveats": [
+          "龙门 / 云冈数字化项目'号称数字化但实际只是宣传'(无 API / 5G 专网协议访问)。国内三大石窟数字化只有数字敦煌真正公众可达",
+          "**山博'佛风遗韵'展无公开策展声明 PDF** —— 反复搜未找到任何馆方一手叙事文档,只有二手报道。**这本身就是原则 C 的产品落地素材**",
+          "国内学者直接 critique 官方展览的公开文章稀缺 —— 这种稀缺本身就是叙事结构的一部分,产品应诚实表达不应造假找",
+          "沙箱无法 curl/WebFetch 验证国内文博站点(全部 403,host_not_allowed)"
+        ],
+        "report_path": "agents/researcher/reports/2026-05-17-track3-academic-and-secondary.md"
+      }
+    },
+    "sample_pipeline_feasibility_test": {
+      "what_we_did": "选 3 件展品测 5 类源能拼到什么程度,覆盖难度梯度",
+      "samples": [
+        {
+          "id": "山博·北齐观音菩萨五尊像",
+          "context": "1954 太原华塔村出土,佛风遗韵北朝单元重器",
+          "path": "agents/researcher/sample-bundles/shanxi-northern-qi-guanyin-pentad.md"
+        },
+        {
+          "id": "上博东馆·北齐白石佛立像",
+          "context": "响堂山系;馆方自标 V&A / Cernuschi / 日本对照",
+          "path": "agents/researcher/sample-bundles/shanghai-northern-qi-white-marble-buddha.md"
+        },
+        {
+          "id": "震旦·红山玉神人兽像",
+          "context": "故意挑的难件 —— 海外 OA 池 0 件直接命中,但'红山玉神人从未经科学发掘出土' = 原则 C 最强落地",
+          "path": "agents/researcher/sample-bundles/aurora-hongshan-jade-anthropomorphic-figure.md"
+        }
+      ],
+      "5_class_feasibility": {
+        "B_overseas_oa_cross_reference": "**100% agent**",
+        "E_digital_humanities_oa": "中-高 80% agent",
+        "C_academic_papers": "中 60% agent",
+        "D_field_audio_media": "低-中 40%(需人工)",
+        "A_museum_first_party": "低 20%(大陆馆需国内 IP)"
+      },
+      "honest_30_items_estimate": "平均 7h / 件、复用 + agent 化后 ≈ 110-150h 总。PM full-time = 3 周;兼职 1.5h/天 = 6-8 周;大陆 IP 严重卡 = 10-12 周",
+      "report_path": "agents/researcher/reports/2026-05-18-discovery-pipeline-feasibility.md"
+    },
+    "cn_llm_api_reachability_test": {
+      "what_we_tested": "5 家国内 LLM(DeepSeek / 智谱 GLM-4 / 阿里通义 / 百度文心 / 字节豆包 + Kimi)从海外沙箱可达性 + 实名 / 付费门槛 + 联网搜索工具",
+      "critical_finding": "**真正瓶颈不是 IP 地理,是沙箱 egress 白名单**。沙箱对所有外部域名(含 OpenAI / Anthropic / 故宫)统一返回 `Host not in allowlist`。商业 CN IP 代理(亮数据等)+ 国内 LLM API 在 web 沙箱里**都跑不了**",
+      "domestic_search_lit_5_of_6": "智谱 / 阿里百炼 / 百度千帆 / 火山方舟 / Kimi 都有联网搜索工具。DeepSeek 唯一不带搜索 —— 与调研目标背道而驰",
+      "recommended_execution_env": "**P2 = Claude Code 本地 CLI(在 PM 国内电脑跑)**。装一次,大陆站点抓取走 PM 国内 IP,无沙箱限制。比 P1(改 web env 网络策略)和 P3(纯人工)都干脆",
+      "report_path": "agents/researcher/reports/2026-05-18-cn-llm-api-reachability.md"
+    }
+  },
+
+  "decisions_locked": [
+    {
+      "id": "D-MUSEUMS",
+      "content": "范围锁定:山博佛风遗韵 15 + 上博本馆 5 + 上博东馆 5 + 震旦 5 = 30 件",
+      "date": "2026-05-17"
+    },
+    {
+      "id": "D-5-SOURCE-CLASSES",
+      "content": "每件 bundle 5 类源:馆方一手 / 跨馆对照 / 学术论文 / 现场场域 / 数字人文 OA",
+      "date": "2026-05-17"
+    },
+    {
+      "id": "D-GREY-1-CN-VOLUNTEER",
+      "content": "灰区 1(找 CN 朋友 = T3)作废。Builder 走非 API 路径,PM 国内时段手动补 30 件大陆数据",
+      "date": "2026-05-17"
+    },
+    {
+      "id": "D-GREY-2-VA-LICENSE",
+      "content": "V&A license 灰区降级。后处理。技术决策:仅入元数据 + 缩略图,不入向量索引",
+      "date": "2026-05-17"
+    },
+    {
+      "id": "D-GREY-3-SHANXI-NO-CURATORIAL",
+      "content": "灰区 3 升级:'山博无公开策展声明'从'产品哲学素材'升级为 Open Discovery Pipeline 的具体目标。找不到公开的就用 AI 拼,缺失本身写进产品哲学",
+      "date": "2026-05-17"
+    },
+    {
+      "id": "D-EXEC-ENV",
+      "content": "执行环境选 P2(Claude Code 本地 CLI 在 PM 国内电脑跑)。绕开沙箱 allowlist + 大陆 IP 限制。其他选项作废",
+      "date": "2026-05-17"
+    },
+    {
+      "id": "D-USP-AI-DRIVEN-DISCOVERY",
+      "content": "AI-driven discovery 本身作为产品 USP 写进 PRD §1.4(已落地)。**ADR-006 Open Discovery Pipeline** 需建,定义 3 个 sub-agent",
+      "date": "2026-05-17"
+    },
+    {
+      "id": "D-TIMEBOX-7-DAYS",
+      "content": "7 天 v0 时间盒。先证明 pipeline 可跑,再加深;Curator/Critic 守过度工程线",
+      "date": "2026-05-17"
+    }
+  ],
+
+  "deliverables_done": [
+    "agents/ 团队骨架 13 文件(5 角色 + 2 新增 experience-critic / innovator)",
+    "PM-Critic 开机自检 review · REDIRECT(招聘官 2.7 / 投资人 2.2)",
+    "Critic 二轮 APPROVE(招聘官 2.7→4.0 / 投资人 2.2→3.3,7 条必须修全 PASS)",
+    "PRD §3.3 重构为 4 原则 + 多实例",
+    "PRD §1.4 Founding Insight 新增 + ADR-003 附录二反向链接",
+    "PRD §13.1 范围表同步实际产出 + §14.5 D-2/D-6/D-8 close",
+    "Strategy-Curator 数据相关性盘点(强 2.1% / 无支撑 62.8%)",
+    "Researcher Track 1/2/3 调研完成 + 3 件样本 + pipeline 可行性 + LLM API 可达性 5 份报告",
+    "工程域 7 条必须修全 PASS(下载冻结 / README 重排 / index.html disclaimer / 无 LLM 措辞清零)",
+    "项目级 pivot 落地(backlog #12 / dashboard / sync-log 更新)"
+  ],
+
+  "tasks_pending_for_new_thread": [
+    {
+      "id": "T1-ADR-006",
+      "priority": "P0",
+      "task": "起 ADR-006 Open Discovery Pipeline 草稿",
+      "definition": "定义 3 个 sub-agent:Discovery(给一件展品 → 枚举所有可能源)/ Verifier(交叉验证 + 标分歧)/ Compiler(整合 + 反幻觉)。基于 sample pipeline feasibility 报告诚实写,标'5 类源各自自动化可行度' + 'agent vs 人在回路'分工 + '30 件诚实工时'",
+      "estimated_effort": "Builder 2-3 小时",
+      "dependencies": "已有研究报告齐备,可直接起",
+      "do_not_touch": "不要先实现 agent,先把 ADR 写明再 implement"
+    },
+    {
+      "id": "T2-PRD-1.4-USP",
+      "priority": "P0",
+      "task": "PRD §1.4 补一段 'AI-driven discovery as USP'",
+      "definition": "在现有 §1.4(海外 CC0 founding insight)末尾或新增小节,加'AI-driven discovery 本身作为产品 USP'的论证。引用 ADR-006",
+      "estimated_effort": "Builder 1 小时",
+      "dependencies": "ADR-006 草稿先就位"
+    },
+    {
+      "id": "T3-ACTION-PACK-A-OVERSEAS",
+      "priority": "P0",
+      "task": "海外补强一周内可落地",
+      "specific_targets": [
+        "AIC API 接入(CC0 + 公开 API + 天龙山佛首)",
+        "Harvard CC0 + IIIF + REST + Dataverse CSV 接入",
+        "Penn Museum CSV + tls.uchicago.edu 跨馆索引(组合)",
+        "数字敦煌 2024 注册(免费 / 个人研究 / 78 国开放)",
+        "BMFEA archive.org 全卷下载",
+        "山西大学云冈学知识库 PDF 抓取"
+      ],
+      "do_not": [
+        "不要再扩 Met / 明清(Curator 已 flag '过度投资')",
+        "不要尝试 V&A 主索引(license 灰区,仅元数据 + 缩略图)",
+        "不要尝试 British Museum SPARQL(工程陷阱)"
+      ]
+    },
+    {
+      "id": "T4-ACTION-PACK-B-MAINLAND",
+      "priority": "P0",
+      "task": "大陆 30 件人工 curation",
+      "specific_path": [
+        "山博官网 URL 枚举脚本(shanximuseum.com/sx/collection/detail/id/{N})",
+        "上博官网关键词检索",
+        "7 馆策展声明文字抓取(公开 / 无反爬 / 直接对应原则 D)"
+      ],
+      "execution_env_required": "**必须在 P2 = PM 国内 Claude Code CLI 跑**。海外沙箱 100% 403,这是结构性约束"
+    },
+    {
+      "id": "T5-ACTION-PACK-C-ADR-003-REVISE",
+      "priority": "P1",
+      "task": "ADR-003 修订",
+      "what_to_add": [
+        "补 UChicago 响堂山项目(单点最大新发现)",
+        "补 BMFEA 瑞典学报",
+        "补山西大学云冈学知识库",
+        "细化'有展示无接入'判断(添加大陆馆方实证证据)",
+        "数字敦煌 2024 权限更新"
+      ]
+    },
+    {
+      "id": "T6-30-BUNDLES-BATCH",
+      "priority": "P0 但等 ADR-006 落地",
+      "task": "30 件批量执行 Open Discovery Pipeline",
+      "dependency": "T1 ADR-006 + T3 / T4 / T5 全部就位",
+      "estimated_time": "110-150h 总(见 sample feasibility 报告)"
+    }
+  ],
+
+  "files_for_new_thread_to_read": {
+    "must_read_in_order": [
+      {
+        "path": "handoff/2026-05-17-rag-knowledge-base.json",
+        "why": "这份 handoff 本身"
+      },
+      {
+        "path": "agents/README.md",
+        "why": "团队结构 + Orchestrator autonomy 原则 + 3 升级触发点(T2/T3/T4)"
+      },
+      {
+        "path": "agents/user-voice/principles.md",
+        "why": "4 用户原则,做产品决策时的根"
+      },
+      {
+        "path": "agents/strategy-curator/data-relevance.md",
+        "why": "现有数据强 / 中 / 弱 / 无支撑分布(强 2.1% / 无支撑 62.8%)"
+      },
+      {
+        "path": "agents/strategy-curator/exhibit-list.md",
+        "why": "30 件展品对照清单当前状态(类目初评已填,具体展品待人工补)"
+      },
+      {
+        "path": "agents/researcher/reports/2026-05-17-track1-cn-museums-and-site-content.md",
+        "why": "大陆 7 馆 + 5 类现场场域调研(有展示·无接入)"
+      },
+      {
+        "path": "agents/researcher/reports/2026-05-17-track2-overseas-oa.md",
+        "why": "海外 14+ 馆调研(AIC / Harvard / Penn 是最优 3 个)"
+      },
+      {
+        "path": "agents/researcher/reports/2026-05-17-track3-academic-and-secondary.md",
+        "why": "学术与二次源(BMFEA / 山西大学云冈学 / 响堂山 = 新发现)"
+      },
+      {
+        "path": "agents/researcher/reports/2026-05-18-discovery-pipeline-feasibility.md",
+        "why": "3 件样本 + 5 类源可行度 + 30 件诚实工时"
+      },
+      {
+        "path": "agents/researcher/reports/2026-05-18-cn-llm-api-reachability.md",
+        "why": "沙箱 egress allowlist 是真瓶颈;P2 = 本地 CLI 是解"
+      }
+    ],
+    "must_read_3_samples": [
+      "agents/researcher/sample-bundles/shanxi-northern-qi-guanyin-pentad.md",
+      "agents/researcher/sample-bundles/shanghai-northern-qi-white-marble-buddha.md",
+      "agents/researcher/sample-bundles/aurora-hongshan-jade-anthropomorphic-figure.md"
+    ],
+    "reference_when_needed": [
+      "docs/PRD.md §1.4 — Founding Insight",
+      "docs/PRD.md §3.3 — 4 原则 + 多实例(2026-05-17 重写)",
+      "docs/PRD.md §6 — AI 同伴人格",
+      "docs/PRD.md §9 — Reject List(T2 边界)",
+      "docs/PRD.md §10 — 内容与知识源(六层分级)",
+      "docs/PRD.md §14.5 — 待 PM 把关决策表",
+      "docs/ADR/003-knowledge-sources.md — 知识源六层 + 附录二 founding insight"
+    ],
+    "do_not_read_for_this_thread": [
+      "docs/experience-20260518/ — 体验设计 5 轮迭代,与 RAG 主线无关",
+      "agents/experience-critic/ — 体验线 agent",
+      "agents/innovator/ — 体验线 agent"
+    ]
+  },
+
+  "team_context_summary": {
+    "active_agent_roles": {
+      "Orchestrator": "主会话(你)= 路由 / 调度 / 升级判断 / 给 PM sync",
+      "PM-Critic": "项目级 review · 资深 PM + AI 招聘官双视角 · 拥 block 权",
+      "Strategy-Curator": "战略策展人 · 维护 KPI / 30 件清单 / 数据相关性 · 任务进 Builder 前必须签字",
+      "Builder": "执行者 · 文档 / ADR / 代码 / 数据 pipeline · 不主动 commit/push,Orchestrator 统一来",
+      "User-Voice": "4 原则代言人 + 4 实例的旁评者 · 周评 · 重大决策时应招",
+      "Researcher": "调研员 · 不下结论只供材料 · T3 红线绝对不能踩"
+    },
+    "dormant_roles_dont_use_for_rag_thread": [
+      "Experience-Critic(只服务体验艺术品)",
+      "Innovator(只服务体验创意发散)"
+    ],
+    "escalation_triggers_3": {
+      "T2": "违反 PRD §6 人格 / §9 Reject List / §12 边界 — Critic block + 标 T2 直接升级",
+      "T3": "花钱 / 注册账号 / 绑卡 / 对外发邮件 / 联系馆方 / 签合同 / 公开承诺 — 任何 agent 提议都升级,不执行直到 PM 签字",
+      "T4": "Critic ↔ Builder 三轮往返仍未达成一致 — 自动升级"
+    },
+    "orchestrator_autonomy_pm_authorized_2026_05_17": {
+      "can_run_without_asking": [
+        "API endpoint 可达性 / 文档查证 / 公开 ToS 阅读",
+        "沙箱内只读测试(curl / dig / WebFetch / Grep)",
+        "多方案对照表构建",
+        "1-2 件样本 / mini PoC 用于 de-risking"
+      ],
+      "still_must_ask": [
+        "花钱 / 注册 / 绑卡 / 对外发信(T3)",
+        "产品方向 / PRD 立场 / 人格边界(T2)",
+        "跨 30 min + 阻塞实验",
+        "法律 / 版权 / ToS 灰区(不确定时升级)"
+      ],
+      "philosophy": "无成本、只消耗 token、无破坏性、能提供确定性认知收益 → 直接跑,不必请示。反复请示是低 agency 表现"
+    }
+  },
+
+  "constraints_for_new_thread": {
+    "sandbox_egress_allowlist": "你也是 web 沙箱,大概率打不开大陆站点 / archive.org / tls.uchicago.edu。任何抓取任务的'必须用 P2 本地 CLI 跑'这一标注要尊重 —— **不要在 web 沙箱里假装能验证大陆 API**",
+    "t3_red_line_strict": "Researcher / Builder 都不能注册账号、不能付费、不能联系外部人、不能在社交平台以项目名义发帖",
+    "dont_extend_data_set": "Curator 已 flag '禁止再扩 Met / 明清 / 占位源'。所有扩量必须先有 KPI 命中论证,Curator 签字",
+    "honest_time_communication": "对 PM 通报工时时,要诚实。已有研究表明 30 件 110-150h,不要承诺'agent 一周搞定'",
+    "honest_progress_communication": "对 PM 通报进度时,区分'设计完成 / 数据接通 / 实测可用',不要把任一阶段伪装成下一阶段"
+  },
+
+  "open_decisions_for_pm_or_new_thread": [
+    {
+      "id": "OD-1",
+      "decision": "PM 何时切到 P2 本地 Claude Code CLI?",
+      "context": "大陆数据获取必须 P2,但 P2 不能跑 web-sandbox 等环境。PM 需要决定:这条任务下到本地 CLI 跑,还是先等 web 沙箱有 outbound 后再启动",
+      "impact": "影响 T4 大陆 30 件人工 curation 的启动时间"
+    },
+    {
+      "id": "OD-2",
+      "decision": "AIC / Harvard / Penn 接入是 Builder 自己跑,还是 Researcher 先验证再 Builder 跑?",
+      "recommendation": "Researcher 先 mini 测各家 API 实际可达性 + auth 要求(我们沙箱没验过,只验过这 3 家的 公共描述),通过则 Builder 跑批量"
+    },
+    {
+      "id": "OD-3",
+      "decision": "Open Discovery Pipeline 在 ADR-006 里要不要画详细架构图?",
+      "context": "PRD §14.5 D-6 已决'加深'(reviewer 是技术招聘官,纯方块图不够),但本次 ADR-006 是新写,需要 PM 决定深度",
+      "recommendation": "起草版包含状态机 + 3 sub-agent 分工 + 反幻觉策略 + human-in-the-loop 边界。先不画 embedding 选型 / chunk 粒度的具体技术细节"
+    }
+  ],
+
+  "starter_prompt_for_new_thread": "你将接管「一起看」博物馆 AI 同伴项目的 RAG 知识库主线。\n\n第一步:严格按 `files_for_new_thread_to_read.must_read_in_order` 顺序读 10 份必读文档,然后读 3 件 sample bundles。\n\n第二步:根据 `tasks_pending_for_new_thread`,推 ADR-006 + PRD §1.4 USP 段落起草。注意:你的环境大概率也是 web 沙箱(同样 allowlist 限制),所以 T4 大陆任务不要尝试在你环境内跑。\n\n第三步:派 Researcher 做 mini 测 AIC / Harvard / Penn 三家 API 的实际可达性,验证'web 沙箱能否做海外 OA 接入'(我没在这次会话里验过)。\n\n约束:T3(花钱 / 注册 / 联系外部)绝对红线。Builder 不主动 commit,Orchestrator 统一来。\n\n哲学:克制 = 立场密度,不是字数(这是体验线 5 轮迭代学到的,可借鉴到 RAG 内容写作)。\n\n开干前先在 chat 里给 PM 一个不超过 200 字的'我读完了,准备这样推'的确认。",
+
+  "metadata": {
+    "git_branch": "claude/install-superpower-plugin-bh2Mg",
+    "latest_commit_at_handoff": "c12461e",
+    "repo": "Longwind1984/prac_Museum",
+    "handoff_committer": "Orchestrator(主会话)",
+    "thread_token_pressure": "高 — 体验线 5 轮迭代后,Orchestrator 主会话上下文已接近压缩点,适合切线"
+  }
+}
